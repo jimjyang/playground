@@ -1,5 +1,5 @@
 include::../locale/attributes.adoc[]
-= Sandkassa for CDV-NO
+= Velkommen til sandkassa for CDV-NO!
 :doctype: article
 :docinfo: shared
 :docinfodir: ../overview
@@ -13,9 +13,20 @@ include::../locale/attributes.adoc[]
 
 Det som utformes/utprøves i denne sandkasse er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
 
+== Et tenkt eksempel
+
+Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
+
+* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" med distribusjon. 
+* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen og dens distribusjon.  
+
+== Metadatamodell for innholdsbeskrivelse (arbeidstittel)
+
 .Forslag til metadatamodellen ()
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
+
+Figuren ovenfor inneholder et forslag til "metadatamodellen". 
 
 Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
 
@@ -29,8 +40,3 @@ Kort forklaring til metadatamodellen:
 * #_Mer utdypende forklaring kan komme senere hvis trengs_#
 
 #_Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse._#
-
-Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
-
-* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" med distribusjon. 
-* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen og dens distribusjon.  
