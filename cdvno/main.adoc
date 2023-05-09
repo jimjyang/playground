@@ -19,12 +19,13 @@ image::images/content-description-vocabulary-no.png[]
 
 Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
 
-Kort forklaring: 
+Kort forklaring til metadatamodellen: 
 
+* Obligatorisk (mandatory) betyr "skal alltid tas med"; anbefalt (recommended) betyr "tas med hvis finnes" og valgfri (optional) betyr "kan tas med". 
 * Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (`rdfs:Recource`)".
 * Innholdet kan nås via en instans av klassen "Distribution (`dcat:Distribution`)" eller en instans av klassen "Data service (API) (`dcat:DataService`)".
 * Innholdet beskrives ("tagges") med egenskapene i klassen "Block (`cdvno:Block`)".
-** Klassen Block er en subklasse av klassen "Dataset description (`dcat:Dataset`)" som er fra ovennevnte DCAT-AP-NO. 
+** Klassen "Block (`cdvno:Block`)" er en subklasse av klassen "Dataset description (`dcat:Dataset`)" fra ovennevnte DCAT-AP-NO. 
 * #_Mer utdypende forklaring kan komme senere hvis trengs_#
 
 #_Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse._#
