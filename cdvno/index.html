@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -435,6 +435,82 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Generate a nice TOC -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we neeed -->
+
+<style>
+.tocify-header {
+    font-style: italic;
+}
+
+.tocify-subheader {
+    font-style: normal;
+    font-size: 90%;
+}
+
+.tocify ul {
+    margin: 0;
+ }
+
+.tocify-focus {
+    color: #7a2518;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tocify-focus > a {
+    color: #7a2518;
+}
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // Add a new container for the tocify toc into the existing toc so we can re-use its
+        // styling
+        $("#toc").append("<div id='generated-toc'></div>");
+        $("#generated-toc").tocify({
+            extendPage: true,
+            context: "#content",
+            highlightOnScroll: true,
+            hideEffect: "slideUp",
+            // Use the IDs that asciidoc already provides so that TOC links and intra-document
+            // links are the same. Anything else might confuse users when they create bookmarks.
+            hashGenerator: function(text, element) {
+                return $(element).attr("id");
+            },
+            // Smooth scrolling doesn't work properly if we use the asciidoc IDs
+            smoothScroll: false,
+            // Set to 'none' to use the tocify classes
+            theme: "none",
+            // Handle book (may contain h1) and article (only h2 deeper)
+            selectors: $( "#content" ).has( "h1" ).size() > 0 ? "h1,h2,h3,h4,h5" : "h2,h3,h4,h5",
+            ignoreSelector: ".discrete"
+        });
+
+        // Switch between static asciidoc toc and dynamic tocify toc based on browser size
+        // This is set to match the media selectors in the asciidoc CSS
+        // Without this, we keep the dynamic toc even if it is moved from the side to preamble
+        // position which will cause odd scrolling behavior
+        var handleTocOnResize = function() {
+            if ($(document).width() < 768) {
+                $("#generated-toc").hide();
+                $(".sectlevel0").show();
+                $(".sectlevel1").show();
+            }
+            else {
+                $("#generated-toc").show();
+                $(".sectlevel0").hide();
+                $(".sectlevel1").hide();
+            }
+        }
+
+        $(window).resize(handleTocOnResize);
+        handleTocOnResize();
+    });
+</script>
 </head>
 <body class="article">
 <div id="header">
@@ -442,13 +518,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="paragraph">
-<p>Forslag til (arbeidstittel) "Spesifikasjon for innholdsbeskrivelse", forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification),</p>
+<p>Det som utformes/utprøves i denne sandkasse er: Forslag til metadatamodell i (arbeidstittel) "Spesifikasjon for innholdsbeskrivelse", forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="images/content-description-vocabulary-no.png"><img src="images/content-description-vocabulary-no.png" alt="content description vocabulary no"></a>
 </div>
-<div class="title">Figure 1. Forslag til metadatamodellen ()</div>
+<div class="title">Figur 1. Forslag til metadatamodellen ()</div>
 </div>
 <div class="paragraph">
 <p>Forslaget gjenbruker <a href="https://data.norge.no/specification/dcat-ap-no" class="ext-link" target="_blank" rel="noopener">Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗</a>. Det som er <mark>gulet</mark> ut i tegningen, er avvik fra DCAT-AP-NO.</p>
@@ -459,26 +535,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen Content (<code>rdfs:Recource</code>).</p>
+<p>Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (<code>rdfs:Recource</code>)".</p>
 </li>
 <li>
-<p>Innholdet kan nås via en instans av Distribution (<code>dcat:Distribution</code>) eller en instans av Data Service (dcat:DataService).</p>
+<p>Innholdet kan nås via en instans av klassen "Distribution (<code>dcat:Distribution</code>)" eller en instans av klassen "Data service (API) (<code>dcat:DataService</code>)".</p>
 </li>
 <li>
-<p>Innholdet beskrives ("tagges") med egenskapene i klassen Block (cdvno:Block).</p>
+<p>Innholdet beskrives ("tagges") med egenskapene i klassen "Block (<code>cdvno:Block</code>)".</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Klassen Block er en subklasse av klassen Dataset description (dcat:Dataset) som er fra nevnte DCAT-AP-NO.
-<mark><em>Mer utdypende forklaring kan komme senere hvis trengs</em></mark></p>
+<p>Klassen Block er en subklasse av klassen "Dataset description (<code>dcat:Dataset</code>)" som er fra ovennevnte DCAT-AP-NO.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p><mark><em>Mer utdypende forklaring kan komme senere hvis trengs</em></mark></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><mark><em>Det skal lages "formell" beskrivelse av klassene og egenskapene, som utgjør en spesifikasjon.</em></mark></p>
+<p><mark><em>Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse.</em></mark></p>
 </div>
 <div class="paragraph">
 <p>Et konkret demo-eksempel: <mark><em>kommer</em></mark></p>
@@ -486,7 +564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-09 10:43:04 UTC
+Sist oppdatert 2023-05-09 10:56:11 UTC
 </div>
 </div>
 </body>
