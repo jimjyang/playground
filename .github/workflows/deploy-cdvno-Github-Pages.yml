@@ -23,7 +23,7 @@ jobs:
       id: adocbuild_html
       uses: tonynv/asciidoctor-action@master
       with:
-          program: "asciidoctor -D cdvno -o index.html -a lang=en cdvno/main.adoc"
+          program: "asciidoctor -D cdvno -o index.html -a lang=nb cdvno/main.adoc"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
