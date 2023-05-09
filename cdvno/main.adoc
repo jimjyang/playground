@@ -11,14 +11,7 @@ include::../locale/attributes.adoc[]
 :table-stripes: even
 :xrefstyle: short
 
-Det som utformes/utprøves i denne sandkasse er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
-
-== Et tenkt eksempel
-
-Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
-
-* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" med distribusjon. 
-* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen og dens distribusjon.  
+Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
@@ -40,3 +33,33 @@ Kort forklaring til metadatamodellen:
 * #_Mer utdypende forklaring kan komme senere hvis trengs_#
 
 #_Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse._#
+
+== Et tenkt eksempel
+
+Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
+
+* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" med distribusjon. 
+* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen og dens distribusjon.  
+
+== Egenskaper med "kodet verdi" (dvs. behov for taksonomier)
+
+Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
+
+[cols="20s,40d, 40d"]
+|===
+| egenskap | *eksempler* | *mulige taksonomier*
+3+| _klassen Block (cdvno:Block)_
+| main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
+| theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
+| access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
+| spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Gamle byen, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
+| audience (dct:audience) | | 
+| status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]
+| type (dct:type) | (om) rettigheter, ... | 
+| update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
+| user need (cvdno:userNeed) | | 
+3+| _klassen Distribution (dcat:Distribution)_
+| | |
+3+| _klassen Data service (dcat:DataService)_ 
+| | |
+|===
