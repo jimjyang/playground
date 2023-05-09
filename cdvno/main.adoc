@@ -1,9 +1,13 @@
 = Sandkassa for CDV-NO
 
-Forslag til (arbeidstittel) Spesifikasjon for innholdsbeskrivelse (CDV-NO = Content Description Vocabulary - Norwegian specification), også kalt metadatamdoell for innholdsbeskrivelse. 
+Forslag til (arbeidstittel) "Spesifikasjon for innholdsbeskrivelse", forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification),  
 
 .Forslag til metadatamodellen ()
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
 
-#_Forklaring til figuren ovenfor kommer senere_#
+Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no#Distribusjon-tilgangsurl[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗, window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
+
+#_Mer forklaring til figuren ovenfor kommer senere_#
+
+Et konkret demo-eksempel: #_kommer_# 
