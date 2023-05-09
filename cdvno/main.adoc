@@ -6,8 +6,16 @@ Forslag til (arbeidstittel) "Spesifikasjon for innholdsbeskrivelse", forkortet t
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
 
-Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no#Distribusjon-tilgangsurl[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗, window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
+Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗, window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
 
-#_Mer forklaring til figuren ovenfor kommer senere_#
+Kort forklaring: 
+
+* Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen Content (`rdfs:Recource`).
+* Innholdet kan nås via en instans av Distribution (`dcat:Distribution`) eller en instans av Data Service (dcat:DataService).
+* Innholdet beskrives ("tagges") med egenskapene i klassen Block (cdvno:Block).
+** Klassen Block er en subklasse av klassen Dataset description (dcat:Dataset) som er fra nevnte DCAT-AP-NO. 
+#_Mer utdypende forklaring kan komme senere hvis trengs_#
+
+#_Det skal lages "formell" beskrivelse av klassene og egenskapene, som utgjør en spesifikasjon._#
 
 Et konkret demo-eksempel: #_kommer_# 
