@@ -1,0 +1,22 @@
+// Norwegian Bokmål, courtesy of Aslak Knutsen <aslak@4fs.no>, with updates from Karl Ove Hufthammer <karl@huftis.org>
+:appendix-caption: Appedix
+:appendix-refsig: {appendix-caption}
+:caution-caption: Caution
+:chapter-label: Chapter
+:chapter-refsig: {chapter-label}
+:example-caption: Example
+:figure-caption: Figure
+:important-caption: Important
+:last-update-label: Last updated
+ifdef::listing-caption[:listing-caption: Program code]
+ifdef::manname-title[:manname-title: Name]
+:note-caption: Note
+//:part-refsig: ???
+ifdef::preface-title[:preface-title: Preface]
+//:section-refsig: ???
+:table-caption: Table
+:tip-caption: Tips
+:toc-title: Content
+:untitled-label: Untitled
+:version-label: Version
+:warning-caption: Warning
