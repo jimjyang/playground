@@ -6,7 +6,7 @@ Forslag til (arbeidstittel) "Spesifikasjon for innholdsbeskrivelse", forkortet t
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
 
-Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗, window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
+Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
 
 Kort forklaring: 
 
