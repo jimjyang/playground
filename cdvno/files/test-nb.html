@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.18">
-<title>Sandkassa for CDV-NO</title>
+<meta name="author" content="HTML-visning av RDF Turtle ressurs">
+<title>test</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,148 +437,259 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Generate a nice TOC -->
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
-<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we neeed -->
-
-<style>
-.tocify-header {
-    font-style: italic;
-}
-
-.tocify-subheader {
-    font-style: normal;
-    font-size: 90%;
-}
-
-.tocify ul {
-    margin: 0;
- }
-
-.tocify-focus {
-    color: #7a2518;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.tocify-focus > a {
-    color: #7a2518;
-}
-</style>
-
-<script type="text/javascript">
-    $(function () {
-        // Add a new container for the tocify toc into the existing toc so we can re-use its
-        // styling
-        $("#toc").append("<div id='generated-toc'></div>");
-        $("#generated-toc").tocify({
-            extendPage: true,
-            context: "#content",
-            highlightOnScroll: true,
-            hideEffect: "slideUp",
-            // Use the IDs that asciidoc already provides so that TOC links and intra-document
-            // links are the same. Anything else might confuse users when they create bookmarks.
-            hashGenerator: function(text, element) {
-                return $(element).attr("id");
-            },
-            // Smooth scrolling doesn't work properly if we use the asciidoc IDs
-            smoothScroll: false,
-            // Set to 'none' to use the tocify classes
-            theme: "none",
-            // Handle book (may contain h1) and article (only h2 deeper)
-            selectors: $( "#content" ).has( "h1" ).size() > 0 ? "h1,h2,h3,h4,h5" : "h2,h3,h4,h5",
-            ignoreSelector: ".discrete"
-        });
-
-        // Switch between static asciidoc toc and dynamic tocify toc based on browser size
-        // This is set to match the media selectors in the asciidoc CSS
-        // Without this, we keep the dynamic toc even if it is moved from the side to preamble
-        // position which will cause odd scrolling behavior
-        var handleTocOnResize = function() {
-            if ($(document).width() < 768) {
-                $("#generated-toc").hide();
-                $(".sectlevel0").show();
-                $(".sectlevel1").show();
-            }
-            else {
-                $("#generated-toc").show();
-                $(".sectlevel0").hide();
-                $(".sectlevel1").hide();
-            }
-        }
-
-        $(window).resize(handleTocOnResize);
-        handleTocOnResize();
-    });
-</script>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>Sandkassa for CDV-NO</h1>
+<h1>test</h1>
+<div class="details">
+<span id="author" class="author">HTML-visning av RDF Turtle ressurs</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Innhold</div>
+<ul class="sectlevel1">
+<li><a href="#block1">&lt;https://jimjyang.github.io/playground/cdvno/test#block1&gt;</a></li>
+<li><a href="#distri1">&lt;https://jimjyang.github.io/playground/cdvno/test#distri1&gt;</a></li>
+<li><a href="#Namespace">Navnerom</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div class="paragraph">
-<p>Det som utformes/utprøves i denne sandkasse er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).</p>
+<div class="sect1">
+<h2 id="block1"><a class="anchor" href="#block1"></a>&lt;https://jimjyang.github.io/playground/cdvno/test#block1&gt;</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Egenskapsnavn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EgenskapsURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdi</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>er instans av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blokk (cdvno:Block)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bare ment som test og demo (<a href="http://publications.europa.eu/resource/authority/language/NOB">bokmål</a>)<br>
+ only meant for test and demo (<a href="http://publications.europa.eu/resource/authority/language/ENG">engelsk</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifikator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jimjyang.github.io/playground/cdvno/test#block1" class="bare">https://jimjyang.github.io/playground/cdvno/test#block1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>hovedspråk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/language/NOB">bokmål</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>utgiver</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:publisher</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/dummy-agents#dmyOrg1" class="bare">https://w3id.org/demo-resources/dummy-agents#dmyOrg1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tema</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://psi.norge.no/los/tema/avlastning-og-stotte" class="bare">https://psi.norge.no/los/tema/avlastning-og-stotte</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tittel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">testblokk (<a href="http://publications.europa.eu/resource/authority/language/NOB">bokmål</a>)<br>
+ test block (<a href="http://publications.europa.eu/resource/authority/language/ENG">engelsk</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tilgangsnivå</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:accessRights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/access-right/PUBLIC" class="bare">http://publications.europa.eu/resource/authority/access-right/PUBLIC</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>distribusjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:distribution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jimjyang.github.io/playground/cdvno/test#distri1" class="bare">https://jimjyang.github.io/playground/cdvno/test#distri1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dekningsområde</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/country/NOR" class="bare">http://publications.europa.eu/resource/authority/country/NOR</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>målgruppe</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:audience</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/demo-classifications#demoClassification1" class="bare">https://w3id.org/demo-resources/demo-classifications#demoClassification1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>produsent</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:creator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/dummy-agents#dmyOrg1" class="bare">https://w3id.org/demo-resources/dummy-agents#dmyOrg1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dato opprettet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-05-01</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dato sist endret</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:modified</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2023-05-10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adms:status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/dataset-status/COMPLETED">ferdigstilt</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/demo-classifications#demoClassification1" class="bare">https://w3id.org/demo-resources/demo-classifications#demoClassification1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>oppdateringsfrekvens</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:accrualPeriodicity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/frequency/TRIENNIAL" class="bare">http://publications.europa.eu/resource/authority/frequency/TRIENNIAL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>brukerbehov</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:userNeed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/demo-classifications#demoClassification1" class="bare">https://w3id.org/demo-resources/demo-classifications#demoClassification1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>gyldighetsperiode</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cv:validityPeriod</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/dummy-times#dmyPropInterval1" class="bare">https://w3id.org/demo-resources/dummy-times#dmyPropInterval1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>versjonsnummer</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">owl:versionInf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>versjonsnote</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adms:versionNotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rettet opp en skrivefeil (<a href="http://publications.europa.eu/resource/authority/language/NOB">bokmål</a>)<br>
+ corrected a typo (<a href="http://publications.europa.eu/resource/authority/language/ENG">engelsk</a>)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="images/content-description-vocabulary-no.png"><img src="images/content-description-vocabulary-no.png" alt="content description vocabulary no"></a>
 </div>
-<div class="title">Figur 1. Forslag til metadatamodellen ()</div>
+<div class="sect1">
+<h2 id="distri1"><a class="anchor" href="#distri1"></a>&lt;https://jimjyang.github.io/playground/cdvno/test#distri1&gt;</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Egenskapsnavn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EgenskapsURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdi</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>er instans av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distribusjon (dcat:Distribution)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tilgangsURL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:accessURL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak" class="bare">https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">testdistribusjon (<a href="http://publications.europa.eu/resource/authority/language/NOB">bokmål</a>)<br>
+ test distribution (<a href="http://publications.europa.eu/resource/authority/language/ENG">engelsk</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>format</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/file-type/HTML" class="bare">http://publications.europa.eu/resource/authority/file-type/HTML</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>lisens</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:license</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/licence/CC0" class="bare">http://publications.europa.eu/resource/authority/licence/CC0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adms:status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/dataset-status/COMPLETED">ferdigstilt</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tilgjengelighet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcatap:availability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE" class="bare">http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tilgangstjeneste</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:accessService</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://w3id.org/demo-resources/dummy-datasets#dmyDataSrvc1" class="bare">https://w3id.org/demo-resources/dummy-datasets#dmyDataSrvc1</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p>Forslaget gjenbruker <a href="https://data.norge.no/specification/dcat-ap-no" class="ext-link" target="_blank" rel="noopener">Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗</a>. Det som er <mark>gulet</mark> ut i tegningen, er avvik fra DCAT-AP-NO.</p>
 </div>
-<div class="paragraph">
-<p>Kort forklaring til metadatamodellen:</p>
+<div class="sect1">
+<h2 id="Namespace"><a class="anchor" href="#Namespace"></a>Navnerom</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prefiks</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>adms</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/adms#" class="bare">http://www.w3.org/ns/adms#</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cv</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://data.europa.eu/m8g/" class="bare">http://data.europa.eu/m8g/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dcat</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/dcat#" class="bare">http://www.w3.org/ns/dcat#</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dct</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/" class="bare">http://purl.org/dc/terms/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>owl</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2002/07/owl#" class="bare">http://www.w3.org/2002/07/owl#</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rdf</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="bare">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>xsd</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2001/XMLSchema#" class="bare">http://www.w3.org/2001/XMLSchema#</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Obligatorisk (mandatory) betyr "skal alltid tas med"; anbefalt (recommended) betyr "tas med hvis finnes" og valgfri (optional) betyr "kan tas med".</p>
-</li>
-<li>
-<p>Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (<code>rdfs:Recource</code>)".</p>
-</li>
-<li>
-<p>Innholdet kan nås via en instans av klassen "Distribution (<code>dcat:Distribution</code>)" eller en instans av klassen "Data service (API) (<code>dcat:DataService</code>)".</p>
-</li>
-<li>
-<p>Innholdet beskrives ("tagges") med egenskapene i klassen "Block (<code>cdvno:Block</code>)".</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Klassen "Block (<code>cdvno:Block</code>)" er en subklasse av klassen "Dataset description (<code>dcat:Dataset</code>)" fra ovennevnte DCAT-AP-NO.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><mark><em>Mer utdypende forklaring kan komme senere hvis trengs</em></mark></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><mark><em>Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse.</em></mark></p>
-</div>
-<div class="paragraph">
-<p>Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge <a href="https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak" class="ext-link" target="_blank" rel="noopener">"Klage på vedtak" ↗</a> under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Her er <a href="files/test-nb.html">HTML-visning</a> av en demo-instans av klassen "Block (<code>cdvno:Block</code>)" med distribusjon.</p>
-</li>
-<li>
-<p>Her er <a href="files/test.ttl">RDF Turtle-representasjon</a> av demo-instansen og dens distribusjon.</p>
-</li>
-</ul>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-09 12:35:04 UTC
+Sist oppdatert 2023-05-09 13:48:47 +0200
 </div>
 </div>
 </body>
