@@ -518,8 +518,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
 <ul class="sectlevel1">
-<li><a href="#_et_tenkt_eksempel">Et tenkt eksempel</a></li>
 <li><a href="#_metadatamodell_for_innholdsbeskrivelse_arbeidstittel">Metadatamodell for innholdsbeskrivelse (arbeidstittel)</a></li>
+<li><a href="#_et_tenkt_eksempel">Et tenkt eksempel</a></li>
+<li><a href="#_egenskaper_med_kodet_verdi_dvs_behov_for_taksonomier">Egenskaper med "kodet verdi" (dvs. behov for taksonomier)</a></li>
 </ul>
 </div>
 </div>
@@ -527,25 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Det som utformes/utprøves i denne sandkasse er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_et_tenkt_eksempel"><a class="anchor" href="#_et_tenkt_eksempel"></a>Et tenkt eksempel</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge <a href="https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak" class="ext-link" target="_blank" rel="noopener">"Klage på vedtak" ↗</a> under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Her er <a href="files/test-nb.html">HTML-visning</a> av en demo-instans av klassen "Block (<code>cdvno:Block</code>)" med distribusjon.</p>
-</li>
-<li>
-<p>Her er <a href="files/test.ttl">RDF Turtle-representasjon</a> av demo-instansen og dens distribusjon.</p>
-</li>
-</ul>
+<p>Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).</p>
 </div>
 </div>
 </div>
@@ -598,10 +581,114 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_et_tenkt_eksempel"><a class="anchor" href="#_et_tenkt_eksempel"></a>Et tenkt eksempel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge <a href="https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak" class="ext-link" target="_blank" rel="noopener">"Klage på vedtak" ↗</a> under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Her er <a href="files/test-nb.html">HTML-visning</a> av en demo-instans av klassen "Block (<code>cdvno:Block</code>)" med distribusjon.</p>
+</li>
+<li>
+<p>Her er <a href="files/test.ttl">RDF Turtle-representasjon</a> av demo-instansen og dens distribusjon.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_egenskaper_med_kodet_verdi_dvs_behov_for_taksonomier"><a class="anchor" href="#_egenskaper_med_kodet_verdi_dvs_behov_for_taksonomier"></a>Egenskaper med "kodet verdi" (dvs. behov for taksonomier)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer").</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>egenskap</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>eksempler</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>mulige taksonomier</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Block (cdvno:Block)</em></strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>main language (dct:language)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bokmål, nynorsk, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>theme (dcat:theme)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">helse, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme" class="ext-link" target="_blank" rel="noopener">Data theme ↗</a>; Norsk <a href="https://psi.norge.no/los/struktur.html" class="ext-link" target="_blank" rel="noopener">Los ↗</a>; Sektorspesifikke taksonomier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>access rights (dct:accessRights)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public, Restricted, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>spatial coverage (dct:spatial)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norge, HSØ, Viken, Oslo, Gamle byen, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country" class="ext-link" target="_blank" rel="noopener">Country ↗</a>; Kartverkets Administrative enheter; &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>audience (dct:audience)</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>status (adms:status)</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status" class="ext-link" target="_blank" rel="noopener">Dataset status ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type (dct:type)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(om) rettigheter, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>update frequency (dct:accrualPeriodicity)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">årlig, hvert tredje år, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency" class="ext-link" target="_blank" rel="noopener">Frequency ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>user need (cvdno:userNeed)</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Distribution (dcat:Distribution)</em></strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Data service (dcat:DataService)</em></strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-09 13:57:41 UTC
+Sist oppdatert 2023-05-09 14:02:41 UTC
 </div>
 </div>
 </body>
