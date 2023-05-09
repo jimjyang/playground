@@ -11,7 +11,12 @@ include::../locale/attributes.adoc[]
 :table-stripes: even
 :xrefstyle: short
 
+NOTE: *Innmelding av feil og mangler:* + 
+Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
+
 Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
+
+
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
