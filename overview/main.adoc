@@ -4,4 +4,4 @@ Welcome to Jim's playground!
 
 There are currently following sandboxes: 
 
-* CDV-NO (Content Description Vocabulary - Norwegian specification content description) - #_coming_#
+* link:cdvno[CDV-NO (Content Description Vocabulary - Norwegian specification content description)]
