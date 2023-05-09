@@ -1,0 +1,9 @@
+= Sandkassa for CDV-NO
+
+Forslag til (arbeidstittel) Spesifikasjon for innholdsbeskrivelse (CDV-NO = Content Description Vocabulary - Norwegian specification), også kalt metadatamdoell for innholdsbeskrivelse. 
+
+.Forslag til metadatamodellen
+[link=images/content-description-vocabulary-no.png]
+image::images/content-description-vocabulary-no.png
+
+#_Forklaring til figuren ovenfor kommer senere_#
