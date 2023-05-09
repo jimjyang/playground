@@ -1,0 +1,35 @@
+name: Build adocs and deploy cdvno to Github Pages
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - cdvno/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: asciidoctor build
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build html
+      id: adocbuild_html
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor -D cdvno -o index.html -a lang=en cdvno/main.adoc"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: cdvno
+        destination_dir: ./cdvno
+        keep_files: true
