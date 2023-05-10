@@ -12,7 +12,7 @@ _The class is used to represent a block in an online resource._
 
 Eksempel i RDF Turtle:
 -----
-<tstBlock> a cdvno:Block ;
+<aBlock> a cdvno:Block ;
    .
 -----
 
@@ -34,8 +34,8 @@ _This property is used to specify the description of the block. This property sh
 
 Eksempel i RDF Turtle:
 -----
-<tstBlock> a cdvno:Block; # blokk
-   dct:description "bare ment som test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
+<aBlock> a cdvno:Block; # blokk
+   dct:description "bare ment for test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
    .
 -----
 
@@ -53,7 +53,7 @@ Eksempel i RDF Turtle:
 
 Eksempel i RDF Turtle:
 -----
-<tstBlock> a cdvno:Block; # blokk
+<aBlock> a cdvno:Block; # blokk
    
    .
 -----
