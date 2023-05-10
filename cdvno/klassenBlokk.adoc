@@ -12,7 +12,7 @@ _The class is used to represent a block in an online resource._
 
 Eksempel i RDF Turtle:
 -----
-<aBlock> a cdvno:Block ;
+<aBlock> a cdvno:Block; # blokk
    .
 -----
 
@@ -54,7 +54,6 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   
    .
 -----
 
