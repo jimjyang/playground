@@ -50,10 +50,10 @@ Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www
 
 Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
 
-[cols="20s,40d, 40d"]
+[cols="20,40d, 40d"]
 |===
-| egenskap | *eksempler* | *mulige taksonomier*
-3+| _klassen Block (cdvno:Block)_
+| *egenskap* | *eksempler* | *mulige taksonomier*
+3+| *_klassen Block (cdvno:Block)_*
 | access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
 | audience (dct:audience) | tjenestetilbyder, tjenestemottaker, pårørende, ... | 
 | main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
@@ -63,7 +63,7 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 | type (dct:type) | (om) rettigheter, ... | 
 | update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
 | user need (cvdno:userNeed) | | 
-3+| _klassen Distribution (dcat:Distribution)_
+3+| *_klassen Distribution (dcat:Distribution)_*
 | compression format (dcat:compressFormat) | gzip, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
 | format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
 | licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
@@ -71,7 +71,7 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 | packaging format (dcat:packageFormat) | TAR, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
 | status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]
 | ... | ... | ...
-3+| _klassen Data service (dcat:DataService)_ 
+3+| *_klassen Data service (dcat:DataService)_* 
 | access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
 | format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
 | licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
