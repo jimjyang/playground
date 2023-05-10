@@ -1,4 +1,4 @@
-=== Klassen Blokk (cdvno:Blaok) [[Block]]
+=== Klassen Blokk (cdvno:Block) [[Block]]
 
 [cols="30s,70d"]
 |===
