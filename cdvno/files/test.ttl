@@ -12,7 +12,7 @@
 
 <https://jimjyang.github.io/playground/cdvno/test#block1>
    rdf:type cdvno:Block;
-   dct:description """bare ment som test og demo"""@nb,
+   dct:description """bare ment for test og demo"""@nb,
        """only meant for test and demo"""@en;
    dct:identifier "https://jimjyang.github.io/playground/cdvno/test#block1"^^xsd:anyURI;
    dct:language <http://publications.europa.eu/resource/authority/language/NOB>;
@@ -49,4 +49,4 @@
    dcat:accessService <https://w3id.org/demo-resources/dummy-datasets#dmyDataSrvc1>;
    .
  
-#### End of the file, 2023-05-10 11:53:53
+#### End of the file, 2023-05-10 12:28:23
