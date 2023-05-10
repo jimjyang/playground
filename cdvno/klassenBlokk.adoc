@@ -40,7 +40,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk identifikator (dct:identifier) [[Blokk-identifikator]]  
+===== Blokk identifikator (dct:identifier) [[Blokk-identifikator]]  
 
 [cols="30s,70d"]
 |===
@@ -64,7 +64,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
+===== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
 
 [cols="30s,70d"]
 |===
@@ -88,7 +88,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk tema (dcat:theme) [[Blokk-tema]] 
+===== Blokk tema (dcat:theme) [[Blokk-tema]] 
 
 [cols="30s,70d"]
 |===
@@ -112,7 +112,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - tittel (dct:title) [[Blokk-tittel]]  
+===== Blokk - tittel (dct:title) [[Blokk-tittel]]  
 
 [cols="30s,70d"]
 |===
@@ -135,7 +135,7 @@ Eksempel i RDF Turtle:
 
 ==== Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
 
-==== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
+===== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
 
 [cols="30s,70d"]
 |===
@@ -159,7 +159,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - geografisk dekning (dct:spatial) [[Blokk-geografisk-dekning]] 
+===== Blokk - geografisk dekning (dct:spatial) [[Blokk-geografisk-dekning]] 
 
 [cols="30s,70d"]
 |===
@@ -185,7 +185,7 @@ Eksempel i RDF Turtle:
 
 ==== Valgfrie egenskaper for _Blokk_ [[Blokk-valgfrie-egenskaper]]
 
-==== Blokk - osv. osv. osv.  
+===== Blokk - osv. osv. osv.  
 
 [cols="30s,70d"]
 |===
