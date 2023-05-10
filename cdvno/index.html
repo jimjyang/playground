@@ -533,9 +533,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-identifikator">Blokk identifikator (dct:identifier)</a></li>
 <li><a href="#Blokk-hovedspråk">Blokk - hovedspråk (dct:language)</a></li>
 <li><a href="#Blokk-tema">Blokk tema (dcat:theme)</a></li>
-<li><a href="#_blokk_osv_osv_osv">Blokk - osv. osv. osv.</a></li>
+<li><a href="#Blokk-tittel">Blokk - tittel (dct:title)</a></li>
 <li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a></li>
+<li><a href="#Blokk-tilgangsnivå">Blokk - tilgangsnivå (dct:accessRights)</a></li>
+<li><a href="#Blokk-geografisk-dekning">Blokk - geografisk dekning (dct:spatial)</a></li>
+<li><a href="#Blokk-geografisk-dekning">Blokk - geografisk dekning (dct:spatial)</a></li>
 <li><a href="#Blokk-valgfrie-egenskaper">Valgfrie egenskaper for <em>Blokk</em></a></li>
+<li><a href="#_blokk_osv_osv_osv">Blokk - osv. osv. osv.</a></li>
 </ul>
 </li>
 </ul>
@@ -795,6 +799,10 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:Block</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av / <em>Subclass of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:Dataset</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
 </tr>
@@ -1012,6 +1020,200 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 <div class="sect3">
+<h4 id="Blokk-tittel"><a class="anchor" href="#Blokk-tittel"></a>Blokk - tittel (dct:title)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>title</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi tittelen til blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify the title of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:title "testblokk"@nb, "test block"@en; # tittel
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-anbefalte-egenskaper"><a class="anchor" href="#Blokk-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Blokk</em></h4>
+
+</div>
+<div class="sect3">
+<h4 id="Blokk-tilgangsnivå"><a class="anchor" href="#Blokk-tilgangsnivå"></a>Blokk - tilgangsnivå (dct:accessRights)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>access rights</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:accessRights</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:RightsStatement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å angi i hvilken grad blokkens innhold er tilgjengelig for allmennheten.</p>
+<p class="tableblock"><em>This property is used to specify to which degree the content of the block is public available.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a>.</p>
+<p class="tableblock">The value shall be chosen from EUs controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:accessRights &lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt;; # allmenn tilgang
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-geografisk-dekning"><a class="anchor" href="#Blokk-geografisk-dekning"></a>Blokk - geografisk dekning (dct:spatial)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>spatial coverage</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:Location</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi geografisk dekning som blokkens innhold er ment for.</p>
+<p class="tableblock">_This property is used to specify spatial coverage that the content of the block is meant for. _</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-geografisk-dekning"><a class="anchor" href="#Blokk-geografisk-dekning"></a>Blokk - geografisk dekning (dct:spatial)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>spatial coverage</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:spatial</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-valgfrie-egenskaper"><a class="anchor" href="#Blokk-valgfrie-egenskaper"></a>Valgfrie egenskaper for <em>Blokk</em></h4>
+
+</div>
+<div class="sect3">
 <h4 id="_blokk_osv_osv_osv"><a class="anchor" href="#_blokk_osv_osv_osv"></a>Blokk - osv. osv. osv.</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -1055,25 +1257,13 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="Blokk-anbefalte-egenskaper"><a class="anchor" href="#Blokk-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Blokk</em></h4>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="Blokk-valgfrie-egenskaper"><a class="anchor" href="#Blokk-valgfrie-egenskaper"></a>Valgfrie egenskaper for <em>Blokk</em></h4>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-10 11:09:00 UTC
+Sist oppdatert 2023-05-10 11:25:18 UTC
 </div>
 </div>
 </body>
