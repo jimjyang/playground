@@ -166,9 +166,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _spatial coverage_
 | URI | dct:spatial
 | Verdiområde / _Range_ | dct:Location
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi geografisk dekning som blokkens innhold er ment for.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi geografisk eller administrativ dekning som blokkens innhold er ment for.
 
-_This property is used to specify spatial coverage that the content of the block is meant for._
+_This property is used to specify spatial or administrative coverage that the content of the block is meant for._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | 
