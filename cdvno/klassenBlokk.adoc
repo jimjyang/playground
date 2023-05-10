@@ -2,7 +2,7 @@
 
 [cols="30s,70d"]
 |===
-| _English name_ | _Block
+| _English name_ | _Block_
 | Anvendelse / _Usage note_ | Klassen brukes til å representere en blokk i en nettressurs.
 
 _The class is used to represent a block in an online resource._
