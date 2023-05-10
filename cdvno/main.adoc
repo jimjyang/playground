@@ -81,7 +81,7 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 
 == Spesifikasjonen 
 
-_utkast til hvordan spesifikasjonen kan se ut_
+#_utkast til hvordan spesifikasjonen kan se ut_#
 
 include::klassenBlokk.adoc[]
 
