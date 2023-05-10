@@ -82,6 +82,8 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 
 #_Klassene og egenskapene skal senere spesifiseres, slik at det hele blir en spesifikasjon for innholdsbeskrivelse. Her viser det (foreløpig) kun hvordan deler av spesifikasjonen kan se ut_#
 
+#_Etter at innholdet er blitt forholdsvis stabilt, vil  egenskapene bli sort alfabetisk etter norske navn._# 
+
 include::klassenBlokk.adoc[]
 
 
