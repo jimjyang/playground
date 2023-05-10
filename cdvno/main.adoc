@@ -86,4 +86,6 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 
 include::klassenBlokk.adoc[]
 
+include::klassenDistribusjon.adoc[]
 
+include:klassenDatatjeneste.adoc[]
