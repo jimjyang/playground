@@ -18,7 +18,7 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 
 [cols="10,90", grid=nome,frame=none] 
 |===
-| image:images/warning-playground.png[playground// ,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
+| image:images/warning-playground.png[playground,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
 |===
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
@@ -34,10 +34,10 @@ Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard fo
 Kort forklaring til metadatamodellen: 
 
 * Obligatorisk (mandatory) betyr "skal alltid tas med"; anbefalt (recommended) betyr "bør tas med hvis finnes" og valgfri (optional) betyr "kan tas med". 
-* Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (`rdfs:Recource`)".
-* Innholdet kan nås via en instans av klassen "Distribution (`dcat:Distribution`)" eller en instans av klassen "Data service (API) (`dcat:DataService`)".
-* Innholdet beskrives ("tagges") med egenskapene i klassen "Block (`cdvno:Block`)".
-** Klassen "Block (`cdvno:Block`)" er en subklasse av klassen "Dataset description (`dcat:Dataset`)" fra ovennevnte DCAT-AP-NO. 
+* Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (rdfs:Recource)".
+* Innholdet kan nås via en instans av klassen "Distribution (dcat:Distribution)" eller en instans av klassen "Data service (API) (dcat:DataService)".
+* Innholdet beskrives ("tagges") med egenskapene i klassen "Block (cdvno:Block)".
+** Klassen "Block (cdvno:Block)" er en subklasse av klassen "Dataset (dcat:Dataset)" fra ovennevnte DCAT-AP-NO. 
 * #_Mer utdypende forklaring kan komme senere hvis trengs_#
 
 
@@ -45,12 +45,12 @@ Kort forklaring til metadatamodellen:
 
 Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
 
-* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" med distribusjon. 
-* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen og dens distribusjon.  
+* Her er link:files/test-nb.html[HTML-visning] av en demo-instans av klassen "Block (cdvno:Block)" og dens distribusjon. 
+* Her er link:files/test.ttl[RDF Turtle-representasjon] av demo-instansen av klassen "Block (cdvno:Block)" og dens distribusjon.  
 
 == Egenskaper med "kodet verdi" (dvs. behov for taksonomier)
 
-Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
+Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
 
 [cols="20,40d, 40d"]
 |===
