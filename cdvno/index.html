@@ -521,6 +521,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_metadatamodell_for_innholdsbeskrivelse_arbeidstittel">Metadatamodell for innholdsbeskrivelse (arbeidstittel)</a></li>
 <li><a href="#_et_tenkt_eksempel">Et tenkt eksempel</a></li>
 <li><a href="#_egenskaper_med_kodet_verdi_dvs_behov_for_taksonomier">Egenskaper med "kodet verdi" (dvs. behov for taksonomier)</a></li>
+<li><a href="#_spesifikasjonen">Spesifikasjonen</a>
+<ul class="sectlevel2">
+<li><a href="#Block">Klassen Blokk (cdvno:Blaok)</a>
+<ul class="sectlevel3">
+<li><a href="#Blokk-obligatoriske-egenskaper">Obligatoriske egenskaper for <em>Blokk</em></a>
+<ul class="sectlevel4">
+<li><a href="#Blokk-beskrivelse">Blokk – beskrivelse (dct:description)</a></li>
+</ul>
+</li>
+<li><a href="#_blokk_osv_osv_osv">Blokk - osv. osv. osv.</a></li>
+<li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a></li>
+<li><a href="#Blokk-valgfrie-egenskaper">Valgfrie egenskaper for <em>Blokk</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -748,10 +764,161 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </table>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_spesifikasjonen"><a class="anchor" href="#_spesifikasjonen"></a>Spesifikasjonen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>utkast til hvordan spesifikasjonen kan se ut</em></p>
+</div>
+<div class="sect2">
+<h3 id="Block"><a class="anchor" href="#Block"></a>Klassen Blokk (cdvno:Blaok)</h3>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_Block</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes til å representere en blokk i en nettressurs.</p>
+<p class="tableblock"><em>The class is used to represent a block in an online resource.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:Block</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;tstBlock&gt; a cdvno:Block ;
+   .</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-obligatoriske-egenskaper"><a class="anchor" href="#Blokk-obligatoriske-egenskaper"></a>Obligatoriske egenskaper for <em>Blokk</em></h4>
+<div class="sect4">
+<h5 id="Blokk-beskrivelse"><a class="anchor" href="#Blokk-beskrivelse"></a>Blokk – beskrivelse (dct:description)</h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>description</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi beskrivelsen av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify the description of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;tstBlock&gt; a cdvno:Block; # blokk
+   dct:description "bare ment som test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
+   .</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_blokk_osv_osv_osv"><a class="anchor" href="#_blokk_osv_osv_osv"></a>Blokk - osv. osv. osv.</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;tstBlock&gt; a cdvno:Block; # blokk
+
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-anbefalte-egenskaper"><a class="anchor" href="#Blokk-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Blokk</em></h4>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-valgfrie-egenskaper"><a class="anchor" href="#Blokk-valgfrie-egenskaper"></a>Valgfrie egenskaper for <em>Blokk</em></h4>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-10 09:56:26 UTC
+Sist oppdatert 2023-05-10 10:21:45 UTC
 </div>
 </div>
 </body>
