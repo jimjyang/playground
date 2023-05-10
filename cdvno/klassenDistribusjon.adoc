@@ -1,0 +1,23 @@
+=== Klassen Distribusjon (dcat:Distribution) [[Distribution]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _Distribution_
+| Anvendelse / _Usage note_ | Klassen brukes til å representere en distribusjon av en nettressurs.
+
+_The class is used to represent a distribution of an online resource._
+| URI | dcat:Distribution
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   .
+-----
+
+==== Obligatoriske egenskaper for _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
+
+==== Anbefalte egenskaper for _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
+
+==== Valgfrie egenskaper for _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
