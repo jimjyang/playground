@@ -532,6 +532,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Blokk-identifikator">Blokk identifikator (dct:identifier)</a></li>
 <li><a href="#Blokk-hovedspråk">Blokk - hovedspråk (dct:language)</a></li>
+<li><a href="#Blokk-tema">Blokk tema (dcat:theme)</a></li>
 <li><a href="#_blokk_osv_osv_osv">Blokk - osv. osv. osv.</a></li>
 <li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a></li>
 <li><a href="#Blokk-valgfrie-egenskaper">Valgfrie egenskaper for <em>Blokk</em></a></li>
@@ -957,6 +958,57 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 <div class="sect3">
+<h4 id="Blokk-tema"><a class="anchor" href="#Blokk-tema"></a>Blokk tema (dcat:theme)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>theme</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi tema som blokkens innhold handler om.</p>
+<p class="tableblock"><em>This property is used to specify the theme which the content of the block is about.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme" class="ext-link" target="_blank" rel="noopener">Data theme ↗</a>, <a href="https://psi.norge.no/los/struktur.html" class="ext-link" target="_blank" rel="noopener">Los ↗</a>, eller andre sektorspesifikke taksonomier.</p>
+<p class="tableblock">The value should be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme" class="ext-link" target="_blank" rel="noopener">Data theme ↗</a>, <a href="https://psi.norge.no/los/struktur.html" class="ext-link" target="_blank" rel="noopener">Los ↗</a>, or other sector specific taxonomies.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dcat:theme &lt;https://psi.norge.no/los/tema/avlastning-og-stotte&gt;;
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_blokk_osv_osv_osv"><a class="anchor" href="#_blokk_osv_osv_osv"></a>Blokk - osv. osv. osv.</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -1018,7 +1070,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-10 10:59:14 UTC
+Sist oppdatert 2023-05-10 11:06:17 UTC
 </div>
 </div>
 </body>
