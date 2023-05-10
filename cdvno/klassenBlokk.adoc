@@ -39,6 +39,54 @@ Eksempel i RDF Turtle:
    .
 -----
 
+==== Blokk identifikator (dct:identifier) [[Blokk-identifikator]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _identifier_
+| URI | dct:identifier
+| Verdiområde / _Range_ | xsd:anyURI
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikator til blokken.
+
+_This property is used to specify an identifier to the block._
+| Multiplisitet / _Multiplicity_ | 1..1
+| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
+| Merkand / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+
+See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only)
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:identifier <https://example.org/aBlock>; 
+   .
+-----
+
+==== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _main language_
+| URI | dct:language
+| Verdiområde / _Range_ | dct:LinguisticSystem 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi hovedspråket blokkens innhold er på.
+
+_This property is used to specify the main language that the concent of the block is in._
+| Multiplisitet / _Multiplicity_ | 1..1
+| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
+
+The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # bokmål
+   .
+-----
+
 ==== Blokk - osv. osv. osv.  
 
 [cols="30s,70d"]
