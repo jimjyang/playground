@@ -20,7 +20,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
-.Forslag til metadatamodellen ()
+.Forslag til metadatamodellen
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
 
