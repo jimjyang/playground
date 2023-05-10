@@ -182,25 +182,6 @@ Eksempel i RDF Turtle:
 -----
 
 
-==== Blokk - geografisk dekning (dct:spatial) [[Blokk-geografisk-dekning]] 
-
-[cols="30s,70d"]
-|===
-| _English name_ | _spatial coverage_
-| URI | dct:spatial
-| Verdiområde / _Range_ | 
-| Anvendelse / _Usage note_ | 
-| Multiplisitet / _Multiplicity_ | 
-| Kravnivå / _Requirement level_ | 
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   .
------
-
-
 
 ==== Valgfrie egenskaper for _Blokk_ [[Blokk-valgfrie-egenskaper]]
 
