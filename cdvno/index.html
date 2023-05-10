@@ -634,19 +634,19 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Block (cdvno:Block)</em></strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>main language (dct:language)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bokmål, nynorsk, &#8230;&#8203;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>theme (dcat:theme)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">helse, &#8230;&#8203;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme" class="ext-link" target="_blank" rel="noopener">Data theme ↗</a>; Norsk <a href="https://psi.norge.no/los/struktur.html" class="ext-link" target="_blank" rel="noopener">Los ↗</a>; Sektorspesifikke taksonomier</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>access rights (dct:accessRights)</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Public, Restricted, &#8230;&#8203;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>audience (dct:audience)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tjenestetilbyder, tjenestemottaker, pårørende, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>main language (dct:language)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bokmål, nynorsk, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>spatial coverage (dct:spatial)</strong></p></td>
@@ -654,14 +654,14 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country" class="ext-link" target="_blank" rel="noopener">Country ↗</a>; Kartverkets Administrative enheter; &#8230;&#8203;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>audience (dct:audience)</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>status (adms:status)</strong></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status" class="ext-link" target="_blank" rel="noopener">Dataset status ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>theme (dcat:theme)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">helse, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme" class="ext-link" target="_blank" rel="noopener">Data theme ↗</a>; Norsk <a href="https://psi.norge.no/los/struktur.html" class="ext-link" target="_blank" rel="noopener">Los ↗</a>; Sektorspesifikke taksonomier</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type (dct:type)</strong></p></td>
@@ -682,17 +682,67 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Distribution (dcat:Distribution)</em></strong></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>compression format (dcat:compressFormat)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gzip, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>format (dct:format)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text, png, mp4, html, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type" class="ext-link" target="_blank" rel="noopener">File type ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>licence (dct:license)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC0, CCBY4, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence" class="ext-link" target="_blank" rel="noopener">Licence ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>media type (dcat:mediaType)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mp4, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>packaging format (dcat:packageFormat)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TAR, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>status (adms:status)</strong></p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status" class="ext-link" target="_blank" rel="noopener">Dataset status ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong><em>klassen Data service (dcat:DataService)</em></strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>access rights (dct:accessRights)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public, Restricted, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>format (dct:format)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text, png, mp4, html, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type" class="ext-link" target="_blank" rel="noopener">File type ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>licence (dct:license)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC0, CCBY4, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EUs <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence" class="ext-link" target="_blank" rel="noopener">Licence ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>media type (dcat:mediaType)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mp4, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
 </tr>
 </tbody>
 </table>
@@ -701,7 +751,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-10 07:20:12 UTC
+Sist oppdatert 2023-05-10 07:55:35 UTC
 </div>
 </div>
 </body>

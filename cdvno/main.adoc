@@ -54,17 +54,27 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 |===
 | egenskap | *eksempler* | *mulige taksonomier*
 3+| _klassen Block (cdvno:Block)_
-| main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
-| theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
 | access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
+| audience (dct:audience) | tjenestetilbyder, tjenestemottaker, pårørende, ... | 
+| main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
 | spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Gamle byen, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
-| audience (dct:audience) | | 
 | status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]
+| theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
 | type (dct:type) | (om) rettigheter, ... | 
 | update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
 | user need (cvdno:userNeed) | | 
 3+| _klassen Distribution (dcat:Distribution)_
-| | |
+| compression format (dcat:compressFormat) | gzip, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
+| format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
+| licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
+| media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
+| packaging format (dcat:packageFormat) | TAR, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
+| status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]
+| ... | ... | ...
 3+| _klassen Data service (dcat:DataService)_ 
-| | |
+| access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
+| format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
+| licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
+| media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
+| ... | ... | ...
 |===
