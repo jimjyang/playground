@@ -62,7 +62,7 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 | theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
 | type (dct:type) | (om) rettigheter, ... | 
 | update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
-| user need (cvdno:userNeed) | | 
+| user need (cvdno:userNeed) | ... | EUs kommende kontrollerte vokabularer for livshendelser; Sektorspesifikke kodeverk (SNOMED CT); ... 
 3+| *_klassen Distribution (dcat:Distribution)_*
 | compression format (dcat:compressFormat) | gzip, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
 | format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
@@ -78,3 +78,4 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 | media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
 | ... | ... | ...
 |===
+
