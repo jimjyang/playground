@@ -23,14 +23,14 @@
    dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
    dcat:distribution <https://jimjyang.github.io/playground/cdvno/test#distri1>;
    dct:spatial <http://publications.europa.eu/resource/authority/country/NOR>;
-   dct:audience <https://w3id.org/demo-resources/demo-classifications#demoClassification1>;
+   dct:audience <https://w3id.org/demo-resources/demo-classifications#demo-category-A>;
    dct:creator <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>;
    dct:created "2023-05-01"^^xsd:date;
-   dct:modified "2023-05-10"^^xsd:date;
+   dct:modified "2023-05-01"^^xsd:date;
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED>;
-   dct:type <https://w3id.org/demo-resources/demo-classifications#demoClassification1>;
+   dct:type <https://w3id.org/demo-resources/demo-classifications#demo-category-A>;
    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL>;
-   cdvno:userNeed <https://w3id.org/demo-resources/demo-classifications#demoClassification1>;
+   cdvno:userNeed <https://data.norge.no/vocabulary/life-event-type#becoming-a-caretaker>;
    cv:validityPeriod <https://w3id.org/demo-resources/dummy-times#dmyPropInterval1>;
    owl:versionInf """1.0.1""";
    adms:versionNotes """rettet opp en skrivefeil"""@nb,
@@ -49,4 +49,4 @@
    dcat:accessService <https://w3id.org/demo-resources/dummy-datasets#dmyDataSrvc1>;
    .
  
-#### End of the file, 2023-05-10 12:28:23
+#### End of the file, 2023-05-10 15:28:49
