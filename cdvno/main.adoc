@@ -30,7 +30,7 @@ Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard fo
 
 Kort forklaring til metadatamodellen: 
 
-* Obligatorisk (mandatory) betyr "skal alltid tas med"; anbefalt (recommended) betyr "tas med hvis finnes" og valgfri (optional) betyr "kan tas med". 
+* Obligatorisk (mandatory) betyr "skal alltid tas med"; anbefalt (recommended) betyr "bør tas med hvis finnes" og valgfri (optional) betyr "kan tas med". 
 * Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (`rdfs:Recource`)".
 * Innholdet kan nås via en instans av klassen "Distribution (`dcat:Distribution`)" eller en instans av klassen "Data service (API) (`dcat:DataService`)".
 * Innholdet beskrives ("tagges") med egenskapene i klassen "Block (`cdvno:Block`)".
