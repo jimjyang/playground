@@ -79,11 +79,11 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 |===
 
 == Spesifikasjonen 
-
+ 
 #_Etter at innholdet er blitt forholdsvis stabilt, vil egenskapene bli sort alfabetisk etter norske navn, nå er de forsøkt sortert etter engelske navn._# 
 
 include::klassenBlokk.adoc[]
 
 include::klassenDistribusjon.adoc[]
 
-include:klassenDatatjeneste.adoc[]
+include::klassenDatatjeneste.adoc[]
