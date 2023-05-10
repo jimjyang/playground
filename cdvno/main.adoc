@@ -54,7 +54,7 @@ Tabellen under viser egenskapene som bør ha "kodet verdi", med mulige kandidate
 |===
 | *egenskap* | *eksempler* | *mulige taksonomier*
 3+| *_klassen Block (cdvno:Block)_*
-| access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
+| access rights (dct:accessRights) | allmenn tilgang, begrenset tilgang, ikke-allmenn tilgang | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
 | audience (dct:audience) | tjenestetilbyder, tjenestemottaker, pårørende, ... | 
 | main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
 | spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Gamle byen, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
