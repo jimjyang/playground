@@ -168,14 +168,16 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | dct:Location
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi geografisk dekning som blokkens innhold er ment for.
 
-_This property is used to specify spatial coverage that the content of the block is meant for. _
+_This property is used to specify spatial coverage that the content of the block is meant for._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | 
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
+   dct:spatial <http://publications.europa.eu/resource/authority/country/NOR>; # Norge
    .
 -----
 
