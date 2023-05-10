@@ -16,7 +16,7 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 
 image:../shared/images/work-in-progress.png[WIP,72,72] Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
 
-
+ 
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
