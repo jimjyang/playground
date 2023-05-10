@@ -530,6 +530,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-beskrivelse">Blokk – beskrivelse (dct:description)</a></li>
 </ul>
 </li>
+<li><a href="#Blokk-identifikator">Blokk identifikator (dct:identifier)</a></li>
+<li><a href="#Blokk-hovedspråk">Blokk - hovedspråk (dct:language)</a></li>
 <li><a href="#_blokk_osv_osv_osv">Blokk - osv. osv. osv.</a></li>
 <li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a></li>
 <li><a href="#Blokk-valgfrie-egenskaper">Valgfrie egenskaper for <em>Blokk</em></a></li>
@@ -853,6 +855,108 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 <div class="sect3">
+<h4 id="Blokk-identifikator"><a class="anchor" href="#Blokk-identifikator"></a>Blokk identifikator (dct:identifier)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>identifier</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:anyURI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi identifikator til blokken.</p>
+<p class="tableblock"><em>This property is used to specify an identifier to the block.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merkand / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator" class="ext-link" target="_blank" rel="noopener">Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗</a></p>
+<p class="tableblock">See <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator" class="ext-link" target="_blank" rel="noopener">Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗</a> (in Norwegian only)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:identifier &lt;https://example.org/aBlock&gt;;
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-hovedspråk"><a class="anchor" href="#Blokk-hovedspråk"></a>Blokk - hovedspråk (dct:language)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>main language</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:LinguisticSystem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi hovedspråket blokkens innhold er på.</p>
+<p class="tableblock"><em>This property is used to specify the main language that the concent of the block is in.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a>.</p>
+<p class="tableblock">The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt;; # bokmål
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_blokk_osv_osv_osv"><a class="anchor" href="#_blokk_osv_osv_osv"></a>Blokk - osv. osv. osv.</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -914,7 +1018,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-10 10:48:13 UTC
+Sist oppdatert 2023-05-10 10:59:14 UTC
 </div>
 </div>
 </body>
