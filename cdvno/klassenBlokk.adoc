@@ -87,6 +87,30 @@ Eksempel i RDF Turtle:
    .
 -----
 
+==== Blokk tema (dcat:theme) [[Blokk-tema]] 
+
+[cols="30s,70d"]
+|===
+| _English name_ | _theme_
+| URI | dcat:theme
+| Verdiområde / _Range_ | skos:Concept
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi tema som blokkens innhold handler om. 
+
+_This property is used to specify the theme which the content of the block is about._ 
+| Multiplisitet / _Multiplicity_ | 1..n
+| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], eller andre sektorspesifikke taksonomier. 
+
+The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], or other sector specific taxonomies. 
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dcat:theme <https://psi.norge.no/los/tema/avlastning-og-stotte>; 
+   .
+-----
+
 ==== Blokk - osv. osv. osv.  
 
 [cols="30s,70d"]
