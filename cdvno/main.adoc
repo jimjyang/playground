@@ -14,9 +14,12 @@ include::../locale/attributes.adoc[]
 NOTE: *Innmelding av feil og mangler:* + 
 Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
 
-image:images/warning-playground.png[WIP,72,72] Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification).   
+// image:images/warning-playground.png[WIP,72,72] Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
 
- 
+[cols="10,90", grid=nome,frame=none] 
+|===
+| image:images/warning-playground.png[playground// ,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
+|===
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
