@@ -26,7 +26,7 @@
    dct:audience <https://w3id.org/demo-resources/demo-classifications#demo-category-A>;
    dct:creator <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>;
    dct:created "2023-05-01"^^xsd:date;
-   dct:modified "2023-05-01"^^xsd:date;
+   dct:modified "2023-0510"^^xsd:date;
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED>;
    dct:type <https://w3id.org/demo-resources/demo-classifications#demo-category-A>;
    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL>;
@@ -49,4 +49,4 @@
    dcat:accessService <https://w3id.org/demo-resources/dummy-datasets#dmyDataSrvc1>;
    .
  
-#### End of the file, 2023-05-10 15:28:49
+#### End of the file, 2023-05-11 18:23:25
