@@ -29,6 +29,8 @@ Eksempel i RDF Turtle:
 | URI | dcat:endpointURL
 | Verdiområde / _Range_ | rdfs:Resource
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi rotplassering eller primært endepunkt for tjenesten (en URI).
+
+_This property is used to specify the root location or primary endpoint of the service (an IRI)._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
@@ -36,6 +38,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:endpointURL <>;
    .
 -----
 
@@ -48,6 +51,8 @@ Eksempel i RDF Turtle:
 | URI | dct:identifier
 | Verdiområde / _Range_ | rdfs:Literal
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikator til datatjenesten.
+
+_This property is used to specify the identifier to the service._
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
@@ -55,6 +60,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:identifier ""^^xsd:anyURI;
    .
 -----
 
@@ -66,6 +72,8 @@ Eksempel i RDF Turtle:
 | URI | dct:title
 | Verdiområde / _Range_ | rdfs:Literal
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navn på datatjenesten. BEgenskapen bør gjentas når navnet finnes på flere ulike språk.
+
+_This property is used to specify the title of the service. This property should be repeated for parallel language versions of the title._
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
@@ -73,6 +81,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:title "testAPI"@nb, "test API"@en; # tittel
    .
 -----
 
@@ -87,6 +96,8 @@ Eksempel i RDF Turtle:
 | URI | dcat:keyword
 | Verdiområde / _Range_ | rdfs:Literal
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi emneord (eller tag) som beskriver datatjenesten. Egenskapen bør gjentas når emneord finnes på flere språk. 
+
+_This property is used to specify keyword (or tag) which describes the service. This property should be repeated for parallel language versions of the keyword._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -94,6 +105,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:keyword "test"@nb, "test"@en; # emneord
    .
 -----
 
@@ -104,7 +116,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _endpoint description_
 | URI | dcat:endpointDescription
 | Verdiområde / _Range_ | rdfs:Resource
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens dct:conformsTo brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens `dct:conformsTo `brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
+
+_This property is sued to specify a description of the services available via the end-points, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while `dct:conformsTo` is used to indicate the general standard or specification that the endpoints implement._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -112,6 +126,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:endpointDescription <>;
    .
 -----
 
@@ -120,16 +135,22 @@ Eksempel i RDF Turtle:
 [cols="30s,70d"]
 |===
 | _English name_ |_format_
-| URI |dct:format
+| URI | dct:format
 | Verdiområde / _Range_ |dct:MediaTypeOrExtent
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datatjenestens dataformat. Egenskapen kan gjentas for datatjenester som leverer data i flere formater.
+
+_This property is used to specify the format of the service. This property may be repeated for services that provide data in several formats._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   <http://publications.europa.eu/resource/authority/file-type/TXT>;
    .
 -----
 
@@ -141,6 +162,8 @@ Eksempel i RDF Turtle:
 | URI | dcat:contactPoint
 | Verdiområde / _Range_ | vcard:Kind
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.
+
+_This property is used to specify contact point(s) which may be used to e.g. send comments about the service._ 
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -148,6 +171,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:contactPoint [ a vcard:Organization; ]
    .
 -----
 
@@ -158,14 +182,20 @@ Eksempel i RDF Turtle:
 | _English name_ | _theme_
 | URI | dcat:theme
 | Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema. 
+
+_This property is used to refer to a main theme for the service. A service may be associated with several themes._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer, f.eks. #...#.
+
+_The value should be chosen from controlled vocabularies, such as #...#._
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:theme <https://psi.norge.no/los/tema/avlastning-og-stotte>; # Los, avlastning og støtte
    .
 -----
 
@@ -177,6 +207,8 @@ Eksempel i RDF Turtle:
 | URI | dcat:servesDataset
 | Verdiområde / _Range_ | dcat:Dataset
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.
+
+_This property is used to refer to datasett(s) which the service may distribute._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -184,6 +216,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:servesDataset [ a dcat:Dataset; ]; 
    .
 -----
 
@@ -194,14 +227,20 @@ Eksempel i RDF Turtle:
 | _English name_ | _publisher_
 | URI | dct:publisher
 | Verdiområde / _Range_ | org:Organization
-| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. Bør være autoritativ URI for aktøren, f.eks.: `dct:publisher <\https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>`.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. 
+
+_This property is used to refer to the agent who is responsible for making the service available._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Virksomhetens identifikasjonsnummer bør brukes, f.eks. Enhetsregisterets organisasjonsnummer.
+
+_The organization’s identifier should be used, e.g. the organization number registered in the Central Coordinating Register for Legal Entities (CCR)._
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>;
    .
 -----
 
@@ -215,6 +254,8 @@ Eksempel i RDF Turtle:
 | URI | dct:description
 | Verdiområde / _Range_ | rdfs:Literal
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. Egenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.
+
+_This property is used to specify a free-text description of the service. This property should be repeated for parallel language versions of the description._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -222,6 +263,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:description "bare for testing"@nb, "only for testing"@en; # beskrivelse
    .
 -----
 
@@ -232,6 +274,8 @@ Eksempel i RDF Turtle:
 | URI | foaf:page
 | Verdiområde / _Range_ | foaf:Document
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en side eller et dokument som beskriver datatjenesten.
+
+_THis property is used to refer to a page or a document which describes the service._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -239,6 +283,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   foaf:page [ a foaf:Document; ]; 
    .
 -----
 
@@ -249,6 +294,8 @@ Eksempel i RDF Turtle:
 | URI | dct:conformsTo
 | Verdiområde / _Range_ | dct:Standard
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en spesifikasjon eller standard som datatjenesten implementerer.
+
+_This property is used to refer to a specification or standard which the service implements._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -256,6 +303,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:conformsTo [ a dct:Standard; ]; 
    .
 -----
 
@@ -266,6 +314,8 @@ Eksempel i RDF Turtle:
 | URI | dcat:landingPage
 | Verdiområde / _Range_ | foaf:Document
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til nettside som gir tilgang til datatjenesten og/eller tilleggsinformasjon. Intensjonen er å peke til en landingsside hos den opprinnelige datautgiveren.
+
+_This property is used to refer to a landing page which provides access to the service and/or additional information. The intention is to refer to the landing page at the original publisher of the data._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -273,6 +323,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:landingPage <>; 
    .
 -----
 
@@ -283,13 +334,19 @@ Eksempel i RDF Turtle:
 | URI | dct:license
 | Verdiområde / _Range_ | dct:LicenseDocument
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi lisensen som datatjenesten blir gjort tilgjengelig under.
+
+_This property is used to specify the licence under which the service is made available._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:license <http://publications.europa.eu/resource/authority/licence/CC0>; # lisens CC0
    .
 -----
 
@@ -301,13 +358,19 @@ Eksempel i RDF Turtle:
 | URI | dcat:mediaType
 | Verdiområde / _Range_ | dct:MediaType
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datatjenestens medietype. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere medietyper.
+
+_This property is used to specify the media type of the service. This property may be repeated for APIs or end-user applications which provide data in several media types._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dcat:mediaType <>; 
    .
 -----
 
@@ -318,7 +381,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _access rights_
 | URI | dct:accessRights
 | Verdiområde / _Range_ | dct:RightsStatement
-| Anvendelse / _Usage note_ | Egenskapen brukes til å brukes til å inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.
+
+_This property is used to include information regarding access or restrictions based on privacy, security, or other policies._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -326,5 +391,6 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
+   dct:accessRights [ a dct:RightsStatement; ]; 
    .
 -----
