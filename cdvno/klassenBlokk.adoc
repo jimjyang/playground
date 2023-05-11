@@ -216,7 +216,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _date created_
 | URI | dct:created
 | Verdiområde / _Range_ | xsd:date
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datoen når blokkens innhold ble første gang opprettet. 
+
+_This property is used to specify the date when the content of the block first time was created._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -235,7 +237,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _date modified_
 | URI | dct:modified
 | Verdiområde / _Range_ | xsd:date
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datoen når blokkens innhold sist ble oppdatert. 
+
+_This property is used to specify the date when the content of the block was last time modified._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -244,25 +248,6 @@ Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
    dct:modified "2023-05-10"^^xsd:date; # dato sist oppdatert
-   .
------
-
-===== Blokk - status (adms:status) [[Blokk-status]]  
-
-[cols="30s,70d"]
-|===
-| _English name_ | _status_
-| URI | adms:status
-| Verdiområde / _Range_ | skos:Concept 
-| Anvendelse / _Usage note_ | 
-| Multiplisitet / _Multiplicity_ | 0..1
-| Kravnivå / _Requirement level_ | Valgfri / _Optional_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   adms:status <>; # status
    .
 -----
 
