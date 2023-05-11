@@ -40,30 +40,6 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - identifikator (dct:identifier) [[Blokk-identifikator]]  
-
-[cols="30s,70d"]
-|===
-| _English name_ | _identifier_
-| URI | dct:identifier
-| Verdiområde / _Range_ | xsd:anyURI
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikatoren til blokken.
-
-_This property is used to specify the identifier to the block._
-| Multiplisitet / _Multiplicity_ | 1..1
-| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merkand / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
-
-See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only)
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   dct:identifier <https://example.org/aBlock>; 
-   .
------
-
 ===== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
 
 [cols="30s,70d"]
@@ -85,6 +61,30 @@ Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
    dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # bokmål
+   .
+-----
+
+===== Blokk - identifikator (dct:identifier) [[Blokk-identifikator]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _identifier_
+| URI | dct:identifier
+| Verdiområde / _Range_ | xsd:anyURI
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikatoren til blokken.
+
+_This property is used to specify the identifier to the block._
+| Multiplisitet / _Multiplicity_ | 1..1
+| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
+| Merkand / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+
+See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only)
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:identifier <https://example.org/aBlock>; 
    .
 -----
 
@@ -135,6 +135,28 @@ Eksempel i RDF Turtle:
 
 ==== Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
 
+===== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
+
+[cols="30s,70d"]
+|===
+| _English name_ | _spatial coverage_
+| URI | dct:spatial
+| Verdiområde / _Range_ | dct:Location
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi geografisk eller administrativ dekningsområde som blokkens innhold er relevant for.
+
+_This property is used to specify spatial or administrative coverage that the content of the block is relevant for._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | 
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:spatial <http://publications.europa.eu/resource/authority/country/NOR>; # Norge
+   .
+-----
+
 ===== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
 
 [cols="30s,70d"]
@@ -159,53 +181,23 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
-
-[cols="30s,70d"]
-|===
-| _English name_ | _spatial coverage_
-| URI | dct:spatial
-| Verdiområde / _Range_ | dct:Location
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi geografisk eller administrativ dekningsområde som blokkens innhold er relevant for.
-
-_This property is used to specify spatial or administrative coverage that the content of the block is relevant for._
-| Multiplisitet / _Multiplicity_ | 0..n
-| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | 
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   dct:spatial <http://publications.europa.eu/resource/authority/country/NOR>; # Norge
-   .
------
-
-
-
 ==== Valgfrie egenskaper for _Blokk_ [[Blokk-valgfrie-egenskaper]]
 
-===== Blokk - målgruppe (dct:audience) [[Blokk-målgruppe]]  
+===== Blokk - brukerbehov (cdvno:userNeed) [[Blokk-brukerbehov]] 
 
 [cols="30s,70d"]
 |===
-| _English name_ | _audience_
-| URI | dct:audience
-| Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for. 
-
-_This property is used to specify the audience that the content of the block is meant for._
-| Multiplisitet / _Multiplicity_ | 0..n
+| _English name_ | _user need_
+| URI | cvdno:userNeed
+| Verdiområde / _Range_ | skos:Concept 
+| Anvendelse / _Usage note_ | 
+| Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
-
-_The value should be chosen from a controlled vocabulary._ 
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:audience <>; # målgruppe
    .
 -----
 
@@ -251,13 +243,13 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - type (dct:type) [[Blokk-type]] 
+===== Blokk - gyldighetsperiode (cv:validityPeriod) [[Blokk-gyldighetsperiode]] 
 
 [cols="30s,70d"]
 |===
-| _English name_ | _type_
-| URI | dct:type
-| Verdiområde / _Range_ | skos:Concept
+| _English name_ | validity period
+| URI | cv:validityPeriod
+| Verdiområde / _Range_ | time:ProperInterval 
 | Anvendelse / _Usage note_ | 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
@@ -266,7 +258,31 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:type <>; # type
+   cv:validityPeriod <https://w3id.org/demo-resources/dummy-times#dmyPropInterval1>;
+   .
+-----
+
+===== Blokk - målgruppe (dct:audience) [[Blokk-målgruppe]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _audience_
+| URI | dct:audience
+| Verdiområde / _Range_ | skos:Concept
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for. 
+
+_This property is used to specify the audience that the content of the block is meant for._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
+
+_The value should be chosen from a controlled vocabulary._ 
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:audience <>; # målgruppe
    .
 -----
 
@@ -289,31 +305,13 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - brukerbehov (cdvno:userNeed) [[Blokk-brukerbehov]] 
+===== Blokk - type (dct:type) [[Blokk-type]] 
 
 [cols="30s,70d"]
 |===
-| _English name_ | _user need_
-| URI | cvdno:userNeed
-| Verdiområde / _Range_ | skos:Concept 
-| Anvendelse / _Usage note_ | 
-| Multiplisitet / _Multiplicity_ | 0..n 
-| Kravnivå / _Requirement level_ | Valgfri / _Optional_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   .
------
-
-===== Blokk - gyldighetsperiode (cv:validityPeriod) [[Blokk-gyldighetsperiode]] 
-
-[cols="30s,70d"]
-|===
-| _English name_ | validity period
-| URI | cv:validityPeriod
-| Verdiområde / _Range_ | time:ProperInterval 
+| _English name_ | _type_
+| URI | dct:type
+| Verdiområde / _Range_ | skos:Concept
 | Anvendelse / _Usage note_ | 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
@@ -322,7 +320,7 @@ Eksempel i RDF Turtle:
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   cv:validityPeriod <https://w3id.org/demo-resources/dummy-times#dmyPropInterval1>;
+   dct:type <>; # type
    .
 -----
 

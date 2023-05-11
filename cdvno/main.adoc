@@ -82,7 +82,7 @@ Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kand
 
 == Spesifikasjonen 
  
-#_Etter at innholdet er blitt forholdsvis stabilt, vil egenskapene bli sort alfabetisk etter norske navn, nå er de forsøkt sortert etter engelske navn._# 
+#_Egenskapene er forsøkt sortert etter norske navn._# 
 
 include::klassenBlokk.adoc[]
 
