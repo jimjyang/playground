@@ -8,6 +8,9 @@
 _The class is used to represent a data service which provides access to one or more online resources._
 | URI | dcat:DataService
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Datatjeneste (dcat:DataService) spesifisert i https://data.norge.no/specification/dcat-ap-no#Datatjeneste[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+
+_In addition to the properties that are specified here, the properties in the class Data service (dcat:DataService) specified in https://data.norge.no/specification/dcat-ap-no#Datatjeneste[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used._
 |===
 
 Eksempel i RDF Turtle:
