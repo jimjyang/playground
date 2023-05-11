@@ -104,7 +104,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _endpoint description_
 | URI | dcat:endpointDescription
 | Verdiområde / _Range_ | rdfs:Resource
-| Anvendelse / _Usage note_ | Denne egenskapen inneholder en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens dct:conformsTo brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens dct:conformsTo brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -122,7 +122,7 @@ Eksempel i RDF Turtle:
 | _English name_ |_format_
 | URI |dct:format
 | Verdiområde / _Range_ |dct:MediaTypeOrExtent
-| Anvendelse / _Usage note_ |Opplysning om datatjenestens dataformat. Kan gjentas for datatjenester som leverer data i flere formater.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datatjenestens dataformat. Egenskapen kan gjentas for datatjenester som leverer data i flere formater.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -140,7 +140,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _contact point_
 | URI | dcat:contactPoint
 | Verdiområde / _Range_ | vcard:Kind
-| Anvendelse / _Usage note_ | Referanse til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -158,7 +158,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _theme_
 | URI | dcat:theme
 | Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | Referanse til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -176,7 +176,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _serves dataset_
 | URI | dcat:servesDataset
 | Verdiområde / _Range_ | dcat:Dataset
-| Anvendelse / _Usage note_ | Refererer til datasett som datatjenesten kan distribuere.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -194,7 +194,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _publisher_
 | URI | dct:publisher
 | Verdiområde / _Range_ | foaf:Agent
-| Anvendelse / _Usage note_ | Referanse til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. Bør være autoritativ URI for aktøren, f.eks.: `dct:publisher <\https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>`.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. Bør være autoritativ URI for aktøren, f.eks.: `dct:publisher <\https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>`.
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -214,7 +214,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _description_
 | URI | dct:description
 | Verdiområde / _Range_ | rdfs:Literal
-| Anvendelse / _Usage note_ | Inneholder en fritekstbeskrivelse av datatjenesten. Bør gjentas når beskrivelsen finnes på flere ulike språk.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. EGenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -231,7 +231,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _page (documentation)_
 | URI | foaf:page
 | Verdiområde / _Range_ | foaf:Document
-| Anvendelse / _Usage note_ | Referanse til en side eller et dokument som beskriver datatjenesten.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en side eller et dokument som beskriver datatjenesten.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -248,7 +248,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _conforms to_
 | URI | dct:conformsTo
 | Verdiområde / _Range_ | dct:Standard
-| Anvendelse / _Usage note_ | Referanse til en spesifikasjon eller standard som datatjenesten implementerer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en spesifikasjon eller standard som datatjenesten implementerer.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -265,7 +265,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _landing page_
 | URI | dcat:landingPage
 | Verdiområde / _Range_ | foaf:Document
-| Anvendelse / _Usage note_ | Referanse til nettside som gir tilgang til datatjenesten og/eller tilleggsinformasjon. Intensjonen er å peke til en landingsside hos den opprinnelige datautgiveren.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til nettside som gir tilgang til datatjenesten og/eller tilleggsinformasjon. Intensjonen er å peke til en landingsside hos den opprinnelige datautgiveren.
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -282,7 +282,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _licence_
 | URI | dct:license
 | Verdiområde / _Range_ | dct:LicenseDocument
-| Anvendelse / _Usage note_ | Inneholder lisensen som datatjenesten blir gjort tilgjengelig under.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi lisensen som datatjenesten blir gjort tilgjengelig under.
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -300,7 +300,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _media type_
 | URI | dcat:mediaType
 | Verdiområde / _Range_ | dct:MediaType
-| Anvendelse / _Usage note_ | Opplysning om datatjenestens medietype. Kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere medietyper.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datatjenestens medietype. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere medietyper.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -318,7 +318,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _access rights_
 | URI | dct:accessRights
 | Verdiområde / _Range_ | dct:RightsStatement
-| Anvendelse / _Usage note_ | Denne egenskapen kan inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å brukes til å inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
