@@ -10,7 +10,7 @@ _The class is used to represent a data service which provides access to one or m
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Datatjeneste (dcat:DataService) spesifisert i https://data.norge.no/specification/dcat-ap-no#Datatjeneste[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
 
-_In addition to the properties that are specified here, the properties in the class Data service (dcat:DataService) specified in https://data.norge.no/specification/dcat-ap-no#Datatjeneste[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used._
+__In addition to the properties that are specified here, the properties in t_he class Data service (dcat:DataService) specified in https://data.norge.no/specification/dcat-ap-no#Datatjeneste[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
 |===
 
 Eksempel i RDF Turtle:
@@ -193,7 +193,7 @@ Eksempel i RDF Turtle:
 |===
 | _English name_ | _publisher_
 | URI | dct:publisher
-| Verdiområde / _Range_ | foaf:Agent
+| Verdiområde / _Range_ | org:Organization
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. Bør være autoritativ URI for aktøren, f.eks.: `dct:publisher <\https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673>`.
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
@@ -214,7 +214,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _description_
 | URI | dct:description
 | Verdiområde / _Range_ | rdfs:Literal
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. EGenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. Egenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
