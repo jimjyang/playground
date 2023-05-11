@@ -18,6 +18,122 @@ Eksempel i RDF Turtle:
 
 ==== Obligatoriske egenskaper for _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
 
+==== Distribusjon - tilgangsURL (dcat:accessURL) [[Distribusjon-tilgangsURL]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _access URL_
+| URI | 	dcat:accessURL
+| Verdiområde / _Range_ | rdfs:Resource
+| Anvendelse / _Usage note_ | En URL som gir tilgang til en distribusjon av datasettet. Ressursen det pekes til kan gi informasjon om hvordan en kan få tilgang til datasettet.
+
+_A URL that provides access to a distribusjon of the dataset. The resource referred to may provide information about how to get access to the dataset._
+| Multiplisitet / _Multiplicity_ | 1..n 
+| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   .
+-----
+
 ==== Anbefalte egenskaper for _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
+
+==== Distribusjon - beskrivelse (dct:description) [[Distribusjon-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _description_
+| URI | 	dct:description
+| Verdiområde / _Range_ | rdf:langString
+| Anvendelse / _Usage note_ | Egenskapen bruks til å oppgi en fritekstbeskrivelse av distribusjonen. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.
+
+_This property is used to specify a free text description of the distribusjon. This property should be repeated for parallel language versions of the description._
+| Multiplisitet / _Multiplicity_ | 0..n 
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+|===
+
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   .
+-----
+
+==== Distribusjon - format (dct:format) [[Distribusjon-format]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _format_
+| URI | 	dct:format
+| Verdiområde / _Range_ | dct:MediaTypeOrExtent
+| Anvendelse / _Usage note_ | Egenskapen bruks til å oppgi distribusjonens format. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.
+
+_This property is used to specify the format of the distribtion. This property may be repeated APIs and end user applications which provide data i several formats._
+| Multiplisitet / _Multiplicity_ | 0..n 
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
+
+_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]._
+|===
+
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   dct:format <http://publications.europa.eu/resource/authority/file-type/HTML>; # format HTML
+   .
+-----
+
+===== Distribusjon - lisens (dct:license) [[Distribusjon-lisens]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _licence_
+| URI | dct:license
+| Verdiområde  / _Range_ | dct:LicenseDocument
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi lisensen som distribusjonen er gjort tilgjengelig under.
+
+_This property is used to specify the licence under which the distribution is made available._
+| Multiplisitet / _Multiplicity_ | 0..1
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].
+
+_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]._
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   dct:license <http://publications.europa.eu/resource/authority/licence/CC0>; # lisens CC0
+   .
+-----
+
+
+===== Distribusjon - status (adms:status) [[Distribusjon-status]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _status_
+| URI | adms:status
+| Verdiområde / _Range_ | skos:Concept 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å angi distribusjonens modenhet.
+
+_This property is used to specify the status of the distribution in the context of maturity lifecycle._
+| Multiplisitet / _Multiplicity_ | 0..1
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"].
+
+_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]._
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   adms:status <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED>; # status ferdigstilt
+   .
+-----
+
 
 ==== Valgfrie egenskaper for _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
