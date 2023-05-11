@@ -1,0 +1,31 @@
+Options +FollowSymLinks
+# Turn off MultiViews
+Options -MultiViews
+
+# Rewrite engine setup
+RewriteEngine On
+
+#### Rewrite rules for cdvno/test
+# text/turtle
+RewriteCond %{HTTP:Accept} text/turtle [NC] 
+RewriteRule ^(cdvno/test)$  https://jimjyang.github.io/playground/cdvno/files/$1.ttl [R=302,L]
+# Norwegian Bokmål
+RewriteCond %{HTTP:Accept-Language} nb [NC]
+RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-nb [R=302,L]
+# Norwegian Nynorsk
+RewriteCond %{HTTP:Accept-Language} nn [NC]
+RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-nb [R=303,L]
+# Norwegian Norsk
+RewriteCond %{HTTP:Accept-Language} no [NC]
+RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-nb [R=303,L]
+# English
+RewriteCond %{HTTP:Accept-Language} en [NC]
+RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-en [R=302,L]
+# English as default
+RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-en [R=303,L] 
+
+#### redirect to default cdvno
+RewriteRule ^cdvno https://jimjyang.github.io/playground/cdvno/ [R=302,L]
+
+#### redirect to overview
+RewriteRule ^$ https://jimjyang.github.io/playground/ [R=302,L]
