@@ -1282,7 +1282,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å indikere brukerbehov som blokkens innhold kan være relevant for.</p>
+<p class="tableblock"><em>This property is used to indicate the user need that the concent of the block may be relevant for.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1291,6 +1292,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer.</p>
+<p class="tableblock"><em>The value should be chosen from controlled vocabularies.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1515,7 +1521,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.</p>
+<p class="tableblock"><em>This property is used to specify the frequency at which the Dataset is updated.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1525,6 +1532,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency" class="ext-link" target="_blank" rel="noopener">Frequency ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency" class="ext-link" target="_blank" rel="noopener">Frequency ↗</a>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -1533,7 +1545,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/TRIENNIAL&gt;;
+   dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/TRIENNIAL&gt;; # hvert tredje år
    .</pre>
 </div>
 </div>
@@ -1560,7 +1572,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datasettets type.</p>
+<p class="tableblock"><em>This property is used to specify the type of the Dataset.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1569,6 +1582,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type ↗</a>.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1605,7 +1623,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi versjonsnummeret til blokkens innhold.</p>
+<p class="tableblock"><em>This property is used to specify the version number of the content of the block.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1650,7 +1669,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.</p>
+<p class="tableblock"><em>This property is used to describe the differences between this version and a previous version of the content of the block.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3436,7 +3456,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-11 08:31:34 UTC
+Sist oppdatert 2023-05-11 08:41:27 UTC
 </div>
 </div>
 </body>

@@ -193,9 +193,14 @@ Eksempel i RDF Turtle:
 | _English name_ | _user need_
 | URI | cvdno:userNeed
 | Verdiområde / _Range_ | skos:Concept 
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å indikere brukerbehov som blokkens innhold kan være relevant for. 
+
+_This property is used to indicate the user need that the concent of the block may be relevant for._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer. 
+
+_The value should be chosen from controlled vocabularies._ 
 |===
 
 Eksempel i RDF Turtle:
@@ -299,14 +304,19 @@ Eksempel i RDF Turtle:
 | URI | dct:accrualPeriodicity
 | Verdiområde / _Range_ | dct:Frequency
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.
+
+_This property is used to specify the frequency at which the Dataset is updated._
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL>;
+   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL>; # hvert tredje år
    .
 -----
 
@@ -317,9 +327,14 @@ Eksempel i RDF Turtle:
 | _English name_ | _type_
 | URI | dct:type
 | Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datasettets type.
+
+_This property is used to specify the type of the Dataset._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -336,7 +351,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _version number_ 
 | URI | owl:versionInfo
 | Verdiområde / _Range_ | rdfs:Literal
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi versjonsnummeret til blokkens innhold.
+
+_This property is used to specify the version number of the content of the block._
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -355,7 +372,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _version notes_
 | URI | adms:versionNotes
 | Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.
+
+_This property is used to describe the differences between this version and a previous version of the content of the block._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
