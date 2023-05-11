@@ -34,10 +34,10 @@ Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard fo
 Kort forklaring til metadatamodellen: 
 
 * Obligatorisk/skal (_mandatory/shall_) betyr "skal alltid tas med"; anbefalt/bør (_recommended/should_) betyr "bør tas med hvis finnes" og valgfri/kan (_optional/may_) betyr "kan tas med". 
-* Innholdet som skal "tagges" (= beskrives med metadata) er en instans av klassen "Content (rdfs:Recource)".
-* Innholdet kan nås via en instans av klassen "Distribution (dcat:Distribution)" eller en instans av klassen "Data service (API) (dcat:DataService)".
-* Innholdet beskrives ("tagges") med egenskapene i klassen "Block (cdvno:Block)".
-** Klassen "Block (cdvno:Block)" er en subklasse av klassen "Dataset (dcat:Dataset)" fra ovennevnte DCAT-AP-NO. 
+* Et gitt innhold som skal "tagges" (= beskrives med metadata) er en instans av klassen "Innhold (rdfs:Recource)".
+* Innholdet kan nås via en instans av klassen "Distribusjon (dcat:Distribution)" eller en instans av klassen "Datatjeneste (API) (dcat:DataService)".
+* Innholdet beskrives ("tagges") med egenskapene i klassen "Blokk (cdvno:Block)".
+** Klassen "Blokk (cdvno:Block)" er en subklasse av klassen "Datasett (dcat:Dataset)" fra ovennevnte DCAT-AP-NO. 
 * #_Mer utdypende forklaring kan komme senere hvis trengs_#
 
 
