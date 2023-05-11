@@ -8,6 +8,9 @@
 _The class is used to represent a distribution of an online resource._
 | URI | dcat:Distribution
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Distribusjon (dcat:Distribution) spesifisert i https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+
+_In addition to the properties that are specified here, the properties in the class Dataset (dcat:Distribution) specified in https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used._
 |===
 
 Eksempel i RDF Turtle:
