@@ -2622,7 +2622,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi rotplassering eller primært endepunkt for tjenesten (en URI).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi rotplassering eller primært endepunkt for tjenesten (en URI).</p>
+<p class="tableblock"><em>This property is used to specify the root location or primary endpoint of the service (an IRI).</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2640,6 +2641,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:endpointURL &lt;&gt;;
    .</pre>
 </div>
 </div>
@@ -2666,7 +2668,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi identifikator til datatjenesten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi identifikator til datatjenesten.</p>
+<p class="tableblock"><em>This property is used to specify the identifier to the service.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2684,6 +2687,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:identifier ""^^xsd:anyURI;
    .</pre>
 </div>
 </div>
@@ -2710,7 +2714,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi navn på datatjenesten. BEgenskapen bør gjentas når navnet finnes på flere ulike språk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi navn på datatjenesten. BEgenskapen bør gjentas når navnet finnes på flere ulike språk.</p>
+<p class="tableblock"><em>This property is used to specify the title of the service. This property should be repeated for parallel language versions of the title.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2728,6 +2733,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:title "testAPI"@nb, "test API"@en; # tittel
    .</pre>
 </div>
 </div>
@@ -2757,7 +2763,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi emneord (eller tag) som beskriver datatjenesten. Egenskapen bør gjentas når emneord finnes på flere språk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi emneord (eller tag) som beskriver datatjenesten. Egenskapen bør gjentas når emneord finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify keyword (or tag) which describes the service. This property should be repeated for parallel language versions of the keyword.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2775,6 +2782,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:keyword "test"@nb, "test"@en; # emneord
    .</pre>
 </div>
 </div>
@@ -2801,7 +2809,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens dct:conformsTo brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens <code>dct:conformsTo `brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.</p>
+<p class="tableblock"><em>This property is sued to specify a description of the services available via the end-points, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while `dct:conformsTo</code> is used to indicate the general standard or specification that the endpoints implement.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2819,6 +2828,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:endpointDescription &lt;&gt;;
    .</pre>
 </div>
 </div>
@@ -2845,7 +2855,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datatjenestens dataformat. Egenskapen kan gjentas for datatjenester som leverer data i flere formater.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datatjenestens dataformat. Egenskapen kan gjentas for datatjenester som leverer data i flere formater.</p>
+<p class="tableblock"><em>This property is used to specify the format of the service. This property may be repeated for services that provide data in several formats.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2855,6 +2866,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type" class="ext-link" target="_blank" rel="noopener">File type ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type" class="ext-link" target="_blank" rel="noopener">File type ↗</a>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2863,6 +2879,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   &lt;http://publications.europa.eu/resource/authority/file-type/TXT&gt;;
    .</pre>
 </div>
 </div>
@@ -2889,7 +2906,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.</p>
+<p class="tableblock"><em>This property is used to specify contact point(s) which may be used to e.g. send comments about the service.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2907,6 +2925,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:contactPoint [ a vcard:Organization; ]
    .</pre>
 </div>
 </div>
@@ -2933,7 +2952,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til et hovedtema for datatjenesten. En datatjeneste kan assosieres med flere tema.</p>
+<p class="tableblock"><em>This property is used to refer to a main theme for the service. A service may be associated with several themes.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2943,6 +2963,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer, f.eks. <mark>&#8230;&#8203;</mark>.</p>
+<p class="tableblock"><em>The value should be chosen from controlled vocabularies, such as <mark>&#8230;&#8203;</mark>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2951,6 +2976,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:theme &lt;https://psi.norge.no/los/tema/avlastning-og-stotte&gt;; # Los, avlastning og støtte
    .</pre>
 </div>
 </div>
@@ -2977,7 +3003,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.</p>
+<p class="tableblock"><em>This property is used to refer to datasett(s) which the service may distribute.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2995,6 +3022,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:servesDataset [ a dcat:Dataset; ];
    .</pre>
 </div>
 </div>
@@ -3021,7 +3049,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig. Bør være autoritativ URI for aktøren, f.eks.: <code>dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/974760673&gt;</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.</p>
+<p class="tableblock"><em>This property is used to refer to the agent who is responsible for making the service available.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3031,6 +3060,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetens identifikasjonsnummer bør brukes, f.eks. Enhetsregisterets organisasjonsnummer.</p>
+<p class="tableblock"><em>The organization’s identifier should be used, e.g. the organization number registered in the Central Coordinating Register for Legal Entities (CCR).</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -3039,6 +3073,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:publisher &lt;https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827&gt;;
    .</pre>
 </div>
 </div>
@@ -3068,7 +3103,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. Egenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en fritekstbeskrivelse av datatjenesten. Egenskapen bør gjentas når beskrivelsen finnes på flere ulike språk.</p>
+<p class="tableblock"><em>This property is used to specify a free-text description of the service. This property should be repeated for parallel language versions of the description.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3086,6 +3122,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:description "bare for testing"@nb, "only for testing"@en; # beskrivelse
    .</pre>
 </div>
 </div>
@@ -3112,7 +3149,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en side eller et dokument som beskriver datatjenesten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en side eller et dokument som beskriver datatjenesten.</p>
+<p class="tableblock"><em>THis property is used to refer to a page or a document which describes the service.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3130,6 +3168,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   foaf:page [ a foaf:Document; ];
    .</pre>
 </div>
 </div>
@@ -3156,7 +3195,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en spesifikasjon eller standard som datatjenesten implementerer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en spesifikasjon eller standard som datatjenesten implementerer.</p>
+<p class="tableblock"><em>This property is used to refer to a specification or standard which the service implements.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3174,6 +3214,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:conformsTo [ a dct:Standard; ];
    .</pre>
 </div>
 </div>
@@ -3200,7 +3241,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til nettside som gir tilgang til datatjenesten og/eller tilleggsinformasjon. Intensjonen er å peke til en landingsside hos den opprinnelige datautgiveren.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til nettside som gir tilgang til datatjenesten og/eller tilleggsinformasjon. Intensjonen er å peke til en landingsside hos den opprinnelige datautgiveren.</p>
+<p class="tableblock"><em>This property is used to refer to a landing page which provides access to the service and/or additional information. The intention is to refer to the landing page at the original publisher of the data.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3218,6 +3260,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:landingPage &lt;&gt;;
    .</pre>
 </div>
 </div>
@@ -3244,7 +3287,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi lisensen som datatjenesten blir gjort tilgjengelig under.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi lisensen som datatjenesten blir gjort tilgjengelig under.</p>
+<p class="tableblock"><em>This property is used to specify the licence under which the service is made available.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3254,6 +3298,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence" class="ext-link" target="_blank" rel="noopener">Licence ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence" class="ext-link" target="_blank" rel="noopener">Licence ↗</a>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -3262,6 +3311,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC0&gt;; # lisens CC0
    .</pre>
 </div>
 </div>
@@ -3288,7 +3338,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datatjenestens medietype. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere medietyper.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datatjenestens medietype. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere medietyper.</p>
+<p class="tableblock"><em>This property is used to specify the media type of the service. This property may be repeated for APIs or end-user applications which provide data in several media types.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3298,6 +3349,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="ext-link" target="_blank" rel="noopener">IANA Media Types ↗</a>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -3306,6 +3362,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dcat:mediaType &lt;&gt;;
    .</pre>
 </div>
 </div>
@@ -3332,7 +3389,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å brukes til å inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å inkludere informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.</p>
+<p class="tableblock"><em>This property is used to include information regarding access or restrictions based on privacy, security, or other policies.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -3350,6 +3408,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
+   dct:accessRights [ a dct:RightsStatement; ];
    .</pre>
 </div>
 </div>
@@ -3461,7 +3520,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-11 08:57:36 UTC
+Sist oppdatert 2023-05-11 09:53:25 UTC
 </div>
 </div>
 </body>
