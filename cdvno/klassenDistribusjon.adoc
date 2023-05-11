@@ -169,7 +169,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | foaf:Document
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en side eller et dokument som beskriver distribusjonen.
 
-_This property ise used to refer to a page or document about this Distribution._
+_This property ise used to refer to a page or document about this distribution._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -258,7 +258,7 @@ Eksempel i RDF Turtle:
 
 _This property is used to refer to the media type of which the distribution is._
 | Multiplisitet / _Multiplicity_ | 0..n
-| Kravnivå / _Requirement level_ | Valgfri
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
 | Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
 
 __The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
