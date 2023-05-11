@@ -25,7 +25,7 @@ RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-
 RewriteRule ^(cdvno/test)$ https://jimjyang.github.io/playground/cdvno/files/$1-en [R=303,L] 
 
 #### redirect to default cdvno
-RewriteRule ^cdvno https://jimjyang.github.io/showroom/skos-ap-no/ [R=302,L]
+RewriteRule ^cdvno https://jimjyang.github.io/playground/cdvno/ [R=302,L]
 
 #### redirect to overview
 RewriteRule ^$ https://jimjyang.github.io/playground/ [R=302,L]
