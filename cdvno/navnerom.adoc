@@ -8,6 +8,7 @@ Navnerom for denne spesifikasjonen er https://jimjyang.github.io/playground/cdvn
 |===
 |*Prefiks*|*Navnerom*|*Forklaring/navn*
 |adms| `\http://www.w3.org/ns/adms#` | https://www.w3.org/TR/vocab-adms/[Asset Description Metadata Schema ↗, window="_blank", role="ext-link"]
+|cdvno| `\https://jimjyang.github.io/playground/cdvno#` | Denne spesifikasjonen
 |cv | `\http://data.europa.eu/m8g/` | https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/e-government-core-vocabularies[e-Government Core Vocabularies ↗, window="_blank", role="ext-link"]
 |dcat| `\http://www.w3.org/ns/dcat#` | https://www.w3.org/TR/vocab-dcat-2/[Data Catalog Vocabulary ↗, window="_blank", role="ext-link"]
 |dcatap| `\http://data.europa.eu/r5r/` | https://ec.europa.eu/isa2/solutions/dcat-application-profile-data-portals-europe_en/[DCAT Application Profile ↗, window="_blank", role="ext-link"]
