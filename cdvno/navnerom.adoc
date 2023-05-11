@@ -1,0 +1,37 @@
+=== Navnerom som er brukt i spesifikasjonen
+
+Navnerom for denne spesifikasjonen er \https://jimjyang.github.io/playground/cdvno# (#skal være en offisiell URI senere#)
+
+[[Tabell-navnerom]]
+.Oversikt over navnerom som er brukt i denne spesifikasjonen (tabellen nedenfor er deskriptiv)
+[cols="10,45,45"]
+|===
+|*Prefiks*|*Navnerom*|*Forklaring/navn*
+|adms| `\http://www.w3.org/ns/adms#` | https://www.w3.org/TR/vocab-adms/[Asset Description Metadata Schema]
+|cv | `\http://data.europa.eu/m8g/` | https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/e-government-core-vocabularies[e-Government Core Vocabularies]
+|dcat| `\http://www.w3.org/ns/dcat#` | https://www.w3.org/TR/vocab-dcat-2/[Data Catalog Vocabulary]
+|dcatap| `\http://data.europa.eu/r5r/` | https://ec.europa.eu/isa2/solutions/dcat-application-profile-data-portals-europe_en/[DCAT Application Profile, EU]
+|dct| `\http://purl.org/dc/terms/` | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCMI Metadata Terms]
+|org| `\http://www.w3.org/ns/org#` | https://www.w3.org/TR/vocab-org/[The Organization Ontology]
+|owl| `\http://www.w3.org/2002/07/owl#` |https://www.w3.org/OWL/[Web Ontology Language (OWL)]
+|rdf| `\http://www.w3.org/1999/02/22-rdf-syntax-ns#` | https://www.w3.org/TR/rdf-syntax-grammar/[RDF 1.1 XML Syntax]
+|rdfs| `\http://www.w3.org/2000/01/rdf-schema#` | https://www.w3.org/TR/rdf-schema/[RDF Schema 1.1]
+|vcard| `\http://www.w3.org/2006/vcard/ns#` | https://www.w3.org/TR/vcard-rdf/[vCard Ontology - for describing People and Organizations]
+|xsd| `\http://www.w3.org/2001/XMLSchema#` | https://www.w3.org/TR/xmlschema-2/[XML Schema Part 2: Datatypes Second Edition]
+|===
+
+Eksempel på prefiksene ovenfor uttrykt i RDF Turtle (_eksemplet er deskriptivt_):
+-----
+@prefix adms: <http://www.w3.org/ns/adms#> . 
+@prefix cv: <http://data.europa.eu/m8g/> . 
+@prefix dcat: <http://www.w3.org/ns/dcat#> . 
+@prefix dcatap: <http://data.europa.eu/r5r/> . 
+@prefix dct: <http://purl.org/dc/terms/> . 
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix cdvno: <https://jimjyang.github.io/playground/cdvno#> . 
+-----
