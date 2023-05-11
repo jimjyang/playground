@@ -61,7 +61,7 @@ Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kand
 | main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
 | spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Bydel Gamle Oslo, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
 | theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
-| type (dct:type #???#) | (om) rettigheter, ... | 
+| type (dct:type #???#) |  ... | 
 | update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
 | user need (cvdno:userNeed) | ... | EUs kommende kontrollerte vokabularer for livshendelser; Sektorspesifikke kodeverk (SNOMED CT); ... 
 3+| *_klassen Distribution (dcat:Distribution)_*
