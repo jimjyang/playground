@@ -10,7 +10,7 @@ _The class is used to represent a distribution of an online resource._
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Distribusjon (dcat:Distribution) spesifisert i https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
 
-_In addition to the properties that are specified here, the properties in the class Distribution (dcat:Distribution) specified in https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used._
+__In addition to the properties that are specified here, the properties in the class Distribution (dcat:Distribution) specified in https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
 |===
 
 Eksempel i RDF Turtle:
@@ -78,7 +78,7 @@ _This property is used to specify the format of the distribtion. This property m
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
 
-_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]._
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].__
 |===
 
 
@@ -103,7 +103,7 @@ _This property is used to specify the licence under which the distribution is ma
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].
 
-_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]._
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -127,7 +127,7 @@ _This property is used to specify the status of the distribution in the context 
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"].
 
-_The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]._
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -232,12 +232,12 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | dct:MediaType
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi komprimeringsformatet for distribusjonen som dataene er i dersom de er i en komprimert form, f.eks. for å redusere størrelsen på den nedlastbare filen.
 
-_This property is used to refer to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA._
+_This property is used to refer to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 | Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
 
-_The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]._
+__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -261,7 +261,7 @@ _This property is used to refer to the media type of which the distribution is._
 | Kravnivå / _Requirement level_ | Valgfri
 | Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
 
-_The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]._distribusjon kan være i flere ulike medietyper.
+__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -300,12 +300,12 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | dct:MediaType
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til formatet til filen der en eller flere datafiler er gruppert sammen, f.eks. for å gjøre det mulig å laste ned et sett relaterte filer.
 
-_This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA._
+_This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 | Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
 
-_The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]._distribusjon kan være i flere ulike medietyper.
+__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
