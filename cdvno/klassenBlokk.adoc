@@ -11,7 +11,7 @@ _The class is used to represent a block in an online resource._
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Datasett (dcat:Dataset) spesifisert i https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
 
-_In addition to the properties that are specified here, the properties in the class Dataset (dcat:Dataset) specified in https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used._
+__In addition to the properties that are specified here, the properties in the class Dataset (dcat:Dataset) specified in https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used__.
 |===
 
 Eksempel i RDF Turtle:
