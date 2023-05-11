@@ -560,6 +560,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Distribusjon-obligatoriske-egenskaper">Obligatoriske egenskaper for <em>Distribusjon</em></a></li>
 <li><a href="#Distribusjon-tilgangsURL">Distribusjon - tilgangsURL (dcat:accessURL)</a></li>
 <li><a href="#Distribusjon-anbefalte-egenskaper">Anbefalte egenskaper for <em>Distribusjon</em></a></li>
+</ul>
+</li>
+<li><a href="#Distribusjon-tilgjengelighet">Distribusjon - tilgjengelighet (dcatap:availability)</a>
+<ul class="sectlevel3">
 <li><a href="#Distribusjon-beskrivelse">Distribusjon - beskrivelse (dct:description)</a></li>
 <li><a href="#Distribusjon-format">Distribusjon - format (dct:format)</a>
 <ul class="sectlevel4">
@@ -1710,6 +1714,52 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <h4 id="Distribusjon-anbefalte-egenskaper"><a class="anchor" href="#Distribusjon-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Distribusjon</em></h4>
 
 </div>
+</div>
+<div class="sect2">
+<h3 id="Distribusjon-tilgjengelighet"><a class="anchor" href="#Distribusjon-tilgjengelighet"></a>Distribusjon - tilgjengelighet (dcatap:availability)</h3>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>availability</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcatap:availability</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å angi hvor lenge det er planlagt å holde distribusjonen av datasettet tilgjengelig.</p>
+<p class="tableblock"><em>This property is used to indicate how long it is planned to keep the distribution of the Dataset available.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
+   dcatap:availability &lt;http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE&gt;; # tilgjengelig
+   .</pre>
+</div>
+</div>
 <div class="sect3">
 <h4 id="Distribusjon-beskrivelse"><a class="anchor" href="#Distribusjon-beskrivelse"></a>Distribusjon - beskrivelse (dct:description)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -1751,6 +1801,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
+   dct:description "testdistribusjon"@nb, "test distribution"@en; # beskrivelse
    .</pre>
 </div>
 </div>
@@ -1967,7 +2018,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-11 05:52:14 UTC
+Sist oppdatert 2023-05-11 05:57:18 UTC
 </div>
 </div>
 </body>
