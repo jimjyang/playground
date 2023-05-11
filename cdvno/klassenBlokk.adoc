@@ -57,7 +57,7 @@ _This property is used to specify the main language that the concent of the bloc
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
 
-The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -81,7 +81,7 @@ _This property is used to specify the identifier to the block._
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merkand / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
 
-See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only)
+__See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only).__
 |===
 
 Eksempel i RDF Turtle:
@@ -105,7 +105,7 @@ _This property is used to specify the theme which the content of the block is ab
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], eller andre sektorspesifikke taksonomier. 
 
-The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], or other sector specific taxonomies. 
+__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], or other sector specific taxonomies.__
 |===
 
 Eksempel i RDF Turtle:
@@ -174,7 +174,7 @@ _This property is used to specify to which degree the content of the block is pu
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].
 
-The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].
+__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -253,7 +253,9 @@ Eksempel i RDF Turtle:
 | _English name_ | validity period
 | URI | cv:validityPeriod
 | Verdiområde / _Range_ | time:ProperInterval 
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi gyldighetsperiode for blokkens innhold.
+
+_This property is used to specify the validity period for the content of the block._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -296,7 +298,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _update frequency_
 | URI | dct:accrualPeriodicity
 | Verdiområde / _Range_ | dct:Frequency
-| Anvendelse / _Usage note_ | 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
