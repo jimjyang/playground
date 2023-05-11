@@ -18,7 +18,7 @@ Eksempel i RDF Turtle:
 
 ==== Obligatoriske egenskaper for _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
 
-==== Distribusjon - tilgangsURL (dcat:accessURL) [[Distribusjon-tilgangsURL]]
+===== Distribusjon - tilgangsURL (dcat:accessURL) [[Distribusjon-tilgangsURL]]
 
 [cols="30s,70d"]
 |===
@@ -40,7 +40,7 @@ Eksempel i RDF Turtle:
 
 ==== Anbefalte egenskaper for _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
 
-=== Distribusjon - tilgjengelighet (dcatap:availability) [[Distribusjon-tilgjengelighet]]
+===== Distribusjon - tilgjengelighet (dcatap:availability) [[Distribusjon-tilgjengelighet]]
 
 [cols="30s,70d"]
 |===
@@ -61,7 +61,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Distribusjon - beskrivelse (dct:description) [[Distribusjon-beskrivelse]]
+===== Distribusjon - beskrivelse (dct:description) [[Distribusjon-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -82,7 +82,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Distribusjon - format (dct:format) [[Distribusjon-format]]
+===== Distribusjon - format (dct:format) [[Distribusjon-format]]
 
 [cols="30s,70d"]
 |===
@@ -130,7 +130,6 @@ Eksempel i RDF Turtle:
    dct:license <http://publications.europa.eu/resource/authority/licence/CC0>; # lisens CC0
    .
 -----
-
 
 ===== Distribusjon - status (adms:status) [[Distribusjon-status]]  
 
