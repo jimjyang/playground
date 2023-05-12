@@ -16,18 +16,20 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 
 Velkommen til sandkassa for Excel-verktøyet som automatisk genererer RDF Turtle og Ascciidoc (for HTML-generering)!
 
-== Bakgrunnen
-
 For å dekke behovet for å kunne lage RDF Turtle basert på en spesifikasjon, samt å kunne lage en menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
 
 Jeg har laget Excel-mal for generering av RDF Turtle (og HTML-visning), tilpasset for: 
 
-* CPSV-AP-NO
-* DCAT-AP-NO
-* ModellDCAT-AP-NO
-* SKOS-AP-NO-Begrep
-* XKOS-AP-NO
+* https://informasjonsforvaltning.github.io/cpsv-ap-no/[CPSV-AP-NO ↗, window="_blank", role="ext-link"]
+* https://data.norge.no/specification/dcat-ap-no[DCAT-AP-NO ↗, window="_blank", role="ext-link"]
+* https://data.norge.no/specification/modelldcat-ap-no[ModellDCAT-AP-NO ↗, window="_blank", role="ext-link"]
+* https://data.norge.no/specification/skos-ap-no-begrep[SKOS-AP-NO-Begrep ↗, window="_blank", role="ext-link"]
+* https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO ↗, window="_blank", role="ext-link"]
 
 Verktøy kan også brukes til å sette opp mal for generering av RDF Turtle generelt, med HTML-visning. 
 
-Siden verktøyet inneholder makroer, legges det ikke ut her. 
+Siden verktøyet inneholder makroer, legges det ikke ut her. Du som er kommet til denne siden skal normalt kjenne meg slik at du vet hvordan du tar kontakt med meg hvis du har behov for dette verktøyet. 
+
+Verktøyet skal fungere ved «normal» bruk. Her er en link:user-guide[enkel brukerveiledning] for hva som er normal bruk. 
+
+*Disclaimer*: Det er ingen garanti for at verktøyet vil kunne fungere i alle tilfeller, heller ikke at malene er oppdatert i takt med ev. oppdateringer av spesifikasjonene nevnt ovenfor.  
