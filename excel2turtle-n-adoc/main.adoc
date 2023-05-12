@@ -1,6 +1,6 @@
 include::../locale/attributes.adoc[]
 = Generering av RDF Turtle med HTML-visning
-doctype: article
+:doctype: article
 :docinfo: shared
 :docinfodir: ../overview
 :icons: font
