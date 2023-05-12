@@ -1,0 +1,41 @@
+name: Build adocs and deploy excel2turtle-n-adoc to Github Pages
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - excel2turtle-n-adoc/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: asciidoctor build
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build html - intro
+      id: adocbuild_html_intro
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor -D excel2turtle-n-adoc -o index.html -a lang=nb excel2turtle-n-adoc/main.adoc"
+
+    - name: Build html - user guide
+      id: adocbuild_html_userguide
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D excel2turtle-n-adoc/user-guide -o index.html -a lang=nb excel2turtle-n-adoc/user-guide-main.adoc"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: excel2turtle-n-adoc
+        destination_dir: ./excel2turtle-n-adoc
+        keep_files: true
