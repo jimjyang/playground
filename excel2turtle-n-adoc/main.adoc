@@ -1,0 +1,33 @@
+include::../locale/attributes.adoc[]
+= Generering av RDF Turtle med HTML-visning
+doctype: article
+:docinfo: shared
+:docinfodir: ../overview
+:icons: font
+:toc: left
+:toclevels: 4
+// :sectlinks:
+:sectanchors:
+:table-stripes: even
+:xrefstyle: short
+
+NOTE: *Innmelding av feil og mangler:* + 
+Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
+
+Velkommen til sandkassa for Excel-verktøyet som automatisk genererer RDF Turtle og Ascciidoc (for HTML-generering)!
+
+== Bakgrunnen
+
+For å dekke behovet for å kunne lage RDF Turtle basert på en spesifikasjon, samt å kunne lage en menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
+
+Jeg har laget Excel-mal for generering av RDF Turtle (og HTML-visning), tilpasset for: 
+
+* CPSV-AP-NO
+* DCAT-AP-NO
+* ModellDCAT-AP-NO
+* SKOS-AP-NO-Begrep
+* XKOS-AP-NO
+
+Verktøy kan også brukes til å sette opp mal for generering av RDF Turtle generelt, med HTML-visning. 
+
+Siden verktøyet inneholder makroer, legges det ikke ut her. 
