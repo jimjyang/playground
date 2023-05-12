@@ -16,13 +16,13 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 
 
 == Innledning
-Verktøyet kan brukes til å generere RDF Turtle og HTML, automatisk. Det er ikke lagt vekt på å få til et robust verktøy, slik at verktøyet fungerer kun ved «normal» bruk. Dette dokumentet forsøker derfor å beskrive hva som er «normal» bruk. Dokumentet vil bli «løpende» oppdatert etter hvert som flere tilfeller av «unormal» bruk oppdages og/eller verktøyet forbedres.   
+Verktøyet kan brukes til å generere RDF Turtle og HTML, automatisk. Det er ikke lagt vekt på å få til et robust verktøy, slik at verktøyet fungerer kun ved «normal» bruk. I denne veiledningen forsøkes derfor å beskrive hva som er «normal» bruk. Veiledningen vil bli «løpende» oppdatert etter hvert som flere tilfeller av «unormal» bruk oppdages og/eller verktøyet forbedres. 
 
-Verktøyet var primært laget for å kunne automatisk generere klassifikasjonsbeskrivelser i henhold til https://informasjonsforvaltning.github.io/xkos-ap-no/[XKOS-AP-NO] (p.t. med status «til utprøving»). Det er allikevel forsøkt å lage verktøyet slik at det også kan brukes til å automatisk generere RDF Turtle (og HTML) fra en «hvilken som helst» Excel-mal som er utformet iht. visse mønstre.   
+Verktøyet var primært laget for å kunne automatisk generere klassifikasjonsbeskrivelser i henhold til https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO ↗, window="_blank", role="ext-link"]. Det er allikevel forsøkt å lage verktøyet slik at det også kan brukes til å automatisk generere RDF Turtle (og HTML) fra en «hvilken som helst» Excel-mal som er utformet iht. visse mønstre.  
 
 Notatet beskriver begge brukstilfeller: 
 
-* når du (som en «vanlig» bruker) bruker en ferdig Excel-mal 
+* når du (som en «vanlig» bruker) bruker en ferdig Excel-mal,
 * når du (som en «tilrettelegger») skal sette opp en Excel-mal iht. en gitt spesifikasjon som f.eks. XKOS-AP-NO, CPSV-AP-NO osv.
 
 == Når du bruker en ferdig Excel-mal
