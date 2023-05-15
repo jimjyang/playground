@@ -1,5 +1,12 @@
 === Klassen Datatjeneste (dcat:DataService) [[DataService]]
 
+[[img-klassenDatatjeneste]]
+.Klassen Datatjeneste (dcat:DataService) og klassene den refererer til. 
+[link=images/cdvno-dataservice.png]
+image::images/cdvno-dataservice.png[]
+
+<<img-klassenDatatjeneste>> viser klassen Datatjeneste (`dcat:DataService`) og klassen den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datatjeneste (dcat:DataService) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+
 [cols="30s,70d"]
 |===
 | _English name_ | _Data service_
