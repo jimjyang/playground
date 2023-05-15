@@ -23,11 +23,12 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
-.Forslag til metadatamodellen
+[[img-cdvno]]
+.Forslag til metadatamodellen.
 [link=images/content-description-vocabulary-no.png]
 image::images/content-description-vocabulary-no.png[]
 
-Figuren ovenfor inneholder et forslag til "metadatamodellen". 
+<<img-cdvno>> ovenfor inneholder et forslag til "metadatamodellen". 
 
 Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
 
