@@ -40,21 +40,21 @@ _This property is used to specify the identifier to the organization._
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | Når organisasjonen har et organisasjonsnummer registrert i Enhetsregisteret, bør identifikatoren oppgis som en URI med følgende mønster der "nnnnnnnnn" er organisasjonsnummeret: f.eks. `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`
 
-_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the follow pattern where "nnnnnnnnn" is the organization number: e.g., `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`
+_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the follow pattern where "nnnnnnnnn" is the organization number: e.g., `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`_
 |===
 
 Eksempel i RDF Turtle:
 -----
-<anOrg> a a org:Organization; # organisasjon
+<anOrg> a org:Organization; # organisasjon
    dct:identifier <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>; # identifikator
    .
 -----
 
-===== Organisasjon – tittel (dct:title) [[Organisasjon-tittel]]  
+===== Organisasjon – navn (dct:title) [[Organisasjon-tittel]]  
 
 [cols="30s,70d"]
 |===
-| _English name_ | _title_
+| _English name_ | _name_
 | URI | dct:title
 | Verdiområde / _Range_ | rdf:langString
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navnet til organisasjonen. Egenskapen bør gjentas når navnet finnes på flere språk. 
@@ -66,7 +66,7 @@ _This property is used to specify the name of the organization. This property sh
 
 Eksempel i RDF Turtle:
 -----
-<anOrg> a a org:Organization; # organisasjon
+<anOrg> a org:Organization; # organisasjon
    dct:title "Digitaliseringsdirektoratet"@nb, "Norwegian Digitalisation Agency"@en; # tittel
    .
 -----
@@ -92,7 +92,7 @@ __The value should be chosen from https://raw.githubusercontent.com/SEMICeu/ADMS
 
 Eksempel i RDF Turtle:
 -----
-<anOrg> a a org:Organization; # organisasjon
+<anOrg> a org:Organization; # organisasjon
    dct:title <http://purl.org/adms/publishertype/NationalAuthority>; # type
    .
 -----

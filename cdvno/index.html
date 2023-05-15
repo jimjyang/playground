@@ -626,7 +626,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Organisasjon-obligatoriske-egenskaper">Obligatoriske egenskaper for <em>Organisasjon</em></a>
 <ul class="sectlevel4">
 <li><a href="#Organisasjon-identifikator">Organisasjon – identifikator (dct:identifier)</a></li>
-<li><a href="#Organisasjon-tittel">Organisasjon – tittel (dct:title)</a></li>
+<li><a href="#Organisasjon-tittel">Organisasjon – navn (dct:title)</a></li>
 </ul>
 </li>
 <li><a href="#Organisasjon-anbefalte-egenskaper">Anbefalte egenskaper for <em>Organisasjon</em></a>
@@ -3537,7 +3537,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Når organisasjonen har et organisasjonsnummer registrert i Enhetsregisteret, bør identifikatoren oppgis som en URI med følgende mønster der "nnnnnnnnn" er organisasjonsnummeret: f.eks. <code>https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn</code></p>
-<p class="tableblock">_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the follow pattern where "nnnnnnnnn" is the organization number: e.g., <code>https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn</code></p></td>
+<p class="tableblock"><em>When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the follow pattern where "nnnnnnnnn" is the organization number: e.g., `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -3546,14 +3546,14 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;anOrg&gt; a a org:Organization; # organisasjon
+<pre>&lt;anOrg&gt; a org:Organization; # organisasjon
    dct:identifier &lt;https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827&gt;; # identifikator
    .</pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="Organisasjon-tittel"><a class="anchor" href="#Organisasjon-tittel"></a>Organisasjon – tittel (dct:title)</h5>
+<h5 id="Organisasjon-tittel"><a class="anchor" href="#Organisasjon-tittel"></a>Organisasjon – navn (dct:title)</h5>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -3562,7 +3562,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>title</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>name</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
@@ -3592,7 +3592,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;anOrg&gt; a a org:Organization; # organisasjon
+<pre>&lt;anOrg&gt; a org:Organization; # organisasjon
    dct:title "Digitaliseringsdirektoratet"@nb, "Norwegian Digitalisation Agency"@en; # tittel
    .</pre>
 </div>
@@ -3646,7 +3646,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;anOrg&gt; a a org:Organization; # organisasjon
+<pre>&lt;anOrg&gt; a org:Organization; # organisasjon
    dct:title &lt;http://purl.org/adms/publishertype/NationalAuthority&gt;; # type
    .</pre>
 </div>
@@ -3759,7 +3759,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-15 11:33:20 UTC
+Sist oppdatert 2023-05-15 11:36:08 UTC
 </div>
 </div>
 </body>
