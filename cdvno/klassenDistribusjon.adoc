@@ -336,7 +336,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Distribusjon - tilgangstjeneste (dcat:accessService) [[Distribusjon-tilganstjeneste]]
+===== Distribusjon - tilgangstjeneste (dcat:accessService) [[Distribusjon-tilganstjeneste]]
 
 [cols="30s,70d"]
 |===
