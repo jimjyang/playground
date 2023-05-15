@@ -48,7 +48,7 @@ Det er viktig at du skal oppgi verdiene fra og med den første «Verdi/Value»-k
 
 Hvor mange verdier som er tillatt for den enkelte egenskapen kan være oppgitt i kolonnen «Multiplisitet». 
 
-image::images/oppgi-verdi.png[utlikk fra excel]
+image::../images/oppgi-verdi.png[utlikk fra excel]
  
 
 === De vanligste datatypene (range)
