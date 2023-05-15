@@ -1,5 +1,12 @@
 === Klassen Distribusjon (dcat:Distribution) [[Distribution]]
 
+[[img-klassenDistribusjon]]
+.Klassen Distribusjon (dcat:Distribution) og klassene den refererer til. 
+[link=images/cdvno-distribution.png]
+image::images/cdvno-distribution.png[]
+
+<<img-klassenBlokk>> viser klassen Distribusjon (`dcat:Distribution`) og klassen den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+
 [cols="30s,70d"]
 |===
 | _English name_ | _Distribution_
@@ -73,7 +80,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | dct:MediaTypeOrExtent
 | Anvendelse / _Usage note_ | Egenskapen bruks til å oppgi distribusjonens format. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.
 
-_This property is used to specify the format of the distribtion. This property may be repeated APIs and end user applications which provide data i several formats._
+_This property is used to specify the format of the distribution. This property may be repeated APIs and end user applications which provide data i several formats._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
@@ -202,28 +209,6 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - filstørrelse (dcat:byteSize) [[Distribusjon-filstørrelse]]
-
-[cols="30s,70d"]
-|===
-| _English name_ | _byte size_
-| URI | dcat:byteSize
-| Verdiområde / _Range_ | rdfs:Literal typed as xsd:decimal
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi distribusjonens størrelse oppgitt i bytes.
-
-_This property is sued to specify the size of a Distribution in bytes._
-| Multiplisitet / _Multiplicity_ | 0..1
-| Kravnivå / _Requirement level_ | Valgfri / _Optional_
-|===
-
-Eksempel i RDF Turtle:
------
-<aDistr> a dcat:Distribution; # distribusjon
-   dcat:byteSize "10000"^^xsd:decimal;
-   .
------
-
-
 ===== Distribusjon - komprimeringsformat (dcat:compressFormat) [[Distribusjon-komprimeringsformat]]
 [cols="30s,70d"]
 |===
@@ -333,6 +318,27 @@ Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
    dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # bokmål
+   .
+-----
+
+===== Distribusjon - størrelse eller varighet (dct:extent) [[Distribusjon-størrelse-varighet]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _extent_
+| URI | dct:extent
+| Verdiområde / _Range_ | rdfs:Literal
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi størrelsen eller varighet av ressursen.
+
+_This property is used to specify the size or duration of the resource._
+| Multiplisitet / _Multiplicity_ | 0..1
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aDistr> a dcat:Distribution; # distribusjon
+   dct:extent "1 h 26 min 41 sec"; # bokmål
    .
 -----
 
