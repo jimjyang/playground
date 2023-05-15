@@ -282,7 +282,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | foaf:Document
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en side eller et dokument som beskriver datatjenesten.
 
-_THis property is used to refer to a page or a document which describes the service._
+_This property is used to refer to a page or a document which describes the service._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
