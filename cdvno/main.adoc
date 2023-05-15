@@ -91,4 +91,6 @@ include::klassenDistribusjon.adoc[]
 
 include::klassenDatatjeneste.adoc[]
 
+include::klassenOrganisasjon.adoc[]
+
 include::navnerom.adoc[]
