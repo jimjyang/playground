@@ -194,9 +194,9 @@ Eksempel i RDF Turtle:
 _This property is used to refer to a main theme for the service. A service may be associated with several themes._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer, f.eks. #...#.
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], og/eller andre sektorspesifikke taksonomier. 
 
-_The value should be chosen from controlled vocabularies, such as #...#._
+__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], and/or other sector specific taxonomies.__
 |===
 
 Eksempel i RDF Turtle:
