@@ -2,8 +2,8 @@
 
 [[img-klassenOrganisajon]]
 .Klassen Organisasjon (org:Organization). 
-[link=images/cdvno-block.png]
-image::images/cdvno-block.png[]
+[link=images/cdvno-organization.png]
+image::images/cdvno-organization.png[]
 
 <<img-klassenBlokk>> viser klassen Organisasjon (`org:Organization`). Klassen er #gulet# ut fordi den ikke er eksplisitt spesifisert i DCAT-AP-NO, dermed et avvik fra DCAT-AP-NO. 
 
