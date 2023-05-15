@@ -1,7 +1,7 @@
 === Klassen Blokk (cdvno:Block) [[Block]]
 
 [[img-klassenBlokk]]
-.Klassen Blokk (cdnv:Block) og klassene den refererer til. 
+.Klassen Blokk (cdvno:Block) og klassene den refererer til. 
 [link=images/cdvno-block.png]
 image::images/cdvno-block.png[]
 
@@ -86,7 +86,7 @@ Eksempel i RDF Turtle:
 _This property is used to specify the identifier to the block._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merkand / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+| Merknad / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
 
 __See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only).__
 |===
@@ -198,7 +198,7 @@ Eksempel i RDF Turtle:
 [cols="30s,70d"]
 |===
 | _English name_ | _user need_
-| URI | cvdno:userNeed
+| URI | cdvno:userNeed
 | Verdiområde / _Range_ | skos:Concept 
 | Anvendelse / _Usage note_ | Egenskapen brukes til å indikere brukerbehov som blokkens innhold kan være relevant for. 
 
