@@ -123,7 +123,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _endpoint description_
 | URI | dcat:endpointDescription
 | Verdiområde / _Range_ | rdfs:Resource
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens `dct:conformsTo `brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Egenskapen gir spesifikke detaljer om de faktiske endepunkt-instansene, mens `dct:conformsTo` brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
 
 _This property is sued to specify a description of the services available via the end-points, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while `dct:conformsTo` is used to indicate the general standard or specification that the endpoints implement._
 | Multiplisitet / _Multiplicity_ | 0..n
