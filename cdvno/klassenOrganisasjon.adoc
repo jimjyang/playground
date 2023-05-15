@@ -10,7 +10,7 @@ image::images/cdvno-organization.png[]
 
 [cols="30s,70d"]
 |===
-| _English name_ | Organization_
+| _English name_ | _Organization_
 | Anvendelse / _Usage note_ | Klassen brukes til å representere en organisasjon.
 
 _The class is used to represent an organization._
