@@ -1,5 +1,12 @@
 === Klassen Blokk (cdvno:Block) [[Block]]
 
+[[img-klassenBlokk]]
+.Klassen Blokk (cdnv:Block) og klassene den refererer til. 
+[link=images/cdvno-block.png]
+image::images/cdvno-block.png[]
+
+<<img-klassenBlokk>> viser klassen Blokk (cdvno:Block) og klassen den refererer til. Det som er #gulet# ut, er avvik frahttps://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) ↗, window="_blank", role="ext-link"]. 
+
 [cols="30s,70d"]
 |===
 | _English name_ | _Block_
