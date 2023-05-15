@@ -21,6 +21,8 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 | image:images/warning-playground.png[playground,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
 |===
 
+*Sist oppdatert*: 2023-05-15
+
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
 [[img-cdvno]]
