@@ -23,19 +23,19 @@ jobs:
       id: adocbuild_html_intro
       uses: tonynv/asciidoctor-action@master
       with:
-          program: "asciidoctor -D xls2ttl&adoc -o index.html -a lang=nb excel2turtle-n-adoc/main.adoc"
+          program: "asciidoctor -D excel2turtle-n-adoc -o index.html -a lang=nb excel2turtle-n-adoc/main.adoc"
 
     - name: Build html - user guide
       id: adocbuild_html_userguide
       uses: tonynv/asciidoctor-action@master
       with:
-         program: "asciidoctor -D xls2ttl&adoc/user-guide -o index.html -a lang=nb excel2turtle-n-adoc/user-guide-main.adoc"
+         program: "asciidoctor -D excel2turtle-n-adoc/user-guide -o index.html -a lang=nb excel2turtle-n-adoc/user-guide-main.adoc"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
-        publish_dir: xls2ttl&adoc
-        destination_dir: ./xls2ttl&adoc
+        publish_dir: excel2turtle-n-adoc
+        destination_dir: ./excel2turtle-n-adoc
         keep_files: true
