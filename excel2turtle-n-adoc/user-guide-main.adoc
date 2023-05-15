@@ -32,8 +32,8 @@ Notatet beskriver begge brukstilfeller:
 
 Noe avhengig av hvordan malen er satt opp, men f.eks.: 
 
-* Raden med rød farge og med «+rdf:type+» i første kolonnen: verdien i denne raden er satt opp av «tilretteleggeren» og skal ikke endres!
-* [#Fra og med v.3#] Raden med rød farge og med «rdf:about» i første kolonnen: verdien i denne raden er enten satt opp av «tilretteleggeren» eller skal bestemmes av «tilretteleggeren», så snakk med vedkommende om/hvordan du skal fylle ut denne raden.  
+* Raden med rød farge og med `rdf:type` i første kolonnen: verdien i denne raden er satt opp av «tilretteleggeren» og skal ikke endres!
+* Raden med rød farge og med `rdf:about` i første kolonnen: verdien i denne raden er enten satt opp av «tilretteleggeren» eller skal bestemmes av «tilretteleggeren», så snakk med vedkommende om/hvordan du skal fylle ut denne raden.  
 * Radene med mørkebrun farge: egenskapene i slike rader er obligatoriske i henhold til den aktuelle spesifikasjonen som malen er satt opp for, dvs. de _skal_ inneholde verdi.
 * Radene med lysebrun/oransje farge: egenskapene i slike rader er anbefalte i henhold til den aktuelle spesifikasjonen som malen er satt opp for, dvs. de _bør_ inneholde verdi.
 * Radene med gul farge: egenskapene i slike rader er obligatoriske i henhold til den aktuelle spesifikasjonen som malen er satt opp for, dvs. de _kan_ inneholde verdi.
@@ -90,7 +90,8 @@ Når du har valgt å «lagre som HTML», og mot slutten av konverteringen vil de
 
 === Noen tips
 
-Arkene som er skjult blir ikke tatt med i konverteringen til Turtle eller Html. Du kan derfor skjule ark som f.eks. ennå ikke er utfylt ut, slik at du unngår valideringsfeil (siden mange obligatoriske verdier mangler). Husk å vise dem igjen når du trenger dem.  +
+Arkene som er skjult blir ikke tatt med i konverteringen til Turtle eller Html. Du kan derfor skjule ark som f.eks. ennå ikke er utfylt ut, slik at du unngår valideringsfeil (siden mange obligatoriske verdier mangler). Husk å vise dem igjen når du trenger dem.  
+
 Du kan kopiere et ark når du trenger flere instanser av samme klasse. 
 
 == Når du skal sette opp en Excel-mal [[sette-opp-mal]]
