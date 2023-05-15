@@ -167,7 +167,7 @@ Eksempel i RDF Turtle:
 |===
 | _English name_ | _contact point_
 | URI | dcat:contactPoint
-| Verdiområde / _Range_ | vcard:Kind
+| Verdiområde / _Range_ | vcard:Organization or vcard:Group
 | Anvendelse / _Usage note_ | Egenskapen brukes til å referere til kontaktpunkt med kontaktopplysninger. Disse kan brukes til å sende kommentarer om datatjenesten.
 
 _This property is used to specify contact point(s) which may be used to e.g. send comments about the service._ 
