@@ -575,12 +575,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#Distribusjon-dokumentasjon">Distribusjon - dokumentasjon (foaf:page)</a></li>
 <li><a href="#Distribusjon-endringsdato">Distribusjon - endringsdato (dct:modified)</a></li>
-<li><a href="#Distribusjon-filstørrelse">Distribusjon - filstørrelse (dcat:byteSize)</a></li>
 <li><a href="#Distribusjon-komprimeringsformat">Distribusjon - komprimeringsformat (dcat:compressFormat)</a></li>
 <li><a href="#Distribusjon-medietype">Distribusjon - medietype (dcat:mediaType)</a></li>
 <li><a href="#Distribusjon-nedlastningslenke">Distribusjon - nedlastningslenke (dcat:downloadURL)</a></li>
 <li><a href="#Distribusjon-pakkeformat">Distribusjon - pakkeformat (dcat:packageFormat)</a></li>
 <li><a href="#Distribusjon-språk">Distribusjon - språk (dct:language)</a></li>
+<li><a href="#Distribusjon-størrelse-varighet">Distribusjon - størrelse eller varighet (dct:extent)</a></li>
 <li><a href="#Distribusjon-tilganstjeneste">Distribusjon - tilgangstjeneste (dcat:accessService)</a></li>
 <li><a href="#Distribusjon-tittel">Distribusjon - tittel (dct:title)</a></li>
 <li><a href="#Distribusjon-utgivelsesdato">Distribusjon - utgivelsesdato (dct:issued)</a></li>
@@ -1703,6 +1703,15 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div class="sect2">
 <h3 id="Distribution"><a class="anchor" href="#Distribution"></a>Klassen Distribusjon (dcat:Distribution)</h3>
+<div id="img-klassenDistribusjon" class="imageblock">
+<div class="content">
+<a class="image" href="images/cdvno-distribution.png"><img src="images/cdvno-distribution.png" alt="cdvno distribution"></a>
+</div>
+<div class="title">Figur 3. Klassen Distribusjon (dcat:Distribution) og klassene den refererer til.</div>
+</div>
+<div class="paragraph">
+<p><a href="#img-klassenBlokk">Figur 2</a> viser klassen Distribusjon (<code>dcat:Distribution</code>) og klassen den refererer til. Det som er <mark>gulet</mark> ut, er avvik fra <a href="https://data.norge.no/specification/dcat-ap-no#Datasett" class="ext-link" target="_blank" rel="noopener">DCAT-AP-NO sin klasse Datasett (dcat:Dataset) ↗</a>. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (<code>skos:Concept</code>).</p>
+</div>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1861,7 +1870,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen bruks til å oppgi distribusjonens format. Egenskapen kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.</p>
-<p class="tableblock"><em>This property is used to specify the format of the distribtion. This property may be repeated APIs and end user applications which provide data i several formats.</em></p></td>
+<p class="tableblock"><em>This property is used to specify the format of the distribution. This property may be repeated APIs and end user applications which provide data i several formats.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -2133,52 +2142,6 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 <div class="sect4">
-<h5 id="Distribusjon-filstørrelse"><a class="anchor" href="#Distribusjon-filstørrelse"></a>Distribusjon - filstørrelse (dcat:byteSize)</h5>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>byte size</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:byteSize</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal typed as xsd:decimal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi distribusjonens størrelse oppgitt i bytes.</p>
-<p class="tableblock"><em>This property is sued to specify the size of a Distribution in bytes.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Eksempel i RDF Turtle:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
-   dcat:byteSize "10000"^^xsd:decimal;
-   .</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
 <h5 id="Distribusjon-komprimeringsformat"><a class="anchor" href="#Distribusjon-komprimeringsformat"></a>Distribusjon - komprimeringsformat (dcat:compressFormat)</h5>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -2419,6 +2382,52 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="content">
 <pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
    dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt;; # bokmål
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Distribusjon-størrelse-varighet"><a class="anchor" href="#Distribusjon-størrelse-varighet"></a>Distribusjon - størrelse eller varighet (dct:extent)</h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>extent</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:extent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi størrelsen eller varighet av ressursen.</p>
+<p class="tableblock"><em>This property is used to specify the size or duration of the resource.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
+   dct:extent "1 h 26 min 41 sec"; # bokmål
    .</pre>
 </div>
 </div>
@@ -3526,7 +3535,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-15 08:17:28 UTC
+Sist oppdatert 2023-05-15 08:37:23 UTC
 </div>
 </div>
 </body>
