@@ -16,6 +16,7 @@ include::../locale/attributes.adoc[]
 NOTE: *Innmelding av feil og mangler:* + 
 Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
 
+
 == Innledning
 Verktøyet kan brukes til å generere RDF Turtle og HTML, automatisk. Det er ikke lagt vekt på å få til et robust verktøy, slik at verktøyet fungerer kun ved «normal» bruk. I denne veiledningen forsøkes derfor å beskrive hva som er «normal» bruk. Veiledningen vil bli «løpende» oppdatert etter hvert som flere tilfeller av «unormal» bruk oppdages og/eller verktøyet forbedres. 
 
