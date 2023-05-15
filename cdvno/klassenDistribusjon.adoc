@@ -5,7 +5,7 @@
 [link=images/cdvno-distribution.png]
 image::images/cdvno-distribution.png[]
 
-<<img-klassenBlokk>> viser klassen Distribusjon (`dcat:Distribution`) og klassen den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO sin klasse Distribusjon (dcat:Distribution) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenBlokk>> viser klassen Distribusjon (`dcat:Distribution`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO sin klasse Distribusjon (dcat:Distribution) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===
