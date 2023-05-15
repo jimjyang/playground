@@ -72,7 +72,7 @@ De vanligste datatypene (range) som verktøyet ved normal bruk klarer å konvert
 
 image::../images/kryss-ref.png[utlikk fra excel]
 
-Eksemplet ovenfor illustrerer at det (fra den fanen man er i) refereres til fanene med navn `cat1`, `cat2` og `cat3`. Dette oppgir du ved f.eks. å skrive inn likhetstegn og deretter velge fanen det skal refereres til og til slutt trykke på returtasten.
+Eksemplet ovenfor illustrerer at det (fra det arket man er i) refereres til arkene med navn `cat1`, `cat2` og `cat3`. Dette oppgir du ved f.eks. å skrive inn likhetstegn og deretter velge arket det skal refereres til og til slutt trykke på returtasten.
 
 === Å sjekke om den auto-genererte RDF Turtle-fil er korrekt [[sjekk-turtle]]
 
