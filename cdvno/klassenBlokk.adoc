@@ -86,7 +86,8 @@ Eksempel i RDF Turtle:
 _This property is used to specify the identifier to the block._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merknad / _Note_ | Se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+| Merknad / _Note_ | 
+Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
 
 __See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifer) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only).__
 |===
