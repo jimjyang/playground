@@ -255,7 +255,7 @@ __The value shall be chosen from https://www.iana.org/assignments/media-types/me
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:mediaType <>;
+   dcat:mediaType <http://www.iana.org/assignments/media-types/application/trig>;
    .
 -----
 

@@ -182,7 +182,8 @@ _This property is used to specify contact point(s) which may be used to e.g. sen
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
-   dcat:contactPoint [ a vcard:Organization; ]
+   dcat:contactPoint [ a vcard:Organization; 
+      vcard:hasEmail  <mailto:contact@example.org>; ]; 
    .
 -----
 
@@ -314,7 +315,7 @@ _This property is used to refer to a specification or standard which the service
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
-   dct:conformsTo [ a dct:Standard; ]; 
+   dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/>;  
    .
 -----
 
@@ -381,7 +382,7 @@ __The value shall be chosen from https://www.iana.org/assignments/media-types/me
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
-   dcat:mediaType <>; 
+   dcat:mediaType <http://www.iana.org/assignments/media-types/application/trig>;
    .
 -----
 
@@ -397,11 +398,14 @@ Eksempel i RDF Turtle:
 _This property is used to include information regarding access or restrictions based on privacy, security, or other policies._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].
+
+__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aDataSrvc> a dcat:DataService; # datatjeneste
-   dct:accessRights [ a dct:RightsStatement; ]; 
+   dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>; # allmenn tilgang
    .
 -----
