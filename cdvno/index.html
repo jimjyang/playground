@@ -2294,7 +2294,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDistr&gt; a dcat:Distribution; # distribusjon
-   dcat:mediaType &lt;&gt;;
+   dcat:mediaType &lt;http://www.iana.org/assignments/media-types/application/trig&gt;;
    .</pre>
 </div>
 </div>
@@ -3015,7 +3015,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
-   dcat:contactPoint [ a vcard:Organization; ]
+   dcat:contactPoint [ a vcard:Organization;
+      vcard:hasEmail  &lt;mailto:contact@example.org&gt;; ];
    .</pre>
 </div>
 </div>
@@ -3304,7 +3305,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
-   dct:conformsTo [ a dct:Standard; ];
+   dct:conformsTo &lt;https://www.w3.org/TR/sparql11-protocol/&gt;;
    .</pre>
 </div>
 </div>
@@ -3452,7 +3453,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
-   dcat:mediaType &lt;&gt;;
+   dcat:mediaType &lt;http://www.iana.org/assignments/media-types/application/trig&gt;;
    .</pre>
 </div>
 </div>
@@ -3490,6 +3491,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EUs controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right ↗</a>.</em></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -3498,7 +3504,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aDataSrvc&gt; a dcat:DataService; # datatjeneste
-   dct:accessRights [ a dct:RightsStatement; ];
+   dct:accessRights &lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt;; # allmenn tilgang
    .</pre>
 </div>
 </div>
@@ -3812,7 +3818,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-16 12:39:49 UTC
+Sist oppdatert 2023-05-16 12:52:05 UTC
 </div>
 </div>
 </body>
