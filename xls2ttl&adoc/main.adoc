@@ -15,9 +15,9 @@ Velkommen til sandkassa for Excel-verktøyet som automatisk genererer RDF Turtle
 
 == Hensikt
 
-For å dekke behovet for generering til RDF Turtle i henhold til en gitt spesifikasjon, samt å kunne lage menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
+For å dekke behovet for generering til RDF Turtle i henhold til en gitt RDF-basert spesifikasjon, og samtidig å kunne ha en menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
 
-Jeg har også tilpasset verktøyet for generering av RDF Turtle (og HTML-visning),  for følgende RDF-baserte spesifikasjoner: 
+Jeg har også tilpasset verktøyet for generering av RDF Turtle (og HTML-visning), i henhold til følgende RDF-baserte spesifikasjoner: 
 
 * https://informasjonsforvaltning.github.io/cpsv-ap-no/[CPSV-AP-NO ↗, window="_blank", role="ext-link"]
 * https://data.norge.no/specification/dcat-ap-no[DCAT-AP-NO ↗, window="_blank", role="ext-link"]
@@ -25,14 +25,14 @@ Jeg har også tilpasset verktøyet for generering av RDF Turtle (og HTML-visning
 * https://data.norge.no/specification/skos-ap-no-begrep[SKOS-AP-NO-Begrep ↗, window="_blank", role="ext-link"]
 * https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO ↗, window="_blank", role="ext-link"]
 
-Verktøyet kan også brukes til å sette opp mal for generering av RDF Turtle generelt, med HTML-visning. 
+Verktøyet er også laget med sikte på å kunne brukes til å sette opp mal for generering av RDF Turtle generelt, med HTML-visning. 
 
-Ettersom verktøyet inneholder makroer, legges det ikke ut her. Du som er kommet til denne siden skal normalt kjenne meg slik at du vet hvordan du kan ta kontakt med meg hvis du har behov for dette verktøyet. 
+Verktøyet legges ikke  ut her ettersom det inneholder makroer. Du som er kommet til denne siden skal som regel kjenne meg slik at du vet hvordan du kan ta kontakt med meg hvis du har behov for dette verktøyet. 
 
 == Brukerveiledning
 
-Verktøyet skal fungere ved «normal» bruk. Her er en link:user-guide[enkel brukerveiledning] for hva som er «normal» bruk. 
+Det har ikke vært et mål å lage et robust verktøy, men verktøyet skal kunne fungere ved «normal» bruk. Her er en link:user-guide[enkel brukerveiledning] som forklarer hva som er «normal» bruk. 
 
 == Forbehold
 
-Det er ingen garanti for at verktøyet vil kunne fungere i alle tilfeller, heller ikke at malene er oppdatert i takt med ev. oppdateringer av spesifikasjonene nevnt ovenfor. Din virksomhets interne sikkerhetspolicy kan også sperre for bruk av makroer.   
+Det er ingen garanti for at verktøyet vil kunne fungere i alle tilfeller, heller ikke at malene er/blir oppdatert i takt med ev. oppdateringer av spesifikasjonene nevnt ovenfor. Din virksomhets interne sikkerhetspolicy kan også sperre for bruk av makroer.   
