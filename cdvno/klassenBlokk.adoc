@@ -158,7 +158,17 @@ Eksempel i RDF Turtle:
 _This property is used to specify spatial or administrative coverage that the content of the block is relevant for._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | 
+|Merknad / _Note_ a|Følgende krav til bruk av kontrollerte vokabularer gjelder:
+
+* Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Kontinent]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Land]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Sted]; http://sws.geonames.org/[GeoNavn].
+
+* For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter] brukes.
+
+_Regarding usage of controlled vocabularies, the following requirements apply:_
+
+* _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place]; http://sws.geonames.org/[GeoNames]._
+
+* _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units] should be used._
 |===
 
 Eksempel i RDF Turtle:
@@ -206,14 +216,15 @@ Eksempel i RDF Turtle:
 _This property is used to indicate the user need that the concent of the block may be relevant for._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer. 
+| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, Sektorspesifikke kodeverk (SNOMED CT), etc. 
 
-_The value should be chosen from controlled vocabularies._ 
+_The value should be chosen from controlled vocabularies, e.g. EU's coming controlled vocabularies for live events, sector specific classifications (SNOMED CT), etc._
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
+   cdvno:userNeed <https://data.norge.no/vocabulary/life-event-type#becoming-a-caretaker>; 
    .
 -----
 
@@ -292,7 +303,7 @@ Eksempel i RDF Turtle:
 _This property is used to specify the audience that the content of the block is meant for._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
+| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. #_Foreløpig ingen slik identifisert._#
 
 _The value should be chosen from a controlled vocabulary._ 
 |===
@@ -343,6 +354,7 @@ _This property is used to specify the type of the Dataset._
 | Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].
 
 __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].__
+| #Spørsmål# | #Ut fra de verdiene på EUs liste over datasett-typer, ser ikke denne egenskapen nyttig ut for vårt formål. Trenger ikke denne? Den er også bare valgfri i DCAT-AP-NO.# 
 |===
 
 Eksempel i RDF Turtle:
