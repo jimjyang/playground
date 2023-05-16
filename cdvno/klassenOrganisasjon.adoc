@@ -38,9 +38,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the identifier to the organization._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merknad / _Note_ | Når organisasjonen har et organisasjonsnummer registrert i Enhetsregisteret, bør identifikatoren oppgis som en URI med følgende mønster der "nnnnnnnnn" er organisasjonsnummeret: f.eks. `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`.
+| Merknad / _Note_ | Når organisasjonen har et organisasjonsnummer registrert i Enhetsregisteret, bør identifikatoren oppgis som en URI med f.eks. følgende mønster der "nnnnnnnnn" er organisasjonsnummeret: `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`.
 
-_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the follow pattern where "nnnnnnnnn" is the organization number: e.g., `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`._
+_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the e.g. follow pattern where "nnnnnnnnn" is the organization number: `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`._
 |===
 
 Eksempel i RDF Turtle:
