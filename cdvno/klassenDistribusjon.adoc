@@ -45,6 +45,7 @@ _A URL that provides access to a distribusjon of the dataset. The resource refer
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
+   dcat:accessURL <>; # tilgangsURL
    .
 -----
 
@@ -92,7 +93,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:format <http://publications.europa.eu/resource/authority/file-type/HTML>; # format HTML
+   dct:format <http://publications.europa.eu/resource/authority/file-type/HTML>; # format, HTML
    .
 -----
 
@@ -116,7 +117,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:license <http://publications.europa.eu/resource/authority/licence/CC0>; # lisens CC0
+   dct:license <http://publications.europa.eu/resource/authority/licence/CC0>; # lisens, CC0
    .
 -----
 
@@ -140,7 +141,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   adms:status <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED>; # status ferdigstilt
+   adms:status <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED>; # status, ferdigstilt
    .
 -----
 
@@ -164,7 +165,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE>; # tilgjengelig
+   dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE>; # tilgjengelighet, tilgjengelig
    .
 -----
 
@@ -187,7 +188,7 @@ _This property ise used to refer to a page or document about this distribution._
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   foaf:page <>;
+   foaf:page <>; # dokumentasjon
    .
 -----
 
@@ -208,7 +209,7 @@ _This property is used to specify the date when the distribution was last change
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:modified "2023-05-10"^^xsd:date;
+   dct:modified "2023-05-10"^^xsd:date; # dato sist oppdatert
    .
 -----
 
@@ -231,7 +232,7 @@ __The value should be chosen from https://www.iana.org/assignments/media-types/m
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:compressFormat <>;
+   dcat:compressFormat <>; # komprimeringsformat
    .
 -----
 
@@ -255,7 +256,7 @@ __The value shall be chosen from https://www.iana.org/assignments/media-types/me
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:mediaType <http://www.iana.org/assignments/media-types/application/trig>;
+   dcat:mediaType <http://www.iana.org/assignments/media-types/application/trig>; # medietype, TriG
    .
 -----
 
@@ -276,7 +277,7 @@ _This property is used to specify a URL that is a direct link to a downloadable 
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:downloadURL <>;
+   dcat:downloadURL <>; # nedlastingsURL
    .
 -----
 
@@ -299,7 +300,7 @@ __The value should be chosen from https://www.iana.org/assignments/media-types/m
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:packageFormat <>;
+   dcat:packageFormat <>; # pakkeformat
    .
 -----
 
@@ -323,7 +324,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # bokmål
+   dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # språk, bokmål
    .
 -----
 
@@ -344,7 +345,7 @@ _This property is used to specify the size or duration of the resource._
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:extent "1 h 26 min 41 sec"; # bokmål
+   dct:extent "1 h 26 min 41 sec"; # varighet
    .
 -----
 
@@ -365,7 +366,7 @@ _This property is used to refer to a data service that gives access to the distr
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:accessService <>;
+   dcat:accessService <>; # tilgangstjeneste
    .
 -----
 
@@ -387,7 +388,7 @@ _This property is used to specify the title of the distribution. This property s
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:title "testdistribusjon"@nb, "test distribution"@en; # navn
+   dct:title "testdistribusjon"@nb, "test distribution"@en; # tittel
    .
 -----
 
