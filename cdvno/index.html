@@ -1218,7 +1218,32 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Følgende krav til bruk av kontrollerte vokabularer gjelder:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent">Kontinent</a>; <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country">Land</a>; <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place">Sted</a>; <a href="http://sws.geonames.org/">GeoNavn</a>.</p>
+</li>
+<li>
+<p>For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular <a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a> brukes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Regarding usage of controlled vocabularies, the following requirements apply:</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>At least one value shall be chosen from the following controlled vocabularies: <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent">Continent</a>; <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country">Country</a>; <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place">Place</a>; <a href="http://sws.geonames.org/">GeoNames</a>.</em></p>
+</li>
+<li>
+<p><em>To specify spatial coverage in Norway, the Norwegian Mapping Authority&#8217;s controlled vocabulary <a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative units</a> should be used.</em></p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -1322,8 +1347,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer.</p>
-<p class="tableblock"><em>The value should be chosen from controlled vocabularies.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, Sektorspesifikke kodeverk (SNOMED CT), etc.</p>
+<p class="tableblock"><em>The value should be chosen from controlled vocabularies, e.g. EU&#8217;s coming controlled vocabularies for live events, sector specific classifications (SNOMED CT), etc.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1333,6 +1358,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   cdvno:userNeed &lt;https://data.norge.no/vocabulary/life-event-type#becoming-a-caretaker&gt;;
    .</pre>
 </div>
 </div>
@@ -1510,7 +1536,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular. <mark><em>Foreløpig ingen slik identifisert.</em></mark></p>
 <p class="tableblock"><em>The value should be chosen from a controlled vocabulary.</em></p></td>
 </tr>
 </tbody>
@@ -1614,6 +1640,10 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type ↗</a>.</p>
 <p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type ↗</a>.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><mark>Spørsmål</mark></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Ut fra de verdiene på EUs liste over datasett-typer, ser ikke denne egenskapen nyttig ut for vårt formål. Trenger ikke denne? Den er også bare valgfri i DCAT-AP-NO.</mark></p></td>
 </tr>
 </tbody>
 </table>
@@ -2053,6 +2083,11 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability" class="ext-link" target="_blank" rel="noopener">Planned availability ↗</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability" class="ext-link" target="_blank" rel="noopener">Planned availability ↗</a>.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -3772,7 +3807,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-16 10:48:40 UTC
+Sist oppdatert 2023-05-16 11:17:10 UTC
 </div>
 </div>
 </body>
