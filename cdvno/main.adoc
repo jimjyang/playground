@@ -85,13 +85,13 @@ Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kand
 
 == Spesifikasjonen 
  
-#_Egenskapene er forsøkt sortert etter norske navn._# 
+#_Klassene og egenskapene er forsøkt sortert etter norske navn._# 
 
 include::klassenBlokk.adoc[]
 
-include::klassenDistribusjon.adoc[]
-
 include::klassenDatatjeneste.adoc[]
+
+include::klassenDistribusjon.adoc[]
 
 include::klassenOrganisasjon.adoc[]
 
