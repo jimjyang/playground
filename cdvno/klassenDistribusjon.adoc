@@ -5,7 +5,7 @@
 [link=images/cdvno-distribution.png]
 image::images/cdvno-distribution.png[]
 
-<<img-klassenDistribusjon>> viser klassen Distribusjon (`dcat:Distribution`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO sin klasse Distribusjon (dcat:Distribution) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenDistribusjon>> viser klassen Distribusjon (`dcat:Distribution`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===
@@ -188,7 +188,7 @@ _This property ise used to refer to a page or document about this distribution._
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   foaf:page <>; # dokumentasjon
+   foaf:page <https://example.org/aDistrDoc>; # dokumentasjon
    .
 -----
 
@@ -198,7 +198,7 @@ Eksempel i RDF Turtle:
 |===
 | _English name_ | _modified (last update)_
 | URI | dct:modified
-| Verdiområde / _Range_ | rdfs:Literal typed as xsd:date
+| Verdiområde / _Range_ | xsd:date
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datoen når distribusjonen sist ble endret.
 
 _This property is used to specify the date when the distribution was last changed._
@@ -209,7 +209,7 @@ _This property is used to specify the date when the distribution was last change
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:modified "2023-05-10"^^xsd:date; # dato sist oppdatert
+   dct:modified "2023-05-10"^^xsd:date; # dato sist endret
    .
 -----
 
@@ -232,7 +232,7 @@ __The value should be chosen from https://www.iana.org/assignments/media-types/m
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:compressFormat <>; # komprimeringsformat
+   dcat:compressFormat <https://www.w3.org/ns/iana/media-types/application/gzip>; # komprimeringsformat, gzip
    .
 -----
 
@@ -277,7 +277,7 @@ _This property is used to specify a URL that is a direct link to a downloadable 
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:downloadURL <>; # nedlastingsURL
+   dcat:downloadURL <https://example.org/aDownloadURL>; # nedlastingsURL
    .
 -----
 
@@ -300,7 +300,7 @@ __The value should be chosen from https://www.iana.org/assignments/media-types/m
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:packageFormat <>; # pakkeformat
+   dcat:packageFormat <https://www.w3.org/ns/iana/media-types/application/zip>; # pakkeformat, zip
    .
 -----
 
@@ -356,9 +356,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _access service_
 | URI | dcat:accessService
 | Verdiområde / _Range_ | dcat:DataService
-| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en datatjeneste som gir tilgang til distribusjonen av datasettet.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til en datatjeneste som gir tilgang til distribusjonen.
 
-_This property is used to refer to a data service that gives access to the distribution of the dataset._
+_This property is used to refer to a data service that gives access to the distribution._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -366,7 +366,7 @@ _This property is used to refer to a data service that gives access to the distr
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:accessService <>; # tilgangstjeneste
+   dcat:accessService <aDataSrvc>; # tilgangstjeneste
    .
 -----
 
@@ -378,7 +378,7 @@ Eksempel i RDF Turtle:
 | _English name_ | _title_
 | URI | dct:title
 | Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navn på distribusjonen. Egenskapen bør gjentas når navnet finnes på flere språk. 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navnet på distribusjonen. Egenskapen bør gjentas når navnet finnes på flere språk. 
 
 _This property is used to specify the title of the distribution. This property should be repeated for parallel language versions of the title._
 | Multiplisitet / _Multiplicity_ | 0..n
@@ -398,7 +398,7 @@ Eksempel i RDF Turtle:
 |===
 | _English name_ | _issued_
 | URI | dct:issued
-| Verdiområde / _Range_ | rdfs:Literal typed as xsd:date
+| Verdiområde / _Range_ | xsd:date
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datoen for formell utgivelse/publisering av distribusjonen.
 
 _This property is used to specify the date for the formal issuing/publication of the distribution._
@@ -409,7 +409,6 @@ _This property is used to specify the date for the formal issuing/publication of
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dct:issued "2023-05-01"^^sd:date; # utgivelsesdato
+   dct:issued "2023-05-01"^^xsd:date; # utgivelsesdato
    .
 -----
-
