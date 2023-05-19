@@ -38,7 +38,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | rdf:langString
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
 
-_This property is used to specify a free text description of the block. This property should be repeated for parallel language versions of the description._
+_This property is used to specify a free-text description of the block. This property should be repeated for parallel language versions of the description._
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
@@ -180,6 +180,27 @@ Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
    dct:spatial <http://publications.europa.eu/resource/authority/country/NOR>; # Norge
+   .
+-----
+
+===== Blokk - distribusjon (dcat:distribution) [[Blokk-distribusjon]] 
+
+[cols="30s,70d"]
+|===
+| _English name_ | _distribution_
+| URI | dcat:distribution
+| Verdiområde / _Range_ | dcat:Distribution
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til beskrivelsen av en distribusjon av innholdet i blokken.
+
+_This property is used to refer to the description of a distribution of the content of the block._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dcat:distribution <aDistr>; # distribusjon
    .
 -----
 

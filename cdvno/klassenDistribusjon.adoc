@@ -15,9 +15,9 @@ image::images/cdvno-distribution.png[]
 _The class is used to represent a distribution of an online resource._
 | URI | dcat:Distribution
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Distribusjon (dcat:Distribution) spesifisert i https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
 
-__In addition to the properties that are specified here, the properties in the class Distribution (dcat:Distribution) specified in https://data.norge.no/specification/dcat-ap-no#Distribusjon[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
+__In addition to the properties that are specified here, the properties in https://data.norge.no/specification/dcat-ap-no#Distribusjon[the class Distribution (dcat:Distribution) specified in DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
 |===
 
 Eksempel i RDF Turtle:
@@ -60,7 +60,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | rdf:langString
 | Anvendelse / _Usage note_ | Egenskapen bruks til å oppgi en fritekstbeskrivelse av distribusjonen. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.
 
-_This property is used to specify a free text description of the distribusjon. This property should be repeated for parallel language versions of the description._
+_This property is used to specify a free-text description of the distribusjon. This property should be repeated for parallel language versions of the description._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
@@ -256,7 +256,7 @@ __The value shall be chosen from https://www.iana.org/assignments/media-types/me
 Eksempel i RDF Turtle:
 -----
 <aDistr> a dcat:Distribution; # distribusjon
-   dcat:mediaType <http://www.iana.org/assignments/media-types/application/trig>; # medietype, TriG
+   dcat:mediaType <https://www.w3.org/ns/iana/media-types/application/trig>; # medietype, TriG
    .
 -----
 
