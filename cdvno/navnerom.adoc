@@ -1,6 +1,6 @@
 == Navnerom som er brukt i spesifikasjonen
 
-Navnerom for denne spesifikasjonen er https://jimjyang.github.io/playground/cdvno# (#skal være en offisiell URI etter ferdigstilling av spesifikasjonen#)
+Navnerom for denne spesifikasjonen er https://jimjyang.github.io/playground/cdvno# (##det skal være en offisiell URI etter ferdigstilling av spesifikasjonen, mest sannsynlig `\https://data.norge.no/vocabulary/cdvno#`##)
 
 [[Tabell-navnerom]]
 .Oversikt over navnerom som er brukt i denne spesifikasjonen (tabellen nedenfor er deskriptiv)
