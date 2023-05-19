@@ -954,8 +954,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi beskrivelsen av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
-<p class="tableblock"><em>This property is used to specify the description of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify a free text description of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1015,6 +1015,10 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a>.</p>
 <p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language ↗</a>.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><mark>Spørsmål</mark></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Kanskje for strengt? Trenger ikke å være obligatorisk, men anbefalt?</mark></p></td>
 </tr>
 </tbody>
 </table>
@@ -1226,6 +1230,9 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <li>
 <p>For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular <a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a> brukes.</p>
 </li>
+<li>
+<p>Andre geografisk eller administrative inndelinger i Norge kan også brukes. F.eks. helseregion, skolekrets osv.</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -1238,6 +1245,9 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </li>
 <li>
 <p><em>To specify spatial coverage in Norway, the Norwegian Mapping Authority&#8217;s controlled vocabulary <a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative units</a> should be used.</em></p>
+</li>
+<li>
+<p>_Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc.</p>
 </li>
 </ul>
 </div></div></td>
@@ -1344,8 +1354,8 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, Sektorspesifikke kodeverk (SNOMED CT), etc.</p>
-<p class="tableblock"><em>The value should be chosen from controlled vocabularies, e.g. EU&#8217;s coming controlled vocabularies for live events, sector specific classifications (SNOMED CT), etc.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, sektorspesifikke kodeverk (SNOMED CT osv.) osv.</p>
+<p class="tableblock"><em>The value should be chosen from controlled vocabularies, e.g. EU&#8217;s coming controlled vocabularies for live events, sector specific classifications (SNOMED CT etc.) etc.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1533,8 +1543,12 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular. <mark><em>Foreløpig ingen slik identifisert.</em></mark></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular.</p>
 <p class="tableblock"><em>The value should be chosen from a controlled vocabulary.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><mark>Spørsmål</mark></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Foreløpig ingen felles kontrollert vokabular identifisert. Burde det finnes et slikt felles vokabular?</mark></p></td>
 </tr>
 </tbody>
 </table>
@@ -1572,7 +1586,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.</p>
-<p class="tableblock"><em>This property is used to specify the frequency at which the Dataset is updated.</em></p></td>
+<p class="tableblock"><em>This property is used to specify the frequency at which the content of the block is updated.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1650,7 +1664,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:type &lt;&gt;; # type
+   dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST&gt;; # type, kodeliste
    .</pre>
 </div>
 </div>
@@ -1724,7 +1738,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.</p>
-<p class="tableblock"><em>This property is used to describe the differences between this version and a previous version of the content of the block.</em></p></td>
+<p class="tableblock"><em>This property is used to describe the differences between this version and a previous version of the content of the block. This property should be repeated for parallel language versions of the notes.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1742,7 +1756,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; #versjonsnoter
+   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; # versjonsnoter
    .</pre>
 </div>
 </div>
@@ -3816,7 +3830,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-19 07:59:43 UTC
+Sist oppdatert 2023-05-19 08:31:29 UTC
 </div>
 </div>
 </body>
