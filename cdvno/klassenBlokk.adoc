@@ -36,9 +36,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _description_
 | URI | dct:description
 | Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi beskrivelsen av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
 
-_This property is used to specify the description of the block. This property should be repeated for parallel language versions of the description._
+_This property is used to specify a free text description of the block. This property should be repeated for parallel language versions of the description._
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
@@ -65,6 +65,7 @@ _This property is used to specify the main language that the concent of the bloc
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
 
 __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].__
+| #Spørsmål# | #Kanskje for strengt? Trenger ikke å være obligatorisk, men anbefalt?# 
 |===
 
 Eksempel i RDF Turtle:
@@ -164,11 +165,15 @@ _This property is used to specify spatial or administrative coverage that the co
 
 * For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter] brukes.
 
+* Andre geografisk eller administrative inndelinger i Norge kan også brukes. F.eks. helseregion, skolekrets osv. 
+
 _Regarding usage of controlled vocabularies, the following requirements apply:_
 
 * _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place]; http://sws.geonames.org/[GeoNames]._
 
 * _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units] should be used._
+
+* _Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc.
 |===
 
 Eksempel i RDF Turtle:
@@ -216,9 +221,9 @@ Eksempel i RDF Turtle:
 _This property is used to indicate the user need that the concent of the block may be relevant for._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, Sektorspesifikke kodeverk (SNOMED CT), etc. 
+| Merknad / _Note_ | Verdien bør velges fra kontrollerte vokabularer, f.eks. EUs kommende kontrollerte vokabularer for livshendelser, sektorspesifikke kodeverk (SNOMED CT osv.) osv. 
 
-_The value should be chosen from controlled vocabularies, e.g. EU's coming controlled vocabularies for live events, sector specific classifications (SNOMED CT), etc._
+_The value should be chosen from controlled vocabularies, e.g. EU's coming controlled vocabularies for live events, sector specific classifications (SNOMED CT etc.) etc._
 |===
 
 Eksempel i RDF Turtle:
@@ -303,9 +308,10 @@ Eksempel i RDF Turtle:
 _This property is used to specify the audience that the content of the block is meant for._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. #_Foreløpig ingen slik identifisert._#
+| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
 
 _The value should be chosen from a controlled vocabulary._ 
+| #Spørsmål# | #Foreløpig ingen felles kontrollert vokabular identifisert. Burde det finnes et slikt felles vokabular?#
 |===
 
 Eksempel i RDF Turtle:
@@ -324,7 +330,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | dct:Frequency
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi hvor ofte blokkens innhold oppdateres.
 
-_This property is used to specify the frequency at which the Dataset is updated._
+_This property is used to specify the frequency at which the content of the block is updated._
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 | Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"].
@@ -360,7 +366,7 @@ __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:type <>; # type
+   dct:type <http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST>; # type, kodeliste
    .
 -----
 
@@ -394,7 +400,7 @@ Eksempel i RDF Turtle:
 | Verdiområde / _Range_ | rdf:langString
 | Anvendelse / _Usage note_ | Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.
 
-_This property is used to describe the differences between this version and a previous version of the content of the block._
+_This property is used to describe the differences between this version and a previous version of the content of the block. This property should be repeated for parallel language versions of the notes._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
@@ -402,7 +408,7 @@ _This property is used to describe the differences between this version and a pr
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; #versjonsnoter
+   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; # versjonsnoter
    .
 -----
 
