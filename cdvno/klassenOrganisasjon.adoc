@@ -40,7 +40,7 @@ _This property is used to specify the identifier to the organization._
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | Når organisasjonen har et organisasjonsnummer registrert i Enhetsregisteret, bør identifikatoren oppgis som en URI med f.eks. følgende mønster der "nnnnnnnnn" er organisasjonsnummeret: `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`.
 
-_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with the e.g. follow pattern where "nnnnnnnnn" is the organization number: `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`._
+_When the organization has a organization number registered in the Central Coordinating Register for Legal Entities (CCR), the identifier should be given as a URI with e.g. the following pattern where "nnnnnnnnn" is the organization number: `\https://organization-catalog.fellesdatakatalog.digdir.no/organizations/nnnnnnnnn`._
 |===
 
 Eksempel i RDF Turtle:
@@ -93,6 +93,6 @@ __The value should be chosen from https://raw.githubusercontent.com/SEMICeu/ADMS
 Eksempel i RDF Turtle:
 -----
 <anOrg> a org:Organization; # organisasjon
-   dct:type <http://purl.org/adms/publishertype/NationalAuthority>; # type
+   dct:type <http://purl.org/adms/publishertype/NationalAuthority>; # type, nasjonal myndighet
    .
 -----
