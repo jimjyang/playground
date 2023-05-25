@@ -5,6 +5,7 @@ include::../locale/attributes.adoc[]
 :docinfodir: ../overview
 :icons: font
 :toc: left
+ifdef::backend-pdf[:toc: macro]
 :toclevels: 4
 // :sectlinks:
 :sectanchors:
@@ -19,7 +20,9 @@ Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playgro
 | image:images/warning-playground.png[playground,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
 |===
 
-*Sist oppdatert*: 2023-05-22
+*Sist oppdatert*: 2023-05-25
+
+toc::[]
 
 == Metadatamodell for innholdsbeskrivelse (arbeidstittel)
 
