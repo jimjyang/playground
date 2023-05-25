@@ -529,6 +529,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-identifikator">Blokk - identifikator (dct:identifier)</a></li>
 <li><a href="#Blokk-tema">Blokk - tema (dcat:theme)</a></li>
 <li><a href="#Blokk-tittel">Blokk - tittel (dct:title)</a></li>
+<li><a href="#Blokk-utgiver">Blokk - utgiver (dct:publisher)</a></li>
 </ul>
 </li>
 <li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a>
@@ -546,6 +547,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-gyldighetsperiode">Blokk - gyldighetsperiode (cv:validityPeriod)</a></li>
 <li><a href="#Blokk-målgruppe">Blokk - målgruppe (dct:audience)</a></li>
 <li><a href="#Blokk-oppdateringsfrekvens">Blokk - oppdateringsfrekvens (dct:accrualPeriodicity) </a></li>
+<li><a href="#Blokk-creator">Blokk - produsent (dct:creator)</a></li>
 <li><a href="#Blokk-type">Blokk - type (dct:type)</a></li>
 <li><a href="#Blokk-versjonsnummer">Blokk - versjonsnummer (owl:versionInfo)</a></li>
 <li><a href="#Blokk-versjonsnoter">Blokk - versjonsnoter (adms:versionNotes)</a></li>
@@ -1183,6 +1185,52 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 </div>
 </div>
+<div class="sect4">
+<h5 id="Blokk-utgiver"><a class="anchor" href="#Blokk-utgiver"></a>Blokk - utgiver (dct:publisher)</h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>publisher</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:publisher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til organisasjonen som er ansvarlig for å gjøre blokkens innhold tilgjengelig.</p>
+<p class="tableblock"><em>This property is used to refer to the organization who is responsible for making the content of the block available.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / Mandatory_</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:publisher &lt;anOrg&gt;; # utgiver
+   .</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="Blokk-anbefalte-egenskaper"><a class="anchor" href="#Blokk-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Blokk</em></h4>
@@ -1658,6 +1706,52 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
    dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/TRIENNIAL&gt;; # hvert tredje år
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="Blokk-creator"><a class="anchor" href="#Blokk-creator"></a>Blokk - produsent (dct:creator)</h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>creator</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:creator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til organisasjonen som er produsent av innholdet i blokken.</p>
+<p class="tableblock"><em>This property is used to refer to the organization who is the creator of the content of the block.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:creator &lt;anOrg&gt;; # produsent
    .</pre>
 </div>
 </div>
@@ -3878,7 +3972,7 @@ Vennligst meld dine tilbakemeldinger inn som <a href="https://github.com/jimjyan
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-25 06:59:03 UTC
+Sist oppdatert 2023-05-25 09:26:09 UTC
 </div>
 </div>
 </body>
