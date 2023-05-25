@@ -338,7 +338,7 @@ Eksempel i RDF Turtle:
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi størrelsen eller varighet av ressursen.
 
 _This property is used to specify the size or duration of the resource._
-| Multiplisitet / _Multiplicity_ | 0..1
+| Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
 
