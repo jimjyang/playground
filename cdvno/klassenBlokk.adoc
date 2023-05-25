@@ -145,6 +145,27 @@ Eksempel i RDF Turtle:
    .
 -----
 
+===== Blokk - utgiver (dct:publisher) [[Blokk-utgiver]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _publisher_
+| URI | dct:publisher
+| Verdiområde / _Range_ | org:Organization
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til organisasjonen som er ansvarlig for å gjøre blokkens innhold tilgjengelig. 
+
+_This property is used to refer to the organization who is responsible for making the content of the block available._ 
+| Multiplisitet / _Multiplicity_ | 1..1
+| Kravnivå / _Requirement level_ | Obligatorisk / Mandatory_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:publisher <anOrg>; # utgiver
+   .
+-----
+
 ==== Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
 
 ===== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
@@ -363,6 +384,27 @@ Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL>; # hvert tredje år
+   .
+-----
+
+===== Blokk - produsent (dct:creator) [[Blokk-creator]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _creator_
+| URI | dct:creator
+| Verdiområde / _Range_ | org:Organization
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til organisasjonen som er produsent av innholdet i blokken. 
+
+_This property is used to refer to the organization who is the creator of the content of the block._ 
+| Multiplisitet / _Multiplicity_ | 0..1
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:creator <anOrg>; # produsent
    .
 -----
 
