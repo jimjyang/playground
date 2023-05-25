@@ -32,7 +32,7 @@ Eksempel i RDF Turtle:
 |===
 | _English name_ | _identifier_
 | URI | dct:identifier
-| Verdiområde / _Range_ | xsd:anyURI
+| Verdiområde / _Range_ | rdfs:Literal
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikatoren til organisasjonen.
 
 _This property is used to specify the identifier to the organization._
@@ -46,7 +46,7 @@ _When the organization has a organization number registered in the Central Coord
 Eksempel i RDF Turtle:
 -----
 <anOrg> a org:Organization; # organisasjon
-   dct:identifier <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>; # identifikator
+   dct:identifier "https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827"^^xsd:anyURI; # identifikator
    .
 -----
 
