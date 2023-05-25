@@ -161,17 +161,17 @@ _This property is used to specify spatial or administrative coverage that the co
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |Merknad / _Note_ a|Følgende krav til bruk av kontrollerte vokabularer gjelder:
 
-* Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Kontinent]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Land]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Sted]; http://sws.geonames.org/[GeoNavn].
+* Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Kontinent ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Land ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Sted ↗, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNavn ↗, window="_blank", role="ext-link"].
 
-* For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter] brukes.
+* For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter ↗, window="_blank", role="ext-link"] brukes.
 
 * Andre geografisk eller administrative inndelinger i Norge kan også brukes. F.eks. helseregion, skolekrets osv. 
 
 _Regarding usage of controlled vocabularies, the following requirements apply:_
 
-* _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place]; http://sws.geonames.org/[GeoNames]._
+* _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place ↗, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNames ↗, window="_blank", role="ext-link"]._
 
-* _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units] should be used._
+* _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units ↗, window="_blank", role="ext-link"] should be used._
 
 * _Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc.
 |===
