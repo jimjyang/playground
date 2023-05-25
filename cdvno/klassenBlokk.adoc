@@ -194,7 +194,7 @@ _Regarding usage of controlled vocabularies, the following requirements apply:_
 
 * _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units ↗, window="_blank", role="ext-link"] should be used._
 
-* _Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc.
+* _Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc._
 |===
 
 Eksempel i RDF Turtle:
