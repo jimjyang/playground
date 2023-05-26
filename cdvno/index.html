@@ -540,19 +540,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#Blokk-obligatoriske-egenskaper">Obligatoriske egenskaper for <em>Blokk</em></a>
 <ul class="sectlevel3">
-<li><a href="#Blokk-beskrivelse">Blokk – beskrivelse (dct:description)</a></li>
 <li><a href="#Blokk-hovedspråk">Blokk - hovedspråk (dct:language)</a></li>
 <li><a href="#Blokk-identifikator">Blokk - identifikator (dct:identifier)</a></li>
 <li><a href="#Blokk-tema">Blokk - tema (dcat:theme)</a></li>
-<li><a href="#Blokk-tittel">Blokk - tittel (dct:title)</a></li>
 <li><a href="#Blokk-utgiver">Blokk - utgiver (dct:publisher)</a></li>
 </ul>
 </li>
 <li><a href="#Blokk-anbefalte-egenskaper">Anbefalte egenskaper for <em>Blokk</em></a>
 <ul class="sectlevel3">
+<li><a href="#Blokk-beskrivelse">Blokk – beskrivelse (dct:description)</a></li>
 <li><a href="#Blokk-dekningsområde">Blokk - dekningsområde (dct:spatial)</a></li>
 <li><a href="#Blokk-distribusjon">Blokk - distribusjon (dcat:distribution)</a></li>
-<li><a href="#Blokk-tilgangsnivå">Blokk - tilgangsnivå (dct:accessRights)</a></li>
+<li><a href="#Blokk-tittel">Blokk - tittel (dct:title)</a></li>
+<li><a href="#Blokk-type-informasjon">Blokk - type informasjon (cdvno:typeInfo)</a></li>
 </ul>
 </li>
 <li><a href="#Blokk-valgfrie-egenskaper">Valgfrie egenskaper for <em>Blokk</em></a>
@@ -564,9 +564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-målgruppe">Blokk - målgruppe (dct:audience)</a></li>
 <li><a href="#Blokk-oppdateringsfrekvens">Blokk - oppdateringsfrekvens (dct:accrualPeriodicity) </a></li>
 <li><a href="#Blokk-creator">Blokk - produsent (dct:creator)</a></li>
-<li><a href="#Blokk-type">Blokk - type (dct:type)</a></li>
-<li><a href="#Blokk-versjonsnummer">Blokk - versjonsnummer (owl:versionInfo)</a></li>
-<li><a href="#Blokk-versjonsnoter">Blokk - versjonsnoter (adms:versionNotes)</a></li>
+<li><a href="#Blokk-undertema">Blokk - undertema (cdvno:subTheme)</a></li>
 </ul>
 </li>
 </ul>
@@ -856,6 +854,14 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <p class="tableblock">Eksempel: <code>skos:Concept</code> er identifikatoren til klassen Begrep (Concept), slik klassen er spesifisert i <code>skos</code> (<a href="#Navnerom">Navnerom som er brukt i spesifikasjonen</a> viser hva <code>skos</code> står for).</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av / <em>Subclass of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Denne brukes bare i spesifikasjon til en klasse, til å spesifisere om klassen er en subklasse av en anne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av / <em>Subproperty of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Denne brukes bare i spesifikasjon til en egenskap, til å spesifisere om egenskapen er en subegenskap av en annen.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Denne brukes bare i spesifikasjon av en egenskap, til å spesifisere lovlige verdier. Disse angis ved henvisning til en klasse eller datatype.</p>
 <p class="tableblock">Eksempel: Verdiområde <code>skos:Concept</code> betyr at verdien til egenskapen skal være en instans av klassen <code>skos:Concept</code>.</p></td>
@@ -875,6 +881,11 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til merknader knyttet til bruk av klassen eller egenskapen, f.eks. restriksjoner hvis noen. Merknadene er også skrevet på engelsk (<em>Note</em>, kursivert), primært ment for engelsktalende utviklere av verktøystøtte.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel / <em>Example</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eksempler på bruk av egenskapen, i prosatekst. Eksempel i RDF Turtle følger etter den aktuelle tabellen, som dog er tekniske eksempler som ikke alltid uttrykker det samme som i prosatekst-eksemplene.</p>
+<p class="tableblock"><em>Examples on the usage of the property, expressed in prose text. Examples in RDF Turtle follow the actual table which though are technical examples that do not necessarily express the same as the prose text examples.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -994,52 +1005,6 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div class="sect2">
 <h3 id="Blokk-obligatoriske-egenskaper"><a class="anchor" href="#Blokk-obligatoriske-egenskaper"></a>Obligatoriske egenskaper for <em>Blokk</em></h3>
-<div class="sect3">
-<h4 id="Blokk-beskrivelse"><a class="anchor" href="#Blokk-beskrivelse"></a>Blokk – beskrivelse (dct:description)</h4>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>description</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
-<p class="tableblock"><em>This property is used to specify a free-text description of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Eksempel i RDF Turtle:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:description "bare ment for test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
-   .</pre>
-</div>
-</div>
-</div>
 <div class="sect3">
 <h4 id="Blokk-hovedspråk"><a class="anchor" href="#Blokk-hovedspråk"></a>Blokk - hovedspråk (dct:language)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -1198,52 +1163,6 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 </div>
 <div class="sect3">
-<h4 id="Blokk-tittel"><a class="anchor" href="#Blokk-tittel"></a>Blokk - tittel (dct:title)</h4>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>title</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi tittelen til blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
-<p class="tableblock"><em>This property is used to specify the title of the block. This property should be repeated for parallel language versions of the title.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Eksempel i RDF Turtle:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:title "testblokk"@nb, "test block"@en; # tittel
-   .</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
 <h4 id="Blokk-utgiver"><a class="anchor" href="#Blokk-utgiver"></a>Blokk - utgiver (dct:publisher)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
@@ -1292,6 +1211,62 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div class="sect2">
 <h3 id="Blokk-anbefalte-egenskaper"><a class="anchor" href="#Blokk-anbefalte-egenskaper"></a>Anbefalte egenskaper for <em>Blokk</em></h3>
+<div class="sect3">
+<h4 id="Blokk-beskrivelse"><a class="anchor" href="#Blokk-beskrivelse"></a>Blokk – beskrivelse (dct:description)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>description</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify a free-text description of the block. This property should be repeated for parallel language versions of the description.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra obligatorisk til anbefalt, tilsvarende med multiplisitet fra 1..n til 0..n. Dette fordi ikke alle har beskrivelse på blokknivå som metadata.</p>
+<p class="tableblock"><em>Extension compared to DCAT-AP-NO: The requirement level is changed from mandatory to recommended, and the multiplicity changed from 1..n to 0..n accordingly.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel / <em>Example</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dette tilsvarer meta-beskrivelse i CMS / SEO (søkermotoroptimalisering).</p>
+<p class="tableblock"><em>This corresponds to meta description in a CMS / SEO (Search Engine Optimization).</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   dct:description "bare ment for test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
+   .</pre>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="Blokk-dekningsområde"><a class="anchor" href="#Blokk-dekningsområde"></a>Blokk - dekningsområde (dct:spatial)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
@@ -1420,7 +1395,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 </div>
 <div class="sect3">
-<h4 id="Blokk-tilgangsnivå"><a class="anchor" href="#Blokk-tilgangsnivå"></a>Blokk - tilgangsnivå (dct:accessRights)</h4>
+<h4 id="Blokk-tittel"><a class="anchor" href="#Blokk-tittel"></a>Blokk - tittel (dct:title)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1429,24 +1404,24 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>access rights</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>title</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:accessRights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:RightsStatement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å angi i hvilken grad blokkens innhold er tilgjengelig for allmennheten.</p>
-<p class="tableblock"><em>This property is used to specify to which degree the content of the block is public available.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi tittelen til blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property is used to specify the title of the block. This property should be repeated for parallel language versions of the title.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
@@ -1454,8 +1429,13 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right &#x29C9;</a>.</p>
-<p class="tableblock"><em>The value shall be chosen from EUs controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right" class="ext-link" target="_blank" rel="noopener">Access right &#x29C9;</a>.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra obligatorisk til anbefalt, tilsvarende med multiplisitet fra 1..n til 0..n. Dette fordi ikke alle har tittel på blokknivå som metadata.</p>
+<p class="tableblock"><em>Extension compared to DCAT-AP-NO: The requirement level is changed from mandatory to recommended, and the multiplicity changed from 1..n to 0..n accordingly.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel / <em>Example</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dette tilsvarer tittel-tag i CMS / SEO (søkermotoroptimalisering).</p>
+<p class="tableblock"><em>This corresponds to title tag in a CMS / SEO (Search Engine Optimization).</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1465,7 +1445,72 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:accessRights &lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt;; # allmenn tilgang
+   dct:title "testblokk"@nb, "test block"@en; # tittel
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-type-informasjon"><a class="anchor" href="#Blokk-type-informasjon"></a>Blokk - type informasjon (cdvno:typeInfo)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>type information</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:typeInfo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av / <em>Subproperty of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å indikere type informasjon som blokkens innhold inneholder.</p>
+<p class="tableblock"><em>This property is used to indicate the type of information that the content of the block contains.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad 1 / <em>Note 1</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular.</p>
+<p class="tableblock"><em>The value should be chosen from a controlled vocabulary.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad 2 / <em>Note 2</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidelse sammenlignet med DCAT-AP-NO: Denne er ikke eksplisitt spesifisert i DCAT-AP-NO. Dette for å kunne indikere type informasjon.</p>
+<p class="tableblock"><em>Extension compared to DCAT-AP-NO: This property is not explicitly specified in DCAT-AP-NO. This is to be able to indicate type information.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel / <em>Example</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjon om tjenester, rettigheter, generell veiledning osv.</p>
+<p class="tableblock"><em>Information about service, rights, general guidance etc.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   cdvno:typeInfo &lt;service&gt;; # type informasjon
    .</pre>
 </div>
 </div>
@@ -1815,7 +1860,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 </div>
 <div class="sect3">
-<h4 id="Blokk-type"><a class="anchor" href="#Blokk-type"></a>Blokk - type (dct:type)</h4>
+<h4 id="Blokk-undertema"><a class="anchor" href="#Blokk-undertema"></a>Blokk - undertema (cdvno:subTheme)</h4>
 <table class="tableblock frame-all grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1828,7 +1873,11 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:subTheme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av / <em>Sunproperty of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dcat:theme</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
@@ -1836,8 +1885,8 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi datasettets type.</p>
-<p class="tableblock"><em>This property is used to specify the type of the Dataset.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi subtema som blokkens innhold handler om.</p>
+<p class="tableblock"><em>This property is used to specify the subtheme which the content of the block is about.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1848,13 +1897,14 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type &#x29C9;</a>.</p>
-<p class="tableblock"><em>The value shall be chosen from EU&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type" class="ext-link" target="_blank" rel="noopener">Dataset type &#x29C9;</a>.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad 1 / <em>Note 1</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular.</p>
+<p class="tableblock"><em>The value should be chosen from a controlled vocabulary.</em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><mark>Spørsmål</mark></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark>Ut fra de verdiene på EUs liste over datasett-typer, ser ikke denne egenskapen nyttig ut for vårt formål. Trenger ikke denne? Den er også bare valgfri i DCAT-AP-NO.</mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad 2 / <em>Note 2</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidelse sammenlignet med DCAT-AP-NO: Denne er ikke eksplisitt spesifisert i DCAT-AP-NO. Dette for å kunne oppgi tema som ikke er inkludert i de obligatoriske/anbefalte taksonomiene for egenskap <a href="#Blokk-tema">Blokk - tema (dcat:theme)</a>.</p>
+<p class="tableblock"><em>Extension compared to DCAT-AP-NO: This property is not explicitly specified in DCAT-AP-NO. This is to be able to specify theme that is not included in the mandatory/recommended taxonomies for the property <a href="#Blokk-tema">Blokk - tema (dcat:theme)</a></em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1864,99 +1914,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="listingblock">
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST&gt;; # type, kodeliste
-   .</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="Blokk-versjonsnummer"><a class="anchor" href="#Blokk-versjonsnummer"></a>Blokk - versjonsnummer (owl:versionInfo)</h4>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>version number</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">owl:versionInfo</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi versjonsnummeret til blokkens innhold.</p>
-<p class="tableblock"><em>This property is used to specify the version number of the content of the block.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Eksempel i RDF Turtle:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   owl:versionInf "1.0.1"; # versjonsnummer
-   .</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="Blokk-versjonsnoter"><a class="anchor" href="#Blokk-versjonsnoter"></a>Blokk - versjonsnoter (adms:versionNotes)</h4>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>version notes</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">adms:versionNotes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.</p>
-<p class="tableblock"><em>This property is used to describe the differences between this version and a previous version of the content of the block. This property should be repeated for parallel language versions of the notes.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Eksempel i RDF Turtle:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
-   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; # versjonsnoter
+   cdvno:subTheme &lt;https://w3id.org/demo-resources/demo-classifications#demo-category-A1&gt;; # subtema
    .</pre>
 </div>
 </div>
@@ -3949,7 +3907,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-26 11:24:34 UTC
+Sist oppdatert 2023-05-26 12:32:45 UTC
 </div>
 </div>
 </body>
