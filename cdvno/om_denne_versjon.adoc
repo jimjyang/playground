@@ -1,0 +1,8 @@
+== Om denne versjonen [[Om-versjonen]]
+
+
+[cols="10,90", grid=nome,frame=none] 
+|===
+| image:images/warning-playground.png[playground,200,200] | *Forslaget er i hypotese-stadiet:* + 
+Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
+|===

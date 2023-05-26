@@ -1,11 +1,11 @@
-=== Klassen Distribusjon (dcat:Distribution) [[Distribution]]
+== Klassen Distribusjon (dcat:Distribution) [[Distribution]]
 
 [[img-klassenDistribusjon]]
 .Klassen Distribusjon (dcat:Distribution) og klassene den refererer til. 
 [link=images/cdvno-distribution.png]
 image::images/cdvno-distribution.png[]
 
-<<img-klassenDistribusjon>> viser klassen Distribusjon (`dcat:Distribution`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenDistribusjon>> viser klassen Distribusjon (`dcat:Distribution`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===
@@ -15,9 +15,9 @@ image::images/cdvno-distribution.png[]
 _The class is used to represent a distribution of an online resource._
 | URI | dcat:Distribution
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til https://data.norge.no/specification/dcat-ap-no#Distribusjon[klassen Distribusjon (dcat:Distribution) spesifisert i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] også brukes. 
 
-__In addition to the properties that are specified here, the properties in https://data.norge.no/specification/dcat-ap-no#Distribusjon[the class Distribution (dcat:Distribution) specified in DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
+__In addition to the properties that are specified here, the properties in https://data.norge.no/specification/dcat-ap-no#Distribusjon[the class Distribution (dcat:Distribution) specified in DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
 |===
 
 Eksempel i RDF Turtle:
@@ -26,9 +26,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Obligatoriske egenskaper for _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
 
-===== Distribusjon - tilgangsURL (dcat:accessURL) [[Distribusjon-tilgangsURL]]
+==== Distribusjon - tilgangsURL (dcat:accessURL) [[Distribusjon-tilgangsURL]]
 
 [cols="30s,70d"]
 |===
@@ -49,9 +49,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Anbefalte egenskaper for _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
+=== Anbefalte egenskaper for _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
 
-===== Distribusjon - beskrivelse (dct:description) [[Distribusjon-beskrivelse]]
+==== Distribusjon - beskrivelse (dct:description) [[Distribusjon-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -72,7 +72,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - format (dct:format) [[Distribusjon-format]]
+==== Distribusjon - format (dct:format) [[Distribusjon-format]]
 
 [cols="30s,70d"]
 |===
@@ -84,9 +84,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the format of the distribution. This property may be repeated APIs and end user applications which provide data i several formats._
 | Multiplisitet / _Multiplicity_ | 0..n 
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 
@@ -97,7 +97,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - lisens (dct:license) [[Distribusjon-lisens]]
+==== Distribusjon - lisens (dct:license) [[Distribusjon-lisens]]
 
 [cols="30s,70d"]
 |===
@@ -109,9 +109,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the licence under which the distribution is made available._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -121,7 +121,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - status (adms:status) [[Distribusjon-status]]  
+==== Distribusjon - status (adms:status) [[Distribusjon-status]]  
 
 [cols="30s,70d"]
 |===
@@ -133,9 +133,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the status of the distribution in the context of maturity lifecycle._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -145,7 +145,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - tilgjengelighet (dcatap:availability) [[Distribusjon-tilgjengelighet]]
+==== Distribusjon - tilgjengelighet (dcatap:availability) [[Distribusjon-tilgjengelighet]]
 
 [cols="30s,70d"]
 |===
@@ -157,9 +157,9 @@ Eksempel i RDF Turtle:
 _This property is used to indicate how long it is planned to keep the distribution of the Dataset available._
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability[Planned availability ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability[Planned availability &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability[Planned availability ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/planned-availability[Planned availability &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -169,9 +169,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Valgfrie egenskaper for _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
+=== Valgfrie egenskaper for _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
 
-===== Distribusjon - dokumentasjon (foaf:page) [[Distribusjon-dokumentasjon]]
+==== Distribusjon - dokumentasjon (foaf:page) [[Distribusjon-dokumentasjon]]
 
 [cols="30s,70d"]
 |===
@@ -192,7 +192,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - endringsdato (dct:modified) [[Distribusjon-endringsdato]]
+==== Distribusjon - endringsdato (dct:modified) [[Distribusjon-endringsdato]]
 
 [cols="30s,70d"]
 |===
@@ -213,7 +213,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - komprimeringsformat (dcat:compressFormat) [[Distribusjon-komprimeringsformat]]
+==== Distribusjon - komprimeringsformat (dcat:compressFormat) [[Distribusjon-komprimeringsformat]]
 [cols="30s,70d"]
 |===
 | _English name_ | _compression format_
@@ -224,9 +224,9 @@ Eksempel i RDF Turtle:
 _This property is used to refer to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
+| Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]. 
 
-__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
+__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -236,8 +236,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-
-===== Distribusjon - medietype (dcat:mediaType) [[Distribusjon-medietype]]
+==== Distribusjon - medietype (dcat:mediaType) [[Distribusjon-medietype]]
 [cols="30s,70d"]
 |===
 | _English name_ | _media type_
@@ -248,9 +247,9 @@ Eksempel i RDF Turtle:
 _This property is used to refer to the media type of which the distribution is._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
+| Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]. 
 
-__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -260,7 +259,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - nedlastningslenke (dcat:downloadURL) [[Distribusjon-nedlastningslenke]]
+==== Distribusjon - nedlastningslenke (dcat:downloadURL) [[Distribusjon-nedlastningslenke]]
 
 [cols="30s,70d"]
 |===
@@ -281,7 +280,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - pakkeformat (dcat:packageFormat) [[Distribusjon-pakkeformat]]
+==== Distribusjon - pakkeformat (dcat:packageFormat) [[Distribusjon-pakkeformat]]
 [cols="30s,70d"]
 |===
 | _English name_ | _packaging format_
@@ -292,9 +291,9 @@ Eksempel i RDF Turtle:
 _This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]. 
+| Merknad / _Note_ | Verdien bør velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]. 
 
-__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
+__The value should be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -304,7 +303,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - språk (dct:language) [[Distribusjon-språk]]
+==== Distribusjon - språk (dct:language) [[Distribusjon-språk]]
 
 [cols="30s,70d"]
 |===
@@ -316,9 +315,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the language/s that is/are used in the distribution._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -328,7 +327,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - størrelse eller varighet (dct:extent) [[Distribusjon-størrelse-varighet]]
+==== Distribusjon - størrelse eller varighet (dct:extent) [[Distribusjon-størrelse-varighet]]
 
 [cols="30s,70d"]
 |===
@@ -349,7 +348,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - tilgangstjeneste (dcat:accessService) [[Distribusjon-tilgangstjeneste]]
+==== Distribusjon - tilgangstjeneste (dcat:accessService) [[Distribusjon-tilgangstjeneste]]
 
 [cols="30s,70d"]
 |===
@@ -370,8 +369,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-
-===== Distribusjon - tittel (dct:title) [[Distribusjon-tittel]]
+==== Distribusjon - tittel (dct:title) [[Distribusjon-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -392,7 +390,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Distribusjon - utgivelsesdato (dct:issued) [[Distribusjon-utgivelsesdato]]
+==== Distribusjon - utgivelsesdato (dct:issued) [[Distribusjon-utgivelsesdato]]
 
 [cols="30s,70d"]
 |===

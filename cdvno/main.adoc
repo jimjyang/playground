@@ -1,5 +1,5 @@
 include::../locale/attributes.adoc[]
-= Velkommen til sandkassa for CDV-NO!
+= Forslag til CDV-NO (Spesifikasjon for innholdsbeskrivelse)
 :doctype: article
 :docinfo: shared
 :docinfodir: ../overview
@@ -13,82 +13,52 @@ ifdef::backend-pdf[:toc: macro]
 :xrefstyle: short
 
 NOTE: *Innmelding av feil og mangler:* + 
-Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
+Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
 
-[cols="10,90", grid=nome,frame=none] 
-|===
-| image:images/warning-playground.png[playground,200,200] | Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "Spesifikasjon for innholdsbeskrivelse" (arbeidstittel), forkortet til CDV-NO (Content Description Vocabulary - Norwegian specification). 
-|===
-
-*Sist oppdatert*: 2023-05-25
+*Sist oppdatert*: 2023-05-26
 
 toc::[]
 
-== Metadatamodell for innholdsbeskrivelse (arbeidstittel)
+include::om_denne_versjon.adoc[]
 
-[[img-cdvno]]
-.Forslag til metadatamodellen.
-[link=images/content-description-vocabulary-no.png]
-image::images/content-description-vocabulary-no.png[]
+include::om_denne_spesifikasjon.adoc[]
 
-<<img-cdvno>> ovenfor inneholder et forslag til "metadatamodellen". 
-
-Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) ↗", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
-
-Kort forklaring til metadatamodellen: 
-
-* Obligatorisk/skal (_mandatory/shall_) betyr "skal alltid tas med"; anbefalt/bør (_recommended/should_) betyr "bør tas med hvis finnes" og valgfri/kan (_optional/may_) betyr "kan tas med". 
-* Et gitt innhold som skal "tagges" (= beskrives med metadata) er en instans av klassen "Innhold (rdfs:Resource)".
-* Innholdet kan nås via en instans av klassen "Distribusjon (dcat:Distribution)" eller en instans av klassen "Datatjeneste (API) (dcat:DataService)".
-* Innholdet beskrives ("tagges") med egenskapene i klassen "Blokk (cdvno:Block)".
-** Klassen "Blokk (cdvno:Block)" er en subklasse av klassen "Datasett (dcat:Dataset)" fra ovennevnte DCAT-AP-NO. 
-* #_Mer utdypende forklaring kan komme senere hvis trengs_#
+include::forenklet-modell.adoc[]
 
 
-== Et tenkt eksempel
-
-Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" ↗", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
-
-* Her er link:./test[HTML-visning] av en demo-instans av klassen "Block (cdvno:Block)" og dens distribusjon. 
-* Her er link:./test/test.ttl[RDF Turtle-representasjon] av demo-instansen av klassen "Block (cdvno:Block)" og dens distribusjon.  
-
-== Egenskaper med "kodet verdi" (dvs. behov for taksonomier)
-
-Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
-
-#NB! Det er stor fare for at det er uoverensstemmelse mellom tabellen under og kravene som er spesifisert til de aktuelle egenskapene senere. Der det er uoverensstemmelse, har spesifikasjon til de enkelte egenskapene som kommer senere, forrang!# 
-
-[cols="20,40d, 40d"]
-|===
-| *egenskap* | *eksempler* | *mulige taksonomier*
-3+| *_klassen Block (cdvno:Block)_*
-| access rights (dct:accessRights) | allmenn tilgang, begrenset tilgang, ikke-allmenn tilgang | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
-| audience (dct:audience) | tjenestetilbyder, tjenestemottaker, pårørende, ... | 
-| main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"]
-| spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Bydel Gamle Oslo, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
-| theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
-| type (dct:type #???#) |  ... | 
-| update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"]
-| user need (cvdno:userNeed) | ... | EUs kommende kontrollerte vokabularer for livshendelser; Sektorspesifikke kodeverk (SNOMED CT); ... 
-3+| *_klassen Distribution (dcat:Distribution)_*
-| compression format (dcat:compressFormat) | gzip, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
-| format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
-| licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
-| media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
-| packaging format (dcat:packageFormat) | TAR, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
-| status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status ↗, window="_blank", role="ext-link"]
-| ... | ... | ...
-3+| *_klassen Data service (dcat:DataService)_* 
-| access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"]
-| format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"]
-| licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"]
-| media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"]
-| ... | ... | ...
-|===
-
-== Spesifikasjonen 
- 
-#_Klassene og egenskapene er forsøkt sortert etter norske navn._# 
+// == Egenskaper med "kodet verdi" (dvs. behov for taksonomier)
+// 
+// Tabellen under viser egenskapene som skal/bør ha "kodet verdi", med mulige kandidater til taksonomier (også kalt "kontrollerte vokabularer"). 
+// 
+// #NB! Det er stor fare for at det er uoverensstemmelse mellom tabellen under og kravene som er spesifisert til de aktuelle egenskapene senere. Der det er uoverensstemmelse, har spesifikasjon til de enkelte egenskapene som kommer senere, forrang!# 
+// 
+// [cols="20,40d, 40d"]
+// |===
+// | *egenskap* | *eksempler* | *mulige taksonomier*
+// 3+| *_klassen Block (cdvno:Block)_*
+// | access rights (dct:accessRights) | allmenn tilgang, begrenset tilgang, ikke-allmenn tilgang | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"]
+// | audience (dct:audience) | tjenestetilbyder, tjenestemottaker, pårørende, ... | 
+// | main language (dct:language) | bokmål, nynorsk, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"]
+// | spatial coverage (dct:spatial) | Norge, HSØ, Viken, Oslo, Bydel Gamle Oslo, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country &#x29C9;, window="_blank", role="ext-link"]; Kartverkets Administrative enheter; ...
+// | theme (dcat:theme) | helse, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme &#x29C9;, window="_blank", role="ext-link"]; Norsk https://psi.norge.no/los/struktur.html[Los &#x29C9;, window="_blank", role="ext-link"]; Sektorspesifikke taksonomier
+// | type (dct:type #???#) |  ... | 
+// | update frequency (dct:accrualPeriodicity) | årlig, hvert tredje år, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency &#x29C9;, window="_blank", role="ext-link"]
+// | user need (cvdno:userNeed) | ... | EUs kommende kontrollerte vokabularer for livshendelser; Sektorspesifikke kodeverk (SNOMED CT); ... 
+// 3+| *_klassen Distribution (dcat:Distribution)_*
+// | compression format (dcat:compressFormat) | gzip, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]
+// | format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"]
+// | licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"]
+// | media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]
+// | packaging format (dcat:packageFormat) | TAR, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]
+// | status (adms:status) |  | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-status[Dataset status &#x29C9;, window="_blank", role="ext-link"]
+// | ... | ... | ...
+// 3+| *_klassen Data service (dcat:DataService)_* 
+// | access rights (dct:accessRights) | Public, Restricted, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"]
+// | format (dct:format) | text, png, mp4, html, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"]
+// | licence (dct:license) | CC0, CCBY4, ... | EUs https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"]
+// | media type (dcat:mediaType) | mp4, ... | https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"]
+// | ... | ... | ...
+// |===
 
 include::klassenBlokk.adoc[]
 
@@ -97,5 +67,3 @@ include::klassenDatatjeneste.adoc[]
 include::klassenDistribusjon.adoc[]
 
 include::klassenOrganisasjon.adoc[]
-
-include::navnerom.adoc[]

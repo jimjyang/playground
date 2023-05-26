@@ -1,0 +1,25 @@
+== Om denne spesifikasjonen [[Om-spesifikasjonen]]
+
+=== Formål [[Formål]]
+
+#_<... kommer ...>_#
+
+=== Omfang og avgrensning [[Omfang-avgrensning]]
+
+#_<... kommer ...>_#
+
+=== Målgrupper [[Målgrupper]]
+
+#_<... kommer ...>_#
+
+=== Forvaltningsregime [[Forvaltningsregime]]
+
+#_<... kommer ...>_#
+
+=== Om kravnivåene i spesifikasjonen [[Om-kravnivåene]]
+
+Spesifikasjonen bruker ordene «obligatorisk/skal» (_"mandatory/shall"_), «anbefalt/bør» (_"recommended/should"_) og «valgfri/kan» (_"optional/may"_). Disse er forklart i https://data.norge.no/specification/dcat-ap-no/#Om-kravene[DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"], og forklaringene gjentas ikke her.
+
+include::navnerom.adoc[]
+
+include::leserveiledning.adoc[]

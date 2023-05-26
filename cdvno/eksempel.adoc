@@ -1,0 +1,7 @@
+=== Et tenkt eksempel på anvendelse av denne spesifikasjonen [[eksempel]]
+
+Som et konkret demo-/test-eksempel, la oss si at vi ønsker å tagge https://www.helsenorge.no/hjelpetilbud-i-kommunene/avlastningstiltak/#klage-pa-vedtak["\"Klage på vedtak\" &#x29C9;", window="_blank", role="ext-link"] under "Støtte og avlastning til pårørende med store omsorgsoppgaver" på helse.norge.no: 
+
+* Her er link:./test[HTML-visning] av en demo-instans av klassen "Block (`cdvno:Block`)" og dens distribusjon. 
+* Her er link:./test/test.ttl[RDF Turtle-representasjon] av demo-instansen av klassen "Block (`cdvno:Block`)" og dens distribusjon.  
+
