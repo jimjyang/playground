@@ -1,11 +1,11 @@
-=== Klassen Blokk (cdvno:Block) [[Block]]
+== Klassen Blokk (cdvno:Block) [[Block]]
 
 [[img-klassenBlokk]]
 .Klassen Blokk (cdvno:Block) og klassene den refererer til. 
 [link=images/cdvno-block.png]
 image::images/cdvno-block.png[]
 
-<<img-klassenBlokk>> viser klassen Blokk (`cdvno:Block`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenBlokk>> viser klassen Blokk (`cdvno:Block`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) &#x29C9;↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===
@@ -16,9 +16,9 @@ _The class is used to represent a block in an online resource._
 | URI | cdvno:Block
 | Subklasse av / _Subclass of_ | dcat:Dataset
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Datasett (dcat:Dataset) spesifisert i https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til klassen Datasett (dcat:Dataset) spesifisert i https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] også brukes. 
 
-__In addition to the properties that are specified here, the properties in the class Dataset (dcat:Dataset) specified in https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used__.
+__In addition to the properties that are specified here, the properties in the class Dataset (dcat:Dataset) specified in https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] (in Norwegian) may also be used__.
 |===
 
 Eksempel i RDF Turtle:
@@ -27,9 +27,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Obligatoriske egenskaper for _Blokk_ [[Blokk-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for _Blokk_ [[Blokk-obligatoriske-egenskaper]]
 
-===== Blokk – beskrivelse (dct:description) [[Blokk-beskrivelse]]
+==== Blokk – beskrivelse (dct:description) [[Blokk-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -50,7 +50,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
+==== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
 
 [cols="30s,70d"]
 |===
@@ -62,9 +62,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the main language that the concent of the block is in._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].__
 | #Spørsmål# | #Kanskje for strengt? Trenger ikke å være obligatorisk, men anbefalt?# 
 |===
 
@@ -75,7 +75,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - identifikator (dct:identifier) [[Blokk-identifikator]]  
+==== Blokk - identifikator (dct:identifier) [[Blokk-identifikator]]  
 
 [cols="30s,70d"]
 |===
@@ -88,9 +88,9 @@ _This property is used to specify the identifier to the block._
 | Multiplisitet / _Multiplicity_ | 1..1
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | 
-Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;, window="_blank", role="ext-link"]
 
-__See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only).__
+__See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;, window="_blank", role="ext-link"] (in Norwegian).__
 |===
 
 Eksempel i RDF Turtle:
@@ -100,7 +100,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - tema (dcat:theme) [[Blokk-tema]] 
+==== Blokk - tema (dcat:theme) [[Blokk-tema]] 
 
 [cols="30s,70d"]
 |===
@@ -112,9 +112,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the theme which the content of the block is about._ 
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], og/eller andre sektorspesifikke taksonomier. 
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme &#x29C9;, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los &#x29C9;, window="_blank", role="ext-link"], og/eller andre sektorspesifikke taksonomier. 
 
-__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], and/or other sector specific taxonomies.__
+__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme &#x29C9;, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los &#x29C9;, window="_blank", role="ext-link"], and/or other sector specific taxonomies.__
 |===
 
 Eksempel i RDF Turtle:
@@ -124,7 +124,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - tittel (dct:title) [[Blokk-tittel]]  
+==== Blokk - tittel (dct:title) [[Blokk-tittel]]  
 
 [cols="30s,70d"]
 |===
@@ -145,7 +145,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - utgiver (dct:publisher) [[Blokk-utgiver]]
+==== Blokk - utgiver (dct:publisher) [[Blokk-utgiver]]
 
 [cols="30s,70d"]
 |===
@@ -166,9 +166,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
+=== Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
 
-===== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
+==== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
 
 [cols="30s,70d"]
 |===
@@ -182,17 +182,17 @@ _This property is used to specify spatial or administrative coverage that the co
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |Merknad / _Note_ a|Følgende krav til bruk av kontrollerte vokabularer gjelder:
 
-* Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Kontinent ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Land ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Sted ↗, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNavn ↗, window="_blank", role="ext-link"].
+* Minst en verdi skal velges fra en av følgende kontrollerte vokabularer: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Kontinent &#x29C9;, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Land &#x29C9;, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Sted &#x29C9;, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNavn &#x29C9;, window="_blank", role="ext-link"].
 
-* For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter ↗, window="_blank", role="ext-link"] brukes.
+* For å angi dekningsområde i Norge, bør Kartverkets kontrollerte vokabular https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative enheter &#x29C9;, window="_blank", role="ext-link"] brukes.
 
 * Andre geografisk eller administrative inndelinger i Norge kan også brukes. F.eks. helseregion, skolekrets osv. 
 
 _Regarding usage of controlled vocabularies, the following requirements apply:_
 
-* _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country ↗, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place ↗, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNames ↗, window="_blank", role="ext-link"]._
+* _At least one value shall be chosen from the following controlled vocabularies: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/continent[Continent &#x29C9;, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country[Country &#x29C9;, window="_blank", role="ext-link"]; https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/place[Place &#x29C9;, window="_blank", role="ext-link"]; http://sws.geonames.org/[GeoNames &#x29C9;, window="_blank", role="ext-link"]._
 
-* _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units ↗, window="_blank", role="ext-link"] should be used._
+* _To specify spatial coverage in Norway, the Norwegian Mapping Authority's controlled vocabulary https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163[Administrative units &#x29C9;, window="_blank", role="ext-link"] should be used._
 
 * _Other spatial or administrative subdivision of Norway may be used. E.g. health region, school district etc._
 |===
@@ -204,7 +204,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - distribusjon (dcat:distribution) [[Blokk-distribusjon]] 
+==== Blokk - distribusjon (dcat:distribution) [[Blokk-distribusjon]] 
 
 [cols="30s,70d"]
 |===
@@ -225,7 +225,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
+==== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
 
 [cols="30s,70d"]
 |===
@@ -237,9 +237,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify to which degree the content of the block is public available._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -249,9 +249,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Valgfrie egenskaper for _Blokk_ [[Blokk-valgfrie-egenskaper]]
+=== Valgfrie egenskaper for _Blokk_ [[Blokk-valgfrie-egenskaper]]
 
-===== Blokk - brukerbehov (cdvno:userNeed) [[Blokk-brukerbehov]] 
+==== Blokk - brukerbehov (cdvno:userNeed) [[Blokk-brukerbehov]] 
 
 [cols="30s,70d"]
 |===
@@ -275,7 +275,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - dato opprettet (dct:created) [[Blokk-data-opprettet]]  
+==== Blokk - dato opprettet (dct:created) [[Blokk-data-opprettet]]  
 
 [cols="30s,70d"]
 |===
@@ -296,7 +296,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - dato sist oppdatert (dct:modified) [[Blokk-data-sist-oppdatert]]  
+==== Blokk - dato sist oppdatert (dct:modified) [[Blokk-data-sist-oppdatert]]  
 
 [cols="30s,70d"]
 |===
@@ -317,7 +317,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - gyldighetsperiode (cv:validityPeriod) [[Blokk-gyldighetsperiode]] 
+==== Blokk - gyldighetsperiode (cv:validityPeriod) [[Blokk-gyldighetsperiode]] 
 
 [cols="30s,70d"]
 |===
@@ -338,7 +338,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - målgruppe (dct:audience) [[Blokk-målgruppe]]  
+==== Blokk - målgruppe (dct:audience) [[Blokk-målgruppe]]  
 
 [cols="30s,70d"]
 |===
@@ -363,7 +363,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - oppdateringsfrekvens (dct:accrualPeriodicity)  [[Blokk-oppdateringsfrekvens]]
+==== Blokk - oppdateringsfrekvens (dct:accrualPeriodicity)  [[Blokk-oppdateringsfrekvens]]
 
 [cols="30s,70d"]
 |===
@@ -375,9 +375,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the frequency at which the content of the block is updated._
 | Multiplisitet / _Multiplicity_ | 0..1 
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency[Frequency &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -387,7 +387,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - produsent (dct:creator) [[Blokk-creator]]
+==== Blokk - produsent (dct:creator) [[Blokk-creator]]
 
 [cols="30s,70d"]
 |===
@@ -408,7 +408,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - type (dct:type) [[Blokk-type]] 
+==== Blokk - type (dct:type) [[Blokk-type]] 
 
 [cols="30s,70d"]
 |===
@@ -420,9 +420,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the type of the Dataset._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type &#x29C9;, window="_blank", role="ext-link"].__
 | #Spørsmål# | #Ut fra de verdiene på EUs liste over datasett-typer, ser ikke denne egenskapen nyttig ut for vårt formål. Trenger ikke denne? Den er også bare valgfri i DCAT-AP-NO.# 
 |===
 
@@ -433,7 +433,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - versjonsnummer (owl:versionInfo) [[Blokk-versjonsnummer]]  
+==== Blokk - versjonsnummer (owl:versionInfo) [[Blokk-versjonsnummer]]  
 
 [cols="30s,70d"]
 |===
@@ -454,7 +454,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Blokk - versjonsnoter (adms:versionNotes) [[Blokk-versjonsnoter]]  
+==== Blokk - versjonsnoter (adms:versionNotes) [[Blokk-versjonsnoter]]  
 
 [cols="30s,70d"]
 |===

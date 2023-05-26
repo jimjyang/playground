@@ -1,11 +1,11 @@
-=== Klassen Datatjeneste (dcat:DataService) [[DataService]]
+== Klassen Datatjeneste (dcat:DataService) [[DataService]]
 
 [[img-klassenDatatjeneste]]
 .Klassen Datatjeneste (dcat:DataService) og klassene den refererer til. 
 [link=images/cdvno-dataservice.png]
 image::images/cdvno-dataservice.png[]
 
-<<img-klassenDatatjeneste>> viser klassen Datatjeneste (`dcat:DataService`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[klassen Datatjeneste (dcat:DataService) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenDatatjeneste>> viser klassen Datatjeneste (`dcat:DataService`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[klassen Datatjeneste (dcat:DataService) spesifisert i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===
@@ -15,9 +15,9 @@ image::images/cdvno-dataservice.png[]
 _The class is used to represent a data service which provides access to one or more online resources._
 | URI | dcat:DataService
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til https://data.norge.no/specification/dcat-ap-no#Datatjeneste[klassen Datatjeneste (dcat:DataService) spesifisert i DCAT-AP-NO ↗, window="_blank", role="ext-link"] også brukes. 
+| Merknad / _Note_ | I tillegg til egenskapene spesifisert her, kan egenskapene til https://data.norge.no/specification/dcat-ap-no#Datatjeneste[klassen Datatjeneste (dcat:DataService) spesifisert i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] også brukes. 
 
-__In addition to the properties that are specified here, the properties in https://data.norge.no/specification/dcat-ap-no#Datatjeneste[the class Data service (dcat:DataService) specified in DCAT-AP-NO ↗, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
+__In addition to the properties that are specified here, the properties in https://data.norge.no/specification/dcat-ap-no#Datatjeneste[the class Data service (dcat:DataService) specified in DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"] (in Norwegian) may also be used.__
 |===
 
 Eksempel i RDF Turtle:
@@ -26,9 +26,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Obligatoriske egenskaper for _Datatjeneste_ [[Datatjeneste-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for _Datatjeneste_ [[Datatjeneste-obligatoriske-egenskaper]]
 
-===== Datatjeneste - endepunktsURL (dcat:endpointURL) [[Datatjeneste-endepunktsurl]]
+==== Datatjeneste - endepunktsURL (dcat:endpointURL) [[Datatjeneste-endepunktsurl]]
 
 [cols="30s,70d"]
 |===
@@ -49,8 +49,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-
-===== Datatjeneste - identifikator (dct:identifier) [[Datatjeneste-identifikator]]
+==== Datatjeneste - identifikator (dct:identifier) [[Datatjeneste-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -63,9 +62,9 @@ _This property is used to specify the identifier to the service._
 | Multiplisitet / _Multiplicity_ | 1..n
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 | Merknad / _Note_ | 
-Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"]
+Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;, window="_blank", role="ext-link"]
 
-__See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. ↗, window="_blank", role="ext-link"] (in Norwegian only).__
+__See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;, window="_blank", role="ext-link"] (in Norwegian).__
 |===
 
 Eksempel i RDF Turtle:
@@ -75,7 +74,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - tittel (dct:title) [[Datatjeneste-tittel]]
+==== Datatjeneste - tittel (dct:title) [[Datatjeneste-tittel]]
 
 [cols="30s,70d"]
 |===
@@ -96,10 +95,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
+=== Anbefalte egenskaper for _Datatjeneste_ [[Datatjeneste-anbefalte-egenskaper]]
 
-==== Anbefalte egenskaper for _Datatjeneste_ [[Datatjeneste-anbefalte-egenskaper]]
-
-===== Datatjeneste - emneord (dcat:keyword) [[Datatjeneste-emneord]]
+==== Datatjeneste - emneord (dcat:keyword) [[Datatjeneste-emneord]]
 
 [cols="30s,70d"]
 |===
@@ -120,7 +118,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - endepunktsbeskrivelse (dcat:endpointDescription) [[Datatjeneste-endepunktsbeskrivelse]]
+==== Datatjeneste - endepunktsbeskrivelse (dcat:endpointDescription) [[Datatjeneste-endepunktsbeskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -144,7 +142,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - format (dct:format) [[Datatjeneste-format]]
+==== Datatjeneste - format (dct:format) [[Datatjeneste-format]]
 
 [cols="30s,70d"]
 |===
@@ -156,9 +154,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the format of the service. This property may be repeated for services that provide data in several formats._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type[File type &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -168,7 +166,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - kontaktpunkt (dcat:contactPoint) [[Datatjeneste-kontaktpunkt]]
+==== Datatjeneste - kontaktpunkt (dcat:contactPoint) [[Datatjeneste-kontaktpunkt]]
 
 [cols="30s,70d"]
 |===
@@ -190,7 +188,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - tema (dcat:theme) [[Datatjeneste-tema]]
+==== Datatjeneste - tema (dcat:theme) [[Datatjeneste-tema]]
 
 [cols="30s,70d"]
 |===
@@ -202,9 +200,9 @@ Eksempel i RDF Turtle:
 _This property is used to refer to a main theme for the service. A service may be associated with several themes._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], og/eller andre sektorspesifikke taksonomier. 
+| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme &#x29C9;, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los &#x29C9;, window="_blank", role="ext-link"], og/eller andre sektorspesifikke taksonomier. 
 
-__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme ↗, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los ↗, window="_blank", role="ext-link"], and/or other sector specific taxonomies.__
+__The value should be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme[Data theme &#x29C9;, window="_blank", role="ext-link"], https://psi.norge.no/los/struktur.html[Los &#x29C9;, window="_blank", role="ext-link"], and/or other sector specific taxonomies.__
 |===
 
 Eksempel i RDF Turtle:
@@ -214,7 +212,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - tilgjengeliggjør datasett (dcat:servesDataset) [[Datatjeneste-tilgjengeliggjør-datasett]]
+==== Datatjeneste - tilgjengeliggjør datasett (dcat:servesDataset) [[Datatjeneste-tilgjengeliggjør-datasett]]
 
 [cols="30s,70d"]
 |===
@@ -235,7 +233,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - utgiver (dct:publisher) [[Datatjeneste-utgiver]]
+==== Datatjeneste - utgiver (dct:publisher) [[Datatjeneste-utgiver]]
 
 [cols="30s,70d"]
 |===
@@ -256,10 +254,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
+=== Valgfrie egenskaper for _Datatjeneste_ [[Datatjeneste-valgfrie-egenskaper]]
 
-==== Valgfrie egenskaper for _Datatjeneste_ [[Datatjeneste-valgfrie-egenskaper]]
-
-===== Datatjeneste - beskrivelse (dct:description) [[Datatjeneste-beskrivelse]]
+==== Datatjeneste - beskrivelse (dct:description) [[Datatjeneste-beskrivelse]]
 [cols="30s,70d"]
 |===
 | _English name_ | _description_
@@ -279,7 +276,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - dokumentasjon (foaf:page) [[Datatjeneste-dokumentasjon]]
+==== Datatjeneste - dokumentasjon (foaf:page) [[Datatjeneste-dokumentasjon]]
 [cols="30s,70d"]
 |===
 | _English name_ | _page (documentation)_
@@ -299,7 +296,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - i samsvar med (dct:conformsTo) [[Datatjeneste-i-samsvar-med]]
+==== Datatjeneste - i samsvar med (dct:conformsTo) [[Datatjeneste-i-samsvar-med]]
 [cols="30s,70d"]
 |===
 | _English name_ | _conforms to_
@@ -319,7 +316,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - landingsside (dcat:landingPage) [[Datatjeneste-landingsside]]
+==== Datatjeneste - landingsside (dcat:landingPage) [[Datatjeneste-landingsside]]
 [cols="30s,70d"]
 |===
 | _English name_ | _landing page_
@@ -339,7 +336,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - lisens (dct:license) [[Datatjeneste-lisens]]
+==== Datatjeneste - lisens (dct:license) [[Datatjeneste-lisens]]
 [cols="30s,70d"]
 |===
 | _English name_ | _licence_
@@ -350,9 +347,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the licence under which the service is made available._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence[Licence &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -362,7 +359,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - medietype (dcat:mediaType) [[Datatjeneste-medietype]]
+==== Datatjeneste - medietype (dcat:mediaType) [[Datatjeneste-medietype]]
 
 [cols="30s,70d"]
 |===
@@ -374,9 +371,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the media type of the service. This property may be repeated for APIs or end-user applications which provide data in several media types._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from https://www.iana.org/assignments/media-types/media-types.xhtml[IANA Media Types &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:
@@ -386,7 +383,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Datatjeneste - tilgangsrettigheter (dct:accessRights) [[Datatjeneste-tilgangsrettigheter]]
+==== Datatjeneste - tilgangsrettigheter (dct:accessRights) [[Datatjeneste-tilgangsrettigheter]]
 
 [cols="30s,70d"]
 |===
@@ -398,9 +395,9 @@ Eksempel i RDF Turtle:
 _This property is used to include information regarding access or restrictions based on privacy, security, or other policies._ 
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].
 
-__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right ↗, window="_blank", role="ext-link"].__
+__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
 Eksempel i RDF Turtle:

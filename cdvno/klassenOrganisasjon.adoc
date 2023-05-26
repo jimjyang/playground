@@ -1,4 +1,4 @@
-=== Klassen Organisasjon (org:Organization) [[Organization]]
+== Klassen Organisasjon (org:Organization) [[Organization]]
 
 [[img-klassenOrganisasjon]]
 .Klassen Organisasjon (org:Organization). 
@@ -24,9 +24,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Obligatoriske egenskaper for _Organisasjon_ [[Organisasjon-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for _Organisasjon_ [[Organisasjon-obligatoriske-egenskaper]]
 
-===== Organisasjon – identifikator (dct:identifier) [[Organisasjon-identifikator]]
+==== Organisasjon – identifikator (dct:identifier) [[Organisasjon-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -50,7 +50,7 @@ Eksempel i RDF Turtle:
    .
 -----
 
-===== Organisasjon – navn (dct:title) [[Organisasjon-tittel]]  
+==== Organisasjon – navn (dct:title) [[Organisasjon-tittel]]  
 
 [cols="30s,70d"]
 |===
@@ -71,9 +71,9 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Anbefalte egenskaper for _Organisasjon_ [[Organisasjon-anbefalte-egenskaper]]
+=== Anbefalte egenskaper for _Organisasjon_ [[Organisasjon-anbefalte-egenskaper]]
 
-===== Organisasjon – type (dct:type) [[Organisasjon-type]] 
+==== Organisasjon – type (dct:type) [[Organisasjon-type]] 
 
 [cols="30s,70d"]
 |===
@@ -85,9 +85,9 @@ Eksempel i RDF Turtle:
 _This property is used to specify the type of the organization_
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf[ADMS Publisher Type Vocabulary ↗, window="_blank", role="ext-link"] (lenket ressurs i RDF) .
+| Merknad / _Note_ | Verdien bør velges fra https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf[ADMS Publisher Type Vocabulary &#x29C9;, window="_blank", role="ext-link"] (lenket ressurs i RDF) .
 
-__The value should be chosen from https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf[ADMS Publisher Type Vocabulary ↗, window="_blank", role="ext-link"] (linked resource in RDF).__
+__The value should be chosen from https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf[ADMS Publisher Type Vocabulary &#x29C9;, window="_blank", role="ext-link"] (linked resource in RDF).__
 |===
 
 Eksempel i RDF Turtle:

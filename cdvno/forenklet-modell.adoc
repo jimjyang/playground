@@ -1,0 +1,20 @@
+== Forenklet metadatamodell for innholdsbeskrivelse (arbeidstittel) [[Forenklet-modell]]
+
+[[img-cdvno]]
+.Forenklet metadatamodell, kun på klassenivå.
+[link=images/cdvno-classes-only.png]
+image::images/cdvno-classes-only.png[]
+
+<<img-cdvno>> ovenfor inneholder et forslag til metadatamodellen. Klassene Blokk (`cdvno:Block`), Distribusjon (`dcat:Distriubution`), Datatjeneste (dcat:DataService) og Organisasjon (`org:Organization`) er spesifisert nærmere i det etterfølgende. Klassene Datasett (`dcat:Datasett`) og Innhold (`rdfs:Resource`) vil ikke bli spesifisert nærmere i denne spesifikasjonen.  
+
+
+Forslaget gjenbruker https://data.norge.no/specification/dcat-ap-no["Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) &#x29C9;", window="_blank", role="ext-link"]. Det som er #gulet# ut i tegningen, er avvik fra DCAT-AP-NO.  
+
+Kort forklaring til metadatamodellen: 
+
+* Et gitt innhold som skal "tagges" (= beskrives med metadata) er en instans av klassen "Innhold `(rdfs:Resource`)".
+* Innholdet kan nås via en eller flere instanser av klassen "Distribusjon (`dcat:Distribution`)" eller en eller flere instanser av klassen "Datatjeneste (API) (`dcat:DataService`)".
+* Innholdet beskrives ("tagges") med egenskapene i klassen "Blokk (`cdvno:Block`)".
+** Klassen "Blokk (`cdvno:Block`)" er en subklasse av klassen "Datasett (dcat:Dataset)" fra ovennevnte DCAT-AP-NO. 
+
+include::eksempel.adoc[]
