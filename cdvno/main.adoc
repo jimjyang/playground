@@ -1,5 +1,5 @@
 include::../locale/attributes.adoc[]
-= Forslag til CDV-NO (Spesifikasjon for innholdsbeskrivelse)
+= Forslag til CDV-NO (Spesifikasjon for innholdsbeskrivelser - arbeidstittel)
 :doctype: article
 :docinfo: shared
 :docinfodir: ../overview
