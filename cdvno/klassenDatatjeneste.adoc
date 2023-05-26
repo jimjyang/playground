@@ -1,4 +1,4 @@
-== Klassen Datatjeneste (dcat:DataService) [[DataService]]
+== Klassen Datatjeneste (API) (dcat:DataService) [[DataService]]
 
 [[img-klassenDatatjeneste]]
 .Klassen Datatjeneste (dcat:DataService) og klassene den refererer til. 
