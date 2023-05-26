@@ -531,7 +531,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Leserveiledning">Hvordan du leser denne spesifikasjonen</a></li>
 </ul>
 </li>
-<li><a href="#Forenklet-modell">Forenklet metadatamodell for innholdsbeskrivelse (arbeidstittel)</a>
+<li><a href="#Forenklet-modell">Forenklet metadatamodell</a>
 <ul class="sectlevel2">
 <li><a href="#eksempel">Et tenkt eksempel på anvendelse av denne spesifikasjonen</a></li>
 </ul>
@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#DataService">Klassen Datatjeneste (dcat:DataService)</a>
+<li><a href="#DataService">Klassen Datatjeneste (API) (dcat:DataService)</a>
 <ul class="sectlevel2">
 <li><a href="#Datatjeneste-obligatoriske-egenskaper">Obligatoriske egenskaper for <em>Datatjeneste</em></a>
 <ul class="sectlevel3">
@@ -850,7 +850,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å angi en unik identifikator til klassen eller egenskapen.</p>
-<p class="tableblock">Det er dette som skal benyttes i RDF-basert utveksling/tilgjengeliggjøring av beskrivelser som er utformet i henhold til denne standarden.</p>
+<p class="tableblock">Det er dette som skal benyttes i RDF-basert utveksling/tilgjengeliggjøring av beskrivelser som er utformet i henhold til denne spesifikasjonen.</p>
 <p class="tableblock">Eksempel: <code>skos:Concept</code> er identifikatoren til klassen Begrep (Concept), slik klassen er spesifisert i <code>skos</code> (<a href="#Navnerom">Navnerom som er brukt i spesifikasjonen</a> viser hva <code>skos</code> står for).</p></td>
 </tr>
 <tr>
@@ -860,7 +860,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å forklare hva klassen eller egenskapen er ment å brukes til, i kontekst av denne standarden. Forklaringen er også skrevet på engelsk (<em>Usage note</em>, kursivert), primært ment for engelsktalende utviklere av verktøystøtte.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å forklare hva klassen eller egenskapen er ment å brukes til, i kontekst av denne spesifikasjonen. Forklaringen er også skrevet på engelsk (<em>Usage note</em>, kursivert), primært ment for engelsktalende utviklere av verktøystøtte.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -880,7 +880,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 </div>
 <div class="sect1">
-<h2 id="Forenklet-modell"><a class="anchor" href="#Forenklet-modell"></a>Forenklet metadatamodell for innholdsbeskrivelse (arbeidstittel)</h2>
+<h2 id="Forenklet-modell"><a class="anchor" href="#Forenklet-modell"></a>Forenklet metadatamodell</h2>
 <div class="sectionbody">
 <div id="img-cdvno" class="imageblock">
 <div class="content">
@@ -889,7 +889,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="title">Figur 1. Forenklet metadatamodell, kun på klassenivå.</div>
 </div>
 <div class="paragraph">
-<p><a href="#img-cdvno">Figur 1</a> ovenfor inneholder et forslag til metadatamodellen. Klassene Blokk (<code>cdvno:Block</code>), Distribusjon (<code>dcat:Distriubution</code>), Datatjeneste (dcat:DataService) og Organisasjon (<code>org:Organization</code>) er spesifisert nærmere i det etterfølgende. Klassene Datasett (<code>dcat:Datasett</code>) og Innhold (<code>rdfs:Resource</code>) vil ikke bli spesifisert nærmere i denne spesifikasjonen.</p>
+<p><a href="#img-cdvno">Figur 1</a> ovenfor inneholder et forslag til metadatamodellen. Klassene Blokk (<code>cdvno:Block</code>), Distribusjon (<code>dcat:Distriubution</code>), Datatjeneste (dcat:DataService) og Organisasjon (<code>org:Organization</code>) er spesifisert nærmere i det etterfølgende. Klassene Datasett (<code>dcat:Datasett</code>) og Innhold (<code>rdfs:Resource</code>) vil ikke bli spesifisert i denne spesifikasjonen.</p>
 </div>
 <div class="paragraph">
 <p>Forslaget gjenbruker <a href="https://data.norge.no/specification/dcat-ap-no" class="ext-link" target="_blank" rel="noopener">Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) &#x29C9;</a>. Det som er <mark>gulet</mark> ut i tegningen, er avvik fra DCAT-AP-NO.</p>
@@ -903,7 +903,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <p>Et gitt innhold som skal "tagges" (= beskrives med metadata) er en instans av klassen "Innhold <code>(rdfs:Resource</code>)".</p>
 </li>
 <li>
-<p>Innholdet kan nås via en eller flere instanser av klassen "Distribusjon (<code>dcat:Distribution</code>)" eller en eller flere instanser av klassen "Datatjeneste (API) (<code>dcat:DataService</code>)".</p>
+<p>Innholdet kan nås via en eller flere instanser av klassen "Distribusjon (<code>dcat:Distribution</code>)", eller en eller flere instanser av klassen "Datatjeneste (API) (<code>dcat:DataService</code>)".</p>
 </li>
 <li>
 <p>Innholdet beskrives ("tagges") med egenskapene i klassen "Blokk (<code>cdvno:Block</code>)".</p>
@@ -1963,7 +1963,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 </div>
 <div class="sect1">
-<h2 id="DataService"><a class="anchor" href="#DataService"></a>Klassen Datatjeneste (dcat:DataService)</h2>
+<h2 id="DataService"><a class="anchor" href="#DataService"></a>Klassen Datatjeneste (API) (dcat:DataService)</h2>
 <div class="sectionbody">
 <div id="img-klassenDatatjeneste" class="imageblock">
 <div class="content">
@@ -3931,7 +3931,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-26 10:14:48 UTC
+Sist oppdatert 2023-05-26 10:34:57 UTC
 </div>
 </div>
 </body>
