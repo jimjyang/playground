@@ -12,7 +12,7 @@ Hvert krav er spesifisert i en tabell som inneholder syntaks og forklaring. Rade
 Det er dette som skal benyttes i RDF-basert utveksling/tilgjengeliggjøring av beskrivelser som er utformet i henhold til denne spesifikasjonen.
 
 Eksempel: `skos:Concept` er identifikatoren til klassen Begrep (Concept), slik klassen er spesifisert i `skos` (<<Navnerom>> viser hva `skos` står for).
-| Subklasse av / _Subclass of_ | Denne brukes bare i spesifikasjon til en klasse, til å spesifisere om klassen er en subklasse av en anne. 
+| Subklasse av / _Subclass of_ | Denne brukes bare i spesifikasjon til en klasse, til å spesifisere om klassen er en subklasse av en annen. 
 | Subegenskap av / _Subproperty of_ | Denne brukes bare i spesifikasjon til en egenskap, til å spesifisere om egenskapen er en subegenskap av en annen.  
 | Verdiområde / _Range_ | Denne brukes bare i spesifikasjon av en egenskap, til å spesifisere lovlige verdier. Disse angis ved henvisning til en klasse eller datatype.
 
