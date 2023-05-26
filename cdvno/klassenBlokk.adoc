@@ -29,27 +29,6 @@ Eksempel i RDF Turtle:
 
 === Obligatoriske egenskaper for _Blokk_ [[Blokk-obligatoriske-egenskaper]]
 
-==== Blokk – beskrivelse (dct:description) [[Blokk-beskrivelse]]
-
-[cols="30s,70d"]
-|===
-| _English name_ | _description_
-| URI | dct:description
-| Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
-
-_This property is used to specify a free-text description of the block. This property should be repeated for parallel language versions of the description._
-| Multiplisitet / _Multiplicity_ | 1..n
-| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   dct:description "bare ment for test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
-   .
------
-
 ==== Blokk - hovedspråk (dct:language) [[Blokk-hovedspråk]]  
 
 [cols="30s,70d"]
@@ -124,27 +103,6 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - tittel (dct:title) [[Blokk-tittel]]  
-
-[cols="30s,70d"]
-|===
-| _English name_ | _title_
-| URI | dct:title
-| Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi tittelen til blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
-
-_This property is used to specify the title of the block. This property should be repeated for parallel language versions of the title._
-| Multiplisitet / _Multiplicity_ |  1..n
-| Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   dct:title "testblokk"@nb, "test block"@en; # tittel
-   .
------
-
 ==== Blokk - utgiver (dct:publisher) [[Blokk-utgiver]]
 
 [cols="30s,70d"]
@@ -167,6 +125,33 @@ Eksempel i RDF Turtle:
 -----
 
 === Anbefalte egenskaper for _Blokk_ [[Blokk-anbefalte-egenskaper]]
+
+==== Blokk – beskrivelse (dct:description) [[Blokk-beskrivelse]]
+
+[cols="30s,70d"]
+|===
+| _English name_ | _description_
+| URI | dct:description
+| Verdiområde / _Range_ | rdf:langString
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi en fritekst beskrivelse av blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
+
+_This property is used to specify a free-text description of the block. This property should be repeated for parallel language versions of the description._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad / _Note_ | Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra obligatorisk til anbefalt, tilsvarende med multiplisitet fra 1..n til 0..n. Dette fordi ikke alle har beskrivelse på blokknivå som metadata. 
+
+_Extension compared to DCAT-AP-NO: The requirement level is changed from mandatory to recommended, and the multiplicity changed from 1..n to 0..n accordingly._ 
+| Eksempel / _Example_ | Dette tilsvarer meta-beskrivelse i CMS / SEO (søkermotoroptimalisering). 
+
+_This corresponds to meta description in a CMS / SEO (Search Engine Optimization)._
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   dct:description "bare ment for test og demo"@nb, "only meant for test and demo"@en; # beskrivelse
+   .
+-----
 
 ==== Blokk - dekningsområde (dct:spatial) [[Blokk-dekningsområde]] 
 
@@ -225,27 +210,61 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - tilgangsnivå (dct:accessRights) [[Blokk-tilgangsnivå]]
+==== Blokk - tittel (dct:title) [[Blokk-tittel]]  
 
 [cols="30s,70d"]
 |===
-| _English name_ | _access rights_
-| URI | dct:accessRights
-| Verdiområde / _Range_ | dct:RightsStatement
-| Anvendelse / _Usage note_ | Egenskapen brukes til å angi i hvilken grad blokkens innhold er tilgjengelig for allmennheten. 
+| _English name_ | _title_
+| URI | dct:title
+| Verdiområde / _Range_ | rdf:langString
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi tittelen til blokken. Egenskapen bør gjentas når beskrivelsen finnes på flere språk. 
 
-_This property is used to specify to which degree the content of the block is public available._ 
-| Multiplisitet / _Multiplicity_ | 0..1
+_This property is used to specify the title of the block. This property should be repeated for parallel language versions of the title._
+| Multiplisitet / _Multiplicity_ |  0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
-| Merknad / _Note_ | Verdien skal velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].
+| Merknad / _Note_ | Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra obligatorisk til anbefalt, tilsvarende med multiplisitet fra 1..n til 0..n. Dette fordi ikke alle har tittel på blokknivå som metadata. 
 
-__The value shall be chosen from EUs controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right[Access right &#x29C9;, window="_blank", role="ext-link"].__
+_Extension compared to DCAT-AP-NO: The requirement level is changed from mandatory to recommended, and the multiplicity changed from 1..n to 0..n accordingly._ 
+| Eksempel / _Example_ | Dette tilsvarer tittel-tag i CMS / SEO (søkermotoroptimalisering). 
+
+_This corresponds to title tag in a CMS / SEO (Search Engine Optimization)._
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>; # allmenn tilgang
+   dct:title "testblokk"@nb, "test block"@en; # tittel
+   .
+-----
+
+==== Blokk - type informasjon (cdvno:typeInfo) [[Blokk-type-informasjon]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _type information_
+| URI | cdvno:typeInfo
+| Subegenskap av / _Subproperty of_ | dct:type
+| Verdiområde / _Range_ | skos:Concept
+| Anvendelse / _Usage note_ | Egenskapen brukes til å indikere type informasjon som blokkens innhold inneholder. 
+
+_This property is used to indicate the type of information that the content of the block contains._
+| Multiplisitet / _Multiplicity_ |  0..n
+| Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
+| Merknad 1 / _Note 1_ | Verdien bør velges fra et kontrollert vokabular. 
+
+_The value should be chosen from a controlled vocabulary._
+| Merknad 2 / _Note 2_ | Utvidelse sammenlignet med DCAT-AP-NO: Denne er ikke eksplisitt spesifisert i DCAT-AP-NO. Dette for å kunne indikere type informasjon. 
+
+_Extension compared to DCAT-AP-NO: This property is not explicitly specified in DCAT-AP-NO. This is to be able to indicate type information._ 
+| Eksempel / _Example_ | Informasjon om tjenester, rettigheter, generell veiledning osv. 
+
+_Information about service, rights, general guidance etc._
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   cdvno:typeInfo <service>; # type informasjon
    .
 -----
 
@@ -408,70 +427,31 @@ Eksempel i RDF Turtle:
    .
 -----
 
-==== Blokk - type (dct:type) [[Blokk-type]] 
+==== Blokk - undertema (cdvno:subTheme) [[Blokk-undertema]] 
 
 [cols="30s,70d"]
 |===
 | _English name_ | _type_
-| URI | dct:type
+| URI | cdvno:subTheme
+| Subegenskap av / _Sunproperty of_ | dcat:theme
 | Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi datasettets type.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi subtema som blokkens innhold handler om.
 
-_This property is used to specify the type of the Dataset._
+_This property is used to specify the subtheme which the content of the block is about._
 | Multiplisitet / _Multiplicity_ | 0..1
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
-| Merknad / _Note_ | Verdien bør velges fra EUs kontrollerte vokabular https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type &#x29C9;, window="_blank", role="ext-link"].
+| Merknad 1 / _Note 1_ | Verdien bør velges fra et kontrollert vokabular. 
 
-__The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type[Dataset type &#x29C9;, window="_blank", role="ext-link"].__
-| #Spørsmål# | #Ut fra de verdiene på EUs liste over datasett-typer, ser ikke denne egenskapen nyttig ut for vårt formål. Trenger ikke denne? Den er også bare valgfri i DCAT-AP-NO.# 
+_The value should be chosen from a controlled vocabulary._
+| Merknad 2 / _Note 2_ | Utvidelse sammenlignet med DCAT-AP-NO: Denne er ikke eksplisitt spesifisert i DCAT-AP-NO. Dette for å kunne oppgi tema som ikke er inkludert i de obligatoriske/anbefalte taksonomiene for egenskap <<Blokk-tema>>. 
+
+_Extension compared to DCAT-AP-NO: This property is not explicitly specified in DCAT-AP-NO. This is to be able to specify theme that is not included in the mandatory/recommended taxonomies for the property <<Blokk-tema>>_ 
 |===
 
 Eksempel i RDF Turtle:
 -----
 <aBlock> a cdvno:Block; # blokk
-   dct:type <http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST>; # type, kodeliste
-   .
------
-
-==== Blokk - versjonsnummer (owl:versionInfo) [[Blokk-versjonsnummer]]  
-
-[cols="30s,70d"]
-|===
-| _English name_ | _version number_ 
-| URI | owl:versionInfo
-| Verdiområde / _Range_ | rdfs:Literal
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi versjonsnummeret til blokkens innhold.
-
-_This property is used to specify the version number of the content of the block._
-| Multiplisitet / _Multiplicity_ | 0..1 
-| Kravnivå / _Requirement level_ | Valgfri / _Optional_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   owl:versionInf "1.0.1"; # versjonsnummer
-   .
------
-
-==== Blokk - versjonsnoter (adms:versionNotes) [[Blokk-versjonsnoter]]  
-
-[cols="30s,70d"]
-|===
-| _English name_ | _version notes_
-| URI | adms:versionNotes
-| Verdiområde / _Range_ | rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å beskrive forskjellene mellom denne og en tidligere versjon av blokkens innhold. Egenskapen Bør gjentas når noten finnes på flere ulike språk.
-
-_This property is used to describe the differences between this version and a previous version of the content of the block. This property should be repeated for parallel language versions of the notes._
-| Multiplisitet / _Multiplicity_ | 0..n
-| Kravnivå / _Requirement level_ | Valgfri / _Optional_
-|===
-
-Eksempel i RDF Turtle:
------
-<aBlock> a cdvno:Block; # blokk
-   adms:versionNotes "rettet opp en skrivefeil"@nb, "corrected a typo"@en; # versjonsnoter
+   cdvno:subTheme <https://w3id.org/demo-resources/demo-classifications#demo-category-A1>; # subtema
    .
 -----
 
