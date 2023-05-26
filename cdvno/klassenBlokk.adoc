@@ -336,6 +336,30 @@ Eksempel i RDF Turtle:
    .
 -----
 
+==== Blokk - følger (cpsv:follows) [[Blokk-følger]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _follows_
+| URI | cpsv:follows
+| Verdiområde / _Range_ | cpsv:Rule
+| Anvendelse / _Usage note_ | Egenskapen brukes til å referere til regel som definerer den regulatoriske rammen for blokkens innhold.   
+
+_This property is used to refer to the rule that defines the regulatory frame for the content of the block._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra anbefalt til valgfri. 
+
+_Extension compared to DCAT-AP-NO: The requirement level is changed from recommended to optional._ 
+|===
+
+Eksempel i RDF Turtle:
+-----
+<aBlock> a cdvno:Block; # blokk
+   cpsv:follows <aRule> ; # regel
+   .
+-----
+
 ==== Blokk - gyldighetsperiode (cv:validityPeriod) [[Blokk-gyldighetsperiode]] 
 
 [cols="30s,70d"]
