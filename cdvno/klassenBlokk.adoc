@@ -396,7 +396,6 @@ _This property is used to specify the audience that the content of the block is 
 | Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
 
 _The value should be chosen from a controlled vocabulary._ 
-| #Spørsmål# | #Foreløpig ingen felles kontrollert vokabular identifisert. Burde det finnes et slikt felles vokabular?#
 |===
 
 Eksempel i RDF Turtle:
