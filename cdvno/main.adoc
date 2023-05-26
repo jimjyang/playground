@@ -68,3 +68,7 @@ include::klassenDatatjeneste.adoc[]
 include::klassenDistribusjon.adoc[]
 
 include::klassenOrganisasjon.adoc[]
+
+include::klassenRegel.adoc[]
+
+include::klassenRegulativRessurs.adoc[]
