@@ -560,6 +560,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-brukerbehov">Blokk - brukerbehov (cdvno:userNeed)</a></li>
 <li><a href="#Blokk-data-opprettet">Blokk - dato opprettet (dct:created)</a></li>
 <li><a href="#Blokk-data-sist-oppdatert">Blokk - dato sist oppdatert (dct:modified)</a></li>
+<li><a href="#Blokk-følger">Blokk - følger (cpsv:follows)</a></li>
 <li><a href="#Blokk-gyldighetsperiode">Blokk - gyldighetsperiode (cv:validityPeriod)</a></li>
 <li><a href="#Blokk-målgruppe">Blokk - målgruppe (dct:audience)</a></li>
 <li><a href="#Blokk-oppdateringsfrekvens">Blokk - oppdateringsfrekvens (dct:accrualPeriodicity) </a></li>
@@ -1657,6 +1658,57 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
    dct:modified "2023-05-10"^^xsd:date; # dato sist oppdatert
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-følger"><a class="anchor" href="#Blokk-følger"></a>Blokk - følger (cpsv:follows)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>follows</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cpsv:follows</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cpsv:Rule</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til regel som definerer den regulatoriske rammen for blokkens innhold.</p>
+<p class="tableblock"><em>This property is used to refer to the rule that defines the regulatory frame for the content of the block.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvidelse sammenlignet med DCAT-AP-NO: Kravnivå er endret fra anbefalt til valgfri.</p>
+<p class="tableblock"><em>Extension compared to DCAT-AP-NO: The requirement level is changed from recommended to optional.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   cpsv:follows &lt;aRule&gt; ; # regel
    .</pre>
 </div>
 </div>
@@ -3907,7 +3959,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-26 12:32:45 UTC
+Sist oppdatert 2023-05-26 12:55:02 UTC
 </div>
 </div>
 </body>
