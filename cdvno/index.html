@@ -563,6 +563,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Blokk-følger">Blokk - følger (cpsv:follows)</a></li>
 <li><a href="#Blokk-gyldighetsperiode">Blokk - gyldighetsperiode (cv:validityPeriod)</a></li>
 <li><a href="#Blokk-målgruppe">Blokk - målgruppe (dct:audience)</a></li>
+<li><a href="#Blokk-målgruppe">Blokk - omhandler (cdvno:subjectGroup)</a></li>
 <li><a href="#Blokk-oppdateringsfrekvens">Blokk - oppdateringsfrekvens (dct:accrualPeriodicity) </a></li>
 <li><a href="#Blokk-creator">Blokk - produsent (dct:creator)</a></li>
 <li><a href="#Blokk-undertema">Blokk - undertema (cdvno:subTheme)</a></li>
@@ -1824,8 +1825,8 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for.</p>
-<p class="tableblock"><em>This property is used to specify the audience that the content of the block is meant for.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for, dvs. typiske lesere.</p>
+<p class="tableblock"><em>This property is used to specify the audience that the content of the block is meant for, i.e., typical readers.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -1849,6 +1850,66 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="content">
 <pre>&lt;aBlock&gt; a cdvno:Block; # blokk
    dct:audience &lt;&gt;; # målgruppe
+   .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Blokk-målgruppe"><a class="anchor" href="#Blokk-målgruppe"></a>Blokk - omhandler (cdvno:subjectGroup)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>subject group (it is about)</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cdvno:subjectGroup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av / <em>Subproperty of</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:subject</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skos:Concept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi hvem (ikke som individ, men gruppe) blokkens innhold handler om.</p>
+<p class="tableblock"><em>This property is used to specify whom (but as an individual, but as a group) the content of the block is about.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien bør velges fra et kontrollert vokabular.</p>
+<p class="tableblock"><em>The value should be chosen from a controlled vocabulary.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel / <em>Example</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barn i førskolealder, barn i folkeskolealder osv.</p>
+<p class="tableblock"><em>preschoolers, children in primary school age etc.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aBlock&gt; a cdvno:Block; # blokk
+   cdvno:subjectGroup &lt;preschooler&gt;; # omhandler
    .</pre>
 </div>
 </div>
@@ -4718,7 +4779,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-30 09:39:20 UTC
+Sist oppdatert 2023-05-30 10:38:08 UTC
 </div>
 </div>
 </body>
