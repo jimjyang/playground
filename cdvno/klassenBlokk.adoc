@@ -423,7 +423,7 @@ _This property is used to specify whom (but as an individual, but as a group) th
 _The value should be chosen from a controlled vocabulary._ 
 | Eksempel / _Example_ | Barn i førskolealder, barn i folkeskolealder osv. 
 
-_preschoolers, children in primary school age etc._
+_preschoolers, children in elementary school age etc._
 |===
 
 Eksempel i RDF Turtle:
