@@ -673,7 +673,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#RegulativRessurs">Klassen Regulativ ressurs (eli:LegalResource)</a></li>
+<li><a href="#RegulativRessurs">Klassen Regulativ ressurs (eli:LegalResource)</a>
+<ul class="sectlevel2">
+<li><a href="#RegulativRessurs-obligatoriske-egenskaper">Obligatoriske egenskaper for klassen <em>Regulativ ressurs</em></a>
+<ul class="sectlevel3">
+<li><a href="#RegulativRessurs-type">Regulativ ressurs - type (dct:type)</a></li>
+</ul>
+</li>
+<li><a href="#RegulativRessurs-anbefalte-egenskaper">Anbefalte egenskaper for klassen <em>Regulativ ressurs</em></a>
+<ul class="sectlevel3">
+<li><a href="#RegulativRessurs-beskrivelse">Regulativ ressurs - beskrivelse (dct:description)</a></li>
+<li><a href="#RegulativRessurs-identifikator">Regulativ ressurs - identifikator (dct:identifier)</a></li>
+<li><a href="#RegulativRessurs-referanse">Regulativ ressurs - referanse (rdfs:seeAlso)</a></li>
+<li><a href="#RegulativRessurs-språk">Regulativ ressurs - språk (dct:language)</a></li>
+<li><a href="#RegulativRessurs-tittel">Regulativ ressurs - tittel (dct:title)</a></li>
+</ul>
+</li>
+<li><a href="#RegulativRessurs-valgfrie-egenskaper">Valgfrie egenskaper for klassen <em>Regulativ ressurs</em></a>
+<ul class="sectlevel3">
+<li><a href="#RegulativRessurs-relatertRegulativRessurs">Regulativ ressurs - relatert regulativ ressurs (dct:relation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -4236,15 +4258,319 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <div class="sect1">
 <h2 id="RegulativRessurs"><a class="anchor" href="#RegulativRessurs"></a>Klassen Regulativ ressurs (eli:LegalResource)</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><mark><em>&lt;&#8230;&#8203;kommer&#8230;&#8203;&gt;</em></mark></p>
+<div id="img-KlassenRegulativRessurs" class="imageblock">
+<div class="content">
+<a class="image" href="images/cdvno-legal-resource.png"><img src="images/cdvno-legal-resource.png" alt="UML-diagram med klassen Regulativ ressurs og dens egenskaper."></a>
+</div>
+<div class="title">Figur 7. Klassen Regulativ ressurs (eli:LegealResource).</div>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Legal Resource</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes til å representere en regulativ ressurs, f.eks. lovgivning/lovverket, retningslinjer eller politikk som regulerer utførelsen av en tjeneste.</p>
+<p class="tableblock"><em>This class is used to represent the legislation, policy or policies that lie behind the Rules that govern the service.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eli:LegalResource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="RegulativRessurs-obligatoriske-egenskaper"><a class="anchor" href="#RegulativRessurs-obligatoriske-egenskaper"></a>Obligatoriske egenskaper for klassen <em>Regulativ ressurs</em></h3>
+<div class="sect3">
+<h4 id="RegulativRessurs-type"><a class="anchor" href="#RegulativRessurs-type"></a>Regulativ ressurs - type (dct:type)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>type</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eli:ResourceType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til typen av en regulativ ressurs (f.eks. direktiv, forordning).</p>
+<p class="tableblock"><em>This property refers to the type of a legal resource (e.g. "Directive", "Règlement grand ducal", "law", "Règlement ministériel", "draft proposition", "Parliamentary act" etc.).</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra det felles kontrollerte vokabularet <a href="https://data.norge.no/vocabulary/legal-resource-type" class="ext-link" target="_blank" rel="noopener">Regulativ ressurs type &#x29C9;</a>, når verdien finnes i vokabularet.</p>
+<p class="tableblock"><em>The value shall be chosen from the common controlled vocabulary <a href="https://data.norge.no/vocabulary/legal-resource-type" class="ext-link" target="_blank" rel="noopener">Legal resource type &#x29C9;</a>, when the value is in the vocabulary.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="RegulativRessurs-anbefalte-egenskaper"><a class="anchor" href="#RegulativRessurs-anbefalte-egenskaper"></a>Anbefalte egenskaper for klassen <em>Regulativ ressurs</em></h3>
+<div class="sect3">
+<h4 id="RegulativRessurs-beskrivelse"><a class="anchor" href="#RegulativRessurs-beskrivelse"></a>Regulativ ressurs - beskrivelse (dct:description)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>description</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en tekstlig beskrivelse av ressursen. Egenskapen bør gjentas når den finnes på flere språk.</p>
+<p class="tableblock"><em>This property contains descriptive textual information about the Legal Resource. This property should be repeated for parallel language versions of the text in different languages.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="RegulativRessurs-identifikator"><a class="anchor" href="#RegulativRessurs-identifikator"></a>Regulativ ressurs - identifikator (dct:identifier)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>identifier</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en identifikator til ressursen.</p>
+<p class="tableblock"><em>This property contains an identifier for the resource.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifikator er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til egenskapen manuelt. For deg som skal utvikle/tilpasse verktøystøtte, se <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/#om-identifikator" class="ext-link" target="_blank" rel="noopener">Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;</a></p>
+<p class="tableblock"><em>See <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator" class="ext-link" target="_blank" rel="noopener">Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;</a> (in Norwegian).</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="RegulativRessurs-referanse"><a class="anchor" href="#RegulativRessurs-referanse"></a>Regulativ ressurs - referanse (rdfs:seeAlso)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>reference</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:seeAlso</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Resource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi referanse til den regulative ressursen.</p>
+<p class="tableblock"><em>To specify the reference(s) to the legal resource.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="RegulativRessurs-språk"><a class="anchor" href="#RegulativRessurs-språk"></a>Regulativ ressurs - språk (dct:language)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>language</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:LinguisticSystem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi språk som den regulative ressursen er  tilgjengelig på.</p>
+<p class="tableblock"><em>To specify the language in which the legal resource is available.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad / <em>Note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdien skal velges fra EUs kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language &#x29C9;</a>.</p>
+<p class="tableblock"><em>The value shall be chosen from Eu&#8217;s controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language" class="ext-link" target="_blank" rel="noopener">Language &#x29C9;</a>.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="RegulativRessurs-tittel"><a class="anchor" href="#RegulativRessurs-tittel"></a>Regulativ ressurs - tittel (dct:title)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi tittel til den regulative ressursen. Egenskapen bør gjentas bør tittelen finnes på flere språk.</p>
+<p class="tableblock"><em>To specify the title of the legal resource, repeated when the title is in several parallel languages.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="RegulativRessurs-valgfrie-egenskaper"><a class="anchor" href="#RegulativRessurs-valgfrie-egenskaper"></a>Valgfrie egenskaper for klassen <em>Regulativ ressurs</em></h3>
+<div class="sect3">
+<h4 id="RegulativRessurs-relatertRegulativRessurs"><a class="anchor" href="#RegulativRessurs-relatertRegulativRessurs"></a>Regulativ ressurs - relatert regulativ ressurs (dct:relation)</h4>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">related legal resource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:relation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eli:LegalResource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å referere til en annen relatert regulativ ressurs.</p>
+<p class="tableblock"><em>This property represents another instance of the Legal Resource class that is related to a particular Legal Resource being described.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri / <em>Optional</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-30 07:57:57 UTC
+Sist oppdatert 2023-05-30 08:06:02 UTC
 </div>
 </div>
 </body>
