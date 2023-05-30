@@ -4013,6 +4013,15 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   .</pre>
+</div>
+</div>
 <div class="sect2">
 <h3 id="Regel-obligatoriske-egenskaper"><a class="anchor" href="#Regel-obligatoriske-egenskaper"></a>Obligatoriske egenskaper for klassen <em>Regel</em></h3>
 <div class="sect3">
@@ -4050,6 +4059,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   dct:description "bare for testing"@nb, "for test only"@en; # beskrivelse
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="Regel-identifikator"><a class="anchor" href="#Regel-identifikator"></a>Regel - identifikator (dct:identifier)</h4>
@@ -4091,6 +4110,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   dct:identifier "https://example.org/anId"^^xsd:anyURI; # identifikator
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="Regel-navn"><a class="anchor" href="#Regel-navn"></a>Regel - navn (dct:title)</h4>
@@ -4127,6 +4156,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   dct:title "testregel"@nb, "test rule"@en; # navn
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -4166,6 +4205,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   cpsv:implements &lt;aLegalResource&gt;; # implementerer
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="Regel-språk"><a class="anchor" href="#Regel-språk"></a>Regel - språk (dct:language)</h4>
@@ -4207,6 +4256,13 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt;; # språk, bokmål
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -4251,6 +4307,13 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aRule&gt; a cpsv:Rule; # regel
+   dct:type &lt;https://data.norge.no/vocabulary/rule-type#case-management-rules&gt;; # type, saksbehandlingsregel
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -4570,7 +4633,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-30 08:06:02 UTC
+Sist oppdatert 2023-05-30 09:09:34 UTC
 </div>
 </div>
 </body>
