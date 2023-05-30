@@ -135,6 +135,8 @@ _This property represents the language(s) in which the rule is available. This c
 __The value shall be chosen from EU's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
+Eksempel i RDF Turtle: 
+
 -----
 <aRule> a cpsv:Rule; # regel
    dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # språk, bokmål
@@ -159,6 +161,8 @@ _This property refers to the type of a Rule._
 
 __The value should be chosen from the common controlled vocabulary https://data.norge.no/vocabulary/rule-type[Rule type &#x29C9;, window="_blank", role="ext-link"], when the value is in the vocabulary.__
 |===
+
+Eksempel i RDF Turtle: 
 
 -----
 <aRule> a cpsv:Rule; # regel
