@@ -5,7 +5,7 @@
 [link=images/cdvno-block.png]
 image::images/cdvno-block.png[]
 
-<<img-klassenBlokk>> viser klassen Blokk (`cdvno:Block`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) &#x29C9;↗, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
+<<img-klassenBlokk>> viser klassen Blokk (`cdvno:Block`) og klassene den refererer til. Det som er #gulet# ut, er avvik fra https://data.norge.no/specification/dcat-ap-no#Datasett[DCAT-AP-NO sin klasse Datasett (dcat:Dataset) &#x29C9;, window="_blank", role="ext-link"]. Klassene som ikke er eksplisitt spesifisert i denne spesifikasjonen er ikke tatt med i figuren over eller i teksten under, f.eks. klassen Begrep (`skos:Concept`). 
 
 [cols="30s,70d"]
 |===

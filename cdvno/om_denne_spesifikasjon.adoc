@@ -2,7 +2,7 @@
 
 === Formål [[Formål]]
 
-Formålet med spesifikasjonen er å legge til rette for en felles måte å beskrive ("tagge") innhold på nett. Spesifikasjonen skal bidra til interoperabilitet av innholdsbeskrivelser på tvers av sektorer og CMSer (_Content Management Systems_). Spesifikasjonen muliggjør også maskinell tilgjengeligliggjøring av beskrivelsene. 
+Formålet med spesifikasjonen er å legge til rette for en felles måte å beskrive («tagge») innhold på nett. Spesifikasjonen skal bidra til interoperabilitet av innholdsbeskrivelser på tvers av sektorer og CMSer (_Content Management Systems_). Spesifikasjonen muliggjør også maskinell tilgjengeligliggjøring av beskrivelsene. 
 
 
 === Omfang og avgrensning [[Omfang-avgrensning]]
@@ -15,7 +15,7 @@ Ettersom spesifikasjonen er basert på https://www.w3.org/RDF/[RDF &#x29C9;, win
 
 === Målgrupper [[Målgrupper]]
 
-Spesifikasjonen er primært for deg som skal utvikle/tilpasse verktøystøtte (f.eks. CMS) for innholdsbeskrivelser. Spesifikasjonen kan sekundært brukes av deg som skal beskrive innhold og som ønsker f.eks. å forstå hvorfor verktøystøtte krever slik den gjør.  
+Spesifikasjonen er primært for deg som skal utvikle/tilpasse verktøystøtte (f.eks. CMS) for innholdsbeskrivelser. Spesifikasjonen kan sekundært brukes av deg som skal beskrive/«tagge» innhold og som ønsker f.eks. å forstå hvorfor verktøystøtte krever slik den gjør.  
 
 Spesifikasjonen er ikke for deg som er leser av det publiserte innholdet som skal beskrives. 
 
