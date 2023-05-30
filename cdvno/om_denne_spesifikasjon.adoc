@@ -2,19 +2,30 @@
 
 === Formål [[Formål]]
 
-#_<... kommer ...>_#
+Formålet med spesifikasjonen er å legge til rette for en felles måte å beskrive ("tagge") innhold på nett. Spesifikasjonen skal bidra til interoperabilitet av innholdsbeskrivelser på tvers av sektorer og CMSer (Content Management Systems). Spesifikasjonen muliggjør også maskinell tilgjengeligliggjøring av beskrivelsene. 
+
 
 === Omfang og avgrensning [[Omfang-avgrensning]]
 
-#_<... kommer ...>_#
+Spesifikasjonen er anbefalt brukt til å beskrive innhold som er publisert eller ment å publiseres på nett, å samt å utveksle/tilgjengeliggjøre beskrivelsene. Spesifikasjonen er basert på https://data.norge.no/specification/dcat-ap-no/[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) &#x29C9;, window="_blank", role="ext-link"], med utvidelser for å dekke behov identifisert gjennom utarbeidelsen av spesifikasjonen. 
+
+Spesifikasjonen inneholder også engelske navn (_English name_) og beskrivelser (_Usage note_). Det gjøres oppmerksom på at engelske navn eller beskrivelser ikke alle er ordrett sitat fra originale engelske tekster. Vi kan ha valgt en annen tekst til å formidle det samme budskapet på, med mindre vi eksplisitt sier at det er et avvik (dvs. også i meningsinnholdet).
+
+Ettersom spesifikasjonen er basert på https://www.w3.org/RDF/[RDF &#x29C9;, window="_blank", role="ext-link"], vil beskrivelsene i henhold til spesifikasjonen også være RDF-baserte og dermed maskinprosesserbare. Som støtte til teknisk implementering er det i spesifikasjonen også tatt med en del eksempler i RDF Turtle. Eksemplene i RDF Turtle er kun veiledende, de er ikke komplette og kan også mangle verdier til obligatoriske egenskaper.
 
 === Målgrupper [[Målgrupper]]
 
-#_<... kommer ...>_#
+Spesifikasjonen har ikke lesere av publisert innhold som sin målgruppe. 
+
+Spesifikasjonen er primært for deg som skal utvikle/tilpasse verktøystøtte (f.eks. CMS) for innholdsbeskrivelser. Spesifikasjonen kan sekundært brukes av deg som skal beskrive innhold og som ønsker f.eks. å forstå hvorfor verktøystøtte krever slik den gjør.  
 
 === Forvaltningsregime [[Forvaltningsregime]]
 
-#_<... kommer ...>_#
+#_gjelder ikke ennå, siden denne versjonen kun er et forslag i et tidlig hypotese-stadie._#
+
+Spesifikasjonen forvaltes av https://digdir.no[Digitaliseringsdirektoratet (Digdir) &#x29C9;, window="_blank", role="ext-link"].
+
+Utarbeidelse av nye versjoner av spesifikasjonen initieres av Digdir. Mindre endringer håndteres av Digdir. Ved behov for større endringer vil Digdir sette sammen arbeidsgruppe med representanter fra relevante virksomheter, for utarbeidelse av forslag til den reviderte versjonen som sendes ut til bred kommentering før fastsetting.
 
 === Om kravnivåene i spesifikasjonen [[Om-kravnivåene]]
 
