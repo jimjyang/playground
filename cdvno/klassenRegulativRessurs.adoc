@@ -15,6 +15,13 @@ _This class is used to represent the legislation, policy or policies that lie be
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
 
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   . 
+-----
+
 === Obligatoriske egenskaper for klassen _Regulativ ressurs_ [[RegulativRessurs-obligatoriske-egenskaper]]
 
 ==== Regulativ ressurs - type (dct:type) [[RegulativRessurs-type]]
@@ -34,6 +41,15 @@ _This property refers to the type of a legal resource (e.g. "Directive", "Règle
 __The value shall be chosen from the common controlled vocabulary https://data.norge.no/vocabulary/legal-resource-type[Legal resource type &#x29C9;, window="_blank", role="ext-link"], when the value is in the vocabulary.__
 |===
 
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:type <https://data.norge.no/vocabulary/legal-resource-type#regulation>; # type, forskrift
+   . 
+-----
+
+
 === Anbefalte egenskaper for klassen _Regulativ ressurs_ [[RegulativRessurs-anbefalte-egenskaper]]
 
 ==== Regulativ ressurs - beskrivelse (dct:description) [[RegulativRessurs-beskrivelse]]
@@ -49,6 +65,14 @@ _This property contains descriptive textual information about the Legal Resource
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
+
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:description "bare for testing"@nb, "for test only"@en; # beskrivelse
+   . 
+-----
 
 ==== Regulativ ressurs - identifikator (dct:identifier) [[RegulativRessurs-identifikator]]
 
@@ -67,6 +91,14 @@ _This property contains an identifier for the resource._
 __See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifikator[Om identifikator (dct:identifier) i Veileder for beskrivelse av datasett osv. &#x29C9;, window="_blank", role="ext-link"] (in Norwegian).__
 |===
 
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:identifier "https://example.org/anId"^^xsd:anyURI; # identifikator
+   . 
+-----
+
 ==== Regulativ ressurs - referanse (rdfs:seeAlso) [[RegulativRessurs-referanse]]
 
 [cols="30s,70d"]
@@ -76,10 +108,18 @@ __See https://data.norge.no/guide/veileder-beskrivelse-av-datasett#om-identifika
 | Verdiområde / _Range_ | rdfs:Resource
 | Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi referanse til den regulative ressursen.
 
-_To specify the reference(s) to the legal resource._
+_This property is used to specify the reference(s) to the legal resource._
 | Multiplisitet / _Multiplicity_ |0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
+
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   rdfs:seeAlso <https://example.org/aRef>; # referanse
+   . 
+-----
 
 ==== Regulativ ressurs - språk (dct:language) [[RegulativRessurs-språk]]
 
@@ -98,6 +138,14 @@ _To specify the language in which the legal resource is available._
 __The value shall be chosen from Eu's controlled vocabulary https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language[Language &#x29C9;, window="_blank", role="ext-link"].__
 |===
 
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:language <http://publications.europa.eu/resource/authority/language/NOB>; # språk, bokmål
+   . 
+-----
+
 ==== Regulativ ressurs - tittel (dct:title) [[RegulativRessurs-tittel]]
 
 [cols="30s,70d"]
@@ -111,6 +159,14 @@ _To specify the title of the legal resource, repeated when the title is in sever
 | Multiplisitet / _Multiplicity_ |0..n
 | Kravnivå / _Requirement level_ | Anbefalt / _Recommended_
 |===
+
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:title "test regulativ ressurs"@nb, "test legal resource"@en; # tittel
+   . 
+-----
 
 === Valgfrie egenskaper for klassen _Regulativ ressurs_ [[RegulativRessurs-valgfrie-egenskaper]]
 
@@ -127,3 +183,12 @@ _This property represents another instance of the Legal Resource class that is r
 | Multiplisitet / _Multiplicity_ |0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 |===
+
+Eksempel i RDF Turtle: 
+
+-----
+<aLegalResource> a eli:LegalResource; # regulativ ressurs
+   dct:relation <anotherLegalResource> # relatert regulativ ressurs
+   . 
+-----
+

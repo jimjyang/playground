@@ -4358,6 +4358,15 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   .</pre>
+</div>
+</div>
 <div class="sect2">
 <h3 id="RegulativRessurs-obligatoriske-egenskaper"><a class="anchor" href="#RegulativRessurs-obligatoriske-egenskaper"></a>Obligatoriske egenskaper for klassen <em>Regulativ ressurs</em></h3>
 <div class="sect3">
@@ -4400,6 +4409,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:type &lt;https://data.norge.no/vocabulary/legal-resource-type#regulation&gt;; # type, forskrift
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -4439,6 +4458,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:description "bare for testing"@nb, "for test only"@en; # beskrivelse
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="RegulativRessurs-identifikator"><a class="anchor" href="#RegulativRessurs-identifikator"></a>Regulativ ressurs - identifikator (dct:identifier)</h4>
@@ -4480,6 +4509,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:identifier "https://example.org/anId"^^xsd:anyURI; # identifikator
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="RegulativRessurs-referanse"><a class="anchor" href="#RegulativRessurs-referanse"></a>Regulativ ressurs - referanse (rdfs:seeAlso)</h4>
@@ -4504,7 +4543,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi referanse til den regulative ressursen.</p>
-<p class="tableblock"><em>To specify the reference(s) to the legal resource.</em></p></td>
+<p class="tableblock"><em>This property is used to specify the reference(s) to the legal resource.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
@@ -4516,6 +4555,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   rdfs:seeAlso &lt;https://example.org/aRef&gt;; # referanse
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="RegulativRessurs-språk"><a class="anchor" href="#RegulativRessurs-språk"></a>Regulativ ressurs - språk (dct:language)</h4>
@@ -4557,6 +4606,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt;; # språk, bokmål
+   .</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="RegulativRessurs-tittel"><a class="anchor" href="#RegulativRessurs-tittel"></a>Regulativ ressurs - tittel (dct:title)</h4>
@@ -4593,6 +4652,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:title "test regulativ ressurs"@nb, "test legal resource"@en; # tittel
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -4632,6 +4701,16 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;aLegalResource&gt; a eli:LegalResource; # regulativ ressurs
+   dct:relation &lt;anotherLegalResource&gt; # relatert regulativ ressurs
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -4639,7 +4718,7 @@ Det som utformes/utprøves i denne sandkassa er: Forslag til metadatamodell i "S
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-05-30 09:11:51 UTC
+Sist oppdatert 2023-05-30 09:28:45 UTC
 </div>
 </div>
 </body>
