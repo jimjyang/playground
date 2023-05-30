@@ -388,9 +388,9 @@ Eksempel i RDF Turtle:
 | _English name_ | _audience_
 | URI | dct:audience
 | Verdiområde / _Range_ | skos:Concept
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for. 
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi målgruppe som blokkens innhold er ment for, dvs. typiske lesere.
 
-_This property is used to specify the audience that the content of the block is meant for._
+_This property is used to specify the audience that the content of the block is meant for, i.e., typical readers._
 | Multiplisitet / _Multiplicity_ | 0..n
 | Kravnivå / _Requirement level_ | Valgfri / _Optional_
 | Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
@@ -404,6 +404,36 @@ Eksempel i RDF Turtle:
    dct:audience <>; # målgruppe
    .
 -----
+
+==== Blokk - omhandler (cdvno:subjectGroup) [[Blokk-målgruppe]]  
+
+[cols="30s,70d"]
+|===
+| _English name_ | _subject group (it is about)_
+| URI | cdvno:subjectGroup
+| Subegenskap av / _Subproperty of_ | dct:subject
+| Verdiområde / _Range_ | skos:Concept
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi hvem (ikke som individ, men gruppe) blokkens innhold handler om.
+
+_This property is used to specify whom (but as an individual, but as a group) the content of the block is about._
+| Multiplisitet / _Multiplicity_ | 0..n
+| Kravnivå / _Requirement level_ | Valgfri / _Optional_
+| Merknad / _Note_ | Verdien bør velges fra et kontrollert vokabular. 
+
+_The value should be chosen from a controlled vocabulary._ 
+| Eksempel / _Example_ | Barn i førskolealder, barn i folkeskolealder osv. 
+
+_preschoolers, children in primary school age etc._
+|===
+
+Eksempel i RDF Turtle:
+
+-----
+<aBlock> a cdvno:Block; # blokk
+   cdvno:subjectGroup <preschooler>; # omhandler
+   .
+-----
+
 
 ==== Blokk - oppdateringsfrekvens (dct:accrualPeriodicity)  [[Blokk-oppdateringsfrekvens]]
 
