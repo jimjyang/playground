@@ -2,7 +2,7 @@
 
 Welcome to Jim's playground! 
 
-There are currently following sandboxes: 
+There are / has been following sandboxes: 
 
-* link:cdvno[CDV-NO (Content Description Vocabulary - Norwegian specification content description)] (the specification for RDF representation is in English as well, otherwise in Norwegian only)
+* CDV-NO (Content Description Vocabulary - Norwegian specification content description) (the specification for RDF representation is in English as well, otherwise in Norwegian only): Moved to https://informasjonsforvaltning.github.io/cdvno/
 * link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visnong] (in Norwegian only)
