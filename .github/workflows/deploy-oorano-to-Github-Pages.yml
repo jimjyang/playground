@@ -25,4 +25,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: ./oora-no
+        destination_dir: ./oora-no
         keep_files: true
