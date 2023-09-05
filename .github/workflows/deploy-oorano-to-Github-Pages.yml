@@ -1,0 +1,28 @@
+name: Deploy oora-no to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - oora-no/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: delop from oora-no to GH-pages
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./oora-no
+        keep_files: true
