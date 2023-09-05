@@ -1,9 +1,7 @@
-= Jim's playground
+= Welcome to Jim's playground!
 
-Welcome to Jim's playground! 
-
-Following sandboxes are (were) here in this playground: 
+Following sandboxes exist/existed here in this playground: 
 
 * CDV-NO (Content Description Vocabulary - Norwegian specification for content description) (the specification for RDF representation is in English as well, otherwise in Norwegian only): Moved to https://informasjonsforvaltning.github.io/cdvno/
-* link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visnong] (in Norwegian only)
-* link:oora-no[utkast til referansearkitektur for "kun én gang" (å dele data med andre, å ta i bruk data fra andre) - ArchiMate-modell] (a mixture of Norwegian and English)
+* link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visning] (in Norwegian only)
+* link:oora-no[Utkast til referansearkitektur for "å dele data med andre" og "å ta i bruk data fra andre" - ArchiMate-modell] (a mixture of Norwegian and English)
