@@ -29,7 +29,7 @@ Notatet beskriver begge brukstilfeller:
 
 == Når du bruker en ferdig Excel-mal
 
-=== Obligatoriske, anbefalte og valgfrie egenskaper
+=== Obligatoriske, anbefalte og valgfrie egenskaper [[kravnivå-egenskaper]]
 
 Noe avhengig av hvordan malen er satt opp, men f.eks.: 
 
@@ -208,7 +208,7 @@ Bort sett fra «konfigurasjonsarkene» omtalt ovenfor, skal hvert ark brukes til
 * Radene: 
 ** Hver rad representerer én egenskap. 
 ** Den første egenskapen (som regel rad nr. 3) skal være `rdf:type` og skal brukes til å oppgi hvilke(n) klasse(r) arket skal representere. Verdien(e) skal som regel settes inn av deg som setter opp malen og verdien(e) skal ikke endres av dine brukere. I eksemplet ovenfor er dette et ark for instans av `skos:Concept` og `mdoelldcatno:CodeElement`. Se også <<Arket ClassNames>> for hvordan du oppgir klassenavnet i ulike språk som verktøyet bruker i HTML-visningsfiler. 
-** Det kan være en fordel å ha ulike farger for ulike kravnivåer (obligatorisk, anbefalt, og valgfri). Se eksemplet ovenfor og <<Obligatoriske, anbefalte og valgfrie egenskaper>> for forklaring.
+** Det kan være en fordel å ha ulike farger for ulike kravnivåer (obligatorisk, anbefalt og valgfri). Se eksemplet ovenfor og <<kravnivå-egenskaper>> for forklaring.
 ** For egenskaper som skal ha fritekst med språkkode (i form av f.eks. `"tekst"@nb`), skal du bruke to rader, den første for friteksten (med range `rdfs:Literal`) og den etterfølgende raden for språkkoden (med range `xsd:language`). Se f.eks. rad 4-5, `skos:prefLabel`, i eksemplet ovenfor. Se også <<Bruk «Datavalidering» i celler som skal ha verdier fra gitte kontrollerte vokabularer>>.
 * Kolonnene: 
 ** Kolonne A: skal inneholde URIen til den aktuelle egenskap.
