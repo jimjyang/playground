@@ -13,7 +13,7 @@ include::../locale/attributes.adoc[]
 
 Velkommen til sandkassa for Excel-verktøyet som automatisk genererer RDF Turtle og Asciidoc (for HTML-generering)!
 
-== Hensikt
+== Hensikt 
 
 For å dekke behovet for generering til RDF Turtle i henhold til en gitt RDF-basert spesifikasjon, og samtidig å kunne ha en menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
 
