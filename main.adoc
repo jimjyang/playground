@@ -2,6 +2,8 @@
 
 Following sandboxes exist/existed here in this playground: 
 
+* Showrooms demonstrating usage of various Norwegian national RDF-based specifications for data sharing
+** Moved permanently to https://data.norge.no/showroom 
 * CDV-NO (Content Description Vocabulary - Norwegian specification for content description) (the specification for RDF representation is in English as well, otherwise in Norwegian only)
 ** Moved permanently to https://informasjonsforvaltning.github.io/cdvno/
 * link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visning] (in Norwegian only)
