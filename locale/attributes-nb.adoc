@@ -3,9 +3,9 @@
 :appendix-refsig: {appendix-caption}
 :caution-caption: OBS
 :chapter-label: Kapittel
-:section-label: Avsnitt
+:section-label: Delkapittel
 :chapter-refsig: kapittel
-:section-refsig: avsnitt
+:section-refsig: delkapittel
 :example-caption: Eksempel
 :figure-caption: Figur
 :important-caption: Viktig

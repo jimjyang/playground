@@ -14,13 +14,13 @@ include::../locale/attributes.adoc[]
 :sectnumlevels: 5
 
 NOTE: *Innmelding av feil og mangler:* + 
-Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues ↗, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
+Vennligst meld dine tilbakemeldinger inn som https://github.com/jimjyang/playground/issues[Github Issues  &#x29C9;, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis. 
 
 
 == Innledning
 Verktøyet kan brukes til å generere RDF Turtle og HTML, automatisk. Det er ikke lagt vekt på å få til et robust verktøy, slik at verktøyet fungerer kun ved «normal» bruk. I denne veiledningen forsøkes derfor å beskrive hva som er «normal» bruk. Veiledningen vil bli «løpende» oppdatert etter hvert som flere tilfeller av «unormal» bruk oppdages og/eller verktøyet forbedres. 
 
-Verktøyet var primært laget for å kunne automatisk generere klassifikasjonsbeskrivelser i henhold til https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO ↗, window="_blank", role="ext-link"]. Det er allikevel forsøkt å lage verktøyet slik at det også kan brukes til å automatisk generere RDF Turtle (og HTML) fra en «hvilken som helst» Excel-mal som er utformet iht. visse mønstre.  
+Verktøyet var primært laget for å kunne automatisk generere klassifikasjonsbeskrivelser i henhold til https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO  &#x29C9;, window="_blank", role="ext-link"]. Det er allikevel forsøkt å lage verktøyet slik at det også kan brukes til å automatisk generere RDF Turtle (og HTML) fra en «hvilken som helst» Excel-mal som er utformet iht. visse mønstre.  
 
 Notatet beskriver begge brukstilfeller: 
 
@@ -46,7 +46,7 @@ Det er viktig at du skal oppgi verdiene fra og med den første «Verdi/Value»-k
 
 Hvor mange verdier som er tillatt for den enkelte egenskapen kan være oppgitt i kolonnen «Multiplisitet». 
 
-image::../images/oppgi-verdi.png[utlikk fra excel]
+image::../images/oppgi-verdi.png[utklipp fra excel]
  
 
 === De vanligste datatypene (range)
@@ -58,9 +58,9 @@ De vanligste datatypene (range) som verktøyet ved normal bruk klarer å konvert
 * `rdfs:Literal`: fritekstfelter. 
 * `xsd:language`: språkkode for fritekstfeltet i raden over.
 * `xsd:decimal`, `xsd:double`: du skal oppgi verdien som et desimaltall.
-* `xsd:integer`, `xsd:positiveInteger`, …: du skal oppgi verdien som et heltall, positivt heltall, … se http://www.datypic.com/sc/xsd/searchres.html?terms=integer&stype=N&ns=null&compsE=E&compsCT=CT&compsST=ST&compsA=A&compsG=G&compsAG=AG[forklaringen og eksempler her ↗, window="_blank", role="ext-link"].
-* `xsd:date`, `xsd:time`, `xsd:dateTime`: du skal oppgi verdien som en dato, et klokkeslett eller et tidspunkt (dato og klokkeslett), se https://www.w3schools.com/xml/schema_dtypes_date.asp[forklaringen og eksempler her ↗, window="_blank", role="ext-link"].
-* `xsd:duration`: du skal oppgi verdien som en varighet, se http://www.datypic.com/sc/xsd/t-xsd_duration.html[forklaringen og eksempler her ↗, window="_blank", role="ext-link"].
+* `xsd:integer`, `xsd:positiveInteger`, …: du skal oppgi verdien som et heltall, positivt heltall, … se http://www.datypic.com/sc/xsd/searchres.html?terms=integer&stype=N&ns=null&compsE=E&compsCT=CT&compsST=ST&compsA=A&compsG=G&compsAG=AG[forklaringen og eksempler her  &#x29C9;, window="_blank", role="ext-link"].
+* `xsd:date`, `xsd:time`, `xsd:dateTime`: du skal oppgi verdien som en dato, et klokkeslett eller et tidspunkt (dato og klokkeslett), se https://www.w3schools.com/xml/schema_dtypes_date.asp[forklaringen og eksempler her  &#x29C9;, window="_blank", role="ext-link"].
+* `xsd:duration`: du skal oppgi verdien som en varighet, se http://www.datypic.com/sc/xsd/t-xsd_duration.html[forklaringen og eksempler her  &#x29C9;, window="_blank", role="ext-link"].
 * `xsd:anyURI`, og alle andre range som har mønsteret `<prefiks>:<KlasseNavn>` (som f.eks. `skos:ConceptScheme`): denne type egenskaper brukes til å referere til en annen ressurs:
 ** Når det skal refereres til en ressurs som er publisert på nettet, oppgir du http(s)-adressen direkte.
 ** Når det skal refereres til en ressurs som er beskrevet i den samme Excel-filen, se <<kryss-ref>>.
@@ -71,15 +71,15 @@ De vanligste datatypene (range) som verktøyet ved normal bruk klarer å konvert
 
 === Å kryss-referere i regnearket [[kryss-ref]]
 
-image::../images/kryss-ref.png[utlikk fra excel]
+image::../images/kryss-ref.png[utklipp fra excel]
 
 Eksemplet ovenfor illustrerer at det (fra det arket man er i) refereres til arkene med navn `cat1`, `cat2` og `cat3`. Dette oppgir du ved f.eks. å skrive inn likhetstegn og deretter velge arket det skal refereres til og til slutt trykke på returtasten.
 
 === Å sjekke om den auto-genererte RDF Turtle-fil er korrekt [[sjekk-turtle]]
 
-RDF Turtle-fil som blir automatisk generert, skal ved «normal» bruk ikke inneholde noen syntaksfeil. Du kan allikevel sjekke om filen er korrekt syntaksmessig ved f.eks. å bruke http://ttl.summerofcode.be/[http://ttl.summerofcode.be/ ↗, window="_blank", role="ext-link"]. Hvis du får feilmelding der, si fra til den du fikk dette verktøyet fra.  
+RDF Turtle-fil som blir automatisk generert, skal ved «normal» bruk ikke inneholde noen syntaksfeil. Du kan allikevel sjekke om filen er korrekt syntaksmessig ved f.eks. å bruke http://ttl.summerofcode.be/[http://ttl.summerofcode.be/  &#x29C9;, window="_blank", role="ext-link"]. Hvis du får feilmelding der, si fra til den du fikk dette verktøyet fra.  
 
-Selv om RDF Turtle-filen ikke inneholder syntaksfeil, er det ikke sikkert at innholdet er i henhold til den spesifikasjonen Excel-malen er satt opp for. https://data.norge.no/validator[Felles datakatalog | Validator (norge.no) ↗, window="_blank", role="ext-link"] kan brukes til å validere den auto-genererte RDF Turtle-fil mot den aktuelle spesifikasjonen. [Spør den som har satt opp Excel-malen hvordan validatoren brukes.] 
+Selv om RDF Turtle-filen ikke inneholder syntaksfeil, er det ikke sikkert at innholdet er i henhold til den spesifikasjonen Excel-malen er satt opp for. https://data.norge.no/validator[Felles datakatalog | Validator (norge.no)  &#x29C9;, window="_blank", role="ext-link"] kan brukes til å validere den auto-genererte RDF Turtle-fil mot den aktuelle spesifikasjonen. [Spør den som har satt opp Excel-malen hvordan validatoren brukes.] 
 
 === Å «Lagre som HTML» [[lagre-html]]
 
@@ -111,19 +111,19 @@ Verktøyet er laget slik at det skal være mulig å konfigurere hvordan verktøy
 
 Det som må innstilles er URIen for instansene som skal genereres av verktøyet. Dette oppgis i arket `Prefixes` (NB! Arknavnet må ikke endres). Arket kan være skjult. I dette arket er de «standard-prefiksene» som regel allerede tatt med. 
 
-image::../images/prefiks.png[utlikk fra excel]
+image::../images/prefiks.png[utklipp fra excel]
 
 Som eksemplet ovenfor viser, er det to måter å oppgi din «base URI» på, med prefiks (ex i bildet ovenfor) eller uten prefiks (blank celle i bildet ovenfor).  
 
 Verktøyet bruker videre verdien oppgitt i raden `rdf:about` til å lage en fullstendig URI for den aktuelle instansen. 
 
-image::../images/raden-rdf-about-classification.png[utlikk fra excel]
+image::../images/raden-rdf-about-classification.png[utklipp fra excel]
 
 Verdien `aClassification` i raden `rdf:about`, kombinert med «base URI» oppgitt i arket `Prefixes`, gir følgende fullstendig URI for instansen illustrert i utklippet ovenfor: `\https://example.org/aClassification`.  
 
 Verdien `aClassification#category1` i raden `rdf:about`, kombinert med «base URI» oppgitt i arket `Prefixes`, gir følgende fullstendig URI for instansen illustrert i utklippet nedenfor: `\https://example.org/aClassification#category1`.
 
-image::../images/raden-rdf-about-category.png[utlikk fra excel]
+image::../images/raden-rdf-about-category.png[utklipp fra excel]
 
 #NB!# URI er en teknisk egenskap som dine domeneeksperter ikke bør bry seg om. URI er på den annen side viktig spesielt hvis den skal være unik og persistent. Du som «tilretteleggeren» bør derfor enten fylle ut `rdf:about`-verdiene selv (etter at det faglige innholdet er på plass) eller presisere hvordan verdiene skal oppgis i raden `rdf:about`.  
 
@@ -131,7 +131,7 @@ image::../images/raden-rdf-about-category.png[utlikk fra excel]
 
 Verktøyet bruker Asciidoctor til å konvertere automatisk til HTML. Asciidoctor må derfor finnes installert på den PCen som verktøyet kjøres på.  
 
-Se https://asciidoctor.org/#installation[https://asciidoctor.org/#installation ↗, window="_blank", role="ext-link"] for hvordan Asciidoctor installeres. 
+Se https://asciidoctor.org/#installation[https://asciidoctor.org/#installation &#x29C9;, window="_blank", role="ext-link"] for hvordan Asciidoctor installeres. 
 
 Når verktøyet bruker Asciidoctor til å automatisk generere html-filer, forventes det at det finnes `main.adoc`-fil som inneholder _«document header»_, med bl.a. «tittel» for html-dokumentet, om det skal lages innholdsfortegnelse, ev. logo som skal tas med, etc. Det er derfor en fordel å ha laget slike `main.adoc`-filer på forhånd og at disse filene er lagret på den PCen verktøyet kjøres, dessuten i den samme mappen Excel-filen er lagret i. Verktøyet konverterer allikevel til HTML selv også når `main.adoc`-fil mangler, og den resulterende html-filen mangler da «tittel», «innholdsfortegnelse» osv.  
 
@@ -141,7 +141,7 @@ Hvis det skal genereres html-filer for flere språk som skal brukes av en server
 * for nynorsk: `main-nn.ado`
 * for engelsk: `main-en.adoc`
 
-Se dcokumentasjonen https://docs.asciidoctor.org/asciidoc/latest/document/header/[Document header ↗, window="_blank", role="ext-link"] for hva en slik `main.adoc`-fil bør/kan inneholde. 
+Se dcokumentasjonen https://docs.asciidoctor.org/asciidoc/latest/document/header/[Document header &#x29C9;, window="_blank", role="ext-link"] for hva en slik `main.adoc`-fil bør/kan inneholde. 
 
 === Å sette opp en mal for generell Turtle (og HTML) konvertering [[sette-opp-generell-mal]]
 
@@ -165,7 +165,7 @@ Et ark skal brukes til å beskrive én instans av én gitt klasse. Klassen spesi
 
 Når verktøyet brukes til å generere HTML, brukes arket `ClassNames` til å oppgi hva de ulike klassene skal hete i ulike språk. Se eksemplet under. Arket er vanligvis skjult og du bør også skjule det når du er ferdig med å oppgi alle klassenavnene. 
 
-image::../images/class-names.png[utlikk fra excel]
+image::../images/class-names.png[utklipp fra excel]
 
 ===== Arket UseCV
 
@@ -173,23 +173,23 @@ Til egenskaper som skal ha «kodede verdier», skal verdiene som regel velges fr
 
 Hvis du velger å la brukerne dine velge fra en liste over lovlige verdier, bruker du arket `UseCV` til å si fra til verktøyet hvilke egenskaper som skal ha verdier fra kontrollerte vokabularer, i hvilket ark lovlige verdier til den enkelte egenskapen ligger lagret. Eksemplet under viser at egenskapen `dct:language` skal ha verdier fra et kontrollert vokabular, og verdiene ligger lagret i arket `LangTag`. 
 
-image::../images/useCV.png[utlikk fra excel]
+image::../images/useCV.png[utklipp fra excel]
 
 Du kan føye til flere rader ved å oppgi URIen til egenskapen og arket der lovlige verdier er lagret. Arket `UseCV` og de arkene som inneholder lovlige verdier er vanligvis skjult og du bør også skjule dem når du er ferdig. Se  <<Arket LangTag>> for eksempel på ark med lovlige verdier. 
 
-image::../images/useCV-samme-URI.png[utlikk fra excel]
+image::../images/useCV-samme-URI.png[utklipp fra excel]
 
 I noen tilfeller brukes samme egenskap (dvs. egenskaper med samme URI) i ulike klasser og dessuten med ulike kontrollerte vokabularer. Typiske eksempler er `dct:type`, `adms:status` osv. I slike tilfeller skal du bruke kolonne C til å oppgi hvilken klasse den aktuelle egenskapen med det tilhørende kontrollerte vokabularet det gjelder. Se eksemplet ovenfor, at `adms:status` med kontrollert vokabularet `DatasetStatus` skal gjelde klassen `skos:ConceptScheme`, og `adms:status` med `ConceptStatus` skal gjelde for klassen `skos:Concept`. 
 
 ===== Arket LangTag
 
-Til egenskapene `dct:title`, `dct:description` osv. skal det vanligvis oppgis en språkkode i tillegg til selve friteksten. Det bør brukes datavalideringsfunksjonen i Excel til å la brukeren velge en språkkode, ved å lenke fra de aktuelle språkkode-cellene til en liste over lovlige språkkoder. På denne måte lager du en rullegardinmeny i den aktuelle cellen. Se https://support.microsoft.com/nb-no/office/bruke-datavalidering-p%C3%A5-celler-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249[Bruke datavalidering på celler ↗, window="_blank", role="ext-link"] for hvordan du bruker datavalidering til å sette opp en rullegardinmeny.  
+Til egenskapene `dct:title`, `dct:description` osv. skal det vanligvis oppgis en språkkode i tillegg til selve friteksten. Det bør brukes datavalideringsfunksjonen i Excel til å la brukeren velge en språkkode, ved å lenke fra de aktuelle språkkode-cellene til en liste over lovlige språkkoder. På denne måte lager du en rullegardinmeny i den aktuelle cellen. Se https://support.microsoft.com/nb-no/office/bruke-datavalidering-p%C3%A5-celler-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249[Bruke datavalidering på celler &#x29C9;, window="_blank", role="ext-link"] for hvordan du bruker datavalidering til å sette opp en rullegardinmeny.  
 
 Arket `LangTag` brukes til å lage en liste over lovlige språkkoder (for ovennevnte rullegardinmeny). I de aller fleste (hvis ikke alle) Digdir-spesifikasjonene er det også obligatorisk å bruke EU sitt kontrollerte vokabular for språk. Dette arket inneholder derfor også lenker til EU sin liste.  
 
 Arket inneholder som regel allerede språkkodene for norsk bokmål, nynorsk og engelsk. Hvis du trenger flere språkkoder, er det bare å legge til i arket. Du kan ev. også endre rekkefølge mellom kodene slik at du også endrer rekkefølgen mellom kodene i rullegardinmenyen. Arket er vanligvis skjult, og du bør skjule det når du er ferdig. 
 
-image::../images/langTag.png[utlikk fra excel]
+image::../images/langTag.png[utklipp fra excel]
 
 Eksemplet ovenfor viser fire språkkoder. Du skal bruke samme mønsteret når du legger til flere språkkoder, eller når du lager ark med andre kontrollerte vokabularer som verktøyet skal bruke (se også <<Arket UseCV>>):
 
@@ -201,7 +201,7 @@ Eksemplet ovenfor viser fire språkkoder. Du skal bruke samme mønsteret når du
 
 ==== Å sette opp arkene som brukerne dine skal oppgi verdi i
 
-image::../images/ark-for-data-input.png[utlikk fra excel]
+image::../images/ark-for-data-input.png[utklipp fra excel]
 
 Bort sett fra «konfigurasjonsarkene» omtalt ovenfor, skal hvert ark brukes til å beskrive én instans av én gitt klasse. Det er visse mønstre som skal følges for at verktøyet skal fungere: 
 
