@@ -16,7 +16,6 @@
 @base <https://data.norge.no/vocabulary/xkosno#> .
 
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:Ontology ;
-                                          # owl:imports <http://rdf-vocabulary.ddialliance.org/xkos> ;
                                            dcterms:creator [ schema:affiliation [ schema:email <mailto:informasjonsforvaltning@digdir.no> ;
                                                                                   schema:name "Digitaliseringsdirektoratet"@nb ,
                                                                                               "Norwgian Digitalisation Agency"@en ;
@@ -132,6 +131,10 @@ xkos:inclusionNote rdf:type owl:AnnotationProperty ;
 rdfs:commet rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 skos:example rdf:type owl:AnnotationProperty .
 
@@ -163,6 +166,10 @@ schema:url rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:ObjectProperty .
+
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#belongsTo
 xkos:belongsTo rdf:type owl:ObjectProperty ;
@@ -387,6 +394,10 @@ xkos:variant rdf:type owl:ObjectProperty ;
 skos:broader rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#member
 skos:member rdf:type owl:ObjectProperty .
 
@@ -395,9 +406,21 @@ skos:member rdf:type owl:ObjectProperty .
 skos:narrower rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:DatatypeProperty .
+
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#depth
 xkos:depth rdf:type owl:DatatypeProperty ;
@@ -454,6 +477,10 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
                     skos:example "«Næringsgruppering 2007» har totalt fem nivåer."@nb .
 
 
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -496,6 +523,30 @@ xkos:ConceptAssociation rdf:type owl:Class ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#Correspondence
 xkos:Correspondence rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty xkos:madeOf ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass xkos:ConceptAssociation
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dcterms:publisher ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass <http://xmlns.com/foaf/0.1/Agent>
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty xkos:compares ;
+                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                      owl:onClass skos:ConceptScheme
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dcterms:title ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange rdf:langString
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dcterms:identifier ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
                     rdfs:comment "Klassen brukes til å representere sammenligning mellom to (varianter/versjoner av) klassifikasjoner, dvs. sammenstilling av sammenligninger mellom kategorier."@nb ,
                                  "This class is used to group concept associations between two classifications (concordances, correspondence tables …​)."@en ;
                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -509,6 +560,16 @@ rdf:List rdf:type owl:Class .
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:inScheme ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass skos:ConceptScheme
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:prefLabel ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange rdf:langString
+                             ] ;
              rdfs:comment "Klassen brukes til å representere et begrep, en kategori i en klassifikasjon/klassifikasjonsnivå."@nb ,
                           "This class is used to represent a concept, a category in a classification or classification level."@en ;
              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
@@ -522,6 +583,26 @@ skos:Concept rdf:type owl:Class ;
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty dcterms:publisher ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass <http://xmlns.com/foaf/0.1/Agent>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dcterms:title ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange rdf:langString
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dcterms:identifier ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:anyURI
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:numberOfLevels ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:positiveInteger
+                                   ] ;
                    vann:usageNote "I konteksten av dette dokumentet er en gitt variant/versjon av en klassifikasjon også en klassifikasjon."@nb ,
                                   "In the context of this document, a given variant/version of a classification is also a classification."@en ;
                    rdfs:comment "Klassen brukes til å representere en klassifikasjon, en variant eller en versjon av en klassifikasjon."@nb ,
@@ -542,6 +623,10 @@ skosxl:Label rdf:type owl:Class .
 prof:Profile rdf:type owl:Class .
 
 
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -550,6 +635,21 @@ prof:Profile rdf:type owl:Class .
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual ,
                                                    voaf:Vocabulary ,
                                                    prof:Profile .
+
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+dcterms:identifier rdfs:label "identifier"@en ,
+                               "identifikator"@nb .
+
+
+dcterms:title rdfs:label "name"@en ,
+                         "navn"@nb .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
