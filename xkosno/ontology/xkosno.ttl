@@ -127,10 +127,6 @@ xkos:inclusionNote rdf:type owl:AnnotationProperty ;
                    rdfs:domain skos:Concept .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#commet
-rdfs:commet rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
 owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
@@ -168,7 +164,12 @@ schema:url rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://purl.org/dc/terms/publisher
-dcterms:publisher rdf:type owl:ObjectProperty .
+dcterms:publisher rdf:type owl:ObjectProperty ;
+                  rdfs:domain xkos:Correspondence ,
+                              skos:ConceptScheme ;
+                  rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                  rdfs:label "publisher"@en ,
+                             "utgiver"@nb .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#belongsTo
@@ -196,11 +197,8 @@ xkos:compares rdf:type owl:ObjectProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#covers
 xkos:covers rdf:type owl:ObjectProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( xkos:ClassificationLevel
-                                        skos:ConceptScheme
-                                      )
-                        ] ;
+            rdfs:domain xkos:ClassificationLevel ,
+                        skos:ConceptScheme ;
             rdfs:range skos:Concept ;
             vann:usageNote "A well-defined classification should cover max. one domain, subject field or such like."@en ,
                            "Bruk heller egenskapen Klassifikasjon – dekker uttømmende (xkos:coversExhaustively) når klassifikasjonen dekker domenet/fagområdet uttømmende, og/eller Klassifikasjon – dekker gjensidig utelukkende (xkos:coversMutuallyExclusively) når klassifikasjonen dekker domenet/fagområdet gjensidig utelukkende."@nb ,
@@ -216,6 +214,9 @@ xkos:covers rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#coversExhaustively
 xkos:coversExhaustively rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf xkos:covers ;
+                        rdfs:domain xkos:ClassificationLevel ,
+                                    skos:ConceptScheme ;
+                        rdfs:range skos:Concept ;
                         vann:usageNote "A well-defined classification should cover max. one domain, subject field or such like, and exhaustively. This property should derfor be used for a well-defined classification."@en ,
                                        "En veldefinert klassifikasjon bør dekke maks. ett domene/fagområde/el.l., og uttømmende. Denne egenskapen bør derfor alltid brukes for en veldefinert klassifikasjon."@nb ;
                         rdfs:comment "Egenskapen brukes til å uttrykke at klassifikasjonen dekker et domene/fagområde/el.l. uttømmende, samt å referere til det som dekkes."@nb ,
@@ -228,12 +229,13 @@ xkos:coversExhaustively rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#coversMutuallyExclusively
 xkos:coversMutuallyExclusively rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf xkos:covers ;
+                               rdfs:domain xkos:ClassificationLevel ,
+                                           skos:ConceptScheme ;
+                               rdfs:range skos:Concept ;
                                vann:usageNote " A well-defined classification should cover max. one domain, subject field or such like, and with mutually exclusive categories."@en ,
                                               "A well-defined classification usually covers its domain, subject field or such like both exhaustively and mutually exclusively. In such cases this property and the property xkos:coversExhaustively should be used."@en ,
                                               "En veldefinert klassifikasjon bør dekke maks. ett domene/fagområde/el.l., og med gjensidig utelukkende kategorier."@nb ,
                                               "En veldefinert klassifikasjon dekker sitt domene/område/begrep både uttømmende og gjensidig utelukkende. I slike tilfeller bør både denne egenskapen og egenskapen Klassifikasjon – dekker uttømmende (xkos:coversExhaustively) brukes."@nb ;
-                               rdfs:commet "If there is no overlap between the classification items at a given level of the classification, we say that the concepts (skos:Concept) representing the items are mutually exclusive."@en ,
-                                           "På ethvert nivå i en veldefinert klassifikasjon er kategoriene gjensidig utelukkende. Denne egenskapen brukes til å uttrykke dette, samt å referere til begrep som kategoriene dekker."@nb ;
                                rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
                                rdfs:label "covers mutually exclusively"@en ,
                                           "dekker gjensidig utelukkende"@nb .
@@ -243,6 +245,8 @@ xkos:coversMutuallyExclusively rdf:type owl:ObjectProperty ;
 xkos:generalizes rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf skos:narrower ;
                  owl:inverseOf xkos:specializes ;
+                 rdfs:domain skos:Concept ;
+                 rdfs:range skos:Concept ;
                  rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien generaliserer, i en generisk relasjon mellom kategoriene."@nb ,
                               "This property is used to refer to categories which the category in question generalizes, in a generic relationship between the categories."@en ;
                  rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -255,6 +259,8 @@ xkos:generalizes rdf:type owl:ObjectProperty ;
 xkos:hasPart rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf skos:narrower ;
              owl:inverseOf xkos:isPartOf ;
+             rdfs:domain skos:Concept ;
+             rdfs:range skos:Concept ;
              rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien består av, i en partitiv relasjon mellom kategoriene."@nb ,
                           "This property is used to refer to categories which the category in question consists of, in a partitive relationship between the categories."@en ;
              rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -267,11 +273,13 @@ xkos:hasPart rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#isPartOf
 xkos:isPartOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf skos:broader ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:Concept ;
               rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien er del av, i en partitiv relasjon mellom kategoriene."@nb ,
                            "This property is used to refer to categories which the category in question is part of, in a partitive relationship between the categories."@en ;
               rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
               rdfs:label "er del av"@nb ,
-                         "is a part of"@en ;
+                         "is part of"@en ;
               skos:example "'mandag' er del av 'ukedag'."@nb .
 
 
@@ -301,6 +309,8 @@ xkos:madeOf rdf:type owl:ObjectProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#next
 xkos:next rdf:type owl:ObjectProperty ;
+          rdfs:domain skos:Concept ;
+          rdfs:range skos:Concept ;
           vann:usageNote "Ordene «neste» og «bak» bør forståes innenfor konteksten av det aktuelle klassifikasjonsnivået i den aktuelle klassifikasjonen."@nb ,
                          "The words \"next\" and \"after\" should be understood within the context of that particular classification level in that particular classification."@en ;
           rdfs:comment "Egenskapen brukes til å referere til kategorien som er bak den aktuelle kategorien, i en sekvensiell relasjon mellom kategoriene."@nb ,
@@ -325,6 +335,8 @@ xkos:organizedBy rdf:type owl:ObjectProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#previous
 xkos:previous rdf:type owl:ObjectProperty ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:Concept ;
               vann:usageNote "Ordene «forrige» og «foran» bør forståes innenfor konteksten av det aktuelle klassifikasjonsnivået i den aktuelle klassifikasjonen."@nb ,
                              "The words \"previous\" and \"before\" should be understood within the context of that particular classification level in that particular classification."@en ;
               rdfs:comment "Egenskapen brukes til å referere til kategorien som er foran den aktuelle kategorien, i en sekvensiell relasjon mellom kategoriene."@nb ,
@@ -349,6 +361,8 @@ xkos:sourceConcept rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#specializes
 xkos:specializes rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf skos:broader ;
+                 rdfs:domain skos:Concept ;
+                 rdfs:range skos:Concept ;
                  rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien spesialiserer, i en generisk relasjon mellom kategoriene."@nb ,
                               "This property is used to refer to categories which the category in question specializes, in a generic relationship between the categories."@en ;
                  rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -359,6 +373,8 @@ xkos:specializes rdf:type owl:ObjectProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#supersedes
 xkos:supersedes rdf:type owl:ObjectProperty ;
+                rdfs:domain skos:ConceptScheme ;
+                rdfs:range skos:ConceptScheme ;
                 rdfs:comment "Egenskapen brukes til å referere til en versjon av klassifikasjonen som denne versjonen erstatter."@nb ,
                              "This property is used to refer to a classification/version that this classification/version supersedes."@en ;
                 rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -391,23 +407,41 @@ xkos:variant rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#broader
-skos:broader rdf:type owl:ObjectProperty .
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:domain skos:Concept ;
+             rdfs:range skos:Concept ;
+             rdfs:label "broader"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
-skos:inScheme rdf:type owl:ObjectProperty .
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:ConceptScheme ;
+              rdfs:label "i klassifikasjon"@nb ,
+                         "in classification"@en ,
+                         "in scheme"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#member
-skos:member rdf:type owl:ObjectProperty .
+skos:member rdf:type owl:ObjectProperty ;
+            rdfs:domain xkos:ClassificationLevel ;
+            rdfs:range skos:Concept ;
+            rdfs:label "inneholder kategori"@nb ,
+                       "member"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#narrower
-skos:narrower rdf:type owl:ObjectProperty .
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:Concept .
 
 
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:ObjectProperty .
+###  https://data.norge.no/vocabulary/xkosno#uneskos:contains
+:uneskos:contains rdf:type owl:ObjectProperty ;
+                  rdfs:domain skos:ConceptScheme ;
+                  rdfs:range skos:Concept ;
+                  rdfs:label "contains classification items"@en ,
+                             "inneholder kategori"@nb .
 
 
 #################################################################
@@ -415,11 +449,13 @@ skos:prefLabel rdf:type owl:ObjectProperty .
 #################################################################
 
 ###  http://purl.org/dc/terms/identifier
-dcterms:identifier rdf:type owl:DatatypeProperty .
+dcterms:identifier rdf:type owl:DatatypeProperty ;
+                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:DatatypeProperty .
+dcterms:title rdf:type owl:DatatypeProperty ;
+              rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#depth
@@ -478,7 +514,8 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty .
+skos:prefLabel rdf:type owl:DatatypeProperty ;
+               rdfs:range rdf:langString .
 
 
 #################################################################
