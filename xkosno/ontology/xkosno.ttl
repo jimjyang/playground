@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -12,17 +13,11 @@
 @prefix schema: <https://schema.org/> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix uneskos: <http://purl.org/umu/uneskos#> .
 @prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
 @base <https://data.norge.no/vocabulary/xkosno#> .
 
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:Ontology ;
-                                           dcterms:creator [ schema:affiliation [ schema:email <mailto:informasjonsforvaltning@digdir.no> ;
-                                                                                  schema:name "Digitaliseringsdirektoratet"@nb ,
-                                                                                              "Norwgian Digitalisation Agency"@en ;
-                                                                                  schema:url <https://digdir.no>
-                                                                                ] ;
-                                                             schema:name "Jim J. Yang"
-                                                           ] ;
                                            dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                            dcterms:title "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
                                                          "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
@@ -39,20 +34,13 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/identifier
-dcterms:identifier rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty .
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:range rdf:langString .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -136,7 +124,8 @@ skos:example rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty .
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:range rdf:langString .
 
 
 ###  http://www.w3.org/ns/dx/prof/isProfileOf
@@ -163,13 +152,26 @@ schema:url rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:ObjectProperty ;
+                rdfs:range foaf:Agent .
+
+
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:ObjectProperty ;
                   rdfs:domain xkos:Correspondence ,
                               skos:ConceptScheme ;
-                  rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                  rdfs:range foaf:Agent ;
                   rdfs:label "publisher"@en ,
                              "utgiver"@nb .
+
+
+###  http://purl.org/umu/uneskos#contains
+uneskos:contains rdf:type owl:ObjectProperty ;
+                 rdfs:domain skos:ConceptScheme ;
+                 rdfs:range skos:Concept ;
+                 rdfs:label "contains classification items"@en ,
+                            "inneholder kategori"@nb .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#belongsTo
@@ -436,26 +438,19 @@ skos:narrower rdf:type owl:ObjectProperty ;
               rdfs:range skos:Concept .
 
 
-###  https://data.norge.no/vocabulary/xkosno#uneskos:contains
-:uneskos:contains rdf:type owl:ObjectProperty ;
-                  rdfs:domain skos:ConceptScheme ;
-                  rdfs:range skos:Concept ;
-                  rdfs:label "contains classification items"@en ,
-                             "inneholder kategori"@nb .
-
-
 #################################################################
 #    Data properties
 #################################################################
 
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
-                   rdfs:range rdfs:Literal .
+                   rdfs:range rdfs:Literal ;
+                   rdfs:label "identifier"@en ,
+                              "identifikator"@nb .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:DatatypeProperty ;
-              rdfs:range rdf:langString .
+dcterms:title rdf:type owl:DatatypeProperty .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#depth
@@ -568,7 +563,7 @@ xkos:Correspondence rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dcterms:publisher ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                      owl:onClass <http://xmlns.com/foaf/0.1/Agent>
+                                      owl:onClass foaf:Agent
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty xkos:compares ;
@@ -623,7 +618,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty dcterms:publisher ;
                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass <http://xmlns.com/foaf/0.1/Agent>
+                                     owl:onClass foaf:Agent
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dcterms:title ;
@@ -661,7 +656,7 @@ prof:Profile rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+foaf:Agent rdf:type owl:Class .
 
 
 #################################################################
@@ -674,19 +669,23 @@ prof:Profile rdf:type owl:Class .
                                                    prof:Profile .
 
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ schema:affiliation [ schema:email <mailto:informasjonsforvaltning@digdir.no> ;
+                       schema:name "Digitaliseringsdirektoratet"@nb ,
+                                   "Norwgian Digitalisation Agency"@en ;
+                       schema:url <https://digdir.no>
+                     ] ;
+  schema:name "Jim J. Yang"
 ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
 
 #################################################################
 #    Annotations
 #################################################################
 
-dcterms:identifier rdfs:label "identifier"@en ,
-                               "identifikator"@nb .
-
-
 dcterms:title rdfs:label "name"@en ,
-                         "navn"@nb .
+                          "navn"@nb .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
