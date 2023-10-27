@@ -1,8 +1,8 @@
 = Welcome to Jim's sandbox for XKOS-AP-NO, using Protégé
 
-NOTE: *Your feedback*, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated! 
+__**Your feedback**, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated!__ 
 
-In this sandbox we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
+*In this sandbox* we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
 
 * Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from Protégé. 
 
