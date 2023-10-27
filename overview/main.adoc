@@ -1,7 +1,7 @@
 = Welcome to Jim's playground!
 :doctype: article
 
-__**Your feedback**, preferably provided as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated!__ 
+__**Your feedback**, preferably provided as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is most welcome!__ 
 
 
 *Following sandboxes* exist/existed here in this playground: 
