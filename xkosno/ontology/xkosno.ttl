@@ -1,4 +1,5 @@
 @prefix : <https://data.norge.no/vocabulary/xkosno#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -19,28 +20,34 @@
 
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:Ontology ;
                                            dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                           dcterms:title "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
-                                                         "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
                                            vann:preferredNamespacePrefix "xkosno" ;
-                                           vann:preferredNamespaceUri : ;
+                                           vann:preferredNamespaceUri <https://data.norge.no/vocabulary/xkosno#> ;
                                            voaf:extends <http://rdf-vocabulary.ddialliance.org/xkos> ;
                                            rdfs:comment "Dette er ontologien for XKOS-AP-NO."@nb ,
                                                         "This is the ontology for XKOS-AP-NO."@en ;
                                            rdfs:label "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
                                                       "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
+                                          dcterms:creator :Digdir;
                                            prof:isProfileOf <http://rdf-vocabulary.ddialliance.org/xkos> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty ;
-              rdfs:range rdf:langString .
+dcterms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -123,6 +130,10 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 skos:example rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty ;
                rdfs:range rdf:langString .
@@ -132,20 +143,12 @@ skos:scopeNote rdf:type owl:AnnotationProperty ;
 prof:isProfileOf rdf:type owl:AnnotationProperty .
 
 
-###  https://schema.org/affiliation
-schema:affiliation rdf:type owl:AnnotationProperty .
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
 
 
-###  https://schema.org/email
-schema:email rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/name
-schema:name rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/url
-schema:url rdf:type owl:AnnotationProperty .
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -444,9 +447,7 @@ skos:narrower rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
-                   rdfs:range rdfs:Literal ;
-                   rdfs:label "identifier"@en ,
-                              "identifikator"@nb .
+                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/title
@@ -469,7 +470,6 @@ xkos:depth rdf:type owl:DatatypeProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#maxLength
 xkos:maxLength rdf:type owl:DatatypeProperty ;
-               rdfs:domain skosxl:Label ;
                rdfs:range xsd:positiveInteger ;
                vann:usageNote """According to XKOS:
 In all cases the skos:prefLabel property is used to express the full (official) label. For the additional fixed-length labels, skosxl:Label instances are created with the xkos:maxLength property indicating the maximum length of these additional labels. Two cases must be distinguished:
@@ -517,10 +517,6 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.org/vocommons/voaf#Vocabulary
-voaf:Vocabulary rdf:type owl:Class .
-
-
 ###  http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel
 xkos:ClassificationLevel rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -538,8 +534,8 @@ xkos:ClassificationLevel rdf:type owl:Class ;
                          rdfs:comment "Klassen brukes til å representere et nivå i en klassifikasjon."@nb ,
                                       "This class is used to represent a classification level."@en ;
                          rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                         rdfs:label "Classification level"@en ,
-                                    "Klassifikasjonsnivå"@nb ;
+                         rdfs:label "Class Classification level"@en ,
+                                    "Klasse Klassifikasjonsnivå"@nb ;
                          skos:example "Nivå 4 «næringsgruppe» i Næringsgruppering 2007."@nb .
 
 
@@ -548,9 +544,8 @@ xkos:ConceptAssociation rdf:type owl:Class ;
                         rdfs:comment "Klassen brukes til å representere sammenligning mellom kategorier."@nb ,
                                      "This class is used to represent correspondences between classification items."@en ;
                         rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                        rdfs:label "Category correspondence"@en ,
-                                   "Concept association"@en ,
-                                   "Kategorisammenligning"@nb .
+                        rdfs:label "Class Category correspondence"@en ,
+                                   "Klasse Kategorisammenligning"@nb .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#Correspondence
@@ -582,12 +577,17 @@ xkos:Correspondence rdf:type owl:Class ;
                     rdfs:comment "Klassen brukes til å representere sammenligning mellom to (varianter/versjoner av) klassifikasjoner, dvs. sammenstilling av sammenligninger mellom kategorier."@nb ,
                                  "This class is used to group concept associations between two classifications (concordances, correspondence tables …​)."@en ;
                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                    rdfs:label "Correspondence"@en ,
-                               "Klassifikasjonssammenligning"@nb .
+                    rdfs:label "Class Correspondence"@en ,
+                               "Klasse Klassifikasjonssammenligning"@nb .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
-rdf:List rdf:type owl:Class .
+rdf:List rdf:type owl:Class ;
+         rdfs:comment "Klassen er en RDF-teknisk konstruksjon som er brukt til å representere en «sortert liste»"@nb ,
+                      "This class is a RDF-technical construction that is used to present an ordered list."@en ;
+         rdfs:isDefinedBy "https://www.w3.org/TR/rdf12-schema/#ch_list" ;
+         rdfs:label "Class List"@en ,
+                    "Klasse Liste"@nb .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -605,11 +605,8 @@ skos:Concept rdf:type owl:Class ;
              rdfs:comment "Klassen brukes til å representere et begrep, en kategori i en klassifikasjon/klassifikasjonsnivå."@nb ,
                           "This class is used to represent a concept, a category in a classification or classification level."@en ;
              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-             rdfs:label "Begrep"@nb ,
-                        "Category"@en ,
-                        "Classification item"@en ,
-                        "Concept"@en ,
-                        "Kategori"@nb ;
+             rdfs:label "Class Category, classification item, concept or suchlike"@en ,
+                        "Klasse Kategori, begrep el.l."@nb ;
              skos:example "Kategorien med kode «A» på nivå 1 i klassifikasjonen «Næringsgruppering 2007»."@nb .
 
 
@@ -640,23 +637,28 @@ skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:comment "Klassen brukes til å representere en klassifikasjon, en variant eller en versjon av en klassifikasjon."@nb ,
                                 "This class is used to represent a classification, a variant of a version of a classification."@en ;
                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                   rdfs:label "Classification"@en ,
-                              "Controlled vocabulary"@en ,
-                              "Klassifikasjon"@nb ,
-                              "Kontrollert vokabular"@nb ;
+                   rdfs:label "Class Classification, controlled vocabulary or suchlike"@en ,
+                              "Klasse Klassifikasjon, kontrollert vokabular el.l."@nb ;
                    skos:example "Næringsgruppering 2007 (SN 2007)"@nb .
 
 
-###  http://www.w3.org/2008/05/skos-xl#Label
-skosxl:Label rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dx/prof/Profile
-prof:Profile rdf:type owl:Class .
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf foaf:Agent ;
+                 rdfs:comment "Klassen brukes til å representere en organisasjon."@nb ,
+                              "This class is used to represent en organization."@en ;
+                 rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+                 rdfs:label "Klasse Organisasjon"@nb ,
+                            "Class Organization" .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-foaf:Agent rdf:type owl:Class .
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "Klassen brukes til å representere en Aktør. Bruk heller org:Organization når aktøren er en organisasjon."@nb ,
+                        "This class is used to represent an Agent. Use rather org:Organization when the agent is an organization."@en ;
+           rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/#term_Agent" ;
+           rdfs:label "Class Agent"@en ,
+                      "Klasse Aktør"@nb .
 
 
 #################################################################
@@ -664,28 +666,35 @@ foaf:Agent rdf:type owl:Class .
 #################################################################
 
 ###  https://data.norge.no/vocabulary/xkosno
-<https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual ,
-                                                   voaf:Vocabulary ,
-                                                   prof:Profile .
+<https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual ;
+                                          dcterms:creator :Digdir .
 
 
-[ schema:affiliation [ schema:email <mailto:informasjonsforvaltning@digdir.no> ;
-                       schema:name "Digitaliseringsdirektoratet"@nb ,
-                                   "Norwgian Digitalisation Agency"@en ;
-                       schema:url <https://digdir.no>
-                     ] ;
-  schema:name "Jim J. Yang"
-] .
+###  https://data.norge.no/vocabulary/xkosno#Digdir
+:Digdir rdf:type owl:NamedIndividual ,
+                 org:Organization ;
+        dcterms:identifier <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
+        dcterms:title "Digitaliseringsdirektoratet"@nb ,
+                      "Norwegian Digitalisation Agency"@en ;
+        skos:prefLabel "Digdir"@en ,
+                       "Digdir"@nb ;
+        foaf:homepage <https://digdir.no> ;
+        foaf:mbox <mailto:informasjonsforvaltning@digdir.no> .
+
 
 [ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+] .
 
 #################################################################
 #    Annotations
 #################################################################
 
-dcterms:title rdfs:label "name"@en ,
-                          "navn"@nb .
+dcterms:identifier rdfs:label "identifier"@en ,
+                               "identifikator"@nb .
+
+
+dcterms:title rdfs:label "title/name"@en ,
+                         "tittel/navn"@nb .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
