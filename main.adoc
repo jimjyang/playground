@@ -1,9 +1,10 @@
 = Welcome to Jim's playground!
+:doctype: article
 
-NOTE: *Your feedback*, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated! 
+__**Your feedback**, preferably provided as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated!__ 
 
 
-Following sandboxes exist/existed here in this playground: 
+*Following sandboxes* exist/existed here in this playground: 
 
 * Showrooms demonstrating the usage of various Norwegian national RDF-based specifications for data sharing
 ** Moved permanently to https://data.norge.no/showroom[https://data.norge.no/showroom &#x29C9;, window="_blank", role="ext-link"] 
