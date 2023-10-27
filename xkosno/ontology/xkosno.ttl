@@ -503,6 +503,10 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 skos:prefLabel rdf:type owl:DatatypeProperty .
 
 
+###  https://data.norge.no/vocabulary/xkosno#dcterns:publisher
+:dcterns:publisher rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -601,6 +605,11 @@ skos:ConceptScheme rdf:type owl:Class ;
                                      owl:onProperty dcterms:title ;
                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange rdf:langString
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :dcterns:publisher ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:anyURI
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dcterms:identifier ;
