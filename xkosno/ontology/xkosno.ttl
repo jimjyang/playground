@@ -18,16 +18,17 @@
 @prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
 @base <https://data.norge.no/vocabulary/xkosno#> .
 
-<https://data.norge.no/vocabulary/xkosno> rdf:type owl:Ontology ;
-                                           dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                           vann:preferredNamespacePrefix "xkosno" ;
-                                           vann:preferredNamespaceUri : ;
-                                           voaf:extends <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                                           rdfs:comment "Dette er ontologien for XKOS-AP-NO."@nb ,
-                                                        "This is the ontology for XKOS-AP-NO."@en ;
-                                           rdfs:label "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
-                                                      "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
-                                           prof:isProfileOf <http://rdf-vocabulary.ddialliance.org/xkos> .
+<https://jimjyang.github.io/playground/xkosno/ontology/xkosno> rdf:type owl:Ontology ;
+                                                                owl:versionIRI <https://jimjyang.github.io/playground/xkosno/ontology/xkosno/0.0.001> ;
+                                                                dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                vann:preferredNamespacePrefix "xkosno" ;
+                                                                vann:preferredNamespaceUri : ;
+                                                                voaf:extends <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                                                                rdfs:comment "Dette er ontologien for XKOS-AP-NO."@nb ,
+                                                                             "This is the ontology for XKOS-AP-NO."@en ;
+                                                                rdfs:label "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
+                                                                           "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
+                                                                prof:isProfileOf <http://rdf-vocabulary.ddialliance.org/xkos> .
 
 #################################################################
 #    Annotation properties
@@ -48,7 +49,8 @@ dct:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
-dct:publisher rdf:type owl:AnnotationProperty .
+dct:publisher rdf:type owl:AnnotationProperty ;
+              rdfs:range xsd:anyURI .
 
 
 ###  http://purl.org/dc/terms/title
@@ -137,7 +139,8 @@ skos:example rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:range rdf:langString .
+               rdfs:range rdf:langString ,
+                          rdfs:Literal .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -438,7 +441,8 @@ skos:narrower rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://purl.org/dc/terms/creator
-dct:creator rdf:type owl:DatatypeProperty .
+dct:creator rdf:type owl:DatatypeProperty ;
+            rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/description
@@ -453,6 +457,7 @@ dct:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/issued
 dct:issued rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime ;
            rdfs:isDefinedBy "http://purl.org/dc/terms/issued" ;
            rdfs:label "issued"@en ,
                       "tilgjengeliggjøringsdato"@nb .
@@ -460,6 +465,7 @@ dct:issued rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:DatatypeProperty ;
+             rdfs:range rdfs:Literal ;
              rdfs:isDefinedBy "http://purl.org/dc/terms/language" ;
              rdfs:label "language"@en ,
                         "språk"@nb .
@@ -467,6 +473,7 @@ dct:language rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime ;
              rdfs:isDefinedBy "http://purl.org/dc/terms/modified" ;
              rdfs:label "modified"@en ,
                         "sist oppdatert"@nb .
@@ -474,15 +481,17 @@ dct:modified rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:anyURI .
+              rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty .
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/type
 dct:type rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:anyURI ;
          rdfs:isDefinedBy "http://purl.org/dc/terms/type" ;
          rdfs:label "type"@en ,
                     "type"@nb .
@@ -544,6 +553,7 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 
 ###  http://schema.org/validFrom
 <http://schema.org/validFrom> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:dateTime ;
                               rdfs:isDefinedBy "https://schema.org/validFrom" ;
                               rdfs:label "gyldig til og med"@nb ,
                                          "valid from (inclusive)"@en .
@@ -551,6 +561,7 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 
 ###  http://schema.org/validThrough
 <http://schema.org/validThrough> rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:dateTime ;
                                  rdfs:isDefinedBy "https://schema.org/validThrough" ;
                                  rdfs:label "gyldig til og med"@nb ,
                                             "valid through (inclusive)"@en .
@@ -558,7 +569,10 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:DatatypeProperty ;
-                rdfs:range rdfs:Literal .
+                rdfs:range rdfs:Literal ;
+                rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#definition" ;
+                rdfs:label "definisjon"@nb ,
+                           "definition"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
@@ -778,12 +792,23 @@ dct:creator rdfs:isDefinedBy "http://purl.org/dc/terms/creator" ;
                         "produsent"@nb .
 
 
-dct:identifier rdfs:label "identifier"@en ,
+dct:identifier rdfs:isDefinedBy "http://purl.org/dc/terms/identifier" ;
+               rdfs:label "identifier"@en ,
                           "identifikator"@nb .
+
+
+dct:publisher rdfs:isDefinedBy "http://purl.org/dc/terms/publisher" ;
+              rdfs:label "publisher"@en ,
+                         "utgiver"@nb .
 
 
 dct:title rdfs:label "title/name"@en ,
                      "tittel/navn"@nb .
+
+
+skos:prefLabel rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#prefLabel" ;
+               rdfs:label "anbefalt/foretrukket term/navn"@nb ,
+                          "preferred label/name"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
