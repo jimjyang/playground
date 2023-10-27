@@ -22,7 +22,7 @@
 #    Individuals
 #################################################################
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             xkos:isPartOf :work ;
@@ -32,7 +32,7 @@
                            "employment"@en .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/income
 :income rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         xkos:isPartOf :work ;
@@ -42,7 +42,7 @@
                        "inntekt"@nn .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income-security
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/income-security
 :income-security rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  xkos:isPartOf :work ;
@@ -52,7 +52,7 @@
                                 "inntektssikring"@nn .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#leave-of-absence-scheme
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/leave-of-absence-scheme
 :leave-of-absence-scheme rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          xkos:isPartOf :work ;
@@ -62,7 +62,7 @@
                                         "permisjonsordning"@nn .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/los
 :los rdf:type owl:NamedIndividual ,
               skos:ConceptScheme ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ;
@@ -72,7 +72,7 @@
                "LOS"@nb .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#seeking-employment
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/seeking-employment
 :seeking-employment rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     xkos:isPartOf :work ;
@@ -82,9 +82,14 @@
                                    "seeking employment"@en .
 
 
-###  https://jimjyang.github.io/playground/xkosno/examples/LOS#work
+###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/work
 :work rdf:type owl:NamedIndividual ,
                skos:Concept ;
+      xkos:hasPart :employment ,
+                   :income ,
+                   :income-security ,
+                   :leave-of-absence-scheme ,
+                   :seeking-employment ;
       skos:inScheme :los ;
       skos:prefLabel "arbeid"@nb ,
                      "arbeid"@nn ,
