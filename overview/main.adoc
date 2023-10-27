@@ -1,5 +1,8 @@
 = Welcome to Jim's playground!
 
+Your feedback, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated! 
+
+
 Following sandboxes exist/existed here in this playground: 
 
 * Showrooms demonstrating the usage of various Norwegian national RDF-based specifications for data sharing
@@ -9,3 +12,4 @@ Following sandboxes exist/existed here in this playground:
 * link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visning] (in Norwegian only)
 * link:oora-no[Sandkasse-versjon av en referansearkitektur for "å dele data med andre" og "å ta i bruk data fra andre" - ArchiMate-modell] (a mixture of Norwegian and English)
 * link:xkosno[Sandbox for XKOS-AP-NO (Norwegian application profile of XKOS)]
+
