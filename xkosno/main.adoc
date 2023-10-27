@@ -1,6 +1,6 @@
 = Welcome to Jim's sandbox for XKOS-AP-NO, using Protégé
 
-__**Your feedback**, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated!__ 
+__**Your feedback**, preferably provided as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated!__
 
 *In this sandbox* we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
 
