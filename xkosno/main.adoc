@@ -10,3 +10,4 @@ In this sandbox we will play with https://data.norge.no/specification/xkos-ap-no
 * In https://data.norge.no/showroom/xkos-ap-no[this showroom &#x29C9;, window="_blank", role="ext-link"], you may find more demo examples of XKOS-AP-NO.
  
 
+Your feedback, registered as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is very mush appreciated! 
