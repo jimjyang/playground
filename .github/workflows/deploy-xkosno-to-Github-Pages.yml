@@ -1,0 +1,35 @@
+name: Deploy xkosno to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - xkosno/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: delop from oora-no to GH-pages
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build html
+      id: adocbuild_html
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D xkosno -o index.html -a lang=en xkosno/main.adoc"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./xkosno
+        destination_dir: ./xkosno
+        keep_files: true
