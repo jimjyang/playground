@@ -1,10 +1,10 @@
-= Welcome to Jim's sandcase for XKOS-AP-NO
+= Welcome to Jim's sandbox for XKOS-AP-NO, using Protégé
 
-In this sandcase we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"]:
+In this sandbox we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
 
-* Here is link:ontology/xkosno.ttl[the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]. 
+* Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from Protégé. 
 
-* Here is link:examples/LOS.ttl[a little example implementation of XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is also modeled in and exported from abovementioned Protégé.
+* Here is link:examples/LOS.ttl[a little sandbox-example of using XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is also modeled in and exported from abovementioned Protégé.
 ** When playing with our test implementation of XKOS-AP-NO in Protégé, you may import abovementioned ontology into Protégé, such that you have the definition of the classes and properties in XKOS-AP-NO available in Protégé.
 
 * In https://data.norge.no/showroom/xkos-ap-no[this showroom &#x29C9;, window="_blank", role="ext-link"], you may find more demo examples of XKOS-AP-NO.
