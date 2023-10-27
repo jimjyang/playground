@@ -21,13 +21,12 @@
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:Ontology ;
                                            dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                            vann:preferredNamespacePrefix "xkosno" ;
-                                           vann:preferredNamespaceUri <https://data.norge.no/vocabulary/xkosno#> ;
+                                           vann:preferredNamespaceUri : ;
                                            voaf:extends <http://rdf-vocabulary.ddialliance.org/xkos> ;
                                            rdfs:comment "Dette er ontologien for XKOS-AP-NO."@nb ,
                                                         "This is the ontology for XKOS-AP-NO."@en ;
                                            rdfs:label "Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)"@nb ,
                                                       "XKOS-AP-NO: Norwegian Application Profile of XKOS"@en ;
-                                          dcterms:creator :Digdir;
                                            prof:isProfileOf <http://rdf-vocabulary.ddialliance.org/xkos> .
 
 #################################################################
@@ -35,15 +34,21 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:range foaf:Agent .
 
 
 ###  http://purl.org/dc/terms/identifier
-dcterms:identifier rdf:type owl:AnnotationProperty .
+dcterms:identifier rdf:type owl:AnnotationProperty ;
+                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -131,7 +136,8 @@ skos:example rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:range rdf:langString .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -154,20 +160,6 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:ObjectProperty ;
-                rdfs:range foaf:Agent .
-
-
-###  http://purl.org/dc/terms/publisher
-dcterms:publisher rdf:type owl:ObjectProperty ;
-                  rdfs:domain xkos:Correspondence ,
-                              skos:ConceptScheme ;
-                  rdfs:range foaf:Agent ;
-                  rdfs:label "publisher"@en ,
-                             "utgiver"@nb .
-
 
 ###  http://purl.org/umu/uneskos#contains
 uneskos:contains rdf:type owl:ObjectProperty ;
@@ -446,8 +438,7 @@ skos:narrower rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://purl.org/dc/terms/identifier
-dcterms:identifier rdf:type owl:DatatypeProperty ;
-                   rdfs:range rdfs:Literal .
+dcterms:identifier rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -509,8 +500,7 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty ;
-               rdfs:range rdf:langString .
+skos:prefLabel rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -554,11 +544,6 @@ xkos:Correspondence rdf:type owl:Class ;
                                       owl:onProperty xkos:madeOf ;
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onClass xkos:ConceptAssociation
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty dcterms:publisher ;
-                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                      owl:onClass foaf:Agent
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty xkos:compares ;
@@ -613,11 +598,6 @@ skos:Concept rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty dcterms:publisher ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass foaf:Agent
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty dcterms:title ;
                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange rdf:langString
@@ -666,8 +646,7 @@ foaf:Agent rdf:type owl:Class ;
 #################################################################
 
 ###  https://data.norge.no/vocabulary/xkosno
-<https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual ;
-                                          dcterms:creator :Digdir .
+<https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual .
 
 
 ###  https://data.norge.no/vocabulary/xkosno#Digdir
