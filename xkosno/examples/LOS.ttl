@@ -22,7 +22,7 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/employment
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             xkos:isPartOf :work ;
@@ -32,7 +32,7 @@
                            "employment"@en .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/income
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income
 :income rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         xkos:isPartOf :work ;
@@ -42,7 +42,7 @@
                        "inntekt"@nn .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/income-security
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income-security
 :income-security rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  xkos:isPartOf :work ;
@@ -52,27 +52,28 @@
                                 "inntektssikring"@nn .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/leave-of-absence-scheme
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#leave-of-absence-scheme
 :leave-of-absence-scheme rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          xkos:isPartOf :work ;
                          skos:inScheme :los ;
-                         skos:prefLabel "leave of absence schemes"@en ,
+                         skos:prefLabel "leave of absence scheme"@en ,
                                         "permisjonsordning"@nb ,
                                         "permisjonsordning"@nn .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/los
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los
 :los rdf:type owl:NamedIndividual ,
               skos:ConceptScheme ;
-     dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ;
+     dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
+                     "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
      dct:publisher "https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827"^^xsd:anyURI ;
      dct:title "LOS"@en ,
                "LOS"@nb .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/seeking-employment
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#seeking-employment
 :seeking-employment rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     xkos:isPartOf :work ;
@@ -82,7 +83,7 @@
                                    "seeking employment"@en .
 
 
-###  http://www.semanticweb.org/jjy/ontologies/2023/9/untitled-ontology-24/work
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#work
 :work rdf:type owl:NamedIndividual ,
                skos:Concept ;
       xkos:hasPart :employment ,
