@@ -36,7 +36,8 @@
 
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:AnnotationProperty ;
-            rdfs:range foaf:Agent .
+            rdfs:range rdfs:Literal ,
+                       foaf:Agent .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -50,11 +51,13 @@ dct:license rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:AnnotationProperty ;
-              rdfs:range xsd:anyURI .
+              rdfs:range rdfs:Literal ,
+                         xsd:anyURI .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:AnnotationProperty .
+dct:title rdf:type owl:AnnotationProperty ;
+          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -73,62 +76,6 @@ vann:usageNote rdf:type owl:AnnotationProperty .
 voaf:extends rdf:type owl:AnnotationProperty .
 
 
-###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
-xkos:additionalContentNote rdf:type owl:AnnotationProperty ;
-                           rdfs:comment "Egenskapen brukes til å oppgi tilleggsinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
-                                        "This property is used to specify additional content to the classification item, repeated when the note is in different languages."@en ;
-                           rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                           rdfs:label "additional content note"@en ,
-                                      "tilleggsinnhold"@nb ;
-                           skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om tilleggsinnhold: «Inkluderer også: Omfatter også tjenester tilknyttet jordbruk, jakt og fangst.»"@nb ,
-                                        "xkos:additionalContentNote is generally labelled \"This category includes also\", \"This item includes also\", \"This division includes also\", \"Includes also\", or similar."@en ;
-                           rdfs:subPropertyOf xkos:inclusionNote ;
-                           rdfs:range xsd:langString ;
-                           rdfs:domain skos:Concept .
-
-
-###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
-xkos:coreContentNote rdf:type owl:AnnotationProperty ;
-                     rdfs:comment "Egenskapen brukes til å oppgi hva som er hovedinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
-                                  "This property is used to specify the core content of the classification item, repeated when the note is in different languages."@en ;
-                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                     rdfs:label "core content note"@en ,
-                                "hovedinnhold"@nb ;
-                     skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om hovedinnhold: \"Inkluderer: Denne næringen omfatter to basisaktiviteter: produksjon av vegetabilske og animalske produkter, jordbruk, dyrking av genetisk modifiserte vekster og oppdrett av genetisk modifiserte dyr. Både dyrking av vekster på friland og i veksthus inngår."@nb ,
-                                  "xkos:coreContentNote is generally labelled \"This category includes\", \"This item includes\", \"This division includes\", \"Includes\" or similar."@en ;
-                     rdfs:subPropertyOf xkos:inclusionNote ;
-                     rdfs:range xsd:langString ;
-                     rdfs:domain skos:Concept .
-
-
-###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
-xkos:exclusionNote rdf:type owl:AnnotationProperty ;
-                   rdfs:comment "Egenskapen brukes til å oppgi hva som ikke er inkludert i kategorien. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
-                                "This property is used to specify what is not included in the category, repeated when the note is in different languages."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                   rdfs:label "eksklusjonsmerknad"@nb ,
-                              "exclusion note"@en ;
-                   skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende eksklusjonsnote: «Ekskluderer: Grunnarbeid, f.eks. anlegg av jordterrasser, drenering o.l. grupperes under næringshovedområde: F Bygge- og anleggsvirksomhet. Kjøpere og andelslag engasjert i markedsføring av jordbruksprodukter grupperes under næringshovedområde: G Varehandel, reparasjon av motorvogner. Stell og vedlikehold av landskap grupperes under: 81.30 Beplantning av hager og parkanlegg.»"@nb ;
-                   rdfs:subPropertyOf skos:scopeNote ;
-                   rdfs:range xsd:langString ;
-                   rdfs:domain skos:Concept .
-
-
-###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
-xkos:inclusionNote rdf:type owl:AnnotationProperty ;
-                   vann:usageNote "Bruk heller den semantisk sett mer presise egenskapen Kategori – hovedinnhold (xkos:coreContentNote), ev. kombinert med egenskapen Kategori – tilleggsinnhold (xkos:additionalContentNote)."@nb ,
-                                  "Use rather the semantically more precise property xkos:coreContentNote, alternatively in combination with the property xkos:additionalContentNote."@en ;
-                   rdfs:comment "Egenskapen brukes til å oppgi merknad om hva som er inkludert i kodeelementet. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
-                                "This property is used to specify what is included in the category, repeated when the note is in different languages."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
-                   rdfs:label "inclusion note"@en ,
-                              "inclusions"@en ,
-                              "inklusjonsmerknad"@nb ;
-                   rdfs:subPropertyOf skos:scopeNote ;
-                   rdfs:range xsd:langString ;
-                   rdfs:domain skos:Concept .
-
-
 ###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
 owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
@@ -141,11 +88,6 @@ skos:example rdf:type owl:AnnotationProperty .
 skos:prefLabel rdf:type owl:AnnotationProperty ;
                rdfs:range rdf:langString ,
                           rdfs:Literal .
-
-
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty ;
-               rdfs:range rdf:langString .
 
 
 ###  http://www.w3.org/ns/dx/prof/isProfileOf
@@ -172,6 +114,13 @@ uneskos:contains rdf:type owl:ObjectProperty ;
                             "inneholder kategori"@nb .
 
 
+###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
+xkos:additionalContentNote rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf xkos:inclusionNote ;
+                           rdfs:domain skos:Concept ;
+                           rdfs:range xsd:langString .
+
+
 ###  http://rdf-vocabulary.ddialliance.org/xkos#belongsTo
 xkos:belongsTo rdf:type owl:ObjectProperty ;
                rdfs:domain skos:ConceptScheme ;
@@ -193,6 +142,13 @@ xkos:compares rdf:type owl:ObjectProperty ;
               rdfs:label "compares"@en ,
                          "sammenligner"@nb ;
               skos:example "«Klassifisering av informasjonssektoren 2007» sammenlignes med «Næringsgruppering 2007 (SN2007)»."@nb .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
+xkos:coreContentNote rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf xkos:inclusionNote ;
+                     rdfs:domain skos:Concept ;
+                     rdfs:range xsd:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#covers
@@ -241,6 +197,12 @@ xkos:coversMutuallyExclusively rdf:type owl:ObjectProperty ;
                                           "dekker gjensidig utelukkende"@nb .
 
 
+###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
+xkos:exclusionNote rdf:type owl:ObjectProperty ;
+                   rdfs:domain skos:Concept ;
+                   rdfs:range xsd:langString .
+
+
 ###  http://rdf-vocabulary.ddialliance.org/xkos#generalizes
 xkos:generalizes rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf skos:narrower ;
@@ -268,6 +230,12 @@ xkos:hasPart rdf:type owl:ObjectProperty ;
                         "har del"@nb ,
                         "has part"@en ;
              skos:example "'ukedag' består av 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag' og 'søndag'."@nb .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
+xkos:inclusionNote rdf:type owl:ObjectProperty ;
+                   rdfs:domain skos:Concept ;
+                   rdfs:range xsd:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#isPartOf
@@ -441,8 +409,7 @@ skos:narrower rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://purl.org/dc/terms/creator
-dct:creator rdf:type owl:DatatypeProperty ;
-            rdfs:range rdfs:Literal .
+dct:creator rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -451,8 +418,7 @@ dct:description rdf:type owl:DatatypeProperty ;
 
 
 ###  http://purl.org/dc/terms/identifier
-dct:identifier rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal .
+dct:identifier rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/issued
@@ -480,13 +446,11 @@ dct:modified rdf:type owl:DatatypeProperty ;
 
 
 ###  http://purl.org/dc/terms/publisher
-dct:publisher rdf:type owl:DatatypeProperty ;
-              rdfs:range rdfs:Literal .
+dct:publisher rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal .
+dct:title rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/type
@@ -495,6 +459,14 @@ dct:type rdf:type owl:DatatypeProperty ;
          rdfs:isDefinedBy "http://purl.org/dc/terms/type" ;
          rdfs:label "type"@en ,
                     "type"@nb .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
+xkos:additionalContentNote rdf:type owl:DatatypeProperty .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
+xkos:coreContentNote rdf:type owl:DatatypeProperty .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#depth
@@ -509,6 +481,16 @@ xkos:depth rdf:type owl:DatatypeProperty ;
            rdfs:label "depth"@en ,
                       "nivånummer"@nb ;
            skos:example "Nivå 4 «Næringsgruppe» i Næringsgruppering har verdi 4 som nivånummer."@nb .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
+xkos:exclusionNote rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
+
+
+###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
+xkos:inclusionNote rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf skos:scopeNote .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#maxLength
@@ -576,8 +558,11 @@ skos:definition rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal .
+skos:prefLabel rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -664,6 +649,10 @@ rdf:List rdf:type owl:Class ;
                     "Klasse Liste"@nb .
 
 
+###  http://www.w3.org/2001/XMLSchema#langString
+xsd:langString rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -686,6 +675,10 @@ skos:Concept rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty uneskos:contains ;
+                                     owl:someValuesFrom skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:creator ;
                                      owl:someValuesFrom xsd:anyURI
                                    ] ,
@@ -804,6 +797,42 @@ dct:publisher rdfs:isDefinedBy "http://purl.org/dc/terms/publisher" ;
 
 dct:title rdfs:label "title/name"@en ,
                      "tittel/navn"@nb .
+
+
+xkos:additionalContentNote rdfs:comment "Egenskapen brukes til å oppgi tilleggsinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
+                                        "This property is used to specify additional content to the classification item, repeated when the note is in different languages."@en ;
+                           rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                           rdfs:label "additional content note"@en ,
+                                      "tilleggsinnhold"@nb ;
+                           skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om tilleggsinnhold: «Inkluderer også: Omfatter også tjenester tilknyttet jordbruk, jakt og fangst.»"@nb ,
+                                        "xkos:additionalContentNote is generally labelled \"This category includes also\", \"This item includes also\", \"This division includes also\", \"Includes also\", or similar."@en .
+
+
+xkos:coreContentNote rdfs:comment "Egenskapen brukes til å oppgi hva som er hovedinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
+                                  "This property is used to specify the core content of the classification item, repeated when the note is in different languages."@en ;
+                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                     rdfs:label "core content note"@en ,
+                                "hovedinnhold"@nb ;
+                     skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om hovedinnhold: \"Inkluderer: Denne næringen omfatter to basisaktiviteter: produksjon av vegetabilske og animalske produkter, jordbruk, dyrking av genetisk modifiserte vekster og oppdrett av genetisk modifiserte dyr. Både dyrking av vekster på friland og i veksthus inngår."@nb ,
+                                  "xkos:coreContentNote is generally labelled \"This category includes\", \"This item includes\", \"This division includes\", \"Includes\" or similar."@en .
+
+
+xkos:exclusionNote rdfs:comment "Egenskapen brukes til å oppgi hva som ikke er inkludert i kategorien. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
+                                "This property is used to specify what is not included in the category, repeated when the note is in different languages."@en ;
+                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:label "eksklusjonsmerknad"@nb ,
+                              "exclusion note"@en ;
+                   skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende eksklusjonsnote: «Ekskluderer: Grunnarbeid, f.eks. anlegg av jordterrasser, drenering o.l. grupperes under næringshovedområde: F Bygge- og anleggsvirksomhet. Kjøpere og andelslag engasjert i markedsføring av jordbruksprodukter grupperes under næringshovedområde: G Varehandel, reparasjon av motorvogner. Stell og vedlikehold av landskap grupperes under: 81.30 Beplantning av hager og parkanlegg.»"@nb .
+
+
+xkos:inclusionNote vann:usageNote "Bruk heller den semantisk sett mer presise egenskapen Kategori – hovedinnhold (xkos:coreContentNote), ev. kombinert med egenskapen Kategori – tilleggsinnhold (xkos:additionalContentNote)."@nb ,
+                                  "Use rather the semantically more precise property xkos:coreContentNote, alternatively in combination with the property xkos:additionalContentNote."@en ;
+                   rdfs:comment "Egenskapen brukes til å oppgi merknad om hva som er inkludert i kodeelementet. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
+                                "This property is used to specify what is included in the category, repeated when the note is in different languages."@en ;
+                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:label "inclusion note"@en ,
+                              "inclusions"@en ,
+                              "inklusjonsmerknad"@nb .
 
 
 skos:prefLabel rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#prefLabel" ;
