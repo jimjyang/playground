@@ -22,6 +22,11 @@
 #    Individuals
 #################################################################
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+rdf:nil rdf:type owl:NamedIndividual ,
+                 rdf:List .
+
+
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
@@ -71,12 +76,45 @@
                       :leave-of-absence-scheme ,
                       :seeking-employment ,
                       :work ;
+     xkos:levels :los-level-list1 ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
                      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
      dct:publisher "https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827"^^xsd:anyURI ;
      dct:title "LOS"@en ,
                "LOS"@nb .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list1
+:los-level-list1 rdf:type owl:NamedIndividual ,
+                          rdf:List ;
+                 rdf:first :los-level1 ;
+                 rdf:rest :los-level-list2 .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list2
+:los-level-list2 rdf:type owl:NamedIndividual ,
+                          rdf:List ;
+                 rdf:first :los-level2 ;
+                 rdf:rest rdf:nil .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level1
+:los-level1 rdf:type owl:NamedIndividual ,
+                     xkos:ClassificationLevel ;
+            skos:member :work ;
+            xkos:depth "1"^^xsd:positiveInteger .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level2
+:los-level2 rdf:type owl:NamedIndividual ,
+                     xkos:ClassificationLevel ;
+            skos:member :employment ,
+                        :income ,
+                        :income-security ,
+                        :leave-of-absence-scheme ,
+                        :seeking-employment ;
+            xkos:depth "2"^^xsd:positiveInteger .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#seeking-employment
