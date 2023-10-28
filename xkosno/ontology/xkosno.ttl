@@ -110,6 +110,7 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 uneskos:contains rdf:type owl:ObjectProperty ;
                  rdfs:domain skos:ConceptScheme ;
                  rdfs:range skos:Concept ;
+                 rdfs:isDefinedBy uneskos:contains ;
                  rdfs:label "contains classification items"@en ,
                             "inneholder kategori"@nb .
 
@@ -127,7 +128,8 @@ xkos:belongsTo rdf:type owl:ObjectProperty ;
                rdfs:range skos:Concept ;
                rdfs:comment "Egenskapen brukes til å knytte en hovedversjon av klassifikasjonen til f.eks. en «klassifikasjonsfamilie» eller en «klassifikasjonsserie»."@nb ,
                             "This property is used to connect a major version of a classification to a concept representing the overall classification."@en ;
-               rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+               rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ,
+                                xkos:belongsTo ;
                rdfs:label "belongs to"@en ,
                           "tilhører"@nb .
 
@@ -138,7 +140,7 @@ xkos:compares rdf:type owl:ObjectProperty ;
               rdfs:range skos:ConceptScheme ;
               rdfs:comment "Egenskapen brukes til å referere til klassifikasjonene (eller versjonene/variantene av samme klassifikasjon) som det sammenlignes mellom."@nb ,
                            "This property is used to link directly the xkos:Correspondence to the classification schemes that it puts in relation."@en ;
-              rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+              rdfs:isDefinedBy xkos:compares ;
               rdfs:label "compares"@en ,
                          "sammenligner"@nb ;
               skos:example "«Klassifisering av informasjonssektoren 2007» sammenlignes med «Næringsgruppering 2007 (SN2007)»."@nb .
@@ -162,7 +164,7 @@ xkos:covers rdf:type owl:ObjectProperty ;
                            "Use rather the property xkos:coversExhaustively when the classification covers the domain / subject field exhaustively, and/or xkos:coversMutuallyExclusively when the classification covers the domain / subject field mutually exclusively."@en ;
             rdfs:comment "A classification / classification leval covers a defined field: economic activity, occupations, living organisms, etc. XKOS specifies the xkos:covers property to express this relation."@en ,
                          "Egenskapen brukes til å referere til begrep som beskriver det domene/fagområde/el.l. som klassifikasjonen/klassifikasjonsnivået dekker."@nb ;
-            rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+            rdfs:isDefinedBy xkos:covers ;
             rdfs:label "covers"@en ,
                        "dekker"@nb .
 
@@ -177,7 +179,7 @@ xkos:coversExhaustively rdf:type owl:ObjectProperty ;
                                        "En veldefinert klassifikasjon bør dekke maks. ett domene/fagområde/el.l., og uttømmende. Denne egenskapen bør derfor alltid brukes for en veldefinert klassifikasjon."@nb ;
                         rdfs:comment "Egenskapen brukes til å uttrykke at klassifikasjonen dekker et domene/fagområde/el.l. uttømmende, samt å referere til det som dekkes."@nb ,
                                      "If the coverage of the given field is complete (i.e. all notions in the field can potentially be classified under the classification), we say that the coverage is exhaustive."@en ;
-                        rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                        rdfs:isDefinedBy xkos:coversExhaustively ;
                         rdfs:label "covers exhaustively"@en ,
                                    "dekker uttømmende"@nb .
 
@@ -192,13 +194,14 @@ xkos:coversMutuallyExclusively rdf:type owl:ObjectProperty ;
                                               "A well-defined classification usually covers its domain, subject field or such like both exhaustively and mutually exclusively. In such cases this property and the property xkos:coversExhaustively should be used."@en ,
                                               "En veldefinert klassifikasjon bør dekke maks. ett domene/fagområde/el.l., og med gjensidig utelukkende kategorier."@nb ,
                                               "En veldefinert klassifikasjon dekker sitt domene/område/begrep både uttømmende og gjensidig utelukkende. I slike tilfeller bør både denne egenskapen og egenskapen Klassifikasjon – dekker uttømmende (xkos:coversExhaustively) brukes."@nb ;
-                               rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                               rdfs:isDefinedBy xkos:coversMutuallyExclusively ;
                                rdfs:label "covers mutually exclusively"@en ,
                                           "dekker gjensidig utelukkende"@nb .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
 xkos:exclusionNote rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf skos:scopeNote ;
                    rdfs:domain skos:Concept ;
                    rdfs:range xsd:langString .
 
@@ -211,7 +214,7 @@ xkos:generalizes rdf:type owl:ObjectProperty ;
                  rdfs:range skos:Concept ;
                  rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien generaliserer, i en generisk relasjon mellom kategoriene."@nb ,
                               "This property is used to refer to categories which the category in question generalizes, in a generic relationship between the categories."@en ;
-                 rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                 rdfs:isDefinedBy xkos:generalizes ;
                  rdfs:label "generaliserer"@nb ,
                             "generalizes"@en ;
                  skos:example "Kategorien med kode «A» på nivå 1 i klassifikasjonen «Næringsgruppering 2007» generaliserer kategoriene med kode «01», «02» og «03» på nivå 2."@nb .
@@ -225,7 +228,7 @@ xkos:hasPart rdf:type owl:ObjectProperty ;
              rdfs:range skos:Concept ;
              rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien består av, i en partitiv relasjon mellom kategoriene."@nb ,
                           "This property is used to refer to categories which the category in question consists of, in a partitive relationship between the categories."@en ;
-             rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+             rdfs:isDefinedBy xkos:hasPart ;
              rdfs:label "består av"@nb ,
                         "har del"@nb ,
                         "has part"@en ;
@@ -234,6 +237,7 @@ xkos:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
 xkos:inclusionNote rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf skos:scopeNote ;
                    rdfs:domain skos:Concept ;
                    rdfs:range xsd:langString .
 
@@ -245,7 +249,7 @@ xkos:isPartOf rdf:type owl:ObjectProperty ;
               rdfs:range skos:Concept ;
               rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien er del av, i en partitiv relasjon mellom kategoriene."@nb ,
                            "This property is used to refer to categories which the category in question is part of, in a partitive relationship between the categories."@en ;
-              rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+              rdfs:isDefinedBy xkos:isPartOf ;
               rdfs:label "er del av"@nb ,
                          "is part of"@en ;
               skos:example "'mandag' er del av 'ukedag'."@nb .
@@ -257,7 +261,7 @@ xkos:levels rdf:type owl:ObjectProperty ;
             rdfs:range rdf:List ;
             rdfs:comment "Egenskapen brukes til å referere til en liste av nivåene i klassifikasjonen (instanser av Klassifikasjonsnivå xkos:ClassificationLevel), representert som en sortert RDF-liste (instans av rdf:List)."@nb ,
                          "This property is used to refer to the list of the classification levels represented as an RDF list of ordered levels (instances of ClassificationLevel)."@en ;
-            rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+            rdfs:isDefinedBy xkos:levels ;
             rdfs:label "har klassifikasjonsnivå"@nb ,
                        "level list"@en ;
             skos:example "Innholdet i «Næringsgruppering 2007» som en (nøstet) liste, med klassifikasjonsnivåene 1 til 5."@nb .
@@ -269,7 +273,7 @@ xkos:madeOf rdf:type owl:ObjectProperty ;
             rdfs:range xkos:ConceptAssociation ;
             rdfs:comment "Egenskapen brukes til å referere til kategorisammenligning, dvs. sammenligning på kategorinivå."@nb ,
                          "This property is used to group category correspondences that this correspondence is made of."@en ;
-            rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+            rdfs:isDefinedBy xkos:madeOf ;
             rdfs:label "har kategorisammenligning"@nb ,
                        "made of"@en ;
             skos:example "Klassifikasjonssammenligningen «Klassifisering av informasjonssektoren 2007 - Næringsgruppering 2007 (SN 2007)» inneholder bl.a. sammenligning mellom kategoriene «26.1 - Produksjon av elektroniske komponenter og kretskort» i «Standard for næringsgruppering (SN2007)» og «1.11 - Produksjon av elektroniske komponenter og kretskort» i «Klassifisering av informasjonssektoren 2007»."@nb .
@@ -283,7 +287,7 @@ xkos:next rdf:type owl:ObjectProperty ;
                          "The words \"next\" and \"after\" should be understood within the context of that particular classification level in that particular classification."@en ;
           rdfs:comment "Egenskapen brukes til å referere til kategorien som er bak den aktuelle kategorien, i en sekvensiell relasjon mellom kategoriene."@nb ,
                        "This property is used to refer to the category that is after the category in question, in a sequential relation between the categories."@en ;
-          rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+          rdfs:isDefinedBy xkos:next ;
           rdfs:label "neste kategori"@nb ,
                      "next"@en ;
           skos:example "Den neste kategori for «A» er «B» i Nivå 1 av «Næringsgruppering 2007 (SN 2007)»."@nb .
@@ -295,7 +299,7 @@ xkos:organizedBy rdf:type owl:ObjectProperty ;
                  rdfs:range skos:Concept ;
                  rdfs:comment "Egenskapen brukes til å referere til begrep som kategoriene i klassifikasjonsnivået er klassifisert innen."@nb ,
                               "This property is used to specify the name (or nature, or type) of the items that constitute the level"@en ;
-                 rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                 rdfs:isDefinedBy xkos:organizedBy ;
                  rdfs:label "er klassifisert innen"@nb ,
                             "organized by"@en ;
                  skos:example "«Næringsgruppering 2007» er klassifisert innen: nivå 1 = Næringshovedområde, nivå 2 = Næring, nivå 3 = Næringshovedgruppe, nivå 4 = Næringsgruppe og nivå 5 = Næringsundergruppe."@nb .
@@ -309,7 +313,7 @@ xkos:previous rdf:type owl:ObjectProperty ;
                              "The words \"previous\" and \"before\" should be understood within the context of that particular classification level in that particular classification."@en ;
               rdfs:comment "Egenskapen brukes til å referere til kategorien som er foran den aktuelle kategorien, i en sekvensiell relasjon mellom kategoriene."@nb ,
                            "This property is used to refer to the category that is before the category in question, in a sequential relation between the categories."@en ;
-              rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+              rdfs:isDefinedBy xkos:previous ;
               rdfs:label "forrige kategori"@nb ,
                          "previous"@en ;
               skos:example "Den forrige kategori til «B» er «A» i Nivå 1 av «Næringsgruppering 2007 (SN 2007)»."@nb .
@@ -321,7 +325,7 @@ xkos:sourceConcept rdf:type owl:ObjectProperty ;
                    rdfs:range skos:Concept ;
                    rdfs:comment "Egenskapen brukes til å referere til en kildekategori i en kategorisammenligning."@nb ,
                                 "This property is used to link to a source concept in the correspondence."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:isDefinedBy xkos:sourceConcept ;
                    rdfs:label "har kildekategori"@nb ,
                               "source concept"@en .
 
@@ -333,7 +337,7 @@ xkos:specializes rdf:type owl:ObjectProperty ;
                  rdfs:range skos:Concept ;
                  rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien spesialiserer, i en generisk relasjon mellom kategoriene."@nb ,
                               "This property is used to refer to categories which the category in question specializes, in a generic relationship between the categories."@en ;
-                 rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                 rdfs:isDefinedBy xkos:specializes ;
                  rdfs:label "specializes"@en ,
                             "spesialiserer"@nb ;
                  skos:example "Kategorien med kode «01» på nivå 2 i klassifikasjonen «Næringsgruppering 2007» spesialiserer kategorien med kode «A» på nivå 1."@nb .
@@ -345,7 +349,7 @@ xkos:supersedes rdf:type owl:ObjectProperty ;
                 rdfs:range skos:ConceptScheme ;
                 rdfs:comment "Egenskapen brukes til å referere til en versjon av klassifikasjonen som denne versjonen erstatter."@nb ,
                              "This property is used to refer to a classification/version that this classification/version supersedes."@en ;
-                rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                rdfs:isDefinedBy xkos:supersedes ;
                 rdfs:label "remplerstatterace"@nb ,
                            "supersedes"@en ;
                 skos:example "«Næringsgruppering 2007 (SN2007)» erstatter «Næringsgruppering 2002 (SN2002)»."@nb .
@@ -357,7 +361,7 @@ xkos:targetConcept rdf:type owl:ObjectProperty ;
                    rdfs:range skos:Concept ;
                    rdfs:comment "Egenskapen brukes til å referere til en målkategori i en kategorisammenligning."@nb ,
                                 "This property is used to link to a target concept in the correspondence."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:isDefinedBy xkos:targetConcept ;
                    rdfs:label "har målkategori"@nb ,
                               "target concept"@en .
 
@@ -368,7 +372,7 @@ xkos:variant rdf:type owl:ObjectProperty ;
              rdfs:range skos:ConceptScheme ;
              rdfs:comment "Egenskapen brukes til å referere til en variant av klassifikasjonen, dvs. klassifikasjonen tilpasset for et spesifikt bruksbehov, ved f.eks. å begrense dekningen, slå sammen eller splitte noen kategorier på et gitt klassifikasjonsnivå."@nb ,
                           "In certain circumstances, statisticians need to \"customize\" a classification scheme for a specific use, by restricting the coverage, merging or splitting certain items at a given level, etc. The xkos:variant property can be used to represent the relation between the base classification scheme and its variant(s)."@en ;
-             rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+             rdfs:isDefinedBy xkos:variant ;
              rdfs:label "har variant"@nb ,
                         "variant"@en ;
              skos:example "«Næringsgruppering 2007» har bl.a. variant «Fastlands-Norge 2009»."@nb .
@@ -378,6 +382,7 @@ xkos:variant rdf:type owl:ObjectProperty ;
 skos:broader rdf:type owl:ObjectProperty ;
              rdfs:domain skos:Concept ;
              rdfs:range skos:Concept ;
+             rdfs:isDefinedBy skos:broader ;
              rdfs:label "broader"@en .
 
 
@@ -385,6 +390,7 @@ skos:broader rdf:type owl:ObjectProperty ;
 skos:inScheme rdf:type owl:ObjectProperty ;
               rdfs:domain skos:Concept ;
               rdfs:range skos:ConceptScheme ;
+              rdfs:isDefinedBy skos:inScheme ;
               rdfs:label "i klassifikasjon"@nb ,
                          "in classification"@en ,
                          "in scheme"@en .
@@ -394,6 +400,7 @@ skos:inScheme rdf:type owl:ObjectProperty ;
 skos:member rdf:type owl:ObjectProperty ;
             rdfs:domain xkos:ClassificationLevel ;
             rdfs:range skos:Concept ;
+            rdfs:isDefinedBy skos:member ;
             rdfs:label "inneholder kategori"@nb ,
                        "member"@en .
 
@@ -401,7 +408,8 @@ skos:member rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/2004/02/skos/core#narrower
 skos:narrower rdf:type owl:ObjectProperty ;
               rdfs:domain skos:Concept ;
-              rdfs:range skos:Concept .
+              rdfs:range skos:Concept ;
+              rdfs:isDefinedBy skos:narrower .
 
 
 #################################################################
@@ -414,7 +422,8 @@ dct:creator rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:DatatypeProperty ;
-                rdfs:range rdfs:Literal .
+                rdfs:range rdf:langString ;
+                rdfs:isDefinedBy dct:description .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -424,7 +433,7 @@ dct:identifier rdf:type owl:DatatypeProperty .
 ###  http://purl.org/dc/terms/issued
 dct:issued rdf:type owl:DatatypeProperty ;
            rdfs:range xsd:dateTime ;
-           rdfs:isDefinedBy "http://purl.org/dc/terms/issued" ;
+           rdfs:isDefinedBy dct:issued ;
            rdfs:label "issued"@en ,
                       "tilgjengeliggjøringsdato"@nb .
 
@@ -432,7 +441,7 @@ dct:issued rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:DatatypeProperty ;
              rdfs:range rdfs:Literal ;
-             rdfs:isDefinedBy "http://purl.org/dc/terms/language" ;
+             rdfs:isDefinedBy dct:language ;
              rdfs:label "language"@en ,
                         "språk"@nb .
 
@@ -440,7 +449,7 @@ dct:language rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:dateTime ;
-             rdfs:isDefinedBy "http://purl.org/dc/terms/modified" ;
+             rdfs:isDefinedBy dct:modified ;
              rdfs:label "modified"@en ,
                         "sist oppdatert"@nb .
 
@@ -450,23 +459,28 @@ dct:publisher rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty .
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:range rdf:langString .
 
 
 ###  http://purl.org/dc/terms/type
 dct:type rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:anyURI ;
-         rdfs:isDefinedBy "http://purl.org/dc/terms/type" ;
+         rdfs:isDefinedBy dct:type ;
          rdfs:label "type"@en ,
                     "type"@nb .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
-xkos:additionalContentNote rdf:type owl:DatatypeProperty .
+xkos:additionalContentNote rdf:type owl:DatatypeProperty ;
+                           rdfs:domain skos:Concept ;
+                           rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
-xkos:coreContentNote rdf:type owl:DatatypeProperty .
+xkos:coreContentNote rdf:type owl:DatatypeProperty ;
+                     rdfs:domain skos:Concept ;
+                     rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#depth
@@ -485,12 +499,14 @@ xkos:depth rdf:type owl:DatatypeProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
 xkos:exclusionNote rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf skos:scopeNote .
+                   rdfs:domain skos:Concept ;
+                   rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
 xkos:inclusionNote rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf skos:scopeNote .
+                   rdfs:domain skos:Concept ;
+                   rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#maxLength
@@ -503,7 +519,7 @@ In all cases the skos:prefLabel property is used to express the full (official) 
                               "For deg som utvikler/tilpasser verktøystøtte, se engelsk note."@nb ;
                rdfs:comment "Egenskapen brukes til å oppgi maksimum kodelengde."@nb ,
                             "This property is used to specify the maximum number of characters for a label that is constrained in length."@en ;
-               rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+               rdfs:isDefinedBy xkos:maxLength ;
                rdfs:label "maksimum kodelengde"@nb ,
                           "maximum length"@en .
 
@@ -514,7 +530,7 @@ xkos:notationPattern rdf:type owl:DatatypeProperty ;
                      rdfs:range rdfs:Literal ;
                      rdfs:comment "Classification items of a given levels usually have a code (expressed by the skos:notation property) that conforms to a specific structure. In order to capture this information, XKOS defines the xkos:notationPattern property. This property is attached to a classification level and should contain a regular expression reflecting the code structure of the items of this level."@en ,
                                   "Egenskapen brukes til å oppgi mønsteret for kodene på et gitt klassifikasjonsnivå. Verdien bør inneholde et regulært uttrykk."@nb ;
-                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                     rdfs:isDefinedBy xkos:notationPattern ;
                      rdfs:label "code pattern"@en ,
                                 "kodemønster"@nb ;
                      skos:example "For example, the NACE sections are identified by a capital letter between A and U."@en ,
@@ -527,7 +543,7 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:positiveInteger ;
                     rdfs:comment "Egenskapen brukes til å oppgi antall nivåer i klassifikasjonen; 1 for en flat klassifikasjon."@nb ,
                                  "This property is used to document number of levels the classification includes; 1 for a flat classification."@en ;
-                    rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                    rdfs:isDefinedBy xkos:numberOfLevels ;
                     rdfs:label "antall nivåer"@nb ,
                                "number of levels"@en ;
                     skos:example "«Næringsgruppering 2007» har totalt fem nivåer."@nb .
@@ -536,7 +552,7 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 ###  http://schema.org/validFrom
 <http://schema.org/validFrom> rdf:type owl:DatatypeProperty ;
                               rdfs:range xsd:dateTime ;
-                              rdfs:isDefinedBy "https://schema.org/validFrom" ;
+                              rdfs:isDefinedBy schema:validFrom ;
                               rdfs:label "gyldig til og med"@nb ,
                                          "valid from (inclusive)"@en .
 
@@ -544,21 +560,22 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
 ###  http://schema.org/validThrough
 <http://schema.org/validThrough> rdf:type owl:DatatypeProperty ;
                                  rdfs:range xsd:dateTime ;
-                                 rdfs:isDefinedBy "https://schema.org/validThrough" ;
+                                 rdfs:isDefinedBy schema:validThrough ;
                                  rdfs:label "gyldig til og med"@nb ,
                                             "valid through (inclusive)"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:DatatypeProperty ;
-                rdfs:range rdfs:Literal ;
-                rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#definition" ;
+                rdfs:range rdf:langString ;
+                rdfs:isDefinedBy skos:definition ;
                 rdfs:label "definisjon"@nb ,
                            "definition"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty .
+skos:prefLabel rdf:type owl:DatatypeProperty ;
+               rdfs:range rdf:langString .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -585,7 +602,7 @@ xkos:ClassificationLevel rdf:type owl:Class ;
                                         "Flate klassifikasjoner betraktes til å inneha ett nivå."@nb ;
                          rdfs:comment "Klassen brukes til å representere et nivå i en klassifikasjon."@nb ,
                                       "This class is used to represent a classification level."@en ;
-                         rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                         rdfs:isDefinedBy xkos:ClassificationLevel ;
                          rdfs:label "Class Classification level"@en ,
                                     "Klasse Klassifikasjonsnivå"@nb ;
                          skos:example "Nivå 4 «næringsgruppe» i Næringsgruppering 2007."@nb .
@@ -607,7 +624,7 @@ xkos:ConceptAssociation rdf:type owl:Class ;
                                         ] ;
                         rdfs:comment "Klassen brukes til å representere sammenligning mellom kategorier."@nb ,
                                      "This class is used to represent correspondences between classification items."@en ;
-                        rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                        rdfs:isDefinedBy xkos:ConceptAssociation ;
                         rdfs:label "Class Category correspondence"@en ,
                                    "Klasse Kategorisammenligning"@nb .
 
@@ -635,7 +652,7 @@ xkos:Correspondence rdf:type owl:Class ;
                                     ] ;
                     rdfs:comment "Klassen brukes til å representere sammenligning mellom to (varianter/versjoner av) klassifikasjoner, dvs. sammenstilling av sammenligninger mellom kategorier."@nb ,
                                  "This class is used to group concept associations between two classifications (concordances, correspondence tables …​)."@en ;
-                    rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                    rdfs:isDefinedBy xkos:Correspondence ;
                     rdfs:label "Class Correspondence"@en ,
                                "Klasse Klassifikasjonssammenligning"@nb .
 
@@ -644,7 +661,7 @@ xkos:Correspondence rdf:type owl:Class ;
 rdf:List rdf:type owl:Class ;
          rdfs:comment "Klassen er en RDF-teknisk konstruksjon som er brukt til å representere en «sortert liste»"@nb ,
                       "This class is a RDF-technical construction that is used to present an ordered list."@en ;
-         rdfs:isDefinedBy "https://www.w3.org/TR/rdf12-schema/#ch_list" ;
+         rdfs:isDefinedBy <https://www.w3.org/TR/rdf12-schema/#ch_list> ;
          rdfs:label "Class List"@en ,
                     "Klasse Liste"@nb .
 
@@ -666,7 +683,7 @@ skos:Concept rdf:type owl:Class ;
                              ] ;
              rdfs:comment "Klassen brukes til å representere et begrep, en kategori i en klassifikasjon/klassifikasjonsnivå."@nb ,
                           "This class is used to represent a concept, a category in a classification or classification level."@en ;
-             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:isDefinedBy skos:Concept ;
              rdfs:label "Class Category, classification item, concept or suchlike"@en ,
                         "Klasse Kategori, begrep el.l."@nb ;
              skos:example "Kategorien med kode «A» på nivå 1 i klassifikasjonen «Næringsgruppering 2007»."@nb .
@@ -728,7 +745,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                   "In the context of this document, a given variant/version of a classification is also a classification."@en ;
                    rdfs:comment "Klassen brukes til å representere en klassifikasjon, en variant eller en versjon av en klassifikasjon."@nb ,
                                 "This class is used to represent a classification, a variant of a version of a classification."@en ;
-                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                   rdfs:isDefinedBy skos:ConceptScheme ;
                    rdfs:label "Class Classification, controlled vocabulary or suchlike"@en ,
                               "Klasse Klassifikasjon, kontrollert vokabular el.l."@nb ;
                    skos:example "Næringsgruppering 2007 (SN 2007)"@nb .
@@ -739,7 +756,7 @@ org:Organization rdf:type owl:Class ;
                  rdfs:subClassOf foaf:Agent ;
                  rdfs:comment "Klassen brukes til å representere en organisasjon."@nb ,
                               "This class is used to represent en organization."@en ;
-                 rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+                 rdfs:isDefinedBy org:Organization ;
                  rdfs:label "Klasse Organisasjon"@nb ,
                             "Class Organization" .
 
@@ -748,7 +765,7 @@ org:Organization rdf:type owl:Class ;
 foaf:Agent rdf:type owl:Class ;
            rdfs:comment "Klassen brukes til å representere en Aktør. Bruk heller org:Organization når aktøren er en organisasjon."@nb ,
                         "This class is used to represent an Agent. Use rather org:Organization when the agent is an organization."@en ;
-           rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/#term_Agent" ;
+           rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/#term_Agent> ;
            rdfs:label "Class Agent"@en ,
                       "Klasse Aktør"@nb .
 
@@ -773,35 +790,36 @@ foaf:Agent rdf:type owl:Class ;
         foaf:mbox <mailto:informasjonsforvaltning@digdir.no> .
 
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-] .
-
 #################################################################
 #    Annotations
 #################################################################
 
-dct:creator rdfs:isDefinedBy "http://purl.org/dc/terms/creator" ;
-             rdfs:label "creator"@en ,
-                        "produsent"@nb .
+dct:creator rdfs:isDefinedBy dct:creator ,
+                             "http://purl.org/dc/terms/creator" ;
+            rdfs:label "creator"@en ,
+                       "produsent"@nb .
 
 
-dct:identifier rdfs:isDefinedBy "http://purl.org/dc/terms/identifier" ;
+dct:identifier rdfs:isDefinedBy dct:identifier ,
+                                "http://purl.org/dc/terms/identifier" ;
                rdfs:label "identifier"@en ,
                           "identifikator"@nb .
 
 
-dct:publisher rdfs:isDefinedBy "http://purl.org/dc/terms/publisher" ;
+dct:publisher rdfs:isDefinedBy dct:publisher ,
+                               "http://purl.org/dc/terms/publisher" ;
               rdfs:label "publisher"@en ,
                          "utgiver"@nb .
 
 
-dct:title rdfs:label "title/name"@en ,
+dct:title rdfs:isDefinedBy dct:title ;
+          rdfs:label "title/name"@en ,
                      "tittel/navn"@nb .
 
 
 xkos:additionalContentNote rdfs:comment "Egenskapen brukes til å oppgi tilleggsinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
                                         "This property is used to specify additional content to the classification item, repeated when the note is in different languages."@en ;
-                           rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                           rdfs:isDefinedBy xkos:additionalContentNote ;
                            rdfs:label "additional content note"@en ,
                                       "tilleggsinnhold"@nb ;
                            skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om tilleggsinnhold: «Inkluderer også: Omfatter også tjenester tilknyttet jordbruk, jakt og fangst.»"@nb ,
@@ -810,7 +828,7 @@ xkos:additionalContentNote rdfs:comment "Egenskapen brukes til å oppgi tilleggs
 
 xkos:coreContentNote rdfs:comment "Egenskapen brukes til å oppgi hva som er hovedinnholdet i kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
                                   "This property is used to specify the core content of the classification item, repeated when the note is in different languages."@en ;
-                     rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                     rdfs:isDefinedBy xkos:coreContentNote ;
                      rdfs:label "core content note"@en ,
                                 "hovedinnhold"@nb ;
                      skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende note om hovedinnhold: \"Inkluderer: Denne næringen omfatter to basisaktiviteter: produksjon av vegetabilske og animalske produkter, jordbruk, dyrking av genetisk modifiserte vekster og oppdrett av genetisk modifiserte dyr. Både dyrking av vekster på friland og i veksthus inngår."@nb ,
@@ -819,7 +837,7 @@ xkos:coreContentNote rdfs:comment "Egenskapen brukes til å oppgi hva som er hov
 
 xkos:exclusionNote rdfs:comment "Egenskapen brukes til å oppgi hva som ikke er inkludert i kategorien. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
                                 "This property is used to specify what is not included in the category, repeated when the note is in different languages."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:isDefinedBy xkos:exclusionNote ;
                    rdfs:label "eksklusjonsmerknad"@nb ,
                               "exclusion note"@en ;
                    skos:example "Kategori med koden «01» i «Næringsgruppering 2007 (SN 2007)» har følgende eksklusjonsnote: «Ekskluderer: Grunnarbeid, f.eks. anlegg av jordterrasser, drenering o.l. grupperes under næringshovedområde: F Bygge- og anleggsvirksomhet. Kjøpere og andelslag engasjert i markedsføring av jordbruksprodukter grupperes under næringshovedområde: G Varehandel, reparasjon av motorvogner. Stell og vedlikehold av landskap grupperes under: 81.30 Beplantning av hager og parkanlegg.»"@nb .
@@ -829,15 +847,19 @@ xkos:inclusionNote vann:usageNote "Bruk heller den semantisk sett mer presise eg
                                   "Use rather the semantically more precise property xkos:coreContentNote, alternatively in combination with the property xkos:additionalContentNote."@en ;
                    rdfs:comment "Egenskapen brukes til å oppgi merknad om hva som er inkludert i kodeelementet. Egenskapen bør gjentas når merknaden finnes i flere ulike språk."@nb ,
                                 "This property is used to specify what is included in the category, repeated when the note is in different languages."@en ;
-                   rdfs:isDefinedBy <http://rdf-vocabulary.ddialliance.org/xkos> ;
+                   rdfs:isDefinedBy xkos:inclusionNote ;
                    rdfs:label "inclusion note"@en ,
                               "inclusions"@en ,
                               "inklusjonsmerknad"@nb .
 
 
-skos:prefLabel rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#prefLabel" ;
+skos:prefLabel rdfs:isDefinedBy skos:prefLabel ,
+                                "http://www.w3.org/2004/02/skos/core#prefLabel" ;
                rdfs:label "anbefalt/foretrukket term/navn"@nb ,
                           "preferred label/name"@en .
+
+
+skos:scopeNote rdfs:isDefinedBy skos:scopeNote .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
