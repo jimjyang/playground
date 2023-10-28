@@ -22,11 +22,6 @@
 #    Individuals
 #################################################################
 
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual ;
-        rdfs:comment "the last nil-element in a RDF-list."@en .
-
-
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#building-and-property
 :building-and-property rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
@@ -107,7 +102,7 @@ rdf:nil rdf:type owl:NamedIndividual ;
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list1
 :los-level-list1 rdf:type owl:NamedIndividual ,
                           rdf:List ;
-                 rdf:first :los ;
+                 rdf:first :los-level1 ;
                  rdf:rest :los-level-list2 .
 
 
