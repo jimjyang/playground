@@ -57,7 +57,8 @@ dct:publisher rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:AnnotationProperty ;
-          rdfs:range rdfs:Literal .
+          rdfs:range rdf:langString ,
+                     rdfs:Literal .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -378,6 +379,16 @@ xkos:variant rdf:type owl:ObjectProperty ;
              skos:example "«Næringsgruppering 2007» har bl.a. variant «Fastlands-Norge 2009»."@nb .
 
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+rdf:first rdf:type owl:ObjectProperty ;
+          rdfs:domain rdf:List .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
+rdf:rest rdf:type owl:ObjectProperty ;
+         rdfs:domain rdf:List .
+
+
 ###  http://www.w3.org/2004/02/skos/core#broader
 skos:broader rdf:type owl:ObjectProperty ;
              rdfs:domain skos:Concept ;
@@ -459,8 +470,7 @@ dct:publisher rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty ;
-          rdfs:range rdf:langString .
+dct:title rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/type
@@ -473,13 +483,11 @@ dct:type rdf:type owl:DatatypeProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
 xkos:additionalContentNote rdf:type owl:DatatypeProperty ;
-                           rdfs:domain skos:Concept ;
                            rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
 xkos:coreContentNote rdf:type owl:DatatypeProperty ;
-                     rdfs:domain skos:Concept ;
                      rdfs:range rdf:langString .
 
 
@@ -499,13 +507,11 @@ xkos:depth rdf:type owl:DatatypeProperty ;
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
 xkos:exclusionNote rdf:type owl:DatatypeProperty ;
-                   rdfs:domain skos:Concept ;
                    rdfs:range rdf:langString .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
 xkos:inclusionNote rdf:type owl:DatatypeProperty ;
-                   rdfs:domain skos:Concept ;
                    rdfs:range rdf:langString .
 
 
@@ -574,8 +580,7 @@ skos:definition rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty ;
-               rdfs:range rdf:langString .
+skos:prefLabel rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -659,6 +664,16 @@ xkos:Correspondence rdf:type owl:Class ;
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty rdf:first ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass xkos:ClassificationLevel
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty rdf:rest ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass rdf:List
+                         ] ;
          rdfs:comment "Klassen er en RDF-teknisk konstruksjon som er brukt til å representere en «sortert liste»"@nb ,
                       "This class is a RDF-technical construction that is used to present an ordered list."@en ;
          rdfs:isDefinedBy <https://www.w3.org/TR/rdf12-schema/#ch_list> ;
@@ -694,6 +709,10 @@ skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty uneskos:contains ;
                                      owl:someValuesFrom skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:levels ;
+                                     owl:someValuesFrom xkos:ClassificationLevel
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:creator ;
