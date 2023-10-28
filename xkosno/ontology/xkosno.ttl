@@ -824,6 +824,12 @@ foaf:Agent rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+rdf:nil rdf:type owl:NamedIndividual ,
+                 rdf:List ;
+        rdfs:comment "An instans of rdf:List, used to indicate the last element in a list."@en .
+
+
 ###  https://data.norge.no/vocabulary/xkosno
 <https://data.norge.no/vocabulary/xkosno> rdf:type owl:NamedIndividual .
 
