@@ -90,11 +90,12 @@
                       :seeking-employment ,
                       :work ;
      xkos:levels :los-level-list1 ;
+     xkos:numberOfLevels "2"^^xsd:positiveInteger ;
      skos:hasTopConcept :work ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
                      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
-     dct:publisher "https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827"^^xsd:anyURI ;
+     dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
      dct:title "LOS"@en ,
                "LOS"@nb .
 
