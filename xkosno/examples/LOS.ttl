@@ -116,7 +116,8 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level1
 :los-level1 rdf:type owl:NamedIndividual ,
                      xkos:ClassificationLevel ;
-            skos:member :work ;
+            skos:member :work , 
+                        :building-and-property ;
             xkos:depth "1"^^xsd:positiveInteger .
 
 
