@@ -107,6 +107,20 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/dc/terms/isReplacedBy
+dct:isReplacedBy rdf:type owl:ObjectProperty ;
+                 rdfs:isDefinedBy dct:isReplacedBy ;
+                 rdfs:label "er erstattet av"@nb ,
+                            "is replaced by"@en .
+
+
+###  http://purl.org/dc/terms/replaces
+dct:replaces rdf:type owl:ObjectProperty ;
+             rdfs:isDefinedBy dct:replaces ;
+             rdfs:label "erstatter"@nb ,
+                        "replaces"@en .
+
+
 ###  http://purl.org/umu/uneskos#contains
 uneskos:contains rdf:type owl:ObjectProperty ;
                  rdfs:domain skos:ConceptScheme ;
@@ -421,6 +435,13 @@ skos:narrower rdf:type owl:ObjectProperty ;
               rdfs:domain skos:Concept ;
               rdfs:range skos:Concept ;
               rdfs:isDefinedBy skos:narrower .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain skos:Concept ;
+                  rdfs:label "er første kategori i"@nb ,
+                             "first category in"@en .
 
 
 #################################################################
