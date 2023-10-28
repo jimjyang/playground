@@ -23,15 +23,27 @@
 #################################################################
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual ,
-                 rdf:List .
+rdf:nil rdf:type owl:NamedIndividual .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#building-and-property
+:building-and-property rdf:type owl:NamedIndividual ,
+                                skos:Concept ;
+                       xkos:previous :work ;
+                       skos:inScheme :los ;
+                       dct:replaces "https://psi.norge.no/los/tema/bygg-og-eiendom"^^xsd:anyURI ;
+                       skos:prefLabel "building and property"@en ,
+                                      "bygg og eiendom"@nb ,
+                                      "bygg og eigedom"@nn .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             xkos:isPartOf :work ;
+            xkos:next :seeking-employment ;
             skos:inScheme :los ;
+            dct:replaces "https://psi.norge.no/los/tema/arbeidsliv"^^xsd:anyURI ;
             skos:prefLabel "arbeidsliv"@nb ,
                            "arbeidsliv"@nn ,
                            "employment"@en .
@@ -41,7 +53,9 @@ rdf:nil rdf:type owl:NamedIndividual ,
 :income rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         xkos:isPartOf :work ;
+        xkos:next :income-security ;
         skos:inScheme :los ;
+        dct:replaces "https://psi.norge.no/los/tema/inntekt"^^xsd:anyURI ;
         skos:prefLabel "income"@en ,
                        "inntekt"@nb ,
                        "inntekt"@nn .
@@ -51,7 +65,9 @@ rdf:nil rdf:type owl:NamedIndividual ,
 :income-security rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  xkos:isPartOf :work ;
+                 xkos:next :leave-of-absence-scheme ;
                  skos:inScheme :los ;
+                 dct:replaces "https://psi.norge.no/los/tema/inntektssikring"^^xsd:anyURI ;
                  skos:prefLabel "income security"@en ,
                                 "inntektssikring"@nb ,
                                 "inntektssikring"@nn .
@@ -62,6 +78,7 @@ rdf:nil rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          xkos:isPartOf :work ;
                          skos:inScheme :los ;
+                         dct:replaces "https://psi.norge.no/los/tema/permisjonsordninger"^^xsd:anyURI ;
                          skos:prefLabel "leave of absence scheme"@en ,
                                         "permisjonsordning"@nb ,
                                         "permisjonsordning"@nn .
@@ -77,6 +94,7 @@ rdf:nil rdf:type owl:NamedIndividual ,
                       :seeking-employment ,
                       :work ;
      xkos:levels :los-level-list1 ;
+     skos:hasTopConcept :work ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
                      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
@@ -86,17 +104,11 @@ rdf:nil rdf:type owl:NamedIndividual ,
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list1
-:los-level-list1 rdf:type owl:NamedIndividual ,
-                          rdf:List ;
-                 rdf:first :los-level1 ;
-                 rdf:rest :los-level-list2 .
+:los-level-list1 rdf:type owl:NamedIndividual .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list2
-:los-level-list2 rdf:type owl:NamedIndividual ,
-                          rdf:List ;
-                 rdf:first :los-level2 ;
-                 rdf:rest rdf:nil .
+:los-level-list2 rdf:type owl:NamedIndividual .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level1
@@ -121,7 +133,9 @@ rdf:nil rdf:type owl:NamedIndividual ,
 :seeking-employment rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     xkos:isPartOf :work ;
+                    xkos:next :income ;
                     skos:inScheme :los ;
+                    dct:replaces "https://psi.norge.no/los/tema/arbeidssoking"^^xsd:anyURI ;
                     skos:prefLabel "arbeidssøking"@nb ,
                                    "arbeidssøking"@nn ,
                                    "seeking employment"@en .
@@ -135,7 +149,10 @@ rdf:nil rdf:type owl:NamedIndividual ,
                    :income-security ,
                    :leave-of-absence-scheme ,
                    :seeking-employment ;
+      xkos:next :building-and-property ;
       skos:inScheme :los ;
+      skos:topConceptOf :los ;
+      dct:replaces "https://psi.norge.no/los/tema/arbeid"^^xsd:anyURI ;
       skos:prefLabel "arbeid"@nb ,
                      "arbeid"@nn ,
                      "work"@en .
