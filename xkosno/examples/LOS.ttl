@@ -22,12 +22,6 @@
 #    Individuals
 #################################################################
 
-###  https://data.norge.no/vocabulary/xkosno
-<https://data.norge.no/vocabulary/xkosno> uneskos:contains :employment ,
-                                                           :income ,
-                                                           :income-security .
-
-
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
