@@ -4,7 +4,7 @@ __**Your feedback**, preferably provided as https://github.com/jimjyang/playgrou
 
 *In this sandbox* we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
 
-* Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from Protégé. 
+* Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from Protégé. #Note that the ontology is not complete yet#.
 
 * Here is link:examples/LOS.ttl[a little sandbox-example of using XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is also modeled in and exported from Protégé.
 ** If you want to play with XKOS-AP-NO in Protégé, you may import abovementioned ontology for XKOS-AP-NO into Protégé such that you have the classes and properties of XKOS-AP-NO available in Protégé.
