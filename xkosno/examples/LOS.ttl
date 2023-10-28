@@ -22,6 +22,12 @@
 #    Individuals
 #################################################################
 
+###  https://data.norge.no/vocabulary/xkosno
+<https://data.norge.no/vocabulary/xkosno> uneskos:contains :employment ,
+                                                           :income ,
+                                                           :income-security .
+
+
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
@@ -65,6 +71,12 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los
 :los rdf:type owl:NamedIndividual ,
               skos:ConceptScheme ;
+     uneskos:contains :employment ,
+                      :income ,
+                      :income-security ,
+                      :leave-of-absence-scheme ,
+                      :seeking-employment ,
+                      :work ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
                      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
