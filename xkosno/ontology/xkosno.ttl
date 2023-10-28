@@ -108,17 +108,11 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://purl.org/dc/terms/isReplacedBy
-dct:isReplacedBy rdf:type owl:ObjectProperty ;
-                 rdfs:isDefinedBy dct:isReplacedBy ;
-                 rdfs:label "er erstattet av"@nb ,
-                            "is replaced by"@en .
+dct:isReplacedBy rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/dc/terms/replaces
-dct:replaces rdf:type owl:ObjectProperty ;
-             rdfs:isDefinedBy dct:replaces ;
-             rdfs:label "erstatter"@nb ,
-                        "replaces"@en .
+dct:replaces rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/umu/uneskos#contains
@@ -411,6 +405,13 @@ skos:broader rdf:type owl:ObjectProperty ;
              rdfs:label "broader"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty ;
+                   rdfs:isDefinedBy skos:hasTopConcept ,
+                                    <skos:hasTopConcept> ;
+                   rdfs:label "has top concept"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme rdf:type owl:ObjectProperty ;
               rdfs:domain skos:Concept ;
@@ -440,6 +441,7 @@ skos:narrower rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/2004/02/skos/core#topConceptOf
 skos:topConceptOf rdf:type owl:ObjectProperty ;
                   rdfs:domain skos:Concept ;
+                  rdfs:isDefinedBy skos:topConceptOf ;
                   rdfs:label "er første kategori i"@nb ,
                              "first category in"@en .
 
@@ -460,6 +462,10 @@ dct:description rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/identifier
 dct:identifier rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+dct:isReplacedBy rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/issued
@@ -488,6 +494,10 @@ dct:modified rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/replaces
+dct:replaces rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -846,10 +856,20 @@ dct:identifier rdfs:isDefinedBy dct:identifier ,
                           "identifikator"@nb .
 
 
+dct:isReplacedBy rdfs:isDefinedBy dct:isReplacedBy ;
+                 rdfs:label "er erstattet av"@nb ,
+                            "is replaced by"@en .
+
+
 dct:publisher rdfs:isDefinedBy dct:publisher ,
                                "http://purl.org/dc/terms/publisher" ;
               rdfs:label "publisher"@en ,
                          "utgiver"@nb .
+
+
+dct:replaces rdfs:isDefinedBy dct:replaces ;
+             rdfs:label "erstatter"@nb ,
+                        "replaces"@en .
 
 
 dct:title rdfs:isDefinedBy dct:title ;
