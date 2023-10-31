@@ -127,8 +127,7 @@ uneskos:contains rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote
 xkos:additionalContentNote rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf xkos:inclusionNote ;
-                           rdfs:domain skos:Concept ;
-                           rdfs:range xsd:langString .
+                           rdfs:domain skos:Concept .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#belongsTo
@@ -158,8 +157,7 @@ xkos:compares rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote
 xkos:coreContentNote rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf xkos:inclusionNote ;
-                     rdfs:domain skos:Concept ;
-                     rdfs:range xsd:langString .
+                     rdfs:domain skos:Concept .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#covers
@@ -211,8 +209,7 @@ xkos:coversMutuallyExclusively rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote
 xkos:exclusionNote rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf skos:scopeNote ;
-                   rdfs:domain skos:Concept ;
-                   rdfs:range xsd:langString .
+                   rdfs:domain skos:Concept .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#generalizes
@@ -247,8 +244,7 @@ xkos:hasPart rdf:type owl:ObjectProperty ;
 ###  http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote
 xkos:inclusionNote rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf skos:scopeNote ;
-                   rdfs:domain skos:Concept ;
-                   rdfs:range xsd:langString .
+                   rdfs:domain skos:Concept .
 
 
 ###  http://rdf-vocabulary.ddialliance.org/xkos#isPartOf
@@ -706,14 +702,10 @@ rdf:List rdf:type owl:Class ;
                            owl:onClass rdf:List
                          ] ;
          rdfs:comment "Klassen er en RDF-teknisk konstruksjon som er brukt til å representere en «sortert liste»"@nb ,
-                      "This class is a RDF-technical construction that is used to present an ordered list."@en ;
+                      "This class is an RDF-technical construction that is used to present an ordered list."@en ;
          rdfs:isDefinedBy <https://www.w3.org/TR/rdf12-schema/#ch_list> ;
          rdfs:label "Class List"@en ,
                     "Klasse Liste"@nb .
-
-
-###  http://www.w3.org/2001/XMLSchema#langString
-xsd:langString rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -825,8 +817,7 @@ foaf:Agent rdf:type owl:Class ;
 #################################################################
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual ,
-                 rdf:List ;
+rdf:nil rdf:type owl:NamedIndividual ;
         rdfs:comment "An instans of rdf:List, used to indicate the last element in a list."@en .
 
 
