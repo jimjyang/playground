@@ -104,6 +104,14 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -674,6 +682,14 @@ xkos:Correspondence rdf:type owl:Class ;
                                       owl:onClass skos:ConceptScheme
                                     ] ,
                                     [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:description ;
+                                      owl:someValuesFrom rdf:langString
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:language ;
+                                      owl:someValuesFrom xsd:anyURI
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty dct:title ;
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onDataRange rdf:langString
@@ -681,6 +697,21 @@ xkos:Correspondence rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty dct:identifier ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:publisher ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:anyURI
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:issued ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:date
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty dct:modified ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:date
                                     ] ;
                     rdfs:comment "Klassen brukes til å representere sammenligning mellom to (varianter/versjoner av) klassifikasjoner, dvs. sammenstilling av sammenligninger mellom kategorier."@nb ,
                                  "This class is used to group concept associations between two classifications (concordances, correspondence tables …​)."@en ;
@@ -747,7 +778,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:issued ;
-                                     owl:someValuesFrom xsd:dateTime
+                                     owl:someValuesFrom xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:language ;
@@ -755,15 +786,15 @@ skos:ConceptScheme rdf:type owl:Class ;
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:modified ;
-                                     owl:someValuesFrom xsd:dateTime
+                                     owl:someValuesFrom xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty <http://schema.org/validFrom> ;
-                                     owl:someValuesFrom xsd:dateTime
+                                     owl:someValuesFrom xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty <http://schema.org/validThrough> ;
-                                     owl:someValuesFrom xsd:dateTime
+                                     owl:someValuesFrom xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:title ;
@@ -799,8 +830,7 @@ org:Organization rdf:type owl:Class ;
                  rdfs:comment "Klassen brukes til å representere en organisasjon."@nb ,
                               "This class is used to represent en organization."@en ;
                  rdfs:isDefinedBy org:Organization ;
-                 rdfs:label "Klasse Organisasjon"@nb ,
-                            "Class Organization" .
+                 rdfs:label "Klasse Organisasjon"@nb .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -841,14 +871,12 @@ rdf:nil rdf:type owl:NamedIndividual ;
 #    Annotations
 #################################################################
 
-dct:creator rdfs:isDefinedBy dct:creator ,
-                             "http://purl.org/dc/terms/creator" ;
+dct:creator rdfs:isDefinedBy dct:creator ;
             rdfs:label "creator"@en ,
                        "produsent"@nb .
 
 
-dct:identifier rdfs:isDefinedBy dct:identifier ,
-                                "http://purl.org/dc/terms/identifier" ;
+dct:identifier rdfs:isDefinedBy dct:identifier ;
                rdfs:label "identifier"@en ,
                           "identifikator"@nb .
 
@@ -858,8 +886,7 @@ dct:isReplacedBy rdfs:isDefinedBy dct:isReplacedBy ;
                             "is replaced by"@en .
 
 
-dct:publisher rdfs:isDefinedBy dct:publisher ,
-                               "http://purl.org/dc/terms/publisher" ;
+dct:publisher rdfs:isDefinedBy dct:publisher ;
               rdfs:label "publisher"@en ,
                          "utgiver"@nb .
 
@@ -910,8 +937,7 @@ xkos:inclusionNote vann:usageNote "Bruk heller den semantisk sett mer presise eg
                               "inklusjonsmerknad"@nb .
 
 
-skos:prefLabel rdfs:isDefinedBy skos:prefLabel ,
-                                "http://www.w3.org/2004/02/skos/core#prefLabel" ;
+skos:prefLabel rdfs:isDefinedBy skos:prefLabel ;
                rdfs:label "anbefalt/foretrukket term/navn"@nb ,
                           "preferred label/name"@en .
 
