@@ -27,7 +27,7 @@
                                 skos:Concept ;
                        xkos:previous :work ;
                        skos:inScheme :los ;
-                       dct:replaces "https://psi.norge.no/los/tema/bygg-og-eiendom"^^xsd:anyURI ;
+                       dct:replaces <https://psi.norge.no/los/tema/bygg-og-eiendom> ;
                        skos:prefLabel "building and property"@en ,
                                       "bygg og eiendom"@nb ,
                                       "bygg og eigedom"@nn .
@@ -39,7 +39,7 @@
             xkos:isPartOf :work ;
             xkos:next :seeking-employment ;
             skos:inScheme :los ;
-            dct:replaces "https://psi.norge.no/los/tema/arbeidsliv"^^xsd:anyURI ;
+            dct:replaces <https://psi.norge.no/los/tema/arbeidsliv> ;
             skos:prefLabel "arbeidsliv"@nb ,
                            "arbeidsliv"@nn ,
                            "employment"@en .
@@ -51,7 +51,7 @@
         xkos:isPartOf :work ;
         xkos:next :income-security ;
         skos:inScheme :los ;
-        dct:replaces "https://psi.norge.no/los/tema/inntekt"^^xsd:anyURI ;
+        dct:replaces <https://psi.norge.no/los/tema/inntekt> ;
         skos:prefLabel "income"@en ,
                        "inntekt"@nb ,
                        "inntekt"@nn .
@@ -63,7 +63,7 @@
                  xkos:isPartOf :work ;
                  xkos:next :leave-of-absence-scheme ;
                  skos:inScheme :los ;
-                 dct:replaces "https://psi.norge.no/los/tema/inntektssikring"^^xsd:anyURI ;
+                 dct:replaces <https://psi.norge.no/los/tema/inntektssikring> ;
                  skos:prefLabel "income security"@en ,
                                 "inntektssikring"@nb ,
                                 "inntektssikring"@nn .
@@ -74,7 +74,7 @@
                                   skos:Concept ;
                          xkos:isPartOf :work ;
                          skos:inScheme :los ;
-                         dct:replaces "https://psi.norge.no/los/tema/permisjonsordninger"^^xsd:anyURI ;
+                         dct:replaces <https://psi.norge.no/los/tema/permisjonsordninger> ;
                          skos:prefLabel "leave of absence scheme"@en ,
                                         "permisjonsordning"@nb ,
                                         "permisjonsordning"@nn .
@@ -139,7 +139,7 @@
                     xkos:isPartOf :work ;
                     xkos:next :income ;
                     skos:inScheme :los ;
-                    dct:replaces "https://psi.norge.no/los/tema/arbeidssoking"^^xsd:anyURI ;
+                    dct:replaces <https://psi.norge.no/los/tema/arbeidssoking> ;
                     skos:prefLabel "arbeidssøking"@nb ,
                                    "arbeidssøking"@nn ,
                                    "seeking employment"@en .
@@ -156,7 +156,7 @@
       xkos:next :building-and-property ;
       skos:inScheme :los ;
       skos:topConceptOf :los ;
-      dct:replaces "https://psi.norge.no/los/tema/arbeid"^^xsd:anyURI ;
+      dct:replaces <https://psi.norge.no/los/tema/arbeid> ;
       skos:prefLabel "arbeid"@nb ,
                      "arbeid"@nn ,
                      "work"@en .
