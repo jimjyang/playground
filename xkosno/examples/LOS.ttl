@@ -203,7 +203,7 @@
               skos:inScheme :los-structural-elements ;
               xkos:coreContentNote "Includes all concepts at level 2 in LOS"@en ,
                                    "Inkluderer alle begreper på nivå 2 i LOS"@nb ;
-              skos:prefLabel "sub theme in LOS"@en ,
+              skos:prefLabel "subtheme in LOS"@en ,
                              "undertema i LOS"@nb .
 
 
@@ -250,6 +250,7 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#work-contract
 :work-contract rdf:type owl:NamedIndividual ,
                         skos:Concept ;
+               xkos:next :employer ;
                skos:inScheme :los ;
                xkos:coreContentNote "Inkluderer avtaler som omtalar rettane og pliktene til arbeidsgjevar og arbeidstakar."@nn ,
                                     "Inkluderer avtaler som omtaler rettene og pliktene til arbeidsgiver og arbeidstaker."@nb ;
