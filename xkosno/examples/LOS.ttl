@@ -25,21 +25,44 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#building-and-property
 :building-and-property rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
+                       dct:replaces <https://psi.norge.no/los/tema/bygg-og-eiendom> ;
                        xkos:previous :work ;
                        skos:inScheme :los ;
-                       dct:replaces <https://psi.norge.no/los/tema/bygg-og-eiendom> ;
                        skos:prefLabel "building and property"@en ,
                                       "bygg og eiendom"@nb ,
                                       "bygg og eigedom"@nn .
 
 
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employer
+:employer rdf:type owl:NamedIndividual ;
+          xkos:coreContentNote "Inkluderer enhver som har ansatt arbeidstaker for å utføre arbeid i sin tjeneste."@nb ,
+                               "Inluderer alle som har tilsett arbeidstakarar for å utføre arbeid i si teneste"@nn ;
+          skos:hiddenLabel "aa-melding"@nb ,
+                           "aa-melding"@nn ,
+                           "aa-registeret"@nb ,
+                           "aa-registeret"@nn ,
+                           "arbeidsgivaransvar"@nn ,
+                           "arbeidsgivarkontroll"@nn ,
+                           "arbeidsgiveransvar"@nb ,
+                           "arbeidsgiverkontroll"@nb ,
+                           "arbeidsgjevaransvar"@nn ,
+                           "arbeidsgjevarkontroll"@nn ,
+                           "lønns- og trekkoppgave"@nb ,
+                           "lønns- og trekkoppgåve"@nn ,
+                           "tiltaksarrangør"@nb ,
+                           "tiltaksarrangør"@nn ;
+          skos:prefLabel "arbeidsgiver"@nb ,
+                         "arbeidsgjevar"@nn ,
+                         "employer"@en .
+
+
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#employment
 :employment rdf:type owl:NamedIndividual ,
                      skos:Concept ;
+            dct:replaces <https://psi.norge.no/los/tema/arbeidsliv> ;
             xkos:isPartOf :work ;
             xkos:next :seeking-employment ;
             skos:inScheme :los ;
-            dct:replaces <https://psi.norge.no/los/tema/arbeidsliv> ;
             skos:prefLabel "arbeidsliv"@nb ,
                            "arbeidsliv"@nn ,
                            "employment"@en .
@@ -48,10 +71,10 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income
 :income rdf:type owl:NamedIndividual ,
                  skos:Concept ;
+        dct:replaces <https://psi.norge.no/los/tema/inntekt> ;
         xkos:isPartOf :work ;
         xkos:next :income-security ;
         skos:inScheme :los ;
-        dct:replaces <https://psi.norge.no/los/tema/inntekt> ;
         skos:prefLabel "income"@en ,
                        "inntekt"@nb ,
                        "inntekt"@nn .
@@ -60,10 +83,10 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#income-security
 :income-security rdf:type owl:NamedIndividual ,
                           skos:Concept ;
+                 dct:replaces <https://psi.norge.no/los/tema/inntektssikring> ;
                  xkos:isPartOf :work ;
                  xkos:next :leave-of-absence-scheme ;
                  skos:inScheme :los ;
-                 dct:replaces <https://psi.norge.no/los/tema/inntektssikring> ;
                  skos:prefLabel "income security"@en ,
                                 "inntektssikring"@nb ,
                                 "inntektssikring"@nn .
@@ -72,9 +95,9 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#leave-of-absence-scheme
 :leave-of-absence-scheme rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
+                         dct:replaces <https://psi.norge.no/los/tema/permisjonsordninger> ;
                          xkos:isPartOf :work ;
                          skos:inScheme :los ;
-                         dct:replaces <https://psi.norge.no/los/tema/permisjonsordninger> ;
                          skos:prefLabel "leave of absence scheme"@en ,
                                         "permisjonsordning"@nb ,
                                         "permisjonsordning"@nn .
@@ -90,10 +113,10 @@
                       :seeking-employment ,
                       :work ;
      xkos:levels :los-level-list1 ;
-     xkos:numberOfLevels "2"^^xsd:positiveInteger ;
      skos:hasTopConcept :work ;
      dct:description "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ,
                      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en ;
+     xkos:numberOfLevels "2"^^xsd:positiveInteger ;
      dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
      dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
      dct:title "LOS"@en ,
@@ -111,20 +134,29 @@
 :los-level-list2 rdf:type owl:NamedIndividual ,
                           rdf:List ;
                  rdf:first :los-level2 ;
+                 rdf:rest :los-level-list3 .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level-list3
+:los-level-list3 rdf:type owl:NamedIndividual ,
+                          rdf:List ;
+                 rdf:first :los-level3 ;
                  rdf:rest rdf:nil .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level1
 :los-level1 rdf:type owl:NamedIndividual ,
                      xkos:ClassificationLevel ;
-            skos:member :work , 
-                        :building-and-property ;
+            xkos:coversMutuallyExclusively :los-main-theme ;
+            skos:member :building-and-property ,
+                        :work ;
             xkos:depth "1"^^xsd:positiveInteger .
 
 
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level2
 :los-level2 rdf:type owl:NamedIndividual ,
                      xkos:ClassificationLevel ;
+            xkos:coversMutuallyExclusively :los-subtheme ;
             skos:member :employment ,
                         :income ,
                         :income-security ,
@@ -133,13 +165,66 @@
             xkos:depth "2"^^xsd:positiveInteger .
 
 
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-level3
+:los-level3 rdf:type owl:NamedIndividual ,
+                     xkos:ClassificationLevel ;
+            xkos:coversMutuallyExclusively :los-topic ;
+            skos:member :employer ,
+                        :work-contract ;
+            xkos:depth "3"^^xsd:positiveInteger .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-main-theme
+:los-main-theme rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                xkos:hasPart :los-subtheme ;
+                skos:inScheme :los-structural-elements ;
+                xkos:coreContentNote "Includes all concepts at level 1 of LOS"@en ,
+                                     "Inkluderer alle begreper på nivå 1 i LOS"@nb ;
+                skos:prefLabel "hovedtema i LOS"@nb ,
+                               "main theme in LOS"@en .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-structural-elements
+:los-structural-elements rdf:type owl:NamedIndividual ,
+                                  skos:ConceptScheme ;
+                         skos:member :los-main-theme ,
+                                     :los-subtheme ,
+                                     :los-topic ;
+                         dct:title "Structural elements in LOS"@en ;
+                         skos:prefLabel "Strukturelle elementer i LOS"@nb .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-subtheme
+:los-subtheme rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              xkos:hasPart :los-topic ;
+              xkos:isPartOf :los-main-theme ;
+              skos:inScheme :los-structural-elements ;
+              xkos:coreContentNote "Includes all concepts at level 2 in LOS"@en ,
+                                   "Inkluderer alle begreper på nivå 2 i LOS"@nb ;
+              skos:prefLabel "sub theme in LOS"@en ,
+                             "undertema i LOS"@nb .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#los-topic
+:los-topic rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           xkos:isPartOf :los-subtheme ;
+           skos:inScheme :los-structural-elements ;
+           xkos:coreContentNote "Includes all concepts at level 3 in LOS"@en ,
+                                "Inkluderer alle begreper på nivå 3 i LOS"@nb ;
+           skos:prefLabel "emneord i LOS"@nb ,
+                          "topic in LOS"@en .
+
+
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#seeking-employment
 :seeking-employment rdf:type owl:NamedIndividual ,
                              skos:Concept ;
+                    dct:replaces <https://psi.norge.no/los/tema/arbeidssoking> ;
                     xkos:isPartOf :work ;
                     xkos:next :income ;
                     skos:inScheme :los ;
-                    dct:replaces <https://psi.norge.no/los/tema/arbeidssoking> ;
                     skos:prefLabel "arbeidssøking"@nb ,
                                    "arbeidssøking"@nn ,
                                    "seeking employment"@en .
@@ -148,6 +233,7 @@
 ###  https://jimjyang.github.io/playground/xkosno/examples/LOS#work
 :work rdf:type owl:NamedIndividual ,
                skos:Concept ;
+      dct:replaces <https://psi.norge.no/los/tema/arbeid> ;
       xkos:hasPart :employment ,
                    :income ,
                    :income-security ,
@@ -156,10 +242,54 @@
       xkos:next :building-and-property ;
       skos:inScheme :los ;
       skos:topConceptOf :los ;
-      dct:replaces <https://psi.norge.no/los/tema/arbeid> ;
       skos:prefLabel "arbeid"@nb ,
                      "arbeid"@nn ,
                      "work"@en .
+
+
+###  https://jimjyang.github.io/playground/xkosno/examples/LOS#work-contract
+:work-contract rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:inScheme :los ;
+               xkos:coreContentNote "Inkluderer avtaler som omtalar rettane og pliktene til arbeidsgjevar og arbeidstakar."@nn ,
+                                    "Inkluderer avtaler som omtaler rettene og pliktene til arbeidsgiver og arbeidstaker."@nb ;
+               skos:altLabel "ansettelsesforhold"@nb ,
+                             "ansettelseskontrakt"@nb ,
+                             "arbeidskontrakt"@nb ,
+                             "arbeidskontrakt"@nn ,
+                             "tilsetjingsforhold"@nn ,
+                             "tilsetjingskontrakt"@nn ;
+               skos:prefLabel "arbeidsavtale"@nb ,
+                              "arbeidsavtale"@nn ,
+                              "work contract"@en .
+
+
+###  https://psi.norge.no/los/tema/arbeid
+<https://psi.norge.no/los/tema/arbeid> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/arbeidsliv
+<https://psi.norge.no/los/tema/arbeidsliv> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/arbeidssoking
+<https://psi.norge.no/los/tema/arbeidssoking> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/bygg-og-eiendom
+<https://psi.norge.no/los/tema/bygg-og-eiendom> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/inntekt
+<https://psi.norge.no/los/tema/inntekt> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/inntektssikring
+<https://psi.norge.no/los/tema/inntektssikring> rdf:type owl:NamedIndividual .
+
+
+###  https://psi.norge.no/los/tema/permisjonsordninger
+<https://psi.norge.no/los/tema/permisjonsordninger> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
