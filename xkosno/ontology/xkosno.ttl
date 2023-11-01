@@ -17,7 +17,7 @@
 @prefix uneskos: <http://purl.org/umu/uneskos#> .
 @prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
 @base <https://data.norge.no/vocabulary/xkosno#> .
- 
+
 <https://jimjyang.github.io/playground/xkosno/ontology/xkosno> rdf:type owl:Ontology ;
                                                                 owl:versionIRI <https://jimjyang.github.io/playground/xkosno/ontology/xkosno/0.0.001> ;
                                                                 dct:license <http://creativecommons.org/licenses/by/4.0/> ;
@@ -121,6 +121,15 @@ dct:isReplacedBy rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/dc/terms/replaces
 dct:replaces rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:ObjectProperty ;
+            rdfs:comment "Egenskapen brukes til å referere til sentralt begrep som er viktig for å forstå og tolke kategorien."@nb ,
+                         "This property is used to refer to the concept which is important in order to understand the category."@en ;
+            rdfs:label "refererer til begrep"@nb ,
+                       "refers to concept"@en ;
+            skos:example "Kategorien med koden «A» i «Næringsgruppering 2007» refererer til begrepet ‘primærnæring’."@nb .
 
 
 ###  http://purl.org/umu/uneskos#contains
@@ -238,7 +247,8 @@ xkos:generalizes rdf:type owl:ObjectProperty ;
 xkos:hasPart rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf skos:narrower ;
              owl:inverseOf xkos:isPartOf ;
-             rdfs:domain skos:Concept ;
+             rdfs:domain xkos:ClassificationLevel ,
+                         skos:Concept ;
              rdfs:range skos:Concept ;
              rdfs:comment "Egenskapen brukes til å referere til kategorier som den aktuelle kategorien består av, i en partitiv relasjon mellom kategoriene."@nb ,
                           "This property is used to refer to categories which the category in question consists of, in a partitive relationship between the categories."@en ;
@@ -606,12 +616,48 @@ xkos:numberOfLevels rdf:type owl:DatatypeProperty ;
                                             "valid through (inclusive)"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:DatatypeProperty ;
+              rdfs:isDefinedBy skos:altLabel .
+
+
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:DatatypeProperty ;
                 rdfs:range rdf:langString ;
                 rdfs:isDefinedBy skos:definition ;
                 rdfs:label "definisjon"@nb ,
                            "definition"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:DatatypeProperty ;
+                 rdfs:isDefinedBy skos:hiddenLabel .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Egenskapen brukes til å oppgi koden for kategorien."@nb ,
+                           "This property is used to specify the code for the classification item."@en ;
+              rdfs:isDefinedBy skos:notation ;
+              rdfs:label "code"@en ,
+                         "kode"@nb ;
+              skos:example "«A» er koden for kategorien med kategorinavn «Jordbruk, skogbruk og fiske», på nivå 1 i «Næringsgruppering 2007 (SN2007)»."@nb .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:DatatypeProperty ;
+          rdfs:range rdf:langString ;
+          rdfs:comment "Egenskapen brukes kun til merknader som ikke kan tas med i en av de andre semantisk sett mer presise egenskapene som Kategori – eksklusjonsmerknad (skos:exclusionNote), Kategori – hovedinnhold (xkos:coreContentNote) og Kategori – tilleggsinnhold (xkos:additionalContentNote)."@nb ,
+                       "Egenskapen brukes til å oppgi merknad om kategorien. Egenskapen bør gjentas når merknaden finnes i flere ulike språk/målformer."@nb ,
+                       "This property is used to specify any note about the classification item, repeated when the note is in different languages."@en ,
+                       "Use this property only for notes that may not be given as values to one of the other semantically more precise properties such as skos:exclusionNote, xkos:coreContentNote and xkos:additionalContentNote."@en ;
+          rdfs:label "merknad"@nb ,
+                     "note"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
@@ -629,9 +675,30 @@ skos:scopeNote rdf:type owl:DatatypeProperty .
 ###  http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel
 xkos:ClassificationLevel rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:covers ;
+                                           owl:someValuesFrom skos:Concept
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:coversExhaustively ;
+                                           owl:someValuesFrom skos:Concept
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:coversMutuallyExclusively ;
+                                           owl:someValuesFrom skos:Concept
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty skos:member ;
                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                            owl:onClass skos:Concept
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:organizedBy ;
+                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass skos:Concept
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty xkos:notationPattern ;
+                                           owl:someValuesFrom rdfs:Literal
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty xkos:depth ;
@@ -742,13 +809,97 @@ rdf:List rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:generalizes ;
+                               owl:someValuesFrom skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:hasPart ;
+                               owl:someValuesFrom skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:isPartOf ;
+                               owl:someValuesFrom skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:specializes ;
+                               owl:someValuesFrom skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:topConceptOf ;
+                               owl:someValuesFrom skos:ConceptScheme
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty skos:inScheme ;
                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onClass skos:ConceptScheme
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:subject ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:next ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:previous ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass skos:Concept
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:additionalContentNote ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:coreContentNote ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:exclusionNote ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:inclusionNote ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:altLabel ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:definition ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:example ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:hiddenLabel ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:notation ;
+                               owl:someValuesFrom rdfs:Literal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty skos:note ;
+                               owl:someValuesFrom rdf:langString
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty skos:prefLabel ;
                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:identifier ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xkos:maxLength ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:positiveInteger
                              ] ;
              rdfs:comment "Klassen brukes til å representere et begrep, en kategori i en klassifikasjon/klassifikasjonsnivå."@nb ,
                           "This class is used to represent a concept, a category in a classification or classification level."@en ;
@@ -765,8 +916,42 @@ skos:ConceptScheme rdf:type owl:Class ;
                                      owl:someValuesFrom skos:Concept
                                    ] ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:belongsTo ;
+                                     owl:someValuesFrom skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:variant ;
+                                     owl:someValuesFrom skos:ConceptScheme
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dct:isReplacedBy ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass skos:ConceptScheme
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dct:replaces ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass skos:ConceptScheme
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:covers ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:coversExhaustively ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty xkos:coversMutuallyExclusively ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass skos:Concept
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty xkos:levels ;
-                                     owl:someValuesFrom xkos:ClassificationLevel
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass rdf:List
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:creator ;
@@ -777,24 +962,8 @@ skos:ConceptScheme rdf:type owl:Class ;
                                      owl:someValuesFrom rdfs:Literal
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty dct:issued ;
-                                     owl:someValuesFrom xsd:date
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:language ;
-                                     owl:someValuesFrom rdfs:Literal
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dct:modified ;
-                                     owl:someValuesFrom xsd:date
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty <http://schema.org/validFrom> ;
-                                     owl:someValuesFrom xsd:date
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty <http://schema.org/validThrough> ;
-                                     owl:someValuesFrom xsd:date
+                                     owl:someValuesFrom xsd:anyURI
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dct:title ;
@@ -813,6 +982,26 @@ skos:ConceptScheme rdf:type owl:Class ;
                                      owl:onProperty xkos:numberOfLevels ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:positiveInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dct:issued ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dct:modified ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://schema.org/validFrom> ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://schema.org/validThrough> ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
                                    ] ;
                    vann:usageNote "I konteksten av dette dokumentet er en gitt variant/versjon av en klassifikasjon også en klassifikasjon."@nb ,
                                   "In the context of this document, a given variant/version of a classification is also a classification."@en ;
@@ -935,6 +1124,13 @@ xkos:inclusionNote vann:usageNote "Bruk heller den semantisk sett mer presise eg
                    rdfs:label "inclusion note"@en ,
                               "inclusions"@en ,
                               "inklusjonsmerknad"@nb .
+
+
+skos:example rdfs:comment "Egenskapen brukes til å oppgi i fritekst eksempler på hva er kategorisert under kategorien. Egenskapen bør gjentas når teksten er i flere ulike språk."@nb ,
+                          "This property is used to specify examples of the content of the category, repeated when the text is in different languages."@en ;
+             rdfs:isDefinedBy skos:example ;
+             rdfs:label "eksempel"@nb ,
+                        "example"@en .
 
 
 skos:prefLabel rdfs:isDefinedBy skos:prefLabel ;
