@@ -17,7 +17,7 @@ Velkommen til sandkassa for Excel-verktøyet som automatisk genererer RDF Turtle
 
 For å dekke behovet for generering av RDF Turtle-representasjon i henhold til en gitt RDF-basert spesifikasjon, og samtidig å kunne ha en menneskevennlig visning av RDF Turtle-innholdet, laget jeg et Excel-verktøy som ut fra en mal automatisk genererer RDF Turtle og Asciidoc (for HTML-generering).
 
-Jeg har også tilpasset verktøyet for generering av RDF Turtle (og HTML-visning), i henhold til følgende RDF-baserte spesifikasjoner: 
+Jeg har laget Excel-maler for følgende RDF-baserte spesifikasjoner: 
 
 * https://informasjonsforvaltning.github.io/cpsv-ap-no/[CPSV-AP-NO  &#x29C9;, window="_blank", role="ext-link"]
 * https://data.norge.no/specification/dcat-ap-no[DCAT-AP-NO  &#x29C9;, window="_blank", role="ext-link"]
