@@ -8,6 +8,6 @@ __**Your feedback**, preferably provided as https://github.com/jimjyang/playgrou
 
 * Here is link:examples/LOS.ttl[a little sandbox-example of using XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is modeled in and exported from https://github.com/sszuev/rdf-protege/wiki[RDF Protégé &#x29C9;, window="_blank", role="ext-link"] (which is also free and open source).
 ** The main reason I chose to use RDF Protégé is its ability to handle RDF, most importantly instances of `rdf:List` required by XKOS/XKOS-AP-NO. 
-** If you want to play with XKOS-AP-NO in Protégé or RDF Protégé, you may import abovementioned ontology for XKOS-AP-NO into Protégé such that you have the classes and properties of XKOS-AP-NO available in Protégé or RDF Protégé.
+** If you want to play with XKOS-AP-NO in Protégé or RDF Protégé, you may import abovementioned ontology for XKOS-AP-NO into Protégé or RDF Protégé, such that you have the classes and properties of XKOS-AP-NO available in Protégé or RDF Protégé.
 
 __In https://data.norge.no/showroom/xkos-ap-no[this showroom &#x29C9;, window="_blank", role="ext-link"], you may find more demo examples of XKOS-AP-NO.__
