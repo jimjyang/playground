@@ -2,13 +2,12 @@
 
 __**Your feedback**, preferably provided as https://github.com/jimjyang/playground/issues[Github Issues &#x29C9;, window="_blank", role="ext-link"], is most welcome!__
 
-*In this sandbox* we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"], using https://protege.stanford.edu/[the free and open source ontology editor Protégé &#x29C9;, window="_blank", role="ext-link"]:
+*In this sandbox* we will play with https://data.norge.no/specification/xkos-ap-no[XKOS-AP-NO &#x29C9;, window="_blank", role="ext-link"], the Norwegian application profile for https://rdf-vocabulary.ddialliance.org/xkos.html[XKOS  &#x29C9;, window="_blank", role="ext-link"]:
 
-* Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from Protégé. 
+* Here is link:ontology/xkosno.ttl[a sandbox-version of the Ontology for XKOS-AP-NO (in RDF Turtle)], modeled in and exported from  https://protege.stanford.edu/[Protégé &#x29C9;, window="_blank", role="ext-link"] (which is a  free and open source ontology editor). 
 
-* Here is link:examples/LOS.ttl[a little sandbox-example of using XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is modeled in and exported from https://github.com/sszuev/rdf-protege/wiki[RDF Protégé &#x29C9;, window="_blank", role="ext-link"] (the main reason I chose to use RDF Protégé is its ability to handle RDF, most importantly instances of `rdf:List`).
+* Here is link:examples/LOS.ttl[a little sandbox-example of using XKOS-AP-NO (in RDF Turtle)], the Norwegian taxonomy / controlled vocabulary LOS, though with only a few concepts/categories included. It is modeled in and exported from https://github.com/sszuev/rdf-protege/wiki[RDF Protégé &#x29C9;, window="_blank", role="ext-link"] (which is also free and open source).
+** The main reason I chose to use RDF Protégé is its ability to handle RDF, most importantly instances of `rdf:List` required by XKOS/XKOS-AP-NO. 
 ** If you want to play with XKOS-AP-NO in Protégé or RDF Protégé, you may import abovementioned ontology for XKOS-AP-NO into Protégé such that you have the classes and properties of XKOS-AP-NO available in Protégé or RDF Protégé.
 
 __In https://data.norge.no/showroom/xkos-ap-no[this showroom &#x29C9;, window="_blank", role="ext-link"], you may find more demo examples of XKOS-AP-NO.__
- 
-
