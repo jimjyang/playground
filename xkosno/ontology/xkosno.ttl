@@ -20,7 +20,8 @@
 
 <https://jimjyang.github.io/playground/xkosno/ontology/xkosno> rdf:type owl:Ontology ;
                                                                 owl:versionIRI <https://jimjyang.github.io/playground/xkosno/ontology/xkosno/0.1.000> ;
-                                                                dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                                                                dct:modified "2023-11-03"^^xsd:date ;
                                                                 vann:preferredNamespacePrefix "xkosno" ;
                                                                 vann:preferredNamespaceUri : ;
                                                                 voaf:extends <http://rdf-vocabulary.ddialliance.org/xkos> ;
@@ -47,6 +48,10 @@ dct:identifier rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/license
 dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -507,12 +512,7 @@ dct:modified rdf:type owl:DatatypeProperty ;
              rdfs:domain xkos:Correspondence ,
                          skos:ConceptScheme ;
              rdfs:range xsd:date ,
-                        xsd:dateTime ;
-             rdfs:comment "Egenskapen brukes til å oppgi dato/tidspunkt når klassifikasjonen/klassifikasjonssammenligningen sist ble oppdatert."@nb ,
-                          "This property is used to specify the date or time when the classification/correspondence was last modified."@en ;
-             rdfs:isDefinedBy dct:modified ;
-             rdfs:label "modified"@en ,
-                        "sist oppdatert"@nb .
+                        xsd:dateTime .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -1113,8 +1113,7 @@ foaf:Agent rdf:type owl:Class ;
 #################################################################
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual ,
-                 rdf:List ;
+rdf:nil rdf:type owl:NamedIndividual ;
         rdfs:comment "An instans of rdf:List, used to indicate the last element in a list."@en .
 
 
@@ -1148,6 +1147,13 @@ dct:identifier rdfs:comment "Egenskapen brukes til å oppgi en unik og persisten
                rdfs:isDefinedBy dct:identifier ;
                rdfs:label "identifier"@en ,
                           "identifikator"@nb .
+
+
+dct:modified rdfs:comment "Egenskapen brukes til å oppgi dato/tidspunkt når klassifikasjonen/klassifikasjonssammenligningen sist ble oppdatert."@nb ,
+                          "This property is used to specify the date or time when the classification/correspondence was last modified."@en ;
+             rdfs:isDefinedBy dct:modified ;
+             rdfs:label "modified"@en ,
+                        "sist oppdatert"@nb .
 
 
 dct:publisher rdfs:comment "Egenskapen brukes til å referere til utgiver av klassifikasjonen/klassifikasjonssammenligningen."@nb ,
