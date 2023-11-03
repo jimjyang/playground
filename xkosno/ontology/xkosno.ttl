@@ -115,19 +115,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://purl.org/dc/terms/isReplacedBy
-dct:isReplacedBy rdf:type owl:ObjectProperty ;
-                 owl:inverseOf dct:replaces ;
-                 rdfs:domain skos:Concept ;
-                 rdfs:range skos:Concept .
-
-
-###  http://purl.org/dc/terms/replaces
-dct:replaces rdf:type owl:ObjectProperty ;
-             rdfs:domain skos:Concept ;
-             rdfs:range skos:Concept .
-
-
 ###  http://purl.org/dc/terms/subject
 dct:subject rdf:type owl:ObjectProperty ;
             rdfs:domain skos:Concept ;
@@ -494,7 +481,9 @@ dct:identifier rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/isReplacedBy
 dct:isReplacedBy rdf:type owl:DatatypeProperty ;
                  rdfs:domain skos:Concept ;
-                 rdfs:range xsd:anyURI .
+                 rdfs:range xsd:anyURI ;
+                 vann:usageNote "This property is not explicitly specified in XKOS-AP-NO, but included here in order to express the relation replaces/isReplacedBy with a concept outside of the current classification, referenced as an URI."@en ;
+                 rdfs:isDefinedBy "http://purl.org/dc/terms/isReplacedBy" .
 
 
 ###  http://purl.org/dc/terms/issued
@@ -547,7 +536,9 @@ dct:publisher rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/replaces
 dct:replaces rdf:type owl:DatatypeProperty ;
              rdfs:domain skos:Concept ;
-             rdfs:range xsd:anyURI .
+             rdfs:range xsd:anyURI ;
+             vann:usageNote "This property is not explicitly specified in XKOS-AP-NO, but included here in order to express the relation replaces/isReplacedBy with a concept outside of the current classification, referenced as an URI."@en ;
+             rdfs:isDefinedBy "http://purl.org/dc/terms/replaces" .
 
 
 ###  http://purl.org/dc/terms/title
@@ -1017,14 +1008,6 @@ skos:Concept rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty dct:isReplacedBy ;
-                                     owl:someValuesFrom skos:ConceptScheme
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty dct:replaces ;
-                                     owl:someValuesFrom skos:ConceptScheme
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty uneskos:contains ;
                                      owl:someValuesFrom skos:Concept
                                    ] ,
@@ -1176,23 +1159,11 @@ dct:identifier rdfs:comment "Egenskapen brukes til å oppgi en unik og persisten
                           "identifikator"@nb .
 
 
-dct:isReplacedBy vann:usageNote "This property is not explicitly specified in XKOS-AP-NO, but added here in order to express the relations isReplacedBy/replaces between the concepts in different classifications."@en ;
-                 rdfs:isDefinedBy dct:isReplacedBy ;
-                 rdfs:label "er erstattet av"@nb ,
-                            "is replaced by"@en .
-
-
 dct:publisher rdfs:comment "Egenskapen brukes til å referere til utgiver av klassifikasjonen/klassifikasjonssammenligningen."@nb ,
                            "This property is used to refer to the publisher of the classification/correspondence."@en ;
               rdfs:isDefinedBy dct:publisher ;
               rdfs:label "publisher"@en ,
                          "utgiver"@nb .
-
-
-dct:replaces vann:usageNote "This property is not explicitly specified in XKOS-AP-NO, but added here in order to express the relations isReplacedBy/replaces between the concepts in different classifications."@en ;
-             rdfs:isDefinedBy dct:replaces ;
-             rdfs:label "erstatter"@nb ,
-                        "replaces"@en .
 
 
 dct:title rdfs:comment "Egenskapen brukes til å oppgi navnet til klassifikasjonen/klassifikasjonssammenligningen. Gjentas når navnet finnes i flere språk."@nb ,
