@@ -31,6 +31,12 @@ jobs:
       with:
           program: "asciidoctor -D dataset-series/beesCZ2022 -o index.html -a lang=en dataset-series/beesCZ2022/main.adoc"
 
+    - name: Build html - haversting-file
+      id: adocbuild_html_harvesting_file
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D dataset-series/source-for-harvesting -o index.html -a lang=en dataset-series/source-for-harvesting/main.adoc"
+
     - name: Build html - beesNL2022
       id: adocbuild_html_beesNL
       uses: tonynv/asciidoctor-action@master
