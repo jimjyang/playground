@@ -1,0 +1,59 @@
+name: Build adocs and deploy dataset-series to Github Pages
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - dataset-series/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: asciidoctor build
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build html - beesCZ
+      id: adocbuild_html_beesCZ
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor -D dataset-series/beesCZ2022 -o index.html -a lang=en dataset-series/beesCZ2022/beesCZ2022.adoc"
+
+    - name: Build html - beesNL2022
+      id: adocbuild_html_beesNL
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D dataset-series/beesNL2022 -o index.html -a lang=en dataset-series/beesNL2022/beesNL2022.adoc"
+
+    - name: Build html - beesNO2022
+      id: adocbuild_html_beesNO
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D dataset-series/beesNO2022 -o index.html -a lang=en dataset-series/beesNO2022/beesNO2022.adoc"
+
+    - name: Build html - beesEU2022withMember
+      id: adocbuild_html_beesEUwithMember
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D dataset-series/beesEU2022withMembers -o index.html -a lang=en dataset-series/beesEU2022withMembers/beesEU2022withMembers.adoc"
+
+    - name: Build html - beesEU2022withoutMembers
+      id: adocbuild_html_beesEUwithoutMembers
+      uses: tonynv/asciidoctor-action@master
+      with:
+         program: "asciidoctor -D dataset-series/beesEU2022withoutMembers -o index.html -a lang=en dataset-series/beesEU2022withoutMembers/beesEU2022withoutMembers.adoc"
+   
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: dataset-series
+        destination_dir: ./dataset-series
+        keep_files: true
