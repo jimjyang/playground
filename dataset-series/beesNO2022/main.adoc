@@ -5,5 +5,5 @@
 `<https://jimjyang.github.io/playground/dataset-series/beesNO2022[]> a dcat:Dataset ;` +
 `&#8201; &#8201; &#8201;    dct:title "Bee population in Norway, 2022"@en ;
    dct:description "as an open dataset"@en ;` +
-`&#8201; &#8201; &#8201;`
+`&#8201; &#8201; &#8201; .`
 
