@@ -1,0 +1,24 @@
+include::../locale/attributes.adoc[]
+= Welcome to Jim's sandbox for dcat:DatasetSeries
+:doctype: article
+:docinfo: shared
+:docinfodir: ../overview
+:icons: font
+:toc: left
+:toclevels: 4
+// :sectlinks:
+:sectanchors:
+:table-stripes: even
+:xrefstyle: short
+
+Let's play with dcat:DatasetSeries! 
+
+We have currently the following instances: 
+
+* https://jimjyang.github.io/playground/data-series/beesCZ2022[]: an instance of dcat:Dataset,
+* https://jimjyang.github.io/playground/data-series/beesNL2022[]: an instance of dcat:Dataset,
+* https://jimjyang.github.io/playground/data-series/beesNO2022[]: an instance of dcat:Dataset,
+* https://jimjyang.github.io/playground/data-series/beesEU2022withMembers[]: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset, 
+* https://jimjyang.github.io/playground/data-series/beesEU2022withoutMembers[]: an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers. 
+
+How to know the members that are in a dataset series?
