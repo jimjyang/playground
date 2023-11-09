@@ -26,6 +26,6 @@ We have the following file to be harvested into a certain data portal, created b
 *Question*: After the harvesting, should the instance of dcat:DatasetSeries be
 
 . like https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers[]: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset
-.. Note: `Agent4` has no mandate to update the abovementioned three instances of dcat:Dataset, and those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is the implementation compliant with w3C/DCAT (when it uses only dcat:seriesMember without at the same using dcat:inSeries)?
+.. Knowing that `Agent4` has no mandate to update the abovementioned three instances of dcat:Dataset, they will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with w3C/DCAT (when it uses only dcat:seriesMember without at the same using dcat:inSeries)?
 . or like https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers[]: an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers. 
-.. In this case, how to know which datasets are in this dataset series? 
+.. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything about memberships of this new dataset series, how to know which datasets are in this dataset series? 
