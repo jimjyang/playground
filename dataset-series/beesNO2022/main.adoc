@@ -1,5 +1,5 @@
 
-````
+-----
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
@@ -7,4 +7,4 @@
    dct:title "Bee population in Norway, 2022"@en ;
    dct:description "as an open dataset"@en ;
    .
-````
+-----
