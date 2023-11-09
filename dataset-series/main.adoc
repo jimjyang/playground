@@ -13,12 +13,19 @@ include::../locale/attributes.adoc[]
 
 Let's play with dcat:DatasetSeries! 
 
-We have currently the following instances: 
+We have the following three instances of dcat:Dataset, maintained by three different Agents: 
 
-* https://jimjyang.github.io/playground/data-series/beesCZ2022[]: an instance of dcat:Dataset,
-* https://jimjyang.github.io/playground/data-series/beesNL2022[]: an instance of dcat:Dataset,
-* https://jimjyang.github.io/playground/data-series/beesNO2022[]: an instance of dcat:Dataset,
-* https://jimjyang.github.io/playground/data-series/beesEU2022withMembers[]: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset, 
-* https://jimjyang.github.io/playground/data-series/beesEU2022withoutMembers[]: an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers. 
+* https://jimjyang.github.io/playground/dataset-series/beesCZ2022[]: an instance of dcat:Dataset, maintained ny Agent1,
+* https://jimjyang.github.io/playground/dataset-series/beesNL2022[]: an instance of dcat:Dataset, maintained by Agent2, 
+* https://jimjyang.github.io/playground/dataset-series/beesNO2022[]: an instance of dcat:Dataset, maintained by Agent3.
 
-How to know the members that are in a dataset series?
+We have the following file to be harvested into a certain data portal, maintained by Agent4 who wants to create a dataset series using the abovementioned open datasets: 
+
+* https://jimjyang.github.io/playground/dataset-series/source-for-harvesting[]
+
+Question: After the harvesting, should the instance of dcat:DatasetSeries be
+
+. https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers[]: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset
+** Note: Agent4 has no mandate to update the abovementioned three instances of dcat:Dataset, and those instances of dcat:Dataset will remain as they are.  
+. https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers[]: an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers. 
+** In this case, how to know which datasets are in this dataset series?

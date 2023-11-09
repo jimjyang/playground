@@ -518,34 +518,62 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Let&#8217;s play with dcat:DatasetSeries!</p>
 </div>
 <div class="paragraph">
-<p>We have currently the following instances:</p>
+<p>We have the following three instances of dcat:Dataset, maintained by three different Agents:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://jimjyang.github.io/playground/data-series/beesCZ2022" class="bare">https://jimjyang.github.io/playground/data-series/beesCZ2022</a>: an instance of dcat:Dataset,</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesCZ2022" class="bare">https://jimjyang.github.io/playground/dataset-series/beesCZ2022</a>: an instance of dcat:Dataset, maintained ny Agent1,</p>
 </li>
 <li>
-<p><a href="https://jimjyang.github.io/playground/data-series/beesNL2022" class="bare">https://jimjyang.github.io/playground/data-series/beesNL2022</a>: an instance of dcat:Dataset,</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNL2022" class="bare">https://jimjyang.github.io/playground/dataset-series/beesNL2022</a>: an instance of dcat:Dataset, maintained by Agent2,</p>
 </li>
 <li>
-<p><a href="https://jimjyang.github.io/playground/data-series/beesNO2022" class="bare">https://jimjyang.github.io/playground/data-series/beesNO2022</a>: an instance of dcat:Dataset,</p>
-</li>
-<li>
-<p><a href="https://jimjyang.github.io/playground/data-series/beesEU2022withMembers" class="bare">https://jimjyang.github.io/playground/data-series/beesEU2022withMembers</a>: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset,</p>
-</li>
-<li>
-<p><a href="https://jimjyang.github.io/playground/data-series/beesEU2022withoutMembers" class="bare">https://jimjyang.github.io/playground/data-series/beesEU2022withoutMembers</a>: an instance of dcat:DatasetSeries <em>without</em> using dcat:seriesMembers.</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNO2022" class="bare">https://jimjyang.github.io/playground/dataset-series/beesNO2022</a>: an instance of dcat:Dataset, maintained by Agent3.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>How to know the members that are in a dataset series?</p>
+<p>We have the following file to be harvested into a certain data portal, maintained by Agent4 who wants to create a dataset series using the abovementioned open datasets:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/source-for-harvesting" class="bare">https://jimjyang.github.io/playground/dataset-series/source-for-harvesting</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Question: After the harvesting, should the instance of dcat:DatasetSeries be</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers</a>: an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Note: Agent4 has no mandate to update the abovementioned three instances of dcat:Dataset, and those instances of dcat:Dataset will remain as they are.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers</a>: an instance of dcat:DatasetSeries <em>without</em> using dcat:seriesMembers.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In this case, how to know which datasets are in this dataset series?</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-09 16:23:00 UTC
+Last updated 2023-11-09 16:46:37 UTC
 </div>
 </div>
 </body>
