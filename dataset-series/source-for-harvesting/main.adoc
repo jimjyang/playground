@@ -4,12 +4,10 @@
 
 `:aDatasetSeries a dcat:DatasetSeries ;`  +
 `&#8201; &#8201; &#8201;    dct:title "Bee population in EU, 2022"@en ;` +
-`&#8201; &#8201; &#8201;   dct:description "as a dataset series, without using dcat:seriesMember."@en ;` +
 `&#8201; &#8201; &#8201;  .`
 
 `<https://jimjyang.github.io/playground/dataset-series/beesCZ2022[]> a dcat:Dataset ;` +
-`&#8201; &#8201; &#8201;    dcat:inSeries :aDatasetSeries ;` +
-`&#8201; &#8201; &#8201;    dct:title "Bee population in EU, 2022"@en ;` +   
+`&#8201; &#8201; &#8201;    dcat:inSeries :aDatasetSeries ;` +   
 `&#8201; &#8201; &#8201; .` 
 
 
