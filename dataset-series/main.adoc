@@ -15,9 +15,9 @@ Let's play with dcat:DatasetSeries!
 
 We have the following three instances of dcat:Dataset, maintained by three different Agents: 
 
-* https://jimjyang.github.io/playground/dataset-series/beesCZ2022[]: an instance of dcat:Dataset, maintained ny `Agent1`,
-* https://jimjyang.github.io/playground/dataset-series/beesNL2022[]: an instance of dcat:Dataset, maintained by `Agent2`, 
-* https://jimjyang.github.io/playground/dataset-series/beesNO2022[]: an instance of dcat:Dataset, maintained by `Agent3`.
+* https://jimjyang.github.io/playground/dataset-series/beesCZ2022[]: an open dataset as an instance of dcat:Dataset, maintained ny `Agent1`,
+* https://jimjyang.github.io/playground/dataset-series/beesNL2022[]: an open dataset as an instance of dcat:Dataset, maintained by `Agent2`, 
+* https://jimjyang.github.io/playground/dataset-series/beesNO2022[]: an open dataset as an instance of dcat:Dataset, maintained by `Agent3`.
 
 We have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create a dataset series using the abovementioned three open datasets: 
 
