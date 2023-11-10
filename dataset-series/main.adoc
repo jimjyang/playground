@@ -17,7 +17,7 @@ Let's play with dcat:DatasetSeries!
 [upperalpha]
 . We have the following three instances of dcat:Dataset, already published by three different Agents: 
 [lowerroman]
-.. https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesCZ2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published ny `Agent1`.
+.. https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesCZ2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
 .. https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNL2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
 .. https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNO2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent3`.
 
