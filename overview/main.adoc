@@ -6,11 +6,12 @@ __**Your feedback**, preferably provided as https://github.com/jimjyang/playgrou
 
 *Following sandboxes* exist/existed here in this playground: 
 
-* Showrooms demonstrating the usage of various Norwegian national RDF-based specifications for data sharing
-** Moved permanently to https://data.norge.no/showroom[https://data.norge.no/showroom &#x29C9;, window="_blank", role="ext-link"] 
-* CDV-NO (Content Description Vocabulary - Norwegian specification for content description) (the specification for RDF representation is in English as well, otherwise in Norwegian only)
-** Moved permanently to https://informasjonsforvaltning.github.io/cdvno/[https://informasjonsforvaltning.github.io/cdvno &#x29C9;, window="_blank", role="ext-link"]
 * link:xls2ttl&adoc[Excel-verktøy for generering av RDF Turtle og HTML-visning] (in Norwegian only)
 * link:oora-no[Sandkasse-versjon av en referansearkitektur for "å dele data med andre" og "å ta i bruk data fra andre" - ArchiMate-modell] (a mixture of Norwegian and English)
 * link:xkosno[Sandbox for XKOS-AP-NO (Norwegian application profile of XKOS)]
+* link:dataset-series[Sandbox for dcat:DatasetSeries] 
 
+* +++<s>Showrooms demonstrating the usage of various Norwegian national RDF-based specifications for data sharing</s>+++
+** __Moved permanently to https://data.norge.no/showroom[https://data.norge.no/showroom &#x29C9;, window="_blank", role="ext-link"] __
+* +++<s>CDV-NO (Content Description Vocabulary - Norwegian specification for content description) (the specification for RDF representation is in English as well, otherwise in Norwegian only)</s>+++
+** __Moved permanently to https://informasjonsforvaltning.github.io/cdvno/[https://informasjonsforvaltning.github.io/cdvno &#x29C9;, window="_blank", role="ext-link"]__
