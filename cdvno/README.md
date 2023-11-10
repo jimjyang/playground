@@ -4,4 +4,4 @@ Jim's playground, sandbox for cdvno (Content Description Vocabulary - Norwegian 
 
 Moved to https://github.com/Informasjonsforvaltning/cdvno
 
-\ [_Digitaliseringsdirektoratet / Norwegian Digitalisation Agency_](https://digdir.no)
+\ [Jim J. Yang](https://www.linkedin.com/in/jimjyang/)

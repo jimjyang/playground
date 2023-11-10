@@ -1,5 +1,6 @@
 # playground
 
-Jim's playground, each folder is a sandbox for playing/testing various solutions
+Jim's playground, each folder with a sandbox for playing/testing `<something>`, e.g., a particular (part of a) specification.
 
-\ [_Digitaliseringsdirektoratet / Norwegian Digitalisation Agency_](https://digdir.no)
+\ \ [Jim J. Yang](https://www.linkedin.com/in/jimjyang/)
+
