@@ -17,17 +17,17 @@ Let's play with dcat:DatasetSeries!
 [upperalpha]
 . We have the following three instances of dcat:Dataset, already published by three different Agents: 
 [lowerroman]
-.. https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesCZ2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
-.. https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNL2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
-.. https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNO2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent3`.
+.. https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[beesCZ2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
+.. https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl[beesNL2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
+.. https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[beesNO2022 (in RDF Turtle)], which is an instance of dcat:Dataset describing an open dataset, published by `Agent3`.
 
 . We have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
 [lowerroman]
-.. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[https://jimjyang.github.io/playground/dataset-series/source-for-harvesting (in RDF Turtle)]
+.. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[source-for-harvesting (in RDF Turtle)]
 
 *Questions*: After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, be 
 
-. dereferenced to https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers (in RDF Turtle)], which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?
+. dereferenced to https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[beesEU2022withMembers (in RDF Turtle)], which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?
 .. Given the fact that `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so, those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (when it uses only the inverse property dcat:seriesMember without at the same using the main property dcat:inSeries)?
-. or dereferenced to https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers (in RDF Turtle)], which is an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers?
+. or dereferenced to https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[beesEU2022withoutMembers (in RDF Turtle)], which is an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers?
 .. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users know which datasets are in this dataset series? 
