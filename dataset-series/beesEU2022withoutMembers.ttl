@@ -1,8 +1,10 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
 @prefix dct: <http://purl.org/dc/terms/> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers> a dcat:DatasetSeries ;
    dct:title "Bee population in EU, 2022"@en ; 
-   dct:description "as a dataset series, without using dcat:seriesMember."@en ;
+   dct:description "A dataset series containing existing national open datasets."@en ; 
+   rdfs:comment "assuming that members will refer to this dataset series using dcat:inSeries"@en ; 
    .
 
