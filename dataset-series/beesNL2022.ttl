@@ -2,6 +2,6 @@
 @prefix dct: <ttp://purl.org/dc/terms/> . 
 
 <https://jimjyang.github.io/playground/dataset-series/beesNL2022> a dcat:Dataset ;
-    dct:title "Bee population in the Netherlands, 2022"@en ;
-    dct:description "as an open dataset"@en ;
-    .
+   dct:title "Bee population in the Netherlands, 2022"@en ;
+   dct:description "as an open dataset"@en ;
+   .
