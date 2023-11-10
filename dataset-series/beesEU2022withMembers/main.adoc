@@ -5,7 +5,7 @@
 `&#8201;&#8201;&#8201;dct:title "Bee population in EU, 2022"@en ;` +
 `&#8201;&#8201;&#8201;dct:description "as a dataset series, using dcat:seriesMember."@en ;` + 
 `&#8201;&#8201;&#8201;dcat:seriesMember` + 
-`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/data-series/beesCZ2022[]> ,` + 
-`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/data-series/beesNL2022[]> ,` + 
-`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/data-series/beesNO2022[]> ;` + 
+`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/dataset-series/beesCZ2022[]> ,` + 
+`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/dataset-series/beesNL2022[]> ,` + 
+`&#8201;&#8201;&#8201;&#8201;&#8201;&#8201;<https://jimjyang.github.io/playground/dataset-series/beesNO2022[]> ;` + 
 `&#8201;&#8201;&#8201;.`
