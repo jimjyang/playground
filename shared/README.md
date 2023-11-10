@@ -1,5 +1,7 @@
 # playground | shared
 
-Jim's playground. This folder contains some shared resources (e.g., images) across the sandboxes.
+Jim's playground. 
+
+This folder contains some resources (e.g., images) shared across the sandboxes.
 
 \ [Jim J. Yang](https://www.linkedin.com/in/jimjyang/)
