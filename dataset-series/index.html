@@ -527,23 +527,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p><a href="https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesCZ2022</a>, which is an open dataset as an instance of dcat:Dataset, published ny <code>Agent1</code>.</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesCZ2022 (in RDF Turtle)</a>, which is an instance of dcat:Dataset describing an open dataset, published ny <code>Agent1</code>.</p>
 </li>
 <li>
-<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesNL2022</a>, which is an open dataset as an instance of dcat:Dataset, published by <code>Agent2</code>.</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesNL2022 (in RDF Turtle)</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent2</code>.</p>
 </li>
 <li>
-<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesNO2022</a>, which is an open dataset as an instance of dcat:Dataset, published by <code>Agent3</code>.</p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl">https://jimjyang.github.io/playground/dataset-series/beesNO2022 (in RDF Turtle)</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent3</code>.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>We have the following file to be harvested into a certain data portal, created by <code>Agent4</code> who wants to create and publish a dataset series by reusing the abovementioned three already published open datasets:</p>
+<p>We have the following file to be harvested into a certain data portal, created by <code>Agent4</code> who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p><a href="https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl">https://jimjyang.github.io/playground/dataset-series/source-for-harvesting</a></p>
+<p><a href="https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl">https://jimjyang.github.io/playground/dataset-series/source-for-harvesting (in RDF Turtle)</a></p>
 </li>
 </ol>
 </div>
@@ -551,22 +551,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>Questions</strong>: After the harvesting, should this instance of dcat:DatasetSeries, <code>&lt;beesEU2022&gt;</code>, be dereferenced to</p>
+<p><strong>Questions</strong>: After the harvesting, should this instance of dcat:DatasetSeries, <code>&lt;beesEU2022&gt;</code>, be</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl">https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers</a>, which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?</p>
+<p>dereferenced to <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl">https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers (in RDF Turtle)</a>, which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Knowing that <code>Agent4</code> has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so, those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with the current version of <a href="https://www.w3.org/TR/vocab-dcat-3/#inverse-properties" class="ext-link" target="_blank" rel="noopener">W3C/DCAT3 &#x29C9;</a> (when it uses only dcat:seriesMember without at the same using dcat:inSeries)?</p>
+<p>Given the fact that <code>Agent4</code> has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so, those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with the current version of <a href="https://www.w3.org/TR/vocab-dcat-3/#inverse-properties" class="ext-link" target="_blank" rel="noopener">W3C/DCAT3 &#x29C9;</a> (when it uses only the inverse property dcat:seriesMember without at the same using the main property dcat:inSeries)?</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>or to <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl">https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers</a>, which is an instance of dcat:DatasetSeries <em>without</em> using dcat:seriesMembers?</p>
+<p>or dereferenced to <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl">https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers (in RDF Turtle)</a>, which is an instance of dcat:DatasetSeries <em>without</em> using dcat:seriesMembers?</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -580,7 +580,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-10 06:35:22 UTC
+Last updated 2023-11-10 06:54:04 UTC
 </div>
 </div>
 </body>
