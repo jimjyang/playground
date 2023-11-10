@@ -15,17 +15,17 @@ Let's play with dcat:DatasetSeries!
 
 We have the following three instances of dcat:Dataset, published by three different Agents: 
 
-* https://jimjyang.github.io/playground/dataset-series/beesCZ2022[], which is an open dataset as an instance of dcat:Dataset, published ny `Agent1`.
-* https://jimjyang.github.io/playground/dataset-series/beesNL2022[], which is an open dataset as an instance of dcat:Dataset, published by `Agent2`.
-* https://jimjyang.github.io/playground/dataset-series/beesNO2022[], which is an open dataset as an instance of dcat:Dataset, published by `Agent3`.
+* https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesCZ2022], which is an open dataset as an instance of dcat:Dataset, published ny `Agent1`.
+* https://jimjyang.github.io/playground/dataset-series/beesNL2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNL2022], which is an open dataset as an instance of dcat:Dataset, published by `Agent2`.
+* https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[https://jimjyang.github.io/playground/dataset-series/beesNO2022], which is an open dataset as an instance of dcat:Dataset, published by `Agent3`.
 
 We have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish a dataset series using the abovementioned three already published open datasets: 
 
-* https://jimjyang.github.io/playground/dataset-series/source-for-harvesting[]
+* https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[https://jimjyang.github.io/playground/dataset-series/source-for-harvesting]
 
 *Questions*: After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, be dereferenced to
 
-. https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers[], which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?
+. https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers], which is an instance of dcat:DatasetSeries using dcat:seriesMembers referring to the abovementioned three instances of dcat:Dataset?
 .. Knowing that `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so, those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (when it uses only dcat:seriesMember without at the same using dcat:inSeries)?
-. or to https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers[], which is an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers?
+. or to https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers], which is an instance of dcat:DatasetSeries _without_ using dcat:seriesMembers?
 .. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users know which datasets are in this dataset series? 
