@@ -7,7 +7,7 @@
    dct:description "A dataset series containing existing national open datasets."@en ; 
    rdfs:comment "with dcat:seriesMember referring to the members"@en ; 
    dcat:seriesMember 
+      <https://jimjyang.github.io/playground/dataset-series/beesBE2022> , 
       <https://jimjyang.github.io/playground/dataset-series/beesCZ2022> , 
-      <https://jimjyang.github.io/playground/dataset-series/beesNL2022> , 
       <https://jimjyang.github.io/playground/dataset-series/beesNO2022> ; 
    .
