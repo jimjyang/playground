@@ -36,9 +36,9 @@ After the harvesting, in our data portal, should this instance of dcat:DatasetSe
 . or, not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[]?
 .. Neither this instance of dcat:DatasetSeries nor the abovementioned dereferenced representations of the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users and non-reasoning applications know which datasets are in this dataset series? The answer is no, they can't.
 
-. or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl[]. 
+. or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, and these new instances of dcat:Dataset also refer back to the dataset series using dcat:inSeries, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl[]. 
 .. This implementation is compliant with the current version of W3C/DCAT3. It also makes it possible for our (re)users and non-reasoning applications to know the members of this dataset series. 
-.. As illustrated, this alternative generates though unnecessary overhead by creating new instances of dcat:Dataset. 
+.. As illustrated, this alternative implementation generates though unnecessary overhead by creating new instances of dcat:Dataset. 
  
 *Question*: 
 
