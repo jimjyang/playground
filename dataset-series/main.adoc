@@ -15,13 +15,13 @@ Let's play with dcat:DatasetSeries!
 
 *Use case*: 
 [upperalpha]
-. We have the following three instances of dcat:Dataset, already published by three different Agents: 
+. Let's assume that we have the following three instances of dcat:Dataset, already published by three different Agents:
 [lowerroman]
 .. `<beesBE2022>` dereferenced to the Turtle representation at https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
 .. `<beesCZ2022>` dereferenced to the Turtle representation at https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
 .. `<beesNO2022>` dereferenced to the Turtle representation at https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent3`.
 
-. We have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
+. Assuming further that we have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
 [lowerroman]
 .. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[]
 .. _Note_: `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so. The abovementioned instances of dcat:Dataset will thus remain as they are. 
