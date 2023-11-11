@@ -15,7 +15,7 @@ Let's play with dcat:DatasetSeries!
 
 *Use case*: 
 [upperalpha]
-. Let's assume that we have the following three instances of dcat:Dataset, already published by three different Agents:
+. Assuming that we have the following three instances of dcat:Dataset, already published by three different Agents:
 [lowerroman]
 .. `<beesBE2022>` dereferenced to the Turtle representation at https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
 .. `<beesCZ2022>` dereferenced to the Turtle representation at https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
