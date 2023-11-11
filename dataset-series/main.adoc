@@ -33,4 +33,4 @@ Let's play with dcat:DatasetSeries!
 . or not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[]?
 .. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can the (re)users and applications know which datasets are in this dataset series? The answer is no.
 
-*The question*: Wouldn't it be a better solution if W3C/DCAT3 used dcat:seriesMember as the main property and dcat:inSeries the inverse (instead of the opposite way in the current version, Working Draft per 07 March 2023)? 
+*Question*: Wouldn't it be a better solution if W3C/DCAT3 used dcat:seriesMember as the main property and dcat:inSeries the inverse (instead of the opposite way in the current version, Working Draft per 07 March 2023)? 
