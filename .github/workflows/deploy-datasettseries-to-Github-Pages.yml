@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    name: delop from dataset-series to GH-pages
+    name: deploy from dataset-series to GH-pages
     steps:
 
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Build html - root
-      id: adocbuild_html_root
+    - name: Build html 
+      id: adocbuild_html
       uses: tonynv/asciidoctor-action@master
       with:
             program: "asciidoctor -D dataset-series -o index.html -a lang=en dataset-series/main.adoc"
 
-    - name: Deploy
+    - name: Deploy to Github-Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
