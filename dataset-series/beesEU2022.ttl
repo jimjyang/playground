@@ -1,0 +1,28 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@base  <https://jimjyang.github.io/playgound/dataset-series/> . 
+
+<https://jimjyang.github.io/playground/dataset-series/beesEU2022> a dcat:DatasetSeries ;
+   dct:title "Bee population in EU, 2022"@en ;
+   dct:description "A dataset series containing existing national open datasets."@en ; 
+   dcat:seriesMember 
+      <https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesBE2022> , 
+      <https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesCZ2022> , 
+      <https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesNO2022> ; 
+   .
+
+<https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesBE2022> a dcat:Dataset ; 
+   dcat:inSeries <beesEU2022> ;
+   owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesBE2022> ;
+   . 
+
+<https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesCZ2022> a dcat:Dataset ;
+   dcat:inSeries <beesEU2022> ; 
+   owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesCZ2022> ;
+   . 
+
+<https://jimjyang.github.io/playground/dataset-series/beesEU2022#beesNO2022> a dcat:Dataset ;
+   dcat:inSeries <beesEU2022> ;
+   owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesNO2022> ;
+   .
