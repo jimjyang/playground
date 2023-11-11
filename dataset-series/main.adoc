@@ -42,4 +42,4 @@ After the harvesting, in our data portal, should this instance of dcat:DatasetSe
  
 *Question*: 
 
-Wouldn't it be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative 1 above could become compliant with W3C/DCAT3? 
+Wouldn't it be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative 1 above which is the most straightforward implementation, could become compliant with W3C/DCAT3? 
