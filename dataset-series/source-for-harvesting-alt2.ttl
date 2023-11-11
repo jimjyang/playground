@@ -7,22 +7,22 @@
    dct:title "Bee population in EU, 2022"@en ;
    dct:description "A dataset series containing existing national open datasets."@en ; 
    dcat:seriesMember 
-      <https://jimjyang.github.io/playground/dataset-series/beesBE2022-inSeriesAdded> , 
-      <https://jimjyang.github.io/playground/dataset-series/beesCZ2022-inSeriesAdded> , 
-      <https://jimjyang.github.io/playground/dataset-series/beesNO2022-inSeriesAdded> ; 
+      <https://jimjyang.github.io/playground/dataset-series/beesBE2022-agent4> , 
+      <https://jimjyang.github.io/playground/dataset-series/beesCZ2022-agent4> , 
+      <https://jimjyang.github.io/playground/dataset-series/beesNO2022-agent4> ; 
    .
 
-<https://jimjyang.github.io/playground/dataset-series/beesBE2022-inSeriesAdded> a dcat:Dataset ; 
+<https://jimjyang.github.io/playground/dataset-series/beesBE2022-agent4> a dcat:Dataset ; 
    dcat:inSeries <beesEU2022> ;
    owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesBE2022> ;
    . 
 
-<https://jimjyang.github.io/playground/dataset-series/beesCZ2022-inSeriesAdded> a dcat:Dataset ;
+<https://jimjyang.github.io/playground/dataset-series/beesCZ2022-agent4> a dcat:Dataset ;
    dcat:inSeries <beesEU2022> ; 
    owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesCZ2022> ;
    . 
 
-<https://jimjyang.github.io/playground/dataset-series/beesNO2022-inSeriesAdded> a dcat:Dataset ;
+<https://jimjyang.github.io/playground/dataset-series/beesNO2022-agent4> a dcat:Dataset ;
    dcat:inSeries <beesEU2022> ;
    owl:sameAs <https://jimjyang.github.io/playground/dataset-series/beesNO2022> ;
    .
