@@ -21,14 +21,14 @@ Let's play with dcat:DatasetSeries!
 .. `<beesCZ2022>` dereferenced to https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent2`.
 .. `<beesNO2022>` dereferenced to https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent3`.
 
-. Assuming further that we have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
+. Assuming further that we have the following file to be harvested into our data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
 [lowerroman]
 .. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[]
 .. _Note_: `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so. The abovementioned instances of dcat:Dataset will thus remain as they are. 
 
 *Possible implementations*: 
 
-After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, 
+After the harvesting, in our data portal, should this instance of dcat:DatasetSeries
 
 . use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[]?
 .. Since the abovementioned dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)? The answer is no, it isn't. 
