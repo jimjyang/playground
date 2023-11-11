@@ -527,13 +527,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p><code>&lt;beesBE2022&gt;</code> dereferenced to the Turtle representation at <a href="https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent1</code>.</p>
+<p><code>&lt;beesBE2022&gt;</code> dereferenced to <a href="https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent1</code>.</p>
 </li>
 <li>
-<p><code>&lt;beesCZ2022&gt;</code> dereferenced to the Turtle representation at <a href="https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent2</code>.</p>
+<p><code>&lt;beesCZ2022&gt;</code> dereferenced to <a href="https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesCZ2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent2</code>.</p>
 </li>
 <li>
-<p><code>&lt;beesNO2022&gt;</code> dereferenced to the Turtle representation at <a href="https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent3</code>.</p>
+<p><code>&lt;beesNO2022&gt;</code> dereferenced to <a href="https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesNO2022.ttl</a>, which is an instance of dcat:Dataset describing an open dataset, published by <code>Agent3</code>.</p>
 </li>
 </ol>
 </div>
@@ -554,7 +554,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>Possible implementations</strong>: After the harvesting, should this instance of dcat:DatasetSeries, <code>&lt;beesEU2022&gt;</code>,</p>
+<p><strong>Possible implementations</strong>:</p>
+</div>
+<div class="paragraph">
+<p>After the harvesting, should this instance of dcat:DatasetSeries, <code>&lt;beesEU2022&gt;</code>,</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -579,11 +582,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>or, use dcat:seriesMembers referring to new instances of dcat:Dataset which refer to the original instances of dcat:Dataset using owl:sameAs, as in <a href="https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl</a>.</p>
+<p>or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, as in <a href="https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl</a>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>This implementation is compliant with the current version of W3C/DCAT3, and also makes it possible for our (re)users and non-reasoning applications to know the members of this new dataset series.</p>
+<p>This implementation is compliant with the current version of W3C/DCAT3. It also makes it possible for our (re)users and non-reasoning applications to know the members of this dataset series.</p>
 </li>
 <li>
 <p>As illustrated, this alternative generates though unnecessary overhead by creating new instances of dcat:Dataset.</p>
@@ -594,12 +597,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>Question</strong>: Therefore, wouldn&#8217;t it be better if W3C/DCAT3 used dcat:seriesMember as the main property and dcat:inSeries the inverse (instead of the opposite way in the current version, Working Draft per 07 March 2023), such that alternative 1 above might be compliant with W3C/DCAT3?</p>
+<p><strong>Question</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Wouldn&#8217;t it be better if W3C/DCAT3 used dcat:seriesMember as the main property and dcat:inSeries the inverse (instead of the opposite way in the current version, Working Draft per 07 March 2023), such that alternative 1 above could become compliant with W3C/DCAT3?</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-11 15:46:44 UTC
+Last updated 2023-11-11 16:01:00 UTC
 </div>
 </div>
 </body>
