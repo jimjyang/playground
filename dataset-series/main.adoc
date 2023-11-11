@@ -23,7 +23,7 @@ Let's play with dcat:DatasetSeries!
 
 . We have the following file to be harvested into a certain data portal, created by `Agent4` who wants to create and publish an open dataset series by reusing the abovementioned three already published dataset descriptions: 
 [lowerroman]
-.. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[source-for-harvesting (in RDF Turtle)]
+.. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[]
 .. _Note_: `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so. The abovementioned instances of dcat:Dataset will thus remain as they are. 
 
 *Alternative implementations*: After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, 
