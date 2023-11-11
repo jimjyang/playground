@@ -1,13 +1,11 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base  <https://jimjyang.github.io/playgound/dataset-series/> . 
 
-<https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers> a dcat:DatasetSeries ;
+<https://jimjyang.github.io/playground/dataset-series/beesEU2022> a dcat:DatasetSeries ;
    dct:title "Bee population in EU, 2022"@en ;
    dct:description "A dataset series containing existing national open datasets."@en ; 
-   rdfs:comment "with dcat:seriesMember referring to the members"@en ; 
    dcat:seriesMember 
       <https://jimjyang.github.io/playground/dataset-series/beesBE2022-inSeriesAdded> , 
       <https://jimjyang.github.io/playground/dataset-series/beesCZ2022-inSeriesAdded> , 
