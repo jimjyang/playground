@@ -26,7 +26,7 @@ Let's play with dcat:DatasetSeries!
 .. https://jimjyang.github.io/playground/dataset-series/source-for-harvesting.ttl[source-for-harvesting (in RDF Turtle)]
 .. _Note_: `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so. The abovementioned instances of dcat:Dataset will thus remain as they are. 
 
-*Alternative implementations in accordance with the current version of W3C/DCAT3*: After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, 
+*Alternative implementations*: After the harvesting, should this instance of dcat:DatasetSeries, `<beesEU2022>`, 
 
 . use dcat:seriesMembers to refer to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[beesEU2022withMembers (in RDF Turtle)]?
 .. Since the dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)?
