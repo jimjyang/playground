@@ -29,5 +29,5 @@ Let's play with dcat:DatasetSeries!
 
 . use dcat:seriesMembers to refer to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[beesEU2022withMembers (in RDF Turtle)]?
 .. Given the fact that `Agent4` has no mandate neither to update the abovementioned three instances of dcat:Dataset nor to enforce the other agents to do so, those instances of dcat:Dataset will remain as they are. Without updating those instances of dcat:Dataset, is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (when it uses only the inverse property dcat:seriesMember without at the same using the main property dcat:inSeries)?
-. not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[beesEU2022withoutMembers (in RDF Turtle)]?
+. or not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[beesEU2022withoutMembers (in RDF Turtle)]?
 .. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users know which datasets are in this dataset series? 
