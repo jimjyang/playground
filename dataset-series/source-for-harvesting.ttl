@@ -8,12 +8,12 @@
    rdfs:comment "assuming that members will refer to this dataset series using dcat:inSeries"@en ; 
    .
 
-<https://jimjyang.github.io/playground/dataset-series/beesCZ2022> a dcat:Dataset ;
-   dcat:inSeries <beesEU2022> ;   
+<https://jimjyang.github.io/playground/dataset-series/beesBE2022> a dcat:Dataset ; 
+   dcat:inSeries <beesEU2022> ;
    . 
 
-<https://jimjyang.github.io/playground/dataset-series/beesNL2022> a dcat:Dataset ; 
-   dcat:inSeries <beesEU2022> ;
+<https://jimjyang.github.io/playground/dataset-series/beesCZ2022> a dcat:Dataset ;
+   dcat:inSeries <beesEU2022> ;   
    . 
 
 <https://jimjyang.github.io/playground/dataset-series/beesNO2022> a dcat:Dataset ;
