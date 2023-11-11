@@ -32,8 +32,8 @@ Let's play with dcat:DatasetSeries!
 .. Since the dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)? The answer is no, it isn't. 
 . or, not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[]?
 .. Neither this instance of dcat:DatasetSeries nor the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can the (re)users and non-reasoning applications know which datasets are in this dataset series? The answer is no, they can't.
-. or, use dcat:seriesMembers referring to new instances of dcat:Dataset which refer to the original instances of dcat:Dataset using owl:sameAs, as in https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl[]. 
-.. This implementation is compliant with the current version of W3C/DCAT3, and also makes it possible for our (re)users and non-reasoning applications to know the members of this new dataset series. 
+. or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, as in https://jimjyang.github.io/playground/dataset-series/source-for-harvesting-alt2.ttl[]. 
+.. This implementation is compliant with the current version of W3C/DCAT3. It also makes it possible for our (re)users and non-reasoning applications to know the members of this dataset series. 
 .. As illustrated, this alternative generates though unnecessary overhead by creating new instances of dcat:Dataset. 
  
 *Question*: Therefore, wouldn't it be better if W3C/DCAT3 used dcat:seriesMember as the main property and dcat:inSeries the inverse (instead of the opposite way in the current version, Working Draft per 07 March 2023), such that alternative 1 above might be compliant with W3C/DCAT3? 
