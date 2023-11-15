@@ -5,6 +5,6 @@
 <https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers> a dcat:DatasetSeries ;
    dct:title "Bee population in EU, 2022"@en ; 
    dct:description "A dataset series containing existing national open datasets."@en ; 
-   rdfs:comment "assuming that members will refer to this dataset series using dcat:inSeries"@en ; 
+   rdfs:comment "relying solely on that the members will refer to this dataset series using dcat:inSeries"@en ; 
    .
 
