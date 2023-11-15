@@ -9,6 +9,8 @@
    rdfs:comment "assuming that members will refer to this dataset series using dcat:inSeries"@en ; 
    .
 
+### Enriching the dataset descriptions by using their original URIs
+
 <https://jimjyang.github.io/playground/dataset-series/beesBE2022> a dcat:Dataset ; 
    dcat:inSeries <beesEU2022> ;
    . 
