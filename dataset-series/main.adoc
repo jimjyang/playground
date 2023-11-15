@@ -31,18 +31,18 @@ Let's build a dataset series using dcat:DatasetSeries!
 After the harvesting, in our data portal, should this instance of dcat:DatasetSeries
 
 [upperalpha]
-. use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[]?
+. use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl[]?
 .. Since the abovementioned dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)? The answer is no, it isn't. 
 
 . or, not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[]?
 .. Neither this instance of dcat:DatasetSeries nor the abovementioned dereferenced representations of the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users and non-reasoning applications know which datasets are in this dataset series? The answer is no, they can't.
 
-. or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, and these new instances of dcat:Dataset also refer back to the dataset series using dcat:inSeries, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl[]. 
+. or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, and these new instances of dcat:Dataset also refer back to the dataset series using dcat:inSeries, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withNewMemberURIs.ttl[]. 
 .. This implementation is compliant with the current version of W3C/DCAT3. It also makes it possible for our (re)users and non-reasoning applications to know the members of this dataset series. 
-.. As illustrated, this implementation generates though unnecessary overhead by creating new instances of dcat:Dataset. 
+.. However, as illustrated, this implementation generates though unnecessary overhead by creating new instances of dcat:Dataset. 
  
 *Questions*: 
 
 . In general, is it correct to assume or even request that the metadata descriptions of a dataset has to be updated with the information about where the dataset is reused, every and each time it is reused? 
 
-. Wouldn't it (therefore) be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative 1 above which is the most straightforward implementation, could become compliant with W3C/DCAT3? 
+. Wouldn't it (therefore) be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative A above which is the most straightforward implementation, could become compliant with W3C/DCAT3? 

@@ -562,7 +562,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist upperalpha">
 <ol class="upperalpha" type="A">
 <li>
-<p>use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl</a>?</p>
+<p>use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl</a>?</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -582,14 +582,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, and these new instances of dcat:Dataset also refer back to the dataset series using dcat:inSeries, as in <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl</a>.</p>
+<p>or, use dcat:seriesMembers referring to new instances of dcat:Dataset that refer to the original instances of dcat:Dataset using owl:sameAs, and these new instances of dcat:Dataset also refer back to the dataset series using dcat:inSeries, as in <a href="https://jimjyang.github.io/playground/dataset-series/beesEU2022withNewMemberURIs.ttl" class="bare">https://jimjyang.github.io/playground/dataset-series/beesEU2022withNewMemberURIs.ttl</a>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>This implementation is compliant with the current version of W3C/DCAT3. It also makes it possible for our (re)users and non-reasoning applications to know the members of this dataset series.</p>
 </li>
 <li>
-<p>As illustrated, this implementation generates though unnecessary overhead by creating new instances of dcat:Dataset.</p>
+<p>However, as illustrated, this implementation generates though unnecessary overhead by creating new instances of dcat:Dataset.</p>
 </li>
 </ol>
 </div>
@@ -605,14 +605,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In general, is it correct to assume or even request that the metadata descriptions of a dataset has to be updated with the information about where the dataset is reused, every and each time it is reused?</p>
 </li>
 <li>
-<p>Wouldn&#8217;t it (therefore) be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative 1 above which is the most straightforward implementation, could become compliant with W3C/DCAT3?</p>
+<p>Wouldn&#8217;t it (therefore) be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative A above which is the most straightforward implementation, could become compliant with W3C/DCAT3?</p>
 </li>
 </ol>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-15 07:09:20 UTC
+Last updated 2023-11-15 07:32:48 UTC
 </div>
 </div>
 </body>
