@@ -11,7 +11,7 @@ include::../locale/attributes.adoc[]
 :table-stripes: even
 :xrefstyle: short
 
-Let's try to build a dataset series using dcat:DatasetSeries! 
+Let's build a dataset series using dcat:DatasetSeries! 
 
 *Use case*: 
 [upperroman]
