@@ -32,7 +32,7 @@ After the harvesting, in our data portal, should this instance of dcat:DatasetSe
 
 [upperalpha]
 . use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022.ttl[]?
-.. Since the abovementioned dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)? The answer is no, it isn't. 
+.. Since the abovementioned dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the _current version_ (_Working Draft per 07 March 2023_) of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"]? The answer is no, it isn't. 
 
 . or, not use dcat:seriesMembers, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withoutMembers.ttl[]?
 .. Neither this instance of dcat:DatasetSeries nor the abovementioned dereferenced representations of the three instances of dcat:Dataset say anything at all about the memberships of this dataset series, how can our (re)users and non-reasoning applications know which datasets are in this dataset series? The answer is no, they can't.
