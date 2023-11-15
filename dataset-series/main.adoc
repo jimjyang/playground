@@ -14,7 +14,7 @@ include::../locale/attributes.adoc[]
 Let's play with dcat:DatasetSeries! 
 
 *Use case*: 
-[upperalpha]
+[upperroman]
 . Assuming that we have the following three instances of dcat:Dataset, already published by three different Agents:
 [lowerroman]
 .. `<beesBE2022>` dereferenced to https://jimjyang.github.io/playground/dataset-series/beesBE2022.ttl[], which is an instance of dcat:Dataset describing an open dataset, published by `Agent1`.
@@ -30,6 +30,7 @@ Let's play with dcat:DatasetSeries!
 
 After the harvesting, in our data portal, should this instance of dcat:DatasetSeries
 
+[upperalpha]
 . use dcat:seriesMembers to refer directly to the abovementioned three instances of dcat:Dataset, as in https://jimjyang.github.io/playground/dataset-series/beesEU2022withMembers.ttl[]?
 .. Since the abovementioned dereferenced representations of the three instances of dcat:Dataset do not use the main property dcat:inSeries, this implementation uses only the inverse property dcat:seriesMember. Is this implementation compliant with the current version of https://www.w3.org/TR/vocab-dcat-3/#inverse-properties[W3C/DCAT3 &#x29C9;, window="_blank", role="ext-link"] (Working Draft per 07 March 2023)? The answer is no, it isn't. 
 
