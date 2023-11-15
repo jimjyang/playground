@@ -3,6 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base  <https://jimjyang.github.io/playgound/dataset-series/> . 
 
+### The dataset series description
+
 <beesEU2022> a dcat:DatasetSeries ; 
    dct:title "Bee population in EU, 2022"@en ;
    dct:description "A dataset series containing existing national open datasets."@en ; 
