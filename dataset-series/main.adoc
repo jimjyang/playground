@@ -43,6 +43,6 @@ After the harvesting, in our data portal, should this instance of dcat:DatasetSe
  
 *Questions*: 
 
-. In general, is it correct to assume or even request that the metadata descriptions of a dataset has to be updated with the information about where the dataset is reused, every and each time it is reused? 
+. In general, is it reasonable to assume or even request that the metadata descriptions of a dataset has to be updated with the information about where the dataset is reused, every and each time it is reused? 
 
 . Wouldn't it (therefore) be better if W3C/DCAT3 had chosen dcat:seriesMember as the main property and dcat:inSeries the inverse, such that alternative A above which is the most straightforward implementation, could become compliant with W3C/DCAT3? 
