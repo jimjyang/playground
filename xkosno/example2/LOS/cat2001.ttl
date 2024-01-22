@@ -7,15 +7,15 @@
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-<https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat2001>
+<https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2001>
    rdf:type skos:Concept;
    skos:prefLabel """employment"""@en,
        """arbeidsliv"""@nb;
-   skos:inScheme <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS>;
-   dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat2001"^^xsd:anyURI;
-   xkos:hasPart <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat3001>;
-   xkos:isPartOf <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1001>;
+   skos:inScheme <https://jimjyang.github.io/playground/xkosno/example2/LOS>;
+   dct:identifier "https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2001"^^xsd:anyURI;
+   xkos:hasPart <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat3001>;
+   xkos:isPartOf <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1001>;
    adms:status <http://publications.europa.eu/resource/authority/concept-status/DRAFT>;
    .
  
-#### End of the file, 2024-01-22 15:25:13
+#### End of the file, 2024-01-22 15:31:00
