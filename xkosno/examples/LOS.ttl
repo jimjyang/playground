@@ -1,5 +1,5 @@
 @prefix schema: <https://schema.org/> .
-@prefix :      <https://jimjyang.github.io/playground/xkosno/examples/LOS#> .
+@prefix :      <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#> .
 @prefix xkosno: <https://data.norge.no/vocabulary/xkosno#> .
 @prefix org:   <http://www.w3.org/ns/org#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
@@ -13,168 +13,187 @@
 @prefix uneskos: <http://purl.org/umu/uneskos#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-:los-structural-elements
-        a            owl:NamedIndividual , skos:ConceptScheme ;
-        dct:title    "Structural elements in LOS"@en , "Strukturelle elementer i LOS"@nb ;
-        skos:member  :los-main-theme , :los-subtheme , :los-topic .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-structural-elements>
+        a            skos:ConceptScheme , owl:NamedIndividual ;
+        dct:title    "Strukturelle elementer i LOS"@nb , "Structural elements in LOS"@en ;
+        skos:member  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-topic> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-subtheme> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-main-theme> .
 
 <https://psi.norge.no/los/tema/bygg-og-eiendom>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:employment  a          owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employment>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/arbeidsliv> ;
-        xkos:isPartOf   :work ;
-        xkos:next       :seeking-employment ;
-        skos:inScheme   :los ;
-        skos:prefLabel  "arbeidsliv"@nb , "arbeidsliv"@nn , "employment"@en .
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
+        xkos:next       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#seeking-employment> ;
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "employment"@en , "arbeidsliv"@nn , "arbeidsliv"@nb .
 
-:los-level3  a                          owl:NamedIndividual , xkos:ClassificationLevel ;
-        xkos:coversMutuallyExclusively  :los-topic ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level3>
+        a                               xkos:ClassificationLevel , owl:NamedIndividual ;
+        xkos:coversMutuallyExclusively  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-topic> ;
         xkos:depth                      "3"^^xsd:positiveInteger ;
-        skos:member                     :employer , :work-contract , :construction , :property .
+        skos:member                     <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work-contract> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employer> .
 
 <https://psi.norge.no/los/tema/arbeidsliv>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:income  a              owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/inntekt> ;
-        xkos:isPartOf   :work ;
-        xkos:next       :income-security ;
-        skos:inScheme   :los ;
-        skos:prefLabel  "income"@en , "inntekt"@nb , "inntekt"@nn .
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
+        xkos:next       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income-security> ;
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "inntekt"@nn , "inntekt"@nb , "income"@en .
 
-:building-and-property
-        a               owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/bygg-og-eiendom> ;
-        xkos:previous   :work ;
+        xkos:hasPart    <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#construction> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#property> ;
+        xkos:previous   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
         skos:broader    <http://publications.europa.eu/resource/authority/data-theme/REGI> ;
-        skos:inScheme   :los ;
-        xkos:hasPart :construction , :property ;
-        skos:prefLabel  "building and property"@en , "bygg og eiendom"@nb , "bygg og eigedom"@nn .
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "bygg og eigedom"@nn , "bygg og eiendom"@nb , "building and property"@en .
 
-:los-main-theme  a            owl:NamedIndividual , skos:Concept ;
-        xkos:coreContentNote  "Includes all concepts at level 1 of LOS"@en , "Inkluderer alle begreper på nivå 1 i LOS"@nb ;
-        xkos:hasPart          :los-subtheme ;
-        skos:inScheme         :los-structural-elements ;
-        skos:prefLabel        "hovedtema i LOS"@nb , "main theme in LOS"@en .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#property>
+        a               owl:NamedIndividual , skos:Concept ;
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property> ;
+        xkos:previous   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#construction> ;
+        skos:prefLabel  "eigedom"@nn , "eiendom"@nb , "property"@en .
 
-:los-level2  a                          owl:NamedIndividual , xkos:ClassificationLevel ;
-        xkos:coversMutuallyExclusively  :los-subtheme ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-main-theme>
+        a                     skos:Concept , owl:NamedIndividual ;
+        xkos:coreContentNote  "Inkluderer alle begreper på nivå 1 i LOS"@nb , "Includes all concepts at level 1 of LOS"@en ;
+        xkos:hasPart          <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-subtheme> ;
+        skos:inScheme         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-structural-elements> ;
+        skos:prefLabel        "main theme in LOS"@en , "hovedtema i LOS"@nb .
+
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level2>
+        a                               owl:NamedIndividual , xkos:ClassificationLevel ;
+        xkos:coversMutuallyExclusively  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-subtheme> ;
         xkos:depth                      "2"^^xsd:positiveInteger ;
-        skos:member                     :employment , :income , :income-security , :leave-of-absence-scheme , :seeking-employment .
+        skos:member                     <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income-security> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#leave-of-absence-scheme> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#seeking-employment> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#construction> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#property> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employment> .
 
 <https://psi.norge.no/los/tema/inntekt>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
 <https://psi.norge.no/los/tema/arbeidssoking>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:income-security  a     owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income-security>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/inntektssikring> ;
-        xkos:isPartOf   :work ;
-        xkos:next       :leave-of-absence-scheme ;
-        skos:inScheme   :los ;
-        skos:prefLabel  "income security"@en , "inntektssikring"@nb , "inntektssikring"@nn .
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
+        xkos:next       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#leave-of-absence-scheme> ;
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "inntektssikring"@nn , "inntektssikring"@nb , "income security"@en .
 
-:los-topic  a                 owl:NamedIndividual , skos:Concept ;
-        xkos:coreContentNote  "Includes all concepts at level 3 in LOS"@en , "Inkluderer alle begreper på nivå 3 i LOS"@nb ;
-        xkos:isPartOf         :los-subtheme ;
-        skos:inScheme         :los-structural-elements ;
-        skos:prefLabel        "emneord i LOS"@nb , "topic in LOS"@en .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-topic>
+        a                     skos:Concept , owl:NamedIndividual ;
+        xkos:coreContentNote  "Inkluderer alle begreper på nivå 3 i LOS"@nb , "Includes all concepts at level 3 in LOS"@en ;
+        xkos:isPartOf         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-subtheme> ;
+        skos:inScheme         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-structural-elements> ;
+        skos:prefLabel        "topic in LOS"@en , "emneord i LOS"@nb .
 
-:los-level-list3  a  owl:NamedIndividual , rdf:List ;
-        rdf:first  :los-level3 ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list3>
+        a          rdf:List , owl:NamedIndividual ;
+        rdf:first  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level3> ;
         rdf:rest   () .
 
-:los-level1  a                          owl:NamedIndividual , xkos:ClassificationLevel ;
-        xkos:coversMutuallyExclusively  :los-main-theme ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level1>
+        a                               xkos:ClassificationLevel , owl:NamedIndividual ;
+        xkos:coversMutuallyExclusively  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-main-theme> ;
         xkos:depth                      "1"^^xsd:positiveInteger ;
-        skos:member                     :building-and-property , :work .
+        skos:member                     <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property> .
 
-:seeking-employment  a  owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#seeking-employment>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/arbeidssoking> ;
-        xkos:isPartOf   :work ;
-        xkos:next       :income ;
-        skos:inScheme   :los ;
-        skos:prefLabel  "arbeidssøking"@nb , "arbeidssøking"@nn , "seeking employment"@en .
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
+        xkos:next       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income> ;
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "seeking employment"@en , "arbeidssøking"@nn , "arbeidssøking"@nb .
 
-:work-contract  a             skos:Concept , owl:NamedIndividual ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work-contract>
+        a                     skos:Concept , owl:NamedIndividual ;
         xkos:coreContentNote  "Inkluderer avtaler som omtaler rettene og pliktene til arbeidsgiver og arbeidstaker."@nb , "Inkluderer avtaler som omtalar rettane og pliktene til arbeidsgjevar og arbeidstakar."@nn ;
-        xkos:next             :employer ;
-        skos:altLabel         "tilsetjingskontrakt"@nn , "tilsetjingsforhold"@nn , "arbeidskontrakt"@nn , "arbeidskontrakt"@nb , "ansettelseskontrakt"@nb , "ansettelsesforhold"@nb ;
-        skos:inScheme         :los ;
-        skos:prefLabel        "arbeidsavtale"@nb , "arbeidsavtale"@nn , "work contract"@en .
+        xkos:next             <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employer> ;
+        skos:altLabel         "tilsetjingskontrakt"@nn , "tilsetjingsforhold"@nn , "arbeidskontrakt"@nb , "arbeidskontrakt"@nn , "ansettelseskontrakt"@nb , "ansettelsesforhold"@nb ;
+        skos:inScheme         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel        "arbeidsavtale"@nn , "arbeidsavtale"@nb , "work contract"@en .
 
 <https://jimjyang.github.io/playground/xkosno/examples/LOS>
         a               owl:Ontology ;
-        dct:modified    "2023-11-03"^^xsd:date ; 
         rdfs:comment    "Only a few concepts from each level of LOS are included here, since the intension is testing and demonstration"@en ;
+        dct:modified    "2023-11-03"^^xsd:date ;
         owl:imports     <https://jimjyang.github.io/playground/xkosno/ontology/xkosno/0.1.000> ;
         owl:versionIRI  <https://jimjyang.github.io/playground/xkosno/examples/LOS/0.0.001> .
 
-:leave-of-absence-scheme
-        a               owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#leave-of-absence-scheme>
+        a               skos:Concept , owl:NamedIndividual ;
         dct:replaces    <https://psi.norge.no/los/tema/permisjonsordninger> ;
-        xkos:isPartOf   :work ;
-        skos:inScheme   :los ;
-        skos:prefLabel  "leave of absence scheme"@en , "permisjonsordning"@nb , "permisjonsordning"@nn .
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> ;
+        skos:inScheme   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel  "permisjonsordning"@nn , "permisjonsordning"@nb , "leave of absence scheme"@en .
 
-:los-level-list2  a  owl:NamedIndividual , rdf:List ;
-        rdf:first  :los-level2 ;
-        rdf:rest   :los-level-list3 .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list2>
+        a          rdf:List , owl:NamedIndividual ;
+        rdf:first  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level2> ;
+        rdf:rest   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list3> .
 
 <https://psi.norge.no/los/tema/permisjonsordninger>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:work   a                  owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work>
+        a                  owl:NamedIndividual , skos:Concept ;
         dct:replaces       <https://psi.norge.no/los/tema/arbeid> ;
-        xkos:hasPart       :seeking-employment , :leave-of-absence-scheme , :income-security , :employment , :income ;
-        xkos:next          :building-and-property ;
-        skos:inScheme      :los ;
-        skos:prefLabel     "work"@en , "arbeid"@nb , "arbeid"@nn ;
-        skos:topConceptOf  :los .
+        xkos:hasPart       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#seeking-employment> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#leave-of-absence-scheme> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income-security> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employment> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income> ;
+        xkos:next          <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property> ;
+        skos:inScheme      <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
+        skos:prefLabel     "work"@en , "arbeid"@nn , "arbeid"@nb ;
+        skos:topConceptOf  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> .
 
 <https://psi.norge.no/los/tema/arbeid>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:los    a                    skos:ConceptScheme , owl:NamedIndividual ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los>
+        a                    skos:ConceptScheme , owl:NamedIndividual ;
         dct:description      "Los is a common vocabulary with themes to be used to categorize and describe public services and resources."@en , "Los er et felles vokabular som er temainndelt for å kategorisere og beskrive offentlige tjenester og ressurser."@nb ;
-        dct:identifier       "https://jimjyang.github.io/playground/xkosno/examples/LOS#los"^^xsd:anyURI ;
+        dct:identifier       "https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los"^^xsd:anyURI ;
         dct:publisher        <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
-        dct:title            "LOS"@en , "LOS"@nb ;
-        uneskos:contains     :employment , :income , :seeking-employment , :work , :income-security , :building-and-property , :employer , :leave-of-absence-scheme , :work-contract , :construction , :property ;
-        xkos:levels          :los-level-list1 ;
+        dct:title            "LOS"@nb , "LOS"@en ;
+        uneskos:contains     <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#construction> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employment> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#seeking-employment> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#income-security> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#property> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employer> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#leave-of-absence-scheme> , <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work-contract> ;
+        xkos:levels          <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list1> ;
         xkos:numberOfLevels  "3"^^xsd:positiveInteger ;
-        skos:hasTopConcept   :work .
+        skos:hasTopConcept   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work> .
 
-:los-level-list1  a  owl:NamedIndividual , rdf:List ;
-        rdf:first  :los-level1 ;
-        rdf:rest   :los-level-list2 .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list1>
+        a          rdf:List , owl:NamedIndividual ;
+        rdf:first  <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level1> ;
+        rdf:rest   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-level-list2> .
 
-:employer  a                  owl:NamedIndividual , skos:Concept ;
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employer>
+        a                     owl:NamedIndividual , skos:Concept ;
         xkos:coreContentNote  "Inluderer alle som har tilsett arbeidstakarar for å utføre arbeid i si teneste"@nn , "Inkluderer enhver som har ansatt arbeidstaker for å utføre arbeid i sin tjeneste."@nb ;
-        xkos:isPartOf         :employment ;
-        xkos:previous         :work-contract ;
-        skos:hiddenLabel      "lønns- og trekkoppgave"@nb , "lønns- og trekkoppgåve"@nn , "aa-registeret"@nb , "arbeidsgjevaransvar"@nn , "aa-registeret"@nn , "tiltaksarrangør"@nb , "tiltaksarrangør"@nn , "arbeidsgivarkontroll"@nn , "arbeidsgiverkontroll"@nb , "arbeidsgiveransvar"@nb , "aa-melding"@nb , "aa-melding"@nn , "arbeidsgivaransvar"@nn , "arbeidsgjevarkontroll"@nn ;
-        skos:inScheme         :los ;
+        xkos:isPartOf         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#employment> ;
+        xkos:previous         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#work-contract> ;
+        skos:hiddenLabel      "lønns- og trekkoppgave"@nb , "lønns- og trekkoppgåve"@nn , "aa-registeret"@nn , "arbeidsgjevaransvar"@nn , "aa-registeret"@nb , "tiltaksarrangør"@nn , "tiltaksarrangør"@nb , "arbeidsgivarkontroll"@nn , "arbeidsgiverkontroll"@nb , "arbeidsgiveransvar"@nb , "aa-melding"@nn , "aa-melding"@nb , "arbeidsgivaransvar"@nn , "arbeidsgjevarkontroll"@nn ;
+        skos:inScheme         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los> ;
         skos:prefLabel        "employer"@en , "arbeidsgjevar"@nn , "arbeidsgiver"@nb .
 
-:construction  a  skos:Concept , owl:NamedIndividual ;
-        skos:prefLabel "construction"@en, "bygging"@nb , "bygging"@nn ;
-        xkos:next :property ;
-        xkos:isPartOf :building-and-property .
-
-:property  a  skos:Concept , owl:NamedIndividual ;
-        skos:prefLabel "property"@en, "eiendom"@nb , "eigedom"@nn ;
-        xkos:previous :construction ;
-        xkos:isPartOf :building-and-property .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#construction>
+        a               owl:NamedIndividual , skos:Concept ;
+        xkos:isPartOf   <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#building-and-property> ;
+        xkos:next       <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#property> ;
+        skos:prefLabel  "bygging"@nn , "bygging"@nb , "construction"@en .
 
 <https://psi.norge.no/los/tema/inntektssikring>
-        a       owl:NamedIndividual , skos:Concept .
+        a       skos:Concept , owl:NamedIndividual .
 
-:los-subtheme  a              owl:NamedIndividual , skos:Concept ;
-        xkos:coreContentNote  "Includes all concepts at level 2 in LOS"@en , "Inkluderer alle begreper på nivå 2 i LOS"@nb ;
-        xkos:hasPart          :los-topic ;
-        xkos:isPartOf         :los-main-theme ;
-        skos:inScheme         :los-structural-elements ;
-        skos:prefLabel        "subtheme in LOS"@en , "undertema i LOS"@nb .
+<https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-subtheme>
+        a                     skos:Concept , owl:NamedIndividual ;
+        xkos:coreContentNote  "Inkluderer alle begreper på nivå 2 i LOS"@nb , "Includes all concepts at level 2 in LOS"@en ;
+        xkos:hasPart          <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-topic> ;
+        xkos:isPartOf         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-main-theme> ;
+        skos:inScheme         <https://jimjyang.github.io/playground/xkosno/examples/LOS.ttl#los-structural-elements> ;
+        skos:prefLabel        "undertema i LOS"@nb , "subtheme in LOS"@en .
