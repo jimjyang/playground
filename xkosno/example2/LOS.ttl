@@ -9,10 +9,10 @@
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-<https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS>
+<https://jimjyang.github.io/playground/xkosno/example2/LOS>
    rdf:type skos:ConceptScheme;
    xkos:numberOfLevels "3"^^xsd:positiveInteger;
-   dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS"^^xsd:anyURI;
+   dct:identifier "https://jimjyang.github.io/playground/xkosno/example2/LOS"^^xsd:anyURI;
    dct:title """LOS"""@en,
        """LOS"""@nb;
    dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827>;
@@ -23,21 +23,21 @@
    schema:validFrom "2024-01-01"^^xsd:date;
    schema:validThrough "2024-12-31"^^xsd:date;
    xkos:levels [ rdf:type rdf:List;
-      rdf:first <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/LOS-level1>;
+      rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-level1>;
       rdf:rest  [ rdf:type rdf:List;
-         rdf:first <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/LOS-level2>;
+         rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-level2>;
          rdf:rest  [ rdf:type rdf:List;
-            rdf:first <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/LOS-Level3>;
+            rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-Level3>;
             rdf:rest rdf:nil;
             ];
          ];
       ];
-   uneskos:contains <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1001>,
-       <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1002>,
-       <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1003>,
-       <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat2001>,
-       <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat2002>,
-       <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat3001>;
+   uneskos:contains <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1001>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1002>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1003>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2001>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2002>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat3001>;
    dct:modified "2024-01-22"^^xsd:date;
    dct:language <http://publications.europa.eu/resource/authority/language/NOB>,
        <http://publications.europa.eu/resource/authority/language/NNO>;
@@ -48,4 +48,4 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP>;
    .
  
-#### End of the file, 2024-01-22 15:25:13
+#### End of the file, 2024-01-22 15:31:00

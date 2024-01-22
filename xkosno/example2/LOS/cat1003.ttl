@@ -6,13 +6,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-<https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1003>
+<https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1003>
    rdf:type skos:Concept;
    skos:prefLabel """democracy and citizen rights"""@en,
        """demokrati og innbyggerrettigheter"""@nb;
-   skos:inScheme <https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS>;
-   dct:identifier "https://jimjyang.github.io/playground/xkosno/examples/LOS-test2/LOS/cat1003"^^xsd:anyURI;
+   skos:inScheme <https://jimjyang.github.io/playground/xkosno/example2/LOS>;
+   dct:identifier "https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1003"^^xsd:anyURI;
    adms:status <http://publications.europa.eu/resource/authority/concept-status/DRAFT>;
    .
  
-#### End of the file, 2024-01-22 15:25:13
+#### End of the file, 2024-01-22 15:31:00
