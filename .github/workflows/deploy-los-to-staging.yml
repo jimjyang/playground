@@ -1,0 +1,53 @@
+name: Deploy LOS to staging
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - los-publisering/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: delop from los-publisering to staging
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Upload files
+      uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
+      id: upload-files
+      with:
+         ontology-type: "vocabulary"
+         ontology: "los"
+         host: "https://staging.fellesdatakatalog.digdir.no"
+         api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+         files: |
+            LOS-en.html text/html en
+            LOS-nb.html text/html nb
+            LOS.ttl text/turtle en
+            los/cat1001.ttl text/turtle en los/cat1001.ttl
+            los/cat1001-en.html text/html en los/cat1001-en.html
+            los/cat1001-nb.html text/html nb los/cat1001-nb.html
+            los/cat1002.ttl text/turtle en los/cat1002.ttl
+            los/cat1002-en.html text/html en los/cat1002-en.html
+            los/cat1002-nb.html text/html nb los/cat1002-nb.html
+            los/cat1003.ttl text/turtle en los/cat1003.ttl
+            los/cat1003-en.html text/html en los/cat1003-en.html
+            los/cat1003-nb.html text/html nb los/cat1003-nb.html
+            los/cat2001.ttl text/turtle en los/cat2001.ttl
+            los/cat2001-en.html text/html en los/cat2001-en.html
+            los/cat2001-nb.html text/html nb los/cat2001-nb.html
+            los/cat2002.ttl text/turtle en los/cat2002.ttl
+            los/cat2002-en.html text/html en los/cat2002-en.html
+            los/cat2002-nb.html text/html nb los/cat2002-nb.html
+            los/cat3001.ttl text/turtle en los/cat3001.ttl
+            los/cat3001-en.html text/html en los/cat3001-en.html
+            los/cat3001-nb.html text/html nb los/cat3001-nb.html
+             
+         
