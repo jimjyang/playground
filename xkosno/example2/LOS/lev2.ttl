@@ -6,12 +6,13 @@
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-<https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-Level3>
+<https://jimjyang.github.io/playground/xkosno/example2/LOS/lev2>
    rdf:type xkos:ClassificationLevel;
-   xkos:depth "3"^^xsd:positiveInteger;
-   skos:member <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat3001>;
-   dct:title """LOS Level 3"""@en,
-       """LOS nivå 3"""@nb;
+   xkos:depth "2"^^xsd:positiveInteger;
+   skos:member <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2001>,
+       <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat2002>;
+   dct:title """LOS Level 2"""@en,
+       """LOS nivå 2"""@nb;
    .
  
-#### End of the file, 2024-01-22 15:31:00
+#### End of the file, 2024-01-22 15:56:53

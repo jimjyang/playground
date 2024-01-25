@@ -6,7 +6,7 @@
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> . 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
 
-<https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-level1>
+<https://jimjyang.github.io/playground/xkosno/example2/LOS/lev1>
    rdf:type xkos:ClassificationLevel;
    xkos:depth "1"^^xsd:positiveInteger;
    skos:member <https://jimjyang.github.io/playground/xkosno/example2/LOS/cat1001>,
@@ -16,4 +16,4 @@
        """LOS nivå 1"""@nb;
    .
  
-#### End of the file, 2024-01-22 15:31:00
+#### End of the file, 2024-01-22 15:56:53
