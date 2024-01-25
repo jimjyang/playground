@@ -23,11 +23,11 @@
    schema:validFrom "2024-01-01"^^xsd:date;
    schema:validThrough "2024-12-31"^^xsd:date;
    xkos:levels [ rdf:type rdf:List;
-      rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-level1>;
+      rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/lev1>;
       rdf:rest  [ rdf:type rdf:List;
-         rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-level2>;
+         rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/lev2>;
          rdf:rest  [ rdf:type rdf:List;
-            rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/LOS-Level3>;
+            rdf:first <https://jimjyang.github.io/playground/xkosno/example2/LOS/lev3>;
             rdf:rest rdf:nil;
             ];
          ];
@@ -48,4 +48,4 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP>;
    .
  
-#### End of the file, 2024-01-22 15:31:00
+#### End of the file, 2024-01-22 15:54:08
