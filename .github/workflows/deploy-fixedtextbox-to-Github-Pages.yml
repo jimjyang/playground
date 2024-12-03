@@ -1,0 +1,29 @@
+name: Deploy fixed textbox to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - test-fixed-textbox/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: delop from test-fixed-textbox to GH-pages
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./test-fixed-textbox
+        destination_dir: ./test-fixed-textbox
+        keep_files: true
