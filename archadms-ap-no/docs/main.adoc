@@ -42,8 +42,6 @@ toc::[]
 :sectnumlevels: 5
 // include::Om_denne_spesifikasjonen.adoc[]
 
-include::Om_denne_versjonen.adoc[]
-
 include::Om_denne_spesifikasjonen.adoc[]
 
 include::Forenklet-fremstilling.adoc[]
