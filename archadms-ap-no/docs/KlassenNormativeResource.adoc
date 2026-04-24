@@ -1,0 +1,23 @@
+== Klassen Normerende ressurs (archadmsno:NormativeResource) [[NormerendeRessurs]]
+
+<<img-KlassenNormativeResource>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenNormativeResource]]
+.Klassen Normerende ressurs (archadmsno:NormativeResource)
+[link=images/KlassenNormativeResource.png]
+image::images/KlassenNormativeResource.png[alt="UML-diagram for klassen Normerende ressurs. Innholdet i diagrammet er forklart i teksten."]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Obligatoriske egenskaper for klassen _Normerende ressurs_ [[NormerendeRessurs-obligatoriske-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Anbefalte egenskaper for klassen _Normerende ressurs_ [[NormerendeRessurs-anbefalte-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Valgfrie egenskaper for klassen _Normerende ressurs_ [[NormerendeRessurs-valgfrie-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+

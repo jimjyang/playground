@@ -1,4 +1,4 @@
-== Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
+== Klassen Operativ kapabilitet (archadmsno:OperationalCapability) [[OperativKapabilitet]]
 
 <<img-KlassenOperationalCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 

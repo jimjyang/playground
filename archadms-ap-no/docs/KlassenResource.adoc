@@ -1,4 +1,4 @@
-== Klassen Ressurs (archimate:Resource)
+== Klassen Ressurs (archimate:Resource) [[Ressurs]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
