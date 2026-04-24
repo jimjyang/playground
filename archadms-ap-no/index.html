@@ -577,7 +577,84 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_forenklet_modell_av_archadms_ap_no">2. Forenklet modell av archADMS-AP-NO</a></li>
-<li><a href="#Spesifikasjon-per-klasse">3. Krav til RDF-representasjon av klassene i archADMS-AP-NO</a></li>
+<li><a href="#Spesifikasjon-per-klasse">3. Krav til RDF-representasjon av klassene i archADMS-AP-NO</a>
+<ul class="sectlevel2">
+<li><a href="#Arkitekturartefakt">3.1. Klassen Arkitekturartefakt (adms:Asset)</a>
+<ul class="sectlevel3">
+<li><a href="#Arkitekturartefakt-obligatoriske-egenskaper">3.1.1. Obligatoriske egenskaper for klassen <em>Arkitekturartefakt</em></a>
+<ul class="sectlevel4">
+<li><a href="#Arkitekturartefakt-identifikator">Arkitekturartefakt – identifikator (dct:identifier)</a></li>
+<li><a href="#Arkitekturartefakt-navn">Arkitekturartefakt – navn (dct:title)</a></li>
+</ul>
+</li>
+<li><a href="#Arkitekturartefakt-anbefalte-egenskaper">3.1.2. Anbefalte egenskaper for klassen <em>Arkitekturartefakt</em></a>
+<ul class="sectlevel4">
+<li><a href="#Arkitekturartefakt-beskrivelse">Arkitekturartefakt – beskrivelse (dct:description)</a></li>
+</ul>
+</li>
+<li><a href="#Arkitekturartefakt-valgfrie-egenskaper">3.1.3. Valgfrie egenskaper for klassen <em>Arkitekturartefakt</em></a></li>
+</ul>
+</li>
+<li><a href="#Distribusjon">3.2. Klassen Distribusjon (adms:AssetDistribution)</a>
+<ul class="sectlevel3">
+<li><a href="#Distribusjon-obligatoriske-egenskaper">3.2.1. Obligatoriske egenskaper for klassen <em>Distribusjon</em></a></li>
+<li><a href="#Distribusjon-anbefalte-egenskaper">3.2.2. Anbefalte egenskaper for klassen <em>Distribusjon</em></a></li>
+<li><a href="#Distribusjon-valgfrie-egenskaper">3.2.3. Valgfrie egenskaper for klassen <em>Distribusjon</em></a></li>
+</ul>
+</li>
+<li><a href="#Fellesløsning">3.3. Klassen Fellesløsning (archadmsno:SharedSolution)</a>
+<ul class="sectlevel3">
+<li><a href="#Fellesløsning-obligatoriske-egenskaper">3.3.1. Obligatoriske egenskaper for klassen <em>Fellesløsning</em></a></li>
+<li><a href="#Fellesløsning-anbefalte-egenskaper">3.3.2. Anbefalte egenskaper for klassen <em>Fellesløsning</em></a></li>
+<li><a href="#Fellesløsning-valgfrie-egenskaper">3.3.3. Valgfrie egenskaper for klassen <em>Fellesløsning</em></a></li>
+</ul>
+</li>
+<li><a href="#Forretningsverdi">3.4. Klassen Forretningsverdi (archadmsno:Value)</a></li>
+<li><a href="#Kapabilitet">3.5. Klassen Kapabilitet (archimate:Capability)</a>
+<ul class="sectlevel3">
+<li><a href="#Kapabilitet-obligatoriske-egenskaper">3.5.1. Obligatoriske egenskaper for klassen <em>Kapabilitet</em></a></li>
+<li><a href="#Kapabilitet-anbefalte-egenskaper">3.5.2. Anbefalte egenskaper for klassen <em>Kapabilitet</em></a></li>
+<li><a href="#Kapabilitet-valgfrie-egenskaper">3.5.3. Valgfrie egenskaper for klassen <em>Kapabilitet</em></a></li>
+</ul>
+</li>
+<li><a href="#Mål">3.6. Klassen Mål (archadmsno:Goal)</a></li>
+<li><a href="#NormerendeRessurs">3.7. Klassen Normerende ressurs (archadmsno:NormativeResource)</a>
+<ul class="sectlevel3">
+<li><a href="#NormerendeRessurs-obligatoriske-egenskaper">3.7.1. Obligatoriske egenskaper for klassen <em>Normerende ressurs</em></a></li>
+<li><a href="#NormerendeRessurs-anbefalte-egenskaper">3.7.2. Anbefalte egenskaper for klassen <em>Normerende ressurs</em></a></li>
+<li><a href="#NormerendeRessurs-valgfrie-egenskaper">3.7.3. Valgfrie egenskaper for klassen <em>Normerende ressurs</em></a></li>
+</ul>
+</li>
+<li><a href="#OperativKapabilitet">3.8. Klassen Operativ kapabilitet (archadmsno:OperationalCapability)</a>
+<ul class="sectlevel3">
+<li><a href="#OperativKapabilitet-obligatoriske-egenskaper">3.8.1. Obligatoriske egenskaper for klassen <em>Operativ kapabilitet</em></a></li>
+<li><a href="#OperativKapabilitet-anbefalte-egenskaper">3.8.2. Anbefalte egenskaper for klassen <em>Operativ kapabilitet</em></a></li>
+<li><a href="#OperativKapabilitet-valgfrie-egenskaper">3.8.3. Valgfrie egenskaper for klassen <em>Operativ kapabilitet</em></a></li>
+</ul>
+</li>
+<li><a href="#OperativRessurs">3.9. Klassen Operativ ressurs (archadmsno:OperationalResource)</a>
+<ul class="sectlevel3">
+<li><a href="#OperativRessurs-obligatoriske-egenskaper">3.9.1. Obligatoriske egenskaper for klassen <em>Operativ ressurs</em></a></li>
+<li><a href="#OperativRessurs-anbefalte-egenskaper">3.9.2. Anbefalte egenskaper for klassen <em>Operativ ressurs</em></a></li>
+<li><a href="#OperativRessurs-valgfrie-egenskaper">3.9.3. Valgfrie egenskaper for klassen <em>Operativ ressurs</em></a></li>
+</ul>
+</li>
+<li><a href="#Ressurs">3.10. Klassen Ressurs (archimate:Resource)</a>
+<ul class="sectlevel3">
+<li><a href="#Ressurs-obligatoriske-egenskaper">3.10.1. Obligatoriske egenskaper for klassen <em>Ressurs</em></a></li>
+<li><a href="#Ressurs-anbefalte-egenskaper">3.10.2. Anbefalte egenskaper for klassen <em>Ressurs</em></a></li>
+<li><a href="#Ressurs-valgfrie-egenskaper">3.10.3. Valgfrie egenskaper for klassen <em>Ressurs</em></a></li>
+</ul>
+</li>
+<li><a href="#StrategiskKapabilitet">3.11. Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)</a>
+<ul class="sectlevel3">
+<li><a href="#StrategiskKapabilitet-obligatoriske-egenskaper">3.11.1. Obligatoriske egenskaper for klassen <em>Strategisk kapabilitet</em></a></li>
+<li><a href="#StrategiskKapabilitet-anbefalte-egenskaper">3.11.2. Anbefalte egenskaper for klassen <em>Strategisk kapabilitet</em></a></li>
+<li><a href="#StrategiskKapabilitet-valgfrie-egenskaper">3.11.3. Valgfrie egenskaper for klassen <em>Strategisk kapabilitet</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#Navnerom">Vedlegg A – Navnerom som er brukt i spesifikasjonen</a></li>
 </ul>
 </div>
@@ -780,38 +857,476 @@ Dette dokumentet kan også lastes ned <a href="files/archadms-ap-no.pdf">som PDF
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="Arkitekturartefakt"><a class="link" href="#Arkitekturartefakt">3.1. Klassen Arkitekturartefakt (adms:Asset)</a></h3>
 <div class="paragraph">
-<p>include::KlassenAsset.adoc[] // Klassen Arkitekturartefakt (archadmsno:Asset)</p>
+<p><em>#@@@@@@ klassenavnet "Arkitekturartefakt" er kun et forslag</em></p>
 </div>
 <div class="paragraph">
-<p>include::KlassenAssetDistribution.adoc[] // klassen Distribusjon (archadmsno:AssetDistribution)</p>
+<p><a href="#img-KlassenAsset">Figur 2, &#8220;Klassen Arkitekturartefakt (<em>Asset</em>) (adms:Asset)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenAsset" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenAsset.png"><img src="images/KlassenAsset.png" alt="UML-diagram for klassen Asset. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 2. Klassen Arkitekturartefakt (<em>Asset</em>) (adms:Asset)</div>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Architecture artefact (Asset)</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes til å beskrive en arkitekturartefakt. NB! Dette er en abstrakt/generell klasse og bør ikke brukes direkte. Dens subklasser bør brukes i steden.</p>
+<p class="tableblock"><em>The class used to represent an Architecture Artefact. Note! This is an abstract/general class and should not be used directly. Its subclasses should be used instead.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adms:Asset</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="Arkitekturartefakt-obligatoriske-egenskaper"><a class="link" href="#Arkitekturartefakt-obligatoriske-egenskaper">3.1.1. Obligatoriske egenskaper for klassen <em>Arkitekturartefakt</em></a></h4>
+<div class="sect4">
+<h5 id="Arkitekturartefakt-identifikator"><a class="link" href="#Arkitekturartefakt-identifikator">3.1.1.1. Arkitekturartefakt – identifikator (dct:identifier)</a></h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>identifier</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi identifikatoren til arkitekturartefakten.</p>
+<p class="tableblock"><em>This property represents an Identifier for the Architecture Artefact.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="Arkitekturartefakt-navn"><a class="link" href="#Arkitekturartefakt-navn">3.1.1.2. Arkitekturartefakt – navn (dct:title)</a></h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>name</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi navnet til arkitekturartefakten. Egenskapen BØR gjentas når navnet finnes på flere språk.</p>
+<p class="tableblock"><em>This property represents the Name (or title) of the Architecture Artefact. This property SHOULD be repeated when the name is in parallel languages.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk / <em>Mandatory</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Arkitekturartefakt-anbefalte-egenskaper"><a class="link" href="#Arkitekturartefakt-anbefalte-egenskaper">3.1.2. Anbefalte egenskaper for klassen <em>Arkitekturartefakt</em></a></h4>
+<div class="sect4">
+<h5 id="Arkitekturartefakt-beskrivelse"><a class="link" href="#Arkitekturartefakt-beskrivelse">3.1.2.1. Arkitekturartefakt – beskrivelse (dct:description)</a></h5>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>English name</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>description</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Verdiområde / <em>Range</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:langString</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anvendelse / <em>Usage note</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskapen brukes til å oppgi en tekstlig beskrivelse av arkitekturartefakten. Egenskapen BØR gjentas når beskrivelsen finnes på flere språk.</p>
+<p class="tableblock"><em>This property represents a free text description of the Architecture Artefact. This property SHOULD be repeated when the description is in parallel languages.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet / <em>Multiplicity</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravnivå / <em>Requirement level</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt / <em>Recommended</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Arkitekturartefakt-valgfrie-egenskaper"><a class="link" href="#Arkitekturartefakt-valgfrie-egenskaper">3.1.3. Valgfrie egenskaper for klassen <em>Arkitekturartefakt</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Distribusjon"><a class="link" href="#Distribusjon">3.2. Klassen Distribusjon (adms:AssetDistribution)</a></h3>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
 </div>
 <div class="paragraph">
-<p>include::KlassenSharedSolution.adoc[] // klassen Fellesløsning (archadmsno:SharedSolution)</p>
+<p><a href="#img-KlassenAssetDistribution">Figur 3, &#8220;Klassen Distribusjon (adms:AssetDistribution)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenAssetDistribution" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenAssetDistribution.png"><img src="images/KlassenAssetDistribution.png" alt="UML-diagram for klassen Distribusjon. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 3. Klassen Distribusjon (adms:AssetDistribution)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenValue.adoc[] // Klassen Forretningsverdi (archadmsno:Value)</p>
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="Distribusjon-obligatoriske-egenskaper"><a class="link" href="#Distribusjon-obligatoriske-egenskaper">3.2.1. Obligatoriske egenskaper for klassen <em>Distribusjon</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Distribusjon-anbefalte-egenskaper"><a class="link" href="#Distribusjon-anbefalte-egenskaper">3.2.2. Anbefalte egenskaper for klassen <em>Distribusjon</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Distribusjon-valgfrie-egenskaper"><a class="link" href="#Distribusjon-valgfrie-egenskaper">3.2.3. Valgfrie egenskaper for klassen <em>Distribusjon</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Fellesløsning"><a class="link" href="#Fellesløsning">3.3. Klassen Fellesløsning (archadmsno:SharedSolution)</a></h3>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
 </div>
 <div class="paragraph">
-<p>include::KlassenCapability.adoc[] // Klassen Kapabilitet (archadmsno:Capability)</p>
+<p><a href="#img-KlassenSharedSolution">Figur 4, &#8220;Klassen Fellesløsning (archadmsno:SharedSolution)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenSharedSolution" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenSharedSolution.png"><img src="images/KlassenSharedSolution.png" alt="UML-diagram for klassen Fellesløsning. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 4. Klassen Fellesløsning (archadmsno:SharedSolution)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenGoal.adoc[] // Klassen Mål (archadmsno:Goal)</p>
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="Fellesløsning-obligatoriske-egenskaper"><a class="link" href="#Fellesløsning-obligatoriske-egenskaper">3.3.1. Obligatoriske egenskaper for klassen <em>Fellesløsning</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Fellesløsning-anbefalte-egenskaper"><a class="link" href="#Fellesløsning-anbefalte-egenskaper">3.3.2. Anbefalte egenskaper for klassen <em>Fellesløsning</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Fellesløsning-valgfrie-egenskaper"><a class="link" href="#Fellesløsning-valgfrie-egenskaper">3.3.3. Valgfrie egenskaper for klassen <em>Fellesløsning</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Forretningsverdi"><a class="link" href="#Forretningsverdi">3.4. Klassen Forretningsverdi (archadmsno:Value)</a></h3>
+<div class="paragraph">
+<p><a href="#img-KlassenValue">Figur 5, &#8220;Klassen Forretningsverdi (archadmsno:Value)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenValue" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenValue.png"><img src="images/KlassenValue.png" alt="UML-diagram for klassen Forretningsverdi. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 5. Klassen Forretningsverdi (archadmsno:Value)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenNormativeResource.adoc[] // Klassen Normativ ressurs (archadmsno:NormativeResource)</p>
+<p><em><mark>tekst kommer</mark></em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Kapabilitet"><a class="link" href="#Kapabilitet">3.5. Klassen Kapabilitet (archimate:Capability)</a></h3>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
 </div>
 <div class="paragraph">
-<p>include::KlassenOperationalCapability.adoc[] // Klassen Operativ kapabilitet (archadmsno:OperationalCapability)</p>
+<p><a href="#img-KlassenCapability">Figur 6, &#8220;Klassen Kapabilitet (archimate:Capability)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenCapability" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenCapability.png"><img src="images/KlassenCapability.png" alt="UML-diagram for klassen Kapabilitet. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 6. Klassen Kapabilitet (archimate:Capability)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenOperationalResource.adoc[] // Klassen Operativ ressurs (archadmsno:OperationalResource)</p>
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="Kapabilitet-obligatoriske-egenskaper"><a class="link" href="#Kapabilitet-obligatoriske-egenskaper">3.5.1. Obligatoriske egenskaper for klassen <em>Kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Kapabilitet-anbefalte-egenskaper"><a class="link" href="#Kapabilitet-anbefalte-egenskaper">3.5.2. Anbefalte egenskaper for klassen <em>Kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Kapabilitet-valgfrie-egenskaper"><a class="link" href="#Kapabilitet-valgfrie-egenskaper">3.5.3. Valgfrie egenskaper for klassen <em>Kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Mål"><a class="link" href="#Mål">3.6. Klassen Mål (archadmsno:Goal)</a></h3>
+<div class="paragraph">
+<p><a href="#img-KlassenGoal">Figur 7, &#8220;Klassen Mål (archadmsno:Goal)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenGoal" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenGoal.png"><img src="images/KlassenGoal.png" alt="UML-diagram for klassen Mål. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 7. Klassen Mål (archadmsno:Goal)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenResource.adoc[] // Klassen Ressurs (archadmsno:Resource)</p>
+<p><em><mark>tekst kommer</mark></em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="NormerendeRessurs"><a class="link" href="#NormerendeRessurs">3.7. Klassen Normerende ressurs (archadmsno:NormativeResource)</a></h3>
+<div class="paragraph">
+<p><a href="#img-KlassenNormativeResource">Figur 8, &#8220;Klassen Normerende ressurs (archadmsno:NormativeResource)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenNormativeResource" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenNormativeResource.png"><img src="images/KlassenNormativeResource.png" alt="UML-diagram for klassen Normerende ressurs. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 8. Klassen Normerende ressurs (archadmsno:NormativeResource)</div>
 </div>
 <div class="paragraph">
-<p>include::KlassenStrategicCapability.adoc[] // Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)</p>
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="NormerendeRessurs-obligatoriske-egenskaper"><a class="link" href="#NormerendeRessurs-obligatoriske-egenskaper">3.7.1. Obligatoriske egenskaper for klassen <em>Normerende ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="NormerendeRessurs-anbefalte-egenskaper"><a class="link" href="#NormerendeRessurs-anbefalte-egenskaper">3.7.2. Anbefalte egenskaper for klassen <em>Normerende ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="NormerendeRessurs-valgfrie-egenskaper"><a class="link" href="#NormerendeRessurs-valgfrie-egenskaper">3.7.3. Valgfrie egenskaper for klassen <em>Normerende ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="OperativKapabilitet"><a class="link" href="#OperativKapabilitet">3.8. Klassen Operativ kapabilitet (archadmsno:OperationalCapability)</a></h3>
+<div class="paragraph">
+<p><a href="#img-KlassenOperationalCapability">Figur 9, &#8220;Klassen Operativ kapabilitet (archadmsno:OperationalCapability)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenOperationalCapability" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenOperationalCapability.png"><img src="images/KlassenOperationalCapability.png" alt="UML-diagram for klassen Operativ kapabilitet. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 9. Klassen Operativ kapabilitet (archadmsno:OperationalCapability)</div>
+</div>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="OperativKapabilitet-obligatoriske-egenskaper"><a class="link" href="#OperativKapabilitet-obligatoriske-egenskaper">3.8.1. Obligatoriske egenskaper for klassen <em>Operativ kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="OperativKapabilitet-anbefalte-egenskaper"><a class="link" href="#OperativKapabilitet-anbefalte-egenskaper">3.8.2. Anbefalte egenskaper for klassen <em>Operativ kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="OperativKapabilitet-valgfrie-egenskaper"><a class="link" href="#OperativKapabilitet-valgfrie-egenskaper">3.8.3. Valgfrie egenskaper for klassen <em>Operativ kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="OperativRessurs"><a class="link" href="#OperativRessurs">3.9. Klassen Operativ ressurs (archadmsno:OperationalResource)</a></h3>
+<div class="paragraph">
+<p><a href="#img-KlassenOperationalResource">Figur 10, &#8220;Klassen Operativ ressurs (archadmsno:OperationalResource)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenOperationalResource" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenOperationalResource.png"><img src="images/KlassenOperationalResource.png" alt="UML-diagram for klassen Operativ ressurs. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 10. Klassen Operativ ressurs (archadmsno:OperationalResource)</div>
+</div>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="OperativRessurs-obligatoriske-egenskaper"><a class="link" href="#OperativRessurs-obligatoriske-egenskaper">3.9.1. Obligatoriske egenskaper for klassen <em>Operativ ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="OperativRessurs-anbefalte-egenskaper"><a class="link" href="#OperativRessurs-anbefalte-egenskaper">3.9.2. Anbefalte egenskaper for klassen <em>Operativ ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="OperativRessurs-valgfrie-egenskaper"><a class="link" href="#OperativRessurs-valgfrie-egenskaper">3.9.3. Valgfrie egenskaper for klassen <em>Operativ ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Ressurs"><a class="link" href="#Ressurs">3.10. Klassen Ressurs (archimate:Resource)</a></h3>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="paragraph">
+<p><a href="#img-KlassenResource">Figur 11, &#8220;Klassen Ressurs (archimate:Resource)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenResource" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenResource.png"><img src="images/KlassenResource.png" alt="UML-diagram for klassen Ressurs. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 11. Klassen Ressurs (archimate:Resource)</div>
+</div>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="Ressurs-obligatoriske-egenskaper"><a class="link" href="#Ressurs-obligatoriske-egenskaper">3.10.1. Obligatoriske egenskaper for klassen <em>Ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Ressurs-anbefalte-egenskaper"><a class="link" href="#Ressurs-anbefalte-egenskaper">3.10.2. Anbefalte egenskaper for klassen <em>Ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Ressurs-valgfrie-egenskaper"><a class="link" href="#Ressurs-valgfrie-egenskaper">3.10.3. Valgfrie egenskaper for klassen <em>Ressurs</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="StrategiskKapabilitet"><a class="link" href="#StrategiskKapabilitet">3.11. Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)</a></h3>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="paragraph">
+<p><a href="#img-KlassenStrategicCapability">Figur 12, &#8220;Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)&#8221;</a> viser en &#8230;&#8203; <em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div id="img-KlassenStrategicCapability" class="imageblock">
+<div class="content">
+<a class="image" href="images/KlassenStrategicCapability.png"><img src="images/KlassenStrategicCapability.png" alt="UML-diagram for klassen Strategisk kapabilitet. Innholdet i diagrammet er forklart i teksten."></a>
+</div>
+<div class="title">Figur 12. Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)</div>
+</div>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+<div class="sect3">
+<h4 id="StrategiskKapabilitet-obligatoriske-egenskaper"><a class="link" href="#StrategiskKapabilitet-obligatoriske-egenskaper">3.11.1. Obligatoriske egenskaper for klassen <em>Strategisk kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="StrategiskKapabilitet-anbefalte-egenskaper"><a class="link" href="#StrategiskKapabilitet-anbefalte-egenskaper">3.11.2. Anbefalte egenskaper for klassen <em>Strategisk kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="StrategiskKapabilitet-valgfrie-egenskaper"><a class="link" href="#StrategiskKapabilitet-valgfrie-egenskaper">3.11.3. Valgfrie egenskaper for klassen <em>Strategisk kapabilitet</em></a></h4>
+<div class="paragraph">
+<p><em><mark>@@@@@@ mer tekst kommer &#8230;&#8203;</mark></em></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -922,7 +1437,7 @@ Dette dokumentet kan også lastes ned <a href="files/archadms-ap-no.pdf">som PDF
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2026-04-24 10:14:00 UTC
+Sist oppdatert 2026-04-24 10:28:56 UTC
 </div>
 </div>
 </body>
