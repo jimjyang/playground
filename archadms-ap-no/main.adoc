@@ -50,23 +50,25 @@ include::Spesifikasjon-per-klasse.adoc[]
 
 :leveloffset: +1
 
-include::KlassenAsset.adoc[]
+include::KlassenAsset.adoc[] // Klassen Arkitekturartefakt (archadmsno:Asset)
 
-include::KlassenAssetDistribution.adoc[]
+include::KlassenAssetDistribution.adoc[] // klassen Distribusjon (archadmsno:AssetDistribution)
 
-include::KlassenSharedSolution.adoc[]
+include::KlassenSharedSolution.adoc[] // klassen Fellesløsning (archadmsno:SharedSolution)
 
-include::KlassenCapability.adoc[]
+include::KlassenValue.adoc[] // Klassen Forretningsverdi (archadmsno:Value)
 
-include::KlassenNormativeResource.adoc[]
+include::KlassenCapability.adoc[] // Klassen Kapabilitet (archadmsno:Capability)
 
-include::KlassenOperationalCapability.adoc[]
+include::KlassenNormativeResource.adoc[] // Klassen Normativ ressurs (archadmsno:NormativeResource)
 
-include::KlassenOperationalResource.adoc[]
+include::KlassenOperationalCapability.adoc[] // Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
 
-include::KlassenResource.adoc[]
+include::KlassenOperationalResource.adoc[] // Klassen Operativ ressurs (archadmsno:OperationalResource)
 
-include::KlassenStrategicCapability.adoc[]
+include::KlassenResource.adoc[] // Klassen Ressurs (archadmsno:Resource)
+
+include::KlassenStrategicCapability.adoc[] // Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
 
 
 :leveloffset: -1
