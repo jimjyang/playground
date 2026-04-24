@@ -1,11 +1,11 @@
-== Klassen Strategic Capability (digdir:StrategicCapability)
+== Klassen Strategic Capability (archadmsno:StrategicCapability)
 
 _#@@@@@@ mer tekst kommer ...#_
 
 <<img-KlassenStrategicCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenStrategicCapability]]
-.Klassen Strategic Capability (digdir:StrategicCapability)
+.Klassen Strategic Capability (archadmsno:StrategicCapability)
 [link=images/KlassenStrategicCapability.png]
 image::images/KlassenStrategicCapability.png[alt="UML-diagram for klassen Strategic Capability. Innholdet i diagrammet er forklart i teksten."]
 
