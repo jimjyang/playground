@@ -1,0 +1,3 @@
+== Om denne versjonen [[Om_denne_versjonen]]
+
+WARNING: Dette er en "sandkasse-versjon" av potensielt ny, egen spesifikasjon for beskrivelse av arkitekturartifakter (archADMS-AP-NO). Det er ikke en offisiell versjon, og det er ikke sikkert at den vil bli en offisiell versjon. Det er heller ikke sikkert at den vil bli videreutviklet. Det er kun et utkast som er laget for å teste ut ideer og få tilbakemeldinger. Det er derfor viktig å ikke bruke denne versjonen i produksjon eller i andre sammenhenger der det er viktig med stabilitet og pålitelighet. 
