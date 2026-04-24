@@ -1,6 +1,6 @@
 == Klassen Arkitekturartefakt (adms:Asset) [[Arkitekturartefakt]]
 
-_#@@@@@@ klassenavnet "Arkitekturartefakt" er kun et forslag_
+_#@@@@@@ klassenavnet "Arkitekturartefakt" er kun et forslag#_
 
 <<img-KlassenAsset>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
