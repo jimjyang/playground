@@ -31,7 +31,7 @@ include::download.adoc[]
 *Gjeldende versjon*: <ingen> +
 // *Gjeldende versjon*: \https://data.norge.no/specification/cccev-ap-no +
 *Forrige versjon*: <ingen> +
-*Redaktørens utkast*: #denne# / +
+*Redaktørens utkast*: #denne# +
 
 // include::Abstract.adoc[]
 
