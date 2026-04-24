@@ -1,9 +1,9 @@
-== Klassen Operational Capability (digdir:OperationalCapability)
+== Klassen Operational Capability (archadmsno:OperationalCapability)
 
 <<img-KlassenOperationalCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenOperationalCapability]]
-.Klassen Operational Capability (digdir:OperationalCapability)
+.Klassen Operational Capability (archadmsno:OperationalCapability)
 [link=images/KlassenOperationalCapability.png]
 image::images/KlassenOperationalCapability.png[alt="UML-diagram for klassen Operational Capability. Innholdet i diagrammet er forklart i teksten."]
 

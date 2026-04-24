@@ -1,11 +1,11 @@
-== Klassen Shared Solution (digdir:SharedSolution)
+== Klassen Shared Solution (archadmsno:SharedSolution)
 
 _#@@@@@@ mer tekst kommer ...#_
 
 <<img-KlassenSharedSolution>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenSharedSolution]]
-.Klassen Shared Solution (digdir:SharedSolution)
+.Klassen Shared Solution (archadmsno:SharedSolution)
 [link=images/KlassenSharedSolution.png]
 image::images/KlassenSharedSolution.png[alt="UML-diagram for klassen Shared Solution. Innholdet i diagrammet er forklart i teksten."]
 
