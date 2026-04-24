@@ -1,9 +1,9 @@
-== Klassen Mål (archadmsno:Goal) [[Mål]]
+== Klassen Mål (archimate:Goal) [[Mål]]
 
 <<img-KlassenGoal>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenGoal]]
-.Klassen Mål (archadmsno:Goal)
+.Klassen Mål (archimate:Goal)
 [link=images/KlassenGoal.png]
 image::images/KlassenGoal.png[alt="UML-diagram for klassen Mål. Innholdet i diagrammet er forklart i teksten."]
 
