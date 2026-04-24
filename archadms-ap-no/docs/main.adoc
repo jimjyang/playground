@@ -103,7 +103,7 @@ include::KlassenWorkPackage.adoc[]
 
 include::Navnerom.adoc[]
 
-// include::Endringslogg.adoc[]
+include::Endringslogg.adoc[]
 
 // Analytics
 // include::shared/analytics.adoc[]
