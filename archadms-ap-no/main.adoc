@@ -54,13 +54,13 @@ include::KlassenAsset.adoc[]
 
 include::KlassenAssetDistribution.adoc[]
 
+include::KlassenSharedSolution.adoc[]
+
 include::KlassenCapability.adoc[]
 
 include::KlassenOperationalCapability.adoc[]
 
 include::KlassenResource.adoc[]
-
-include::KlassenSharedSolution.adoc[]
 
 include::KlassenStrategicCapability.adoc[]
 

@@ -1,25 +1,25 @@
-== Klassen Strategic Capability (archadmsno:StrategicCapability)
+== Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
 
 _#@@@@@@ mer tekst kommer ...#_
 
 <<img-KlassenStrategicCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenStrategicCapability]]
-.Klassen Strategic Capability (archadmsno:StrategicCapability)
+.Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
 [link=images/KlassenStrategicCapability.png]
-image::images/KlassenStrategicCapability.png[alt="UML-diagram for klassen Strategic Capability. Innholdet i diagrammet er forklart i teksten."]
+image::images/KlassenStrategicCapability.png[alt="UML-diagram for klassen Strategisk kapabilitet. Innholdet i diagrammet er forklart i teksten."]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Strategic Capability_ [[StrategicCapability-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for klassen _Strategisk kapabilitet_ [[StrategiskKapabilitet-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Strategic Capability_ [[StrategicCapability-anbefalte-egenskaper]]
+=== Anbefalte egenskaper for klassen _Strategisk kapabilitet_ [[StrategiskKapabilitet-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Strategic Capability_ [[StrategicCapability-valgfrie-egenskaper]]
+=== Valgfrie egenskaper for klassen _Strategisk kapabilitet_ [[StrategiskKapabilitet-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

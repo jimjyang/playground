@@ -1,25 +1,25 @@
-== Klassen Shared Solution (archadmsno:SharedSolution)
+== Klassen Fellesløsning (archadmsno:SharedSolution)
 
 _#@@@@@@ mer tekst kommer ...#_
 
 <<img-KlassenSharedSolution>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
 [[img-KlassenSharedSolution]]
-.Klassen Shared Solution (archadmsno:SharedSolution)
+.Klassen Fellesløsning (archadmsno:SharedSolution)
 [link=images/KlassenSharedSolution.png]
-image::images/KlassenSharedSolution.png[alt="UML-diagram for klassen Shared Solution. Innholdet i diagrammet er forklart i teksten."]
+image::images/KlassenSharedSolution.png[alt="UML-diagram for klassen Fellesløsning. Innholdet i diagrammet er forklart i teksten."]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Shared Solution_ [[SharedSolution-obligatoriske-egenskaper]]
+=== Obligatoriske egenskaper for klassen _Fellesløsning_ [[Fellesløsning-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Shared Solution_ [[SharedSolution-anbefalte-egenskaper]]
+=== Anbefalte egenskaper for klassen _Fellesløsning_ [[Fellesløsning-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Shared Solution_ [[SharedSolution-valgfrie-egenskaper]]
+=== Valgfrie egenskaper for klassen _Fellesløsning_ [[Fellesløsning-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
