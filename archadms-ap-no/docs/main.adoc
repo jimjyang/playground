@@ -15,10 +15,13 @@ ifdef::backend-pdf[:toc: macro]
 
 image::images/Digdir.png[alt="Digdir-logo", width=30%, pdfwidth=30vw, link=https://digdir.no/]
 
+include::Om_denne_versjonen.adoc[]
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/jimjyang/playground/issues[GitHub Issues &#x29C9;, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på GitHub kan du opprette bruker gratis.
+
 include::download.adoc[]
 
-// NOTE: *Innmelding av feil og mangler:* +
-// Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/cccev-ap-no/issues[GitHub Issues &#x29C9;, window="_blank", role="ext-link"]. Dersom du ikke allerede har bruker på GitHub kan du opprette bruker gratis.
 
 *Lisens*: https://creativecommons.org/licenses/by/4.0/[CC BY 4.0 &#x29C9;, window="_blank", role="ext-link"] +
 *Status*: #under utarbeidelse# +
@@ -29,8 +32,6 @@ include::download.adoc[]
 // *Gjeldende versjon*: \https://data.norge.no/specification/cccev-ap-no +
 *Forrige versjon*: <ingen> +
 *Redaktørens utkast*: #denne# / +
-
-// include::Om_denne_versjonen.adoc[]
 
 // include::Abstract.adoc[]
 
