@@ -1,4 +1,4 @@
-== Klassen Distribusjon (adms:AssetDistribution)
+== Klassen Distribusjon (adms:AssetDistribution) [[Distribusjon]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

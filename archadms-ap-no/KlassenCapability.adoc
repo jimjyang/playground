@@ -1,4 +1,4 @@
-== Klassen Kapabilitet (archimate:Capability)
+== Klassen Kapabilitet (archimate:Capability) [[Kapabilitet]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

@@ -58,7 +58,11 @@ include::KlassenSharedSolution.adoc[]
 
 include::KlassenCapability.adoc[]
 
+include::KlassenNormativeResource.adoc[]
+
 include::KlassenOperationalCapability.adoc[]
+
+include::KlassenOperationalResource.adoc[]
 
 include::KlassenResource.adoc[]
 

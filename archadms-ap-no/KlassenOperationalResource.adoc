@@ -1,0 +1,23 @@
+== Klassen Operativ ressurs (archadmsno:OperationalResource) [[OperativRessurs]]
+
+<<img-KlassenOperationalResource>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenOperationalResource]]
+.Klassen Operativ ressurs (archadmsno:OperationalResource)
+[link=images/KlassenOperationalResource.png]
+image::images/KlassenOperationalResource.png[alt="UML-diagram for klassen Operativ ressurs. Innholdet i diagrammet er forklart i teksten."]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Obligatoriske egenskaper for klassen _Operativ ressurs_ [[OperativRessurs-obligatoriske-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Anbefalte egenskaper for klassen _Operativ ressurs_ [[OperativRessurs-anbefalte-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Valgfrie egenskaper for klassen _Operativ ressurs_ [[OperativRessurs-valgfrie-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+

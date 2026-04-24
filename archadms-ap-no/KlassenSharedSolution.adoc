@@ -1,4 +1,4 @@
-== Klassen Fellesløsning (archadmsno:SharedSolution)
+== Klassen Fellesløsning (archadmsno:SharedSolution) [[Fellesløsning]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

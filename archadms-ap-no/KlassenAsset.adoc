@@ -1,4 +1,4 @@
-== Klassen Arkitekturartefakt (adms:Asset)
+== Klassen Arkitekturartefakt (adms:Asset) [[Arkitekturartefakt]]
 
 _#@@@@@@ klassenavnet "Arkitekturartefakt" er kun et forslag_
 

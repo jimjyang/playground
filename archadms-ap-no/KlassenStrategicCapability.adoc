@@ -1,4 +1,4 @@
-== Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
+== Klassen Strategisk kapabilitet (archadmsno:StrategicCapability) [[StrategiskKapabilitet]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
