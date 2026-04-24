@@ -1,0 +1,5 @@
+== Klassen Brukerbehov (archadmsno:UserNeed) [[Brukerbehov]]
+
+subklasse av Mål (archadmsno:Goal).
+
+_#@@@@@@ mer tekst kommer ...#_

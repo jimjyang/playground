@@ -53,6 +53,9 @@ include::Spesifikasjon-per-klasse.adoc[]
 // Klassen Arkitekturartefakt (archadmsno:Asset)
 include::KlassenAsset.adoc[] 
 
+// Klassen Brukerbehov (archadmsno:UserNeed)
+include::KlassenUserNeed.adoc[]
+
 // klassen Distribusjon (archadmsno:AssetDistribution)
 include::KlassenAssetDistribution.adoc[] 
 
@@ -62,10 +65,13 @@ include::KlassenSharedSolution.adoc[]
 // Klassen Forretningsverdi (archadmsno:Value)
 include::KlassenValue.adoc[] 
 
-// Klassen Kapabilitet (archadmsno:Capability)
+// Klassen Gap (archimate:Gap)
+include::KlassenGap.adoc[]
+
+// Klassen Kapabilitet (archimate:Capability)
 include::KlassenCapability.adoc[] 
 
-// Klassen Mål (archadmsno:Goal)
+// Klassen Mål (archimate:Goal)
 include::KlassenGoal.adoc[] 
 
 // Klassen Normativ ressurs (archadmsno:NormativeResource)
@@ -77,12 +83,17 @@ include::KlassenOperationalCapability.adoc[]
 // Klassen Operativ ressurs (archadmsno:OperationalResource)
 include::KlassenOperationalResource.adoc[] 
 
+// Klassen Prinsipp (archimate:Principle)
+include::KlassenPrinciple.adoc[]
+
 // Klassen Ressurs (archadmsno:Resource)
 include::KlassenResource.adoc[] 
 
 // Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
 include::KlassenStrategicCapability.adoc[] 
 
+// Klassen Tiltak (archadmsno:WorkPackage)
+include::KlassenWorkPackage.adoc[]
 
 :leveloffset: -1
 
