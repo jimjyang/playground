@@ -11,7 +11,7 @@ _#@@@@@@ mer tekst kommer ...#_
 
 === Omfang og avgrensing [[Omfang-og-avgrensing]]
 
-Spesifikasjonen er basert på EUs https://www.w3.org/TR/vocab-adms/[__Asset Description Metadata Schema (ADMS)__ &#x29C9;, window="_blank", role="ext-link"]. Spesifikasjonen gjenbruker også https://htmlpreview.github.io/?https://github.com/AlbertoDMendoza/archimate_ontology/blob/main/archimate.html[__ArchiMate Ontology__ &#x29C9;, window="_blank", role="ext-link"].
+Spesifikasjonen er basert på EUs https://semiceu.github.io/ADMS/releases/2.00/[__ADMS Vocabulary__ &#x29C9;, window="_blank", role="ext-link"]. Spesifikasjonen gjenbruker også https://htmlpreview.github.io/?https://github.com/AlbertoDMendoza/archimate_ontology/blob/main/archimate.html[__ArchiMate Ontology__ &#x29C9;, window="_blank", role="ext-link"].
 
 Spesifikasjonen inneholder også engelske navn (_English name_) og beskrivelser (_Usage note_). Det gjøres oppmerksom på at ikke alle engelske navn eller beskrivelser er ordrette sitater fra originale engelske tekster. Vi kan ha valgt en annen tekst til å formidle det samme budskapet på, med mindre vi eksplisitt sier at det er et avvik (dvs. også i meningsinnholdet). 
 
