@@ -1,0 +1,25 @@
+== Klassen Capability (archimate:Capability)
+
+_#@@@@@@ mer tekst kommer ...#_
+
+<<img-KlassenCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenCapability]]
+.Klassen Capability (archimate:Capability)
+[link=images/KlassenCapability.png]
+image::images/KlassenCapability.png[alt="UML-diagram for klassen Capability. Innholdet i diagrammet er forklart i teksten."]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Obligatoriske egenskaper for klassen _Capability_ [[Capability-obligatoriske-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Anbefalte egenskaper for klassen _Capability_ [[Capability-anbefalte-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Valgfrie egenskaper for klassen _Capability_ [[Capability-valgfrie-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
