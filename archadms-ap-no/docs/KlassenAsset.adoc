@@ -1,0 +1,25 @@
+== Klassen Asset (adms:Asset)
+
+_#@@@@@@ må finne et norsk navn for asset som ikke er ressurs (som finnes i achimate)#_
+
+<<img-KlassenAsset>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenAsset]]
+.Klassen Asset (adms:Asset)
+[link=images/KlassenAsset.png]
+image::images/KlassenAsset.png[alt="UML-diagram for klassen Asset. Innholdet i diagrammet er forklart i teksten."]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Obligatoriske egenskaper for klassen _Asset_ [[Asset-obligatoriske-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Anbefalte egenskaper for klassen _Asset_ [[Asset-anbefalte-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Valgfrie egenskaper for klassen _Asset_ [[Asset-valgfrie-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+

@@ -1,4 +1,4 @@
-name: Build adocs and deploy archadmsno to Github Pages
+name: Build adocs and deploy archadms-ap-no to Github Pages
 
 permissions:
   contents: write
@@ -41,4 +41,3 @@ jobs:
         publish_branch: gh-pages
         publish_dir: ./archadms-ap-no/
         destination_dir: ./archadms-ap-no/
-        keep_files: true
