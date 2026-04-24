@@ -12,7 +12,7 @@ image::images/KlassenAsset.png[alt="UML-diagram for klassen Asset. Innholdet i d
 [cols="30s,70d"]
 |===
 | _English name_ | _Architecture artefact (Asset)_
-| Anvendelse / _Usage note_ | Klassen brukes til å beskrive en arkitekturartefakt. NB! Dette er en abstrakt/genrell klasse og bør ikke brukes direkte. Dens subklasser bør brukes i steden. 
+| Anvendelse / _Usage note_ | Klassen brukes til å beskrive en arkitekturartefakt. NB! Dette er en abstrakt/generell klasse og bør ikke brukes direkte. Dens subklasser bør brukes i steden. 
 
 _The class used to represent an Architecture Artefact. Note! This is an abstract/general class and should not be used directly. Its subclasses should be used instead._
 | URI | adms:Asset
