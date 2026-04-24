@@ -1,3 +1,11 @@
 == Klassen Forretningsverdi (archadmsno:Value) [[Forretningsverdi]]
 
+<<img-KlassenValue>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenValue]]
+.Klassen Forretningsverdi (archadmsno:Value)
+[link=images/KlassenValue.png]
+image::images/KlassenValue.png[alt="UML-diagram for klassen Forretningsverdi. Innholdet i diagrammet er forklart i teksten."]
+
+
 _#tekst kommer#_

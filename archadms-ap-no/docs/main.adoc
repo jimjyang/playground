@@ -60,6 +60,8 @@ include::KlassenValue.adoc[] // Klassen Forretningsverdi (archadmsno:Value)
 
 include::KlassenCapability.adoc[] // Klassen Kapabilitet (archadmsno:Capability)
 
+include::KlassenGoal.adoc[] // Klassen Mål (archadmsno:Goal)
+
 include::KlassenNormativeResource.adoc[] // Klassen Normativ ressurs (archadmsno:NormativeResource)
 
 include::KlassenOperationalCapability.adoc[] // Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
