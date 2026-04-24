@@ -27,7 +27,7 @@ _The class used to represent an Architecture Artefact. Note! This is an abstract
 | _English name_ | _identifier_
 | URI | dct:identifier
 | Verdiområde / _Range_ | rdfs:Literal
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikatoren til en arkitekturartefakt.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi identifikatoren til arkitekturartefakten.
 
 _This property represents an Identifier for the Architecture Artefact._
 | Multiplisitet / _Multiplicity_ | 1..1
@@ -41,7 +41,7 @@ _This property represents an Identifier for the Architecture Artefact._
 | _English name_ | _name_
 | URI | dct:title
 | Verdiområde / _Range_ |  rdf:langString
-| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navn til arkitekturartefakten. Egenskapen BØR gjentas når navnet finnes på flere språk.
+| Anvendelse / _Usage note_ | Egenskapen brukes til å oppgi navnet til arkitekturartefakten. Egenskapen BØR gjentas når navnet finnes på flere språk.
 
 _This property represents the Name (or title) of the Architecture Artefact. This property SHOULD be repeated when the name is in parallel languages._
 | Multiplisitet / _Multiplicity_ | 1..n
