@@ -1,0 +1,44 @@
+name: Build adocs and deploy archadmsno to Github Pages
+
+permissions:
+  contents: write
+  pages: write
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - archADMS-ap-no/docs/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    name: deploy from archADMS-ap-no/docs to GH-pages
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build html 
+      id: adocbuild_html
+      uses: tonynv/asciidoctor-action@master
+      with:
+            program: "asciidoctor -D archADMS-ap-no/docs -o index.html -a lang=nb archADMS-ap-no/docs/main.adoc"
+
+    - name: Build pdf
+      id: adocbuild_pdf
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "asciidoctor-pdf -D archADMS-ap-no/docs -o files/archadms-ap-no.pdf -a lang=nb archADMS-ap-no/docs/main.adoc"
+      continue-on-error: true
+
+    - name: Deploy to Github-Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./archADMS-ap-no/docs
+        destination_dir: ./archADMS-ap-no/docs
+        keep_files: true
