@@ -50,27 +50,38 @@ include::Spesifikasjon-per-klasse.adoc[]
 
 :leveloffset: +1
 
-include::KlassenAsset.adoc[] // Klassen Arkitekturartefakt (archadmsno:Asset)
+// Klassen Arkitekturartefakt (archadmsno:Asset)
+include::KlassenAsset.adoc[] 
 
-include::KlassenAssetDistribution.adoc[] // klassen Distribusjon (archadmsno:AssetDistribution)
+// klassen Distribusjon (archadmsno:AssetDistribution)
+include::KlassenAssetDistribution.adoc[] 
 
-include::KlassenSharedSolution.adoc[] // klassen Fellesløsning (archadmsno:SharedSolution)
+// klassen Fellesløsning (archadmsno:SharedSolution)
+include::KlassenSharedSolution.adoc[] 
 
-include::KlassenValue.adoc[] // Klassen Forretningsverdi (archadmsno:Value)
+// Klassen Forretningsverdi (archadmsno:Value)
+include::KlassenValue.adoc[] 
 
-include::KlassenCapability.adoc[] // Klassen Kapabilitet (archadmsno:Capability)
+// Klassen Kapabilitet (archadmsno:Capability)
+include::KlassenCapability.adoc[] 
 
-include::KlassenGoal.adoc[] // Klassen Mål (archadmsno:Goal)
+// Klassen Mål (archadmsno:Goal)
+include::KlassenGoal.adoc[] 
 
-include::KlassenNormativeResource.adoc[] // Klassen Normativ ressurs (archadmsno:NormativeResource)
+// Klassen Normativ ressurs (archadmsno:NormativeResource)
+include::KlassenNormativeResource.adoc[] 
 
-include::KlassenOperationalCapability.adoc[] // Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
+// Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
+include::KlassenOperationalCapability.adoc[] 
 
-include::KlassenOperationalResource.adoc[] // Klassen Operativ ressurs (archadmsno:OperationalResource)
+// Klassen Operativ ressurs (archadmsno:OperationalResource)
+include::KlassenOperationalResource.adoc[] 
 
-include::KlassenResource.adoc[] // Klassen Ressurs (archadmsno:Resource)
+// Klassen Ressurs (archadmsno:Resource)
+include::KlassenResource.adoc[] 
 
-include::KlassenStrategicCapability.adoc[] // Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
+// Klassen Strategisk kapabilitet (archadmsno:StrategicCapability)
+include::KlassenStrategicCapability.adoc[] 
 
 
 :leveloffset: -1
