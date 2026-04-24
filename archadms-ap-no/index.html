@@ -435,6 +435,127 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- this docinfo contains several modifications to the default asciidoc-CSS -->
+
+<!-- 1) Generate a collapsible TOC -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<!-- We do not need the tocify CSS because the asciidoc CSS already provides most of what we need -->
+
+<style>
+.tocify-header {
+    font-style: italic;
+}
+
+.tocify-subheader {
+    font-style: normal;
+    font-size: 90%;
+}
+
+.tocify ul {
+    margin: 0;
+ }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // Add a new container for the tocify toc into the existing toc so we can re-use its
+        // styling
+        $("#toc").append("<div id='generated-toc'></div>");
+        $("#generated-toc").tocify({
+            extendPage: true,
+            context: "#content",
+            highlightOnScroll: true,
+            hideEffect: "slideUp",
+            // Use the IDs that asciidoc already provides so that TOC links and intra-document
+            // links are the same. Anything else might confuse users when they create bookmarks.
+            hashGenerator: function(text, element) {
+                return $(element).attr("id");
+            },
+            // Smooth scrolling doesn't work properly if we use the asciidoc IDs
+            smoothScroll: false,
+            // Set to 'none' to use the tocify classes
+            theme: "none",
+            // Handle book (may contain h1) and article (only h2 deeper)
+            selectors: $( "#content" ).has( "h1" ).size() > 0 ? "h1,h2,h3,h4,h5" : "h2,h3,h4,h5",
+            ignoreSelector: ".discrete"
+        });
+
+        // Make TOC items focusable
+        $("#generated-toc").find("a").attr("tabindex", "0");
+        // Make TOC items focusable
+        $("#generated-toc").find("a").attr("tabindex", "0");
+        // Collapse TOC initially, showing only level 1 headings
+        $("#generated-toc").find(".tocify-subheader").hide();
+        $("#generated-toc").find(".tocify-header").addClass("collapsed");
+        // Toggle collapse on click
+        $("#generated-toc").on("click", ".tocify-header", function() {
+          $(this).nextUntil(".tocify-header").toggle();
+          $(this).toggleClass("collapsed");
+        });
+
+/*
+        // Make TOC items focusable
+        toc.find("a").attr("tabindex", "0");
+
+        // Collapse TOC initially, showing only level 1 headings
+        toc.find(".tocify-subheader").hide();
+        toc.find(".tocify-header").addClass("collapsed");
+
+        // Toggle collapse on click
+        toc.on("click", ".tocify-header", function() {
+          $(this).nextUntil(".tocify-header").toggle();
+          $(this).toggleClass("collapsed");
+        });
+*/
+        // Switch between static asciidoc toc and dynamic tocify toc based on browser size
+        // This is set to match the media selectors in the asciidoc CSS
+        // Without this, we keep the dynamic toc even if it is moved from the side to preamble
+        // position which will cause odd scrolling behavior
+        var handleTocOnResize = function() {
+            if ($(document).width() < 768) {
+                $("#generated-toc").hide();
+                $(".sectlevel0").show();
+                $(".sectlevel1").show();
+            }
+            else {
+                $("#generated-toc").show();
+                $(".sectlevel0").hide();
+                $(".sectlevel1").hide();
+            }
+        }
+
+        $(window).resize(handleTocOnResize);
+        handleTocOnResize();
+    });
+</script>
+
+
+<!-- 2) To make collapsible blocks outlined when focused -->
+
+<style>
+    /* Add outline to the summary element when focused */
+    details summary:focus {
+        outline: thin dotted; /* Adjust thickness and color as needed */
+        outline-offset: -2px; /* Adjust the offset to fit the text width */
+        display: inline-block; /* Ensure the element is inline-block */
+        width: auto /* Ensure the width is auto to fit the text */
+    }
+</style>
+
+<script>
+    // Add focus and blur event listeners to the summary element
+    document.querySelectorAll('details summary').forEach(el => {
+        el.setAttribute('tabindex', '0'); // Make it focusable
+        el.addEventListener('focus', () => {
+            el.classList.add('focus-outline'); // Add the outline class on focus
+        });
+        el.addEventListener('blur', () => {
+            el.classList.remove('focus-outline'); // Remove the outline class on blur
+        });
+    });
+</script>
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
@@ -519,6 +640,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <a class="image" href="https://digdir.no/"><img src="images/Digdir.png" alt="Digdir-logo" width="30%"></a>
 </div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Dette dokumentet kan også lastes ned <a href="files/archadms-ap-no.pdf">som PDF</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Lisens</strong>: <a href="https://creativecommons.org/licenses/by/4.0/" class="ext-link" target="_blank" rel="noopener">CC BY 4.0 &#x29C9;</a><br>
@@ -1029,7 +1162,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2026-04-24 03:55:35 UTC
+Sist oppdatert 2026-04-24 04:04:49 UTC
 </div>
 </div>
 </body>
