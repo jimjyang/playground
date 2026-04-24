@@ -1,5 +1,5 @@
 include::locale/attributes.adoc[]
-= Spesifikasjon for beskrivelse av arkitekturartifakter (archADMS-AP-NO)
+= Spesifikasjon for beskrivelse av arkitekturartefakter (archADMS-AP-NO)
 Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency
 :doctype: book
 :docinfo: shared
