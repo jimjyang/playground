@@ -1,0 +1,25 @@
+== Klassen Resource (archimate:Resource)
+
+_#@@@@@@ mer tekst kommer ...#_
+
+<<img-KlassenResource>> viser en ... _#@@@@@@ mer tekst kommer ...#_
+
+[[img-KlassenResource]]
+.Klassen Resource (archimate:Resource)
+[link=images/KlassenResource.png]
+image::images/KlassenResource.png[alt="UML-diagram for klassen Resource. Innholdet i diagrammet er forklart i teksten."]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Obligatoriske egenskaper for klassen _Resource_ [[Resource-obligatoriske-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Anbefalte egenskaper for klassen _Resource_ [[Resource-anbefalte-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
+=== Valgfrie egenskaper for klassen _Resource_ [[Resource-valgfrie-egenskaper]]
+
+_#@@@@@@ mer tekst kommer ...#_
+
