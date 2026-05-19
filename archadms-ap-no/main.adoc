@@ -25,7 +25,7 @@ include::download.adoc[]
 
 *Lisens*: https://creativecommons.org/licenses/by/4.0/[CC BY 4.0 &#x29C9;, window="_blank", role="ext-link"] +
 *Status*: #under utarbeidelse# +
-*Versjon*: v. 0.0.012 +
+*Versjon*: v. 0.0.01 +
 *Publisert*: #under utarbeidelse# +
 *Oppdatert*: #under utarbeidelse# +
 *Gjeldende versjon*: <ingen> +
