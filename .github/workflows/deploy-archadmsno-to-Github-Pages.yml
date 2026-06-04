@@ -2,7 +2,6 @@ name: Build adocs and deploy archadms-ap-no to Github Pages
 
 permissions:
   contents: write
-  pages: write
 
 on:
   push:
@@ -10,35 +9,17 @@ on:
     - main
     paths:
     - archadms-ap-no/docs/**
-  workflow_dispatch:
 
 jobs:
-  adoc_build:
-    runs-on: ubuntu-latest
-    name: deploy from archadms-ap-no/docs to GH-pages
-    steps:
-
-    - name: Checkout code
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-
-    - name: Build html 
-      id: adocbuild_html
-      uses: Analog-inc/asciidoctor-action@328aa83fd20efb2e8899a34716db60c9ddf2d9a0  # master
-      with:
-            shellcommand: "asciidoctor -D archadms-ap-no/docs -o index.html -a lang=nb archadms-ap-no/docs/main.adoc"
-
-    - name: Build pdf
-      id: adocbuild_pdf
-      uses: Analog-inc/asciidoctor-action@328aa83fd20efb2e8899a34716db60c9ddf2d9a0  # master
-      with:
-          shellcommand: "asciidoctor-pdf -D archadms-ap-no/docs -o files/archadms-ap-no.pdf -a lang=nb archadms-ap-no/docs/main.adoc"
-      continue-on-error: true
-
-    - name: Deploy to Github-Pages
-      if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: ./archadms-ap-no/docs/
-        destination_dir: ./archadms-ap-no/
+  build-adocs:
+    uses: Informasjonsforvaltning/workflows/.github/workflows/specification-github-pages.yaml@main
+    with:
+      program_html: |
+        asciidoctor -D archadms-ap-no/docs -o index.html -a lang=nb archadms-ap-no/docs/main.adoc
+      program_pdf: |
+        asciidoctor-pdf -D archadms-ap-no/docs -o files/archadms-ap-no.pdf -a lang=nb archadms-ap-no/docs/main.adoc
+      publish_branch: gh-pages
+      publish_dir: ./archadms-ap-no/docs/
+      destination_dir: ./archadms-ap-no/
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
