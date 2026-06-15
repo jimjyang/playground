@@ -1,4 +1,4 @@
-== Klassen Ressurs (archimate:Resource) [[Ressurs]]
+=== Klassen Ressurs (archimate:Resource) [[Ressurs]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
@@ -11,15 +11,15 @@ image::images/KlassenResource.png[alt="UML-diagram for klassen Ressurs. Innholde
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Ressurs_ [[Ressurs-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Ressurs_ [[Ressurs-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Ressurs_ [[Ressurs-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Ressurs_ [[Ressurs-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Ressurs_ [[Ressurs-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Ressurs_ [[Ressurs-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

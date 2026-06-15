@@ -1,4 +1,4 @@
-== Klassen Mål (archimate:Goal) [[Mål]]
+=== Klassen Mål (archimate:Goal) [[Mål]]
 
 <<img-KlassenGoal>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 

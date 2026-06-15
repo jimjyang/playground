@@ -48,8 +48,6 @@ include::Forenklet-fremstilling.adoc[]
 
 include::Spesifikasjon-per-klasse.adoc[]
 
-:leveloffset: +1
-
 // Klassen Arkitekturartefakt (archadmsno:Asset)
 include::KlassenAsset.adoc[] 
 
@@ -60,7 +58,7 @@ include::KlassenUserNeed.adoc[]
 include::KlassenAssetDistribution.adoc[] 
 
 // klassen Fellesløsning (archadmsno:SharedSolution)
-include::KlassenSharedSolution.adoc[] 
+// include::KlassenSharedSolution.adoc[] 
 
 // Klassen Forretningsverdi (archadmsno:Value)
 include::KlassenValue.adoc[] 
@@ -81,7 +79,7 @@ include::KlassenNormativeResource.adoc[]
 include::KlassenOperationalCapability.adoc[] 
 
 // Klassen Operativ ressurs (archadmsno:OperationalResource)
-include::KlassenOperationalResource.adoc[] 
+include::KlassenReusableSolution.adoc[] 
 
 // Klassen Prinsipp (archimate:Principle)
 include::KlassenPrinciple.adoc[]
@@ -94,8 +92,6 @@ include::KlassenStrategicCapability.adoc[]
 
 // Klassen Tiltak (archadmsno:WorkPackage)
 include::KlassenWorkPackage.adoc[]
-
-:leveloffset: -1
 
 // Appendix, section number off
 :sectnums!:

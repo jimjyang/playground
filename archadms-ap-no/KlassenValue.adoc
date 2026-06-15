@@ -1,4 +1,4 @@
-== Klassen Forretningsverdi (archadmsno:Value) [[Forretningsverdi]]
+=== Klassen Forretningsverdi (archadmsno:Value) [[Forretningsverdi]]
 
 <<img-KlassenValue>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 

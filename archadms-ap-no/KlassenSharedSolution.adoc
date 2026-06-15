@@ -1,4 +1,4 @@
-== Klassen Fellesløsning (archadmsno:SharedSolution) [[Fellesløsning]]
+=== Klassen Fellesløsning (archadmsno:SharedSolution) [[Fellesløsning]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
@@ -11,15 +11,15 @@ image::images/KlassenSharedSolution.png[alt="UML-diagram for klassen Fellesløsn
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Fellesløsning_ [[Fellesløsning-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Fellesløsning_ [[Fellesløsning-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Fellesløsning_ [[Fellesløsning-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Fellesløsning_ [[Fellesløsning-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Fellesløsning_ [[Fellesløsning-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Fellesløsning_ [[Fellesløsning-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
