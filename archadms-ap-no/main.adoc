@@ -66,6 +66,9 @@ include::KlassenValue.adoc[]
 // Klassen Gap (archimate:Gap)
 include::KlassenGap.adoc[]
 
+// Klassen Gjenbrukbar løsning (archadmsno:ReusableSolution)
+include::KlassenReusableSolution.adoc[]
+
 // Klassen Kapabilitet (archimate:Capability)
 include::KlassenCapability.adoc[] 
 
@@ -77,9 +80,6 @@ include::KlassenNormativeResource.adoc[]
 
 // Klassen Operativ kapabilitet (archadmsno:OperationalCapability)
 include::KlassenOperationalCapability.adoc[] 
-
-// Klassen Operativ ressurs (archadmsno:OperationalResource)
-include::KlassenReusableSolution.adoc[] 
 
 // Klassen Prinsipp (archimate:Principle)
 include::KlassenPrinciple.adoc[]
