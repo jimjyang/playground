@@ -161,7 +161,7 @@ __This property is used to specify name of the solution.__
 
 ==== Anbefalte egenskaper for klassen __Gjenbrukbar løsning__ [[Gjenbrukbar-løsning-anbefalte-egenskaper]]
 
-Ingen anbefalte egenskaper er spesifiert.
+Ingen anbefalte egenskaper er spesifisert.
 
 ==== Valgfrie egenskaper for klassen __Gjenbrukbar løsning__ [[Gjenbrukbar-løsning-valgfrie-egenskaper]]
 
