@@ -1,4 +1,4 @@
-== Klassen Arkitekturartefakt (adms:Asset) [[Arkitekturartefakt]]
+=== Klassen Arkitekturartefakt (adms:Asset) [[Arkitekturartefakt]]
 
 _#@@@@@@ klassenavnet "Arkitekturartefakt" er kun et forslag#_
 
@@ -18,9 +18,9 @@ _The class used to represent an Architecture Artefact. Note! This is an abstract
 | URI | adms:Asset
 |===
 
-=== Obligatoriske egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-obligatoriske-egenskaper]]
 
-==== Arkitekturartefakt – identifikator (dct:identifier) [[Arkitekturartefakt-identifikator]]
+===== Arkitekturartefakt – identifikator (dct:identifier) [[Arkitekturartefakt-identifikator]]
 
 [cols="30s,70d"]
 |===
@@ -34,7 +34,7 @@ _This property represents an Identifier for the Architecture Artefact._
 | Kravnivå / _Requirement level_ | Obligatorisk / _Mandatory_
 |===
 
-==== Arkitekturartefakt – navn (dct:title) [[Arkitekturartefakt-navn]]
+===== Arkitekturartefakt – navn (dct:title) [[Arkitekturartefakt-navn]]
 
 [cols="30s,70d"]
 |===
@@ -50,9 +50,9 @@ _This property represents the Name (or title) of the Architecture Artefact. This
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-anbefalte-egenskaper]]
 
-==== Arkitekturartefakt – beskrivelse (dct:description) [[Arkitekturartefakt-beskrivelse]]
+===== Arkitekturartefakt – beskrivelse (dct:description) [[Arkitekturartefakt-beskrivelse]]
 
 [cols="30s,70d"]
 |===
@@ -69,7 +69,7 @@ _This property represents a free text description of the Architecture Artefact. 
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Arkitekturartefakt_ [[Arkitekturartefakt-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

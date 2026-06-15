@@ -1,4 +1,4 @@
-== Klassen Distribusjon (adms:AssetDistribution) [[Distribusjon]]
+=== Klassen Distribusjon (adms:AssetDistribution) [[Distribusjon]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
@@ -11,15 +11,15 @@ image::images/KlassenAssetDistribution.png[alt="UML-diagram for klassen Distribu
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Distribusjon_ [[Distribusjon-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Distribusjon_ [[Distribusjon-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Distribusjon_ [[Distribusjon-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

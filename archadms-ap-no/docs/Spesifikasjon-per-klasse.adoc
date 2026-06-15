@@ -4,12 +4,12 @@ _Denne delen av spesifikasjonen er primært ment for den tekniske målgruppen og
 
 :xrefstyle: short
 
-<<img-KlasseOversikt>> viser en visuell oversikt over klassene i archADMS-AP-NO og relasjoner mellom dem. _#@@@@@@ mer tekst kommer ...#_
+// <<img-KlasseOversikt>> viser en visuell oversikt over klassene i archADMS-AP-NO og relasjoner mellom dem. _#@@@@@@ mer tekst kommer ...#_
 
-[[img-KlasseOversikt]]
-.Klassene i archADMS-AP-NO
-[link=images/archADMS-AP-NO-klasser.png]
-image::images/archADMS-AP-NO-klasser.png[alt="UML-diagram med klassene som er i archADMS-AP-NO og noen av relasjoner mellom dem. Innholdet i diagrammet er forklart i teksten."]
+// [[img-KlasseOversikt]]
+// .Klassene i archADMS-AP-NO
+// [link=images/archADMS-AP-NO-klasser.png]
+// image::images/archADMS-AP-NO-klasser.png[alt="UML-diagram med klassene som er i archADMS-AP-NO og noen av relasjoner mellom dem. Innholdet i diagrammet er forklart i teksten."]
 
 //:xrefstyle: pass:[%n %t]
 :xrefstyle: full

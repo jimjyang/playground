@@ -1,4 +1,4 @@
-== Klassen Operativ kapabilitet (archadmsno:OperationalCapability) [[OperativKapabilitet]]
+=== Klassen Operativ kapabilitet (archadmsno:OperationalCapability) [[OperativKapabilitet]]
 
 <<img-KlassenOperationalCapability>> viser en ... _#@@@@@@ mer tekst kommer ...#_
 
@@ -9,15 +9,15 @@ image::images/KlassenOperationalCapability.png[alt="UML-diagram for klassen Oper
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Operativ kapabilitet_ [[OperativKapabilitet-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 

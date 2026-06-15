@@ -1,4 +1,4 @@
-== Klassen Brukerbehov (archadmsno:UserNeed) [[Brukerbehov]]
+=== Klassen Brukerbehov (archadmsno:UserNeed) [[Brukerbehov]]
 
 subklasse av Mål (archimate:Goal).
 

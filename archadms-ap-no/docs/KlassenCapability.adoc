@@ -1,4 +1,4 @@
-== Klassen Kapabilitet (archimate:Capability) [[Kapabilitet]]
+=== Klassen Kapabilitet (archimate:Capability) [[Kapabilitet]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
@@ -11,15 +11,15 @@ image::images/KlassenCapability.png[alt="UML-diagram for klassen Kapabilitet. In
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Obligatoriske egenskaper for klassen _Kapabilitet_ [[Kapabilitet-obligatoriske-egenskaper]]
+==== Obligatoriske egenskaper for klassen _Kapabilitet_ [[Kapabilitet-obligatoriske-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Anbefalte egenskaper for klassen _Kapabilitet_ [[Kapabilitet-anbefalte-egenskaper]]
+==== Anbefalte egenskaper for klassen _Kapabilitet_ [[Kapabilitet-anbefalte-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
-=== Valgfrie egenskaper for klassen _Kapabilitet_ [[Kapabilitet-valgfrie-egenskaper]]
+==== Valgfrie egenskaper for klassen _Kapabilitet_ [[Kapabilitet-valgfrie-egenskaper]]
 
 _#@@@@@@ mer tekst kommer ...#_
 
